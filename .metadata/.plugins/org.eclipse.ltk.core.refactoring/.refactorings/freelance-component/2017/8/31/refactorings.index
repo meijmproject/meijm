@@ -1,0 +1,10 @@
+1501827995323	Rename type 'JadeWorkflowServiceImpl'
+1501828084977	Rename type 'JadeWorkflowService'
+1501828139814	Rename type 'JadeValidateBeforeAdvice'
+1501828203538	Rename type 'JadeValidateFacade'
+1501828258644	Rename type 'JadeValidateService'
+1501828273096	Rename type 'JadeValidateServiceImpl'
+1501828360553	Rename type 'JadeValidateClassConfigParse'
+1501828533484	Delete element
+1501829156642	Rename type 'JadeValidateConfigParse'
+1501829190861	Rename type 'JadeValidateClassConfig'

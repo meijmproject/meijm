@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+    <!--单位信息-->
+	<bean name="utUnitService" class="com.yh.hr.res.unit.service.impl.UtUnitServiceImpl">
+	     <property name="utOrganizationService" ref="utOrganizationService"/>
+		 <property name="utRelationService" ref="utRelationService"/>
+	</bean>
+	<!--内设机构信息-->
+	<bean name="utOrgService" class="com.yh.hr.res.unit.service.impl.UtOrgServiceImpl">
+		<property name="utOrganizationService" ref="utOrganizationService"/>
+		<property name="utRelationService" ref="utRelationService"/>
+	</bean>
+	<!--组织机构信息-->
+	<bean name="utOrganizationService" class="com.yh.hr.res.unit.service.impl.UtOrganizationServiceImpl" />
+	<!--组织机构对应关系信息-->
+	<bean name="utRelationService" class="com.yh.hr.res.unit.service.impl.UtRelationServiceImpl">
+		<property name="utUnitService" ref="utUnitService"/>
+		<property name="utOrgService" ref="utOrgService"/>
+	</bean>
+	
+</beans>

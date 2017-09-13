@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <meta charset="utf-8">
+    <title>信息校核名字选择列表</title>
+    <link rel="stylesheet" href="..\..\css\common\reset.css">
+    <link rel="stylesheet" href="..\..\css\components\info_check.css">
+</head>
+<body style="background: #edf0f5;width: 110px;margin: 20px;">
+
+    <div class="infoshow-container">
+        <a class="nl-previous"></a>
+        <ul class="nl-main">
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a nl-name-aselect" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+            <li><a class="nl-name-a" href="">刘小三</a></li>
+        </ul>
+        <a class="nl-next"></a>
+    </div>
+
+<!--<script src="..\..\js\jquery-1.12.4.js"></script>-->
+<script>
+    $(function () {
+        $(document).on('click','.nl-name-a',function (e) {
+            e.stopPropagation();
+            $(this).addClass('nl-name-aselect');
+            $(this).parent('li').siblings('li').children('a').removeClass('nl-name-aselect');
+            return false;
+        });
+    })
+</script>
+</body>
+</html>

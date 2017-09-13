@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="uploadPhotoFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.uploadphoto.facade.UploadPhotoFacade">
+				<property name="pbPhotoService" ref="pbPhotoService" />
+				<property name="uploadPhotoService" ref="uploadPhotoService" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="uploadPhotoService" class="com.yh.hr.info.uploadphoto.service.impl.UploadPhotoServiceImpl" />
+</beans>

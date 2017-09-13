@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <meta charset="utf-8">
+    <title>信息校核信息集表格项展示</title>
+    <link rel="stylesheet" href="..\..\css\common\reset.css">
+    <link rel="stylesheet" href="..\..\css\components\info_check.css">
+    <link rel="stylesheet" href="..\..\css\components\handle_btn.css">
+    <link rel="stylesheet" href="..\..\css\components\search_result_table.css">
+
+</head>
+<body style="background: #edf0f5;width: 925px;margin: 20px;">
+
+<div class="infoshow-container padding-lrb">
+    <div class="st-title-box">
+        <h3 class="st-title-text">家庭主要成员信息</h3>
+        <div class="st-title-icon">
+            <a class="st-add-icon"></a>
+            <a class="st-upload-icon"></a>
+        </div>
+    </div>
+
+    <div class="st-main-table">
+        <table class="sr-table">
+            <thead class="sr-table-thead"></thead>
+            <tbody class="sr-table-tbody"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="..\..\js\jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        // 信息校核信息集表格项st-main-table中插入数据
+        $.ajax({
+            url: "../json_data.json",//json文件位置
+            type: "GET",//请求方式为get
+            dataType: "json", //返回数据格式为json
+            success: function(data) {//请求成功完成后要执行的方法
+                //each循环 使用$.each方法遍历返回的数据date
+                var index=1;
+                $.each(data.infoTableData, function(i, item) {
+                    if (i==0){/*添加表头*/
+                        var str = '<tr><th class="md-th"></th><th class="md-th"><input type="checkbox"></th><th>' +
+                            item.name + '</th><th>' + item.elationship + '</th><th>'+
+                            item.birthday+'</th><th>'+item.politicsstatus +'</th><th>'+ '操作'+'</th></tr>';
+
+                        $('.sr-table-thead').append(str);
+                    }else{/*添加表体数据*/
+                        var str = '<tr><td class="md-th">'+index+'</td><td class="md-th"><input type="checkbox"></td><td> ' +
+                            item.name + '</td><td>' + item.elationship + '</td><td>'+
+                            item.birthday+'</td><td>'+item.politicsstatus +'</td><td>'+ '<a class="btn-delete-gray btn-icon-only"></a><a class="btn-modify-gray btn-icon-only"></a>'+'</td></tr>';
+
+                            $('.sr-table-tbody').append(str);
+                            index ++;
+                    }
+
+                });
+            }
+        });
+
+    })
+</script>
+</body>
+</html>

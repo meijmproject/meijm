@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flows>
+	<flow code="contractrenew" name="合同续签">
+		<parameters>
+			<value>_auth</value>
+			<value>_report</value>
+			<value>_check</value>
+			<value>_bizrecall</value>
+		</parameters>
+		<nodes>
+			<node code="begin" name="开始" type="begin">
+				<next condition="nvl" go-to="managementApprove" />
+			</node>
+			<!-- <node code="managementUnitReport" name="单位申报" type="action">
+				<next condition="_report=y" go-to="managementUnitReported" />
+				<next condition="_interrupt=n" go-to="interruptReport" />
+			</node>
+			<node code="managementUnitReported" name="单位已申报" type="auto">
+				<next condition="nvl" go-to="managementApprove" />
+			</node> -->
+			<node code="interruptReport" name="终止业务" type="auto">
+				<next condition="nvl" go-to="end" />
+			</node>
+			<!-- <node code="managementUnitRecall" name="单位撤回" type="auto">
+				<next condition="nvl" go-to="managementUnitReport" />
+			</node> -->
+			<!-- <node code="managementRevoke" name="业务退回" type="auto">
+				<next condition="nvl" go-to="managementUnitReport" />
+			</node> -->
+			<node code="managementApprove" name="审核确认" type="action">
+				<next condition="_check=y" go-to="managementApproveAgree" />
+				<!-- <next condition="_check=t" go-to="managementApproveDisAgree" /> -->
+				<!-- <next condition="_bizrecall=y" go-to="managementUnitRecall" /> -->
+			</node>
+			<node code="managementApproveAgree" name="审核同意" type="auto">
+				<next condition="nvl" go-to="managementTransferInfo" />
+			</node>
+			<!-- <node code="managementApproveDisAgree" name="审核不同意" type="auto">
+				<next condition="nvl" go-to="managementRevoke" />
+			</node> -->
+			<node code="managementTransferInfo" name="转库" type="auto">
+				<next condition="nvl" go-to="end" />
+			</node>
+			<node code="end" name="结束" type="end" />
+		</nodes>
+	</flow>
+</flows>

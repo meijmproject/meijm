@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+    <title>衢州人事管理系统</title>
+    <link media="screen" rel="stylesheet" href="../css/index.css"/>
+    <!--角色维护模态框css-->
+    <link  href="../css/ModalRoleMaintain.css" rel="stylesheet"/>
+    <script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../js/uijs/index.js"></script>
+    <!--角色维护模态框js-->
+    <script src="../js/uijs/ModalRoleMaintain.js"></script>
+</head>
+<body>
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a class="system_safety  theme_login" href="javascript:;" onclick="reque()">系统安全</a>
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <img src="../img/index/icon_time_white.png"  class="icon_time_white" alt=""/>&nbsp;
+                        <span class="icon_time_white_time">2016-8-12&nbsp;&nbsp;12:00:00</span>
+                    </div>
+                </div>
+                <div class="arrow_down">
+                    <img src="../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                    <div class="hide_content">
+                        <ul>
+                            <li>修改密码</li>
+                            <li>xxxxx</li>
+                            <li>xxxxx</li>
+                            <li>xxxxx</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+<!--模态框-->
+<div class="ajax"></div>
+<!--$.ajax请求ModalRoleMaintain_a.html-->
+<div class="theme_popover_mask"></div><!--底色背景-->
+<div class="theme_popover">
+    <div class="theme_poptit">
+        <a href="javascript:;" title="关闭" class="theme_poptit_close"></a>
+        <span class="theme_poptit_RoleMaintain">&nbsp;&nbsp;角色维护 <span class="RoleMaintain_arrows"> >> </span> 角色授权</span>
+    </div>
+    <div class="theme-popbod dform">
+        <div class="theme_popover_content">
+            <div class="theme_popover_content_Main" style="display:block">
+                <!--弹出框左侧-->
+                <div class="theme_popover_content_Left">
+                    <div onscroll="myFunction()">
+                        <div class="theme_popover_content_Form">
+                            <div class="theme_popbod_box">
+                                <form class="theme_popbod_form">
+                                    <label>选择系统:</label>
+                                    <select  class="select">
+                                        <option>人事信息管理子系统</option>
+                                        <option>人事信息管理子系统2</option>
+                                    </select>
+
+                                </form>
+                            </div>
+                        </div>
+                        <div class="popover_list">
+                            <ul class="popover_system  popover_left_onscroll">
+                                <li class="popover_system_PerInformation"><a href="#" class="popover_inactive popover_file">系统安全</a>
+                                    <ul style="display: none" class="popover_inactive_systemSafety">
+                                        <li><a href="#" class="popover_inactive">资源维护</a></li>
+                                        <li><a href="#" class="popover_inactive">菜单维护</a></li>
+                                        <li><a href="#" class="popover_inactive">系统岗位维护</a></li>
+                                        <li><a href="#" class="popover_inactive">用户维护</a></li>
+                                        <li><a href="#" class="popover_inactive">数据权限角色维护</a></li>
+                                        <li><a href="#" class="popover_inactive">操作日志查询</a></li>
+                                        <li><a href="#" class="popover_inactive">基础代码维护</a></li>
+                                        <li><a href="#" class="popover_inactive">功能维护</a></li>
+                                        <li><a href="#" class="popover_inactive">功能权限角色维护</a></li>
+                                        <li><a href="#" class="popover_inactive">业务参数维护</a></li>
+                                    </ul>
+                                </li>
+                                <li class="popover_system_PerInformation">
+                                    <a href="#" class="popover_inactive popover_file">人员信息集（公用）</a>
+                                    <ul style="display: none">
+                                        <li><a href="#" class="popover_inactive">修改</a>
+                                            <ul>
+                                                <li><a href="#">考核信息</a></li>
+                                                <li><a href="#">经费形式信息</a></li>
+                                                <li><a href="#">离退休情况信息</a></li>
+                                                <li><a href="#">来华工作信息</a></li>
+                                                <li><a href="#">数据权限角色维护</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--滚动条结束-->
+                </div>
+                <!--弹出框中间-->
+                <div class="theme_popover_content_Middle">
+                    <div>
+                        <ul>
+                            <li class="addElement">添加授权 <span class="addElement_arrows">>></span></li>
+                            <li class="removeElement"> <span class="removeElement_arrows"><< </span>移除授权</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--弹出框右侧-->
+                <div class="theme_popover_content_Right popover_right_onscroll">
+                    <table class="customers">
+                        <thead>
+                        <tr class="customers_title">
+                            <td class="customers_title_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_title_td_system">系统类别</td>
+                            <td class="customers_title_td_function">功能名称</td>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody">
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">资源维护</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">菜单维护</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">系统岗位维护</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">数据权限角色维护</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">操作日志查询</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">基础代码维护</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">修改密码（人事系统）</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">退役军人信息</td>
+                        </tr>
+                        <tr>
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">语言能力信息</td>
+                        </tr>
+                        <tr class="customers_tr_height">
+                            <td class="customers_contet_input">
+                                <input type="checkbox"/>
+                            </td>
+                            <td class="customers_contet_td">人事信息管理子系统</td>
+                            <td class="customers_contet_td">职业(执业)资格信息</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="clear: both"></div><!--清除浮动-->
+            </div>
+        </div>
+        <!---->
+    </div>
+    <!--测试-->
+    <!--脚部-->
+    <div class="popover_footer">
+        <div class="popover_footer_save">
+            <button class="popover_footer_save_bt">保存</button>
+        </div>
+        <a href="javascript:;" title="关闭" class="popover_footer_cancel theme_poptit_close" >取消</a>
+        <div style="clear: both"></div><!--清除浮动-->
+    </div>
+</div>
+<script>
+</script>
+</body>
+</html>

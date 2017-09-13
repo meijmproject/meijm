@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	</form-beans>
+	
+	<action-mappings>
+		<!-- 菜单  begin -->
+		<action path="/goToBizWarningBusinessMainWorkBench"
+				scope="request"
+				type="com.yh.hr.info.warning.web.action.BizWarningHomePageAction"
+				parameter="method">
+			<description>预警-菜单</description>
+			<forward name="success" path="/component/warning/bizwarningbusiness_workbench.jsp"></forward>
+		</action>	
+		<!-- 菜单  end -->	
+		<action path="/goToBizWarningInfo" 
+                parameter="method" 
+                type="com.yh.hr.info.warning.web.action.BizWarningHomePageAction"
+                validate="false">
+            <forward name="YJPRZSYQ" path="/component/warning/warningforprobationaffirm/warningforengageprobationaffirm_viewport.jsp" />
+            <forward name="YJHTDQ" path="/hrinfo/warning/warningforcontractextend_viewport.jsp" />
+            <forward name="YJLTX" path="/hrinfo/warning/warningforretire_viewport.jsp" />
+            <forward name="YJCFDQ" path="/component/warning/warningforpunish/warningforpunish_viewport.jsp" />
+        </action>						
+        
+        <action path="/listBizWarningInfo"
+				scope="request"
+				type="com.yh.hr.info.warning.web.action.BizWarningHomePageAction"
+				parameter="method">
+			<description>预警列表</description>
+		</action>
+		
+		<action path="/getBizWarningInfo"
+				scope="request"
+				type="com.yh.hr.info.warning.web.action.BizWarningHomePageAction"
+				parameter="method">
+			<description>查询具体的预警列表</description>
+		</action>
+		<action path="/unitHomePage" 
+                parameter="method" 
+                type="com.yh.hr.info.warning.web.action.BizWarningHomePageAction"
+                validate="false">
+            <forward name="success" path="/component/warning/biz_warning_homepage.jsp" />
+        </action>
+        
+		<!-- 预警树  end -->	
+		
+		<!-- 聘任制试用期到期预警修改 -->
+		
+		<!-- 合同到期预警导出 -->
+		<action path="/exportWarningList"
+        scope="request"
+        type="com.yh.hr.info.warning.web.action.BizWarningHomePageAction"
+        parameter="method">
+      <description>离退休预警删除</description>
+    </action>
+	</action-mappings>
+</struts-config>	

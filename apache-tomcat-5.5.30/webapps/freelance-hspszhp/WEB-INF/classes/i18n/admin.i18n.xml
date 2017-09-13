@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<i18n>
+	<entry key="errors.service.common">
+		<zh_CN>系统异常。请联系系统维护人员</zh_CN>
+	</entry>
+	<entry key="errors.authority.no">
+		<zh_CN>无此操作权限</zh_CN>
+	</entry>
+	
+	<!-- 登录异常提示 -->
+	<entry key="errors.login">
+		<zh_CN>用户名、密码不正确! 请重新输入！</zh_CN>
+	</entry>
+	<entry key="errors.userIDnull">
+		<zh_CN>此用户ID不存在!</zh_CN>
+	</entry>
+	<entry key="errorpage.page.name">
+		<zh_CN>系统异常</zh_CN>
+	</entry>
+	<entry key="errorpage.error.detail">
+		<zh_CN>详细信息</zh_CN>
+	</entry>
+	<entry key="errorpage.exception.info">
+		<zh_CN>异常信息</zh_CN>
+	</entry>
+	<entry key="user.menu.none">
+		<zh_CN>用户无本系统操作权限</zh_CN>
+	</entry>
+	<entry key="errors.license.invalid">
+		<zh_CN>license已到期，请联系管理员！</zh_CN>
+	</entry>
+	<!--========= oracle error message =================-->
+	<entry key="error.dao.common">
+		<zh_CN>数据库读写失败</zh_CN>
+	</entry>
+	<entry key="ORA-00001">
+		<zh_CN>数据重复,请重新录入</zh_CN>
+	</entry>
+	<entry key="ORA-00018">
+		<zh_CN>数据库连接均在使用中,请稍后再试</zh_CN>
+	</entry>
+	<entry key="ORA-00022">
+		<zh_CN>当前数据库会话已过期</zh_CN>
+	</entry>
+	<entry key="ORA-01688">
+		<zh_CN>无法扩展数据空间,请联系系统维护人员</zh_CN>
+	</entry>
+	<entry key="ORA-02291">
+		<zh_CN>无法找到父键</zh_CN>
+	</entry>
+	<entry key="ORA-02292">
+		<zh_CN>发现子记录,不能删除</zh_CN>
+	</entry>
+	<entry key="ORA-12547">
+		<zh_CN>数据库连接中断,请联系系统维护人员</zh_CN>
+	</entry>
+	<entry key="ORA-01401">
+		<zh_CN>插入值超过允许的最大长度</zh_CN>
+	</entry>
+	<entry key="ORA-01407">
+		<zh_CN>更新失败（企图将一个非空要求的字段更新为空值）</zh_CN>
+	</entry>
+	<entry key="ORA-12899">
+		<zh_CN>数据值长度超长</zh_CN>
+	</entry>
+
+	<!--========= struts base validation =================-->
+	<entry key="errors.header">
+		<zh_CN>&lt;font color=red&gt;异常提示:&lt;/font&gt;</zh_CN>
+	</entry>
+	<entry key="errors.authority.counddown">
+		<zh_CN>秒后自动返回</zh_CN>
+	</entry>
+	<entry key="errors.required">
+		<zh_CN>{0} 必须输入.</zh_CN>
+	</entry>
+	<entry key="errors.minlength">
+		<zh_CN>{0} 不能少于 {1} 个字符.</zh_CN>
+	</entry>
+	<entry key="errors.maxlength">
+		<zh_CN>{0} 不能多于 {1} 个字符.</zh_CN>
+	</entry>
+	<entry key="errors.szghrsmaxlength">
+		<zh_CN>{0} 不能多于 {1} 个字符(一个汉字占2个字符).</zh_CN>
+	</entry>
+	<entry key="errors.invalid">
+		<zh_CN>{0} 无效.</zh_CN>
+	</entry>
+	<entry key="errors.date.invalid">
+		<zh_CN>{0} 格式无效.应为&lt;YYYY-MM-DD HH:MM:SS&gt;</zh_CN>
+	</entry>
+	<entry key="errors.byte">
+		<zh_CN>{0} 必须为byte类型.</zh_CN>
+	</entry>
+	<entry key="errors.short">
+		<zh_CN>{0} 必须为短整数类型.</zh_CN>
+	</entry>
+	<entry key="errors.integer">
+		<zh_CN>{0} 必须为整数类型.</zh_CN>
+	</entry>
+	<entry key="errors.long">
+		<zh_CN>{0} 必须为长整数类型.</zh_CN>
+	</entry>
+	<entry key="errors.float">
+		<zh_CN>{0} 必须为浮点数字类型。可以有小数点.</zh_CN>
+	</entry>
+	<entry key="errors.double">
+		<zh_CN>{0} 必须为浮点数字类型。可以有小数点.</zh_CN>
+	</entry>
+	<entry key="errors.date">
+		<zh_CN>{0} 不是合法的日期.</zh_CN>
+	</entry>
+	<entry key="errors.range">
+		<zh_CN>{0} 必须介于 {1} 和 {2} 之间.</zh_CN>
+	</entry>
+	<entry key="errors.creditcard">
+		<zh_CN>{0} 是无效的信用卡号码.</zh_CN>
+	</entry>
+	<entry key="errors.email">
+		<zh_CN>{0} 是无效的Email地址.</zh_CN>
+	</entry>
+	<entry key="errors.towdatefields">
+		<zh_CN>{0} 必须早于或等于 {1} .</zh_CN>
+	</entry>
+	<entry key="errors.towfields">
+		<zh_CN>{0} 必须大于 {1} .</zh_CN>
+	</entry>
+
+</i18n>

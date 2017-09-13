@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+   	 <!--开始 ok-->
+     <bean id="beginNode" class="com.yh.hr.worktop.callback.TaskStartNode"/>
+      <!--审核同意 -->
+     <bean id="checkAgreeNode" class="com.yh.hr.worktop.callback.TaskCheckAgreeNode"/>
+     <!--审核不同意 -->
+     <bean id="checkDisagreeNode" class="com.yh.hr.worktop.callback.TaskCheckDisAgreeNode"/>
+	 <!--结束 end-->
+     <bean id="endNode" class="com.yh.hr.worktop.callback.TaskEndNode"/>
+</beans>

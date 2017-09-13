@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	</form-beans>
+	<action-mappings>
+
+		<action path="/goBizUploadPhoto"
+			type="com.yh.hr.info.biz.bizuploadphoto.web.action.BizUploadPhotoAction"
+			scope="request"
+			parameter="method">
+			<description>跳转到文件上传页面</description>
+			<forward name="success" path="/hrinfo/bizUploadPhoto/biz_person_upload.jsp" />
+		</action>
+		<action path="/bizUploadPhoto"
+			type="com.yh.hr.info.biz.bizuploadphoto.web.action.BizUploadPhotoAction"
+			scope="request"
+			parameter="method">
+			<description>上传文件</description>
+		</action>
+		<action path="/listBizUploadPhoto"
+			type="com.yh.hr.info.biz.bizuploadphoto.web.action.BizUploadPhotoAction"
+			scope="request"
+			parameter="method">
+			<description>查询文件列表</description>
+		</action>
+		
+		<action path="/deleteBizUploadPhoto"
+			type="com.yh.hr.info.biz.bizuploadphoto.web.action.BizUploadPhotoAction"
+			scope="request"
+			parameter="method">
+			<description>删除文件</description>
+		</action>
+		
+		<action path="/downloadBizUploadPhoto"
+			type="com.yh.hr.info.biz.bizuploadphoto.web.action.BizUploadPhotoAction"
+			scope="request"
+			parameter="method">
+			<description>下载文件</description>
+		</action>
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<!-- message-default resource -->
+	<message-resources parameter="resources" null="false" />
+	<message-resources parameter="baseResources" key="base" />
+
+	<message-resources
+		parameter="com.njusoft.syschroFlow.struts.ApplicationResources"
+		key="flow" />
+
+	<!-- validation plugIn -->
+	 <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="stopOnFirstError" value="true" />
+		<set-property property="pathnames"
+			value="/WEB-INF/core/validator-rules.xml"/>
+	</plug-in>
+
+</struts-config>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+          
+<struts-config>
+	<action-mappings>
+		<action path="/goTocheckPersonDic"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.VerPersonDataAction"
+				parameter="method">
+			<description>弹出字典检查</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/person-import-ver.jsp"/>
+		</action>
+		
+		<action path="/checkPersonDic"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.VerPersonDataAction"
+				parameter="method">
+			<description>字典检查</description>
+		</action>
+		<action path="/checkDicDataNumBefore"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.VerPersonDataAction"
+				parameter="method">
+			<description>校验前置检查异常数据</description>
+		</action>
+		<action path="/checkDicDataNum"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.VerPersonDataAction"
+				parameter="method">
+			<description>校核检查异常数据</description>
+		</action>
+		<action path="/countExportPerson"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.VerPersonDataAction"
+				parameter="method">
+			<description>转库数据</description>
+		</action>
+		
+	</action-mappings>
+</struts-config>	

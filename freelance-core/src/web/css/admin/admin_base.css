@@ -1,0 +1,710 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #f0f5fb;
+}
+
+body {
+    min-width: 1250px;
+    overflow: auto;
+    width: 100%;
+}
+
+body, input, select, button, textarea {
+    font: normal 100% 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+
+button, input, img {
+    border: 0;
+    outline: none;
+    background: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul, li {
+    list-style: none;
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../../img/DetailPages/icon_select.png") no-repeat 98% center transparent
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+
+
+/*锟斤拷图锟斤拷锟斤拷*/
+
+.sitemap {
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    background: #fff;
+    width: 100%;
+}
+
+.sitemap ul li {
+    display: inline;
+    font-size: 14px;
+}
+
+.sitemap ul li a {
+    color: #0071b9;
+}
+.go_back {
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    background-color: #0195ff;
+    color: #fff;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.go_back img{
+	margin-right: 7px;
+    margin-top: -3px;
+}
+.sitemap .go_back a{
+    color: #fff;
+}
+.sitemap .go_back:hover {
+    text-decoration: none;
+    background-color: #2E8ADF;
+}
+
+.left_nav {
+    float: left;
+    width: 350px;
+    background-color: #fff;
+    height:100%;
+}
+
+/* .right_content {
+    background-color: #fff;
+    margin-left: 370px; 
+    margin-right: 20px;
+} */
+.right_content_sys {
+    background-color: #fff;
+    margin-left: 370px; 
+    margin-right: 20px;
+}
+.left_nav dt {
+    padding-left: 36px;
+    padding-right: 10px;
+    color: #585858;
+    font-size: 16px;
+    position: relative;
+    line-height: 50px;
+    cursor: pointer;
+    border-bottom: 1px dashed #b7b7b7;
+}
+
+.left_nav dd {
+    background-color: #66aad5;
+    padding-left: 50px;
+    line-height: 36px;
+}
+
+.left_nav dd a {
+    color: #fff;
+    font-size: 14px;
+}
+
+/*锟窖帮拷锟斤拷锟窖★拷羁�/
+.nav_tab {
+    height: 50px;
+    line-height: 32px;
+    color: #0195ff;
+    font-size: 14px;
+    border-bottom: 2px solid #0195ff;
+}
+
+.nav_tab li {
+    display: inline;
+    padding: 16px 30px;
+    position: relative;
+    top: 9px;
+}
+
+#nav_tab .nav_tab_li{
+	float: right;
+    background: #0195FF;
+    color: #fff;
+    padding: 0px 16px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+#nav_tab .nav_tab_li:hover{
+	background-color: #2E8ADF;
+}
+.nav_tab li a {
+    color: #0195ff;
+}
+.nav_tab li{font-size:16px;}
+.nav_tab_checked {
+    background-color: #0195ff;
+}
+
+.nav_tab li.nav_tab_checked a {
+    color: #fff;
+}
+
+/*锟斤拷询锟斤拷锟斤拷*/
+.search {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 20px;
+    /*overflow: hidden;*/
+}
+
+.search-horizontal {
+    float: left;
+    width: 32%;
+    text-align: right;
+    margin-right:1%;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+}
+/*鍏ㄥ睆鏃舵瘡涓煡璇㈡爮鍗犳瘮鍑忓皬*/
+.search-horizontal-small .search-horizontal{
+    width: 26%;
+}
+.search .btn_search{
+    float: left;
+}
+.search-horizontal-small .search-horizontal.search-horizontal-double{
+    width: 52%;
+}
+/*鏄惁鍚笅璁鹃�鎷�/
+.search-horizontal.search-horizontal-double{
+    width: 64%;
+}
+.search-horizontal.search-horizontal-double dt{
+    width: 18%;
+}
+.search-horizontal.search-horizontal-double input[type=text],.search-horizontal.search-horizontal-double select{
+    width: 32%;
+    float: left;
+}
+.search-horizontal input[type=checkbox]{
+    width: 22px;
+    height: 16px;
+    margin-left: 10px;
+}
+/*鏌ヨ鏉′欢涓崟閫夋寜閽牱寮�/
+.search-horizontal div{float: left;line-height: 26px;}
+.search-horizontal input[type=radio]{width: 22px;height: 16px;margin-left: 16px;}
+/*鍗曚綅鍙緭鍏ュ彲涓嬫媺鏍峰紡*/
+.search-horizontal.search-horizontal-double .input_wrap_model_min{
+    width: 32%;
+}
+.search-horizontal .input_wrap_model_min{
+    width: 64%;
+}
+.search-horizontal .input_wrap_model_min input[type=text]{
+    width: 100%;
+}
+
+.search-horizontal button{
+    float: left;
+}
+.search-horizontal dt {
+    float: left;
+    width: 36%;
+    min-width: 50px;
+    clear: left;
+    text-align: right;
+    font-size: 14px;
+    color: #333;
+    height: 26px;
+}
+.search-horizontal dd{
+    height: 26px;
+}
+.search-horizontal input {
+    width: 64%;
+    height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.search-horizontal select {
+    width: 64%;
+    height: 26px;
+    line-height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    padding-right: 20px;
+    border: 1px solid #ddd;
+}
+.btn_search {
+    width: 96px;
+    height: 30px;
+    background-color: #e7f8ff;
+    border: 1px solid #0195ff;
+    color: #0195ff;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.btn_cancel {
+    color: #666;
+    font-size: 16px;
+    height: 30px;
+
+}
+
+.btn_cancel:hover {
+    color: #e20000;
+}
+
+.btn_search:hover {
+    background-color: #0084e2;
+    color: #fff;
+}
+
+/*锟斤拷锟斤拷锟斤拷钮*/
+.handel {
+    width: 100%;
+    height: 56px;
+    margin-right: 20px;
+    background-color: #f2f2f2;
+}
+
+.handel button {
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    margin: 15px 10px;
+    height: 26px;
+    padding-left: 22px;
+    padding-right: 10px;
+    line-height: 26px;
+}
+
+.btn_add {
+    background: url("../../img/messageCheck/icon_add.png") no-repeat 8% #00ab3c;
+}
+
+.btn_add:hover {
+    background-color: #00852f;
+}
+
+.btn_delete {
+    background: url("../../img/messageCheck/icon_delete.png") no-repeat 8% #e20000;
+}
+
+.btn_delete:hover {
+    background-color: #bf0000;
+}
+.btn_setting {
+	float: right !important;
+    margin-right: 0 !important;
+    background: url("../images/common/set.png") no-repeat 8% #00ab3c;
+}
+/*鏌ョ湅銆佸垹闄ゃ�鏂板鎸夐挳鍒楄〃-start*/
+.btn_check{
+    background: url("../img/messageCheck/icon_check.png") no-repeat 8% #0084e2;
+}
+.btn_check:hover{
+    background-color: #0064ac;
+}
+
+
+.handle_list{
+    float: left;
+    height: 56px;
+}
+.handle_list .btn_list{
+    font-size: 14px;
+    color: #fff;
+    margin: 15px 10px;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 22px;
+    padding-right: 25px;
+    border: none;
+    float: left;
+    position: relative;
+}
+.handle_list .btn_list ul{
+    display: none;
+}
+.handle_list .btn_list:hover ul{
+    display: block;
+}
+
+.btn_list img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn_list ul{
+    position: absolute;
+    left: 0;
+    margin-top: -1px;
+    z-index: 999;
+}
+.btn_list ul li{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    white-space:nowrap;
+    text-align: left;
+    cursor: pointer;
+}
+.btn_list ul li a{
+    color: #fff;
+}
+.btn_check_list li{
+    background: #0084e2;
+    border-bottom: 1px solid #5194c4;
+}
+.btn_delete_list li{
+    background: #e20000;
+    border-bottom: 1px solid #c45151;
+}
+.btn_add_list li{
+    background: #00ab3c;
+    border-bottom: 1px solid #51a86f;
+}
+
+.btn_delete_list li:hover,.btn_delete_list li:visited{
+    background: #bf0000;
+}
+.btn_add_list li:hover,.btn_add_list li:visited{
+    background: #00832e;
+}
+.btn_check_list li:hover,.btn_check_list li:visited{
+    background-color: #0064ac;
+}
+
+.btn_check_list .btn_salary_pan{
+    background: url("../img/messageCheck/icon_03.png") no-repeat 2% #0084e2;
+    padding-left:22px;
+}
+
+/*鏌ョ湅銆佸垹闄ゃ�鏂板鎸夐挳鍒楄〃-end*/
+
+
+
+/*锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷*/
+.handel_float {
+    width: 560px;
+    height: 50px;
+    border: 1px solid #0084e2;
+    position: relative;
+    background-color: #FFF;
+    display: none;
+    margin-left: 20px;
+}
+
+.handel_float em {
+    display: block;
+    border-width: 10px;
+    position: absolute;
+    left: 50px;
+    top: -20px;
+    border-style: dashed dashed dashed dashed;
+    border-color: transparent transparent #0084e2 transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.handel_float span {
+    display: block;
+    border-width: 10px;
+    position: absolute;
+    top: -18px;
+    left: 50px;
+    border-style: dashed dashed dashed dashed;
+    border-color: transparent transparent #fff transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.handel_float button {
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    margin: 15px 10px;
+    height: 26px;
+    padding-left: 20px;
+    padding-right: 10px;
+    line-height: 26px;
+}
+.handel_float_button {
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    margin: 15px 10px;
+    height: 26px;
+    padding-left: 20px;
+    padding-right: 10px;
+    line-height: 26px;
+}
+.btn_print {
+    background: url("../img/messageCheck/icon_print.png") no-repeat 2% #0084e2;
+}
+.btn_excel {
+    background: url("../img/handel_icon/h_16.png") no-repeat 2% #0084e2;
+}
+.btn_ok {
+    background: url("../../img/messageCheck/icon_ok.png") no-repeat 2% #0084e2;
+}
+.btn_reset{
+	background: url("../../img/messageCheck/passwordreset.png") no-repeat 2% #0084e2;
+}
+.btn_reorder {
+    background: url("../img/messageCheck/icon_reorder.png") no-repeat 2% #0084e2;
+}
+.btn_agree {
+    background: url("../img/handel_icon/h_11.png") no-repeat 2% #00ab3c;
+}
+
+.btn_disagree {
+    background: url("../img/handel_icon/h_12.png") no-repeat 2% #0084e2;
+}
+.btn_end {
+    background: url("../img/handel_icon/h_12.png") no-repeat 2% #0084e2;
+}
+.btn_back {
+    background: url("../img/handel_icon/h_08.png") no-repeat 2% #0084e2;
+}
+.btn_upload {
+    background: url("../img/handel_icon/h_06.png") no-repeat 2% #0084e2;
+}
+.btn_calculate {
+    background: url("../img/handel_icon/h_03.png") no-repeat 2% #00ab3c;
+}
+.btn_update {
+    background: url("../img/messageCheck/icon_03.png") no-repeat 2% #0084e2;
+}
+
+
+.btn_submit {
+    background: url("../img/handel_icon/h_05.png") no-repeat 2% #00ab3c;
+}
+.btn_agree:hover,.btn_submit:hover,.btn_calculate:hover {
+    background-color: #00852f;
+}
+.btn_print:hover, .btn_ok:hover, .btn_reorder:hover,.btn_excel:hover,.btn_disagree:hover,.btn_back:hover,.btn_update:hover,.btn_upload:hover {
+    background-color: #0071c1;
+}
+
+/*锟叫憋拷锟斤拷锟斤拷*/
+.main_list {
+    padding-bottom: 20px;
+}
+
+.table_edit_bg2 {
+    display: table;
+    vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-all;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 98%;
+    cellspacing: 1px;
+    cellpadding: 3px;
+    margin: 0 auto;
+}
+
+.td_title2 {
+    border-collapse: separate;
+    empty-cells: show;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.td_content2 {
+    text-align: center;
+    font-size: 14px;
+    color: #7c7c7c;
+    word-break: break-all;
+    border-collapse: separate;
+    background-color: #ffffff;
+    padding-left: 2px;
+    line-height: 50px;
+    height: 50px;
+}
+
+.table_edit_bg2 tr:nth-child(even) {
+    background: #f5f9fc;
+}
+
+.td_checked {
+    background-color: #e5f2fc;
+    color: #004470;
+    font-weight: bold;
+}
+
+.table_edit_bg2 tr:hover {
+    background-color: #f3f6fd;
+    color: #333;
+
+}
+
+/*页锟斤拷*/
+.page {
+    width: 98%;
+    height: 48px;
+    background-color: #f2f2f2;
+    margin: 10px auto;
+    font-size: 12px;
+    line-height: 48px;
+}
+
+.page ul li {
+    display: inline;
+    margin: 5px;
+
+}
+
+.page ul li a {
+    color: #333;
+}
+
+/*锟斤拷锟斤拷一页锟斤拷式*/
+.page ul li .page_disabled {
+    color: #999;
+    cursor: default;
+}
+
+.page ul li .page_disabled:hover {
+    color: #999;
+    cursor: default;
+}
+
+.page ul li:hover a {
+    color: #2555a1;
+}
+
+.input_page {
+    width: 34px;
+    padding: 2px 4px;
+    background-color: #fff;
+}
+
+.main_bg {
+    background-color: #f0f5fb;
+}
+
+/*系统锟斤拷全页锟斤拷锟斤拷式*/
+.link:hover {
+    color: #0071b9;
+    text-decoration: underline;
+}
+
+.link img {
+    margin-right: 10px;
+}
+
+.user_infor li {
+    float: left;
+    min-width: 60px;
+    font-size: 14px;
+    line-height: 48px;
+    margin-left: 20px;
+}
+
+.user_front {
+    color: #7c7c7c;
+}
+
+.user_latter {
+    color: #333;
+}
+
+.btn_add_post {
+    width: 280px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: #00ab3c;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn_add_post:hover {
+    background-color: #00852f;
+}
+
+.table_noscroll {
+    width: 98%;
+    margin: 0 auto;
+}
+
+
+/*宀椾綅淇℃伅*/
+
+.li_front{
+    float: left;
+    width: 90px;
+    clear: left;
+    text-align: right;
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+    font-size: 14px;
+    margin-left: 20px;
+    color: #7c7c7c;
+}
+.li_latter{
+    font-size: 14px;
+    margin-left: 118px;
+    margin-right: 7px;
+    font-size: 14px;
+    color: #333;
+    padding-right: 8px;
+}
+.user_ul{padding-top: 20px;padding-bottom: 20px;}
+.btn_add_margin{margin-top: 20px;}
+.user_ul:nth-child(3n+1){background-color:#f5f9fc;}
+/*.user_ul:nth-child(3n+1){background-color:#e7f8ff;}*/
+.li_img{float: right;margin-top:-20px;margin-right: 5px;}
+.icon_revise{margin-right: -16px;}
+
+
+/*琛ㄦ牸缁欏浐瀹氶珮搴�/
+.gridDiv{min-height: 560px!important;}
+.btn_download{
+    background:#0084e2;
+    background: url("../img/handel_icon/handle_28.png") no-repeat 5% #0084e2;
+}
+

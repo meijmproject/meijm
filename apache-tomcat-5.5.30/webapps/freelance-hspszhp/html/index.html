@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+    <title>衢州人事管理系统</title>
+    <link media="screen" rel="stylesheet" href="../css/index.css"/>
+    <script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../js/uijs/index.js"></script>
+</head>
+<body class="index_backg">
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a href="#">系统管理</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <ul  class="rt_arrow_down">
+                            <li>
+                                <a href=""><img src="../img/index/change_password.png"  class="change_password" title="修改密码" alt=""/></a>
+                            </li>
+                            <li> <a href=""><img src="../img/index/help_center.png"  class="change_password"  title="帮助中心" alt=""/></a></li>
+                            <h3 class="text_line"></h3><!--清除浮动-->
+                        </ul>
+                    </div>
+                    <div class="arrow_down">
+                        <img src="../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                        <div class="hide_content">
+                            <ul>
+                                <li>
+                                    <a href="">帮助中心</a>
+                                </li>
+                                <li>
+                                    <a href="">修改密码</a>
+                                </li>
+                                <li>
+                                    <a href="">xxxxxx</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+<!--主体内容-->
+<div class="bigBox">
+    <div class="one">
+        <div class="Left-container">
+            <div class="Left-content">
+                <div class="Left-content-Box">
+                    <!--<div class="DIVuserIoc"><img src="../img/index/icon_user.png" id="userIoc" alt=""/></div>-->
+                    <div class="DIVWelcome">
+                        <div class="DIV-W1">
+                            <p class="DIVname"><span>张三，</span>欢迎您！</p>
+                            <p class="DIVregister">衢州人事<span> : xxx单位</span></p>
+                            <p class="DIVregister">上次登录时间：<span>2016-05-18&nbsp;11:00</span></p>
+                            <p class="DIVregister2">上次登录IP：<span>112:168.1.103</span></p>
+                        </div>
+                    </div>
+                    <h3 class="clearFloat"></h3>
+                </div>
+            </div>
+            <div class="currentSystem">
+                <div class="currentSystem-box">
+                    <div class="DIVSystem1">
+                        <p class="p1">当前系统<span> : 政府人事管理系统</span></p>
+                        <p class="p2">当前岗位 : <span></span></p>
+                    </div>
+                    <div class="DIVSystem2">
+                        <select class="post_toggle">
+                            <option value="" >岗位切换</option>
+                            <option></option>
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="clearFloat"></h3>
+            </div>
+            <div class=" UesrToDoTasks">
+                <div class="UesrToDoTasks-con">
+                    <div class="ToDoTasksitem">
+                        <img src="../img/index/icon_todolist.png" id="day" alt=""/>
+                        <p class="ToDoTasksitem-con">待办事项</p>
+                    </div>
+                    <div class="ToDoTasksitem2">
+                        <p>129</p>
+                    </div>
+                    <h3 class="clearFloat"></h3>
+                </div>
+            </div>
+            <div class="Quickoffice">
+                <div class="UesrToDoTasks-con">
+                    <div class="ToDoTasksitem2">
+                        <p><img src="../img/index/icon_menu.png" class="write" alt=""/></p>
+                        <p id="system_shezhi">定制菜单</p>
+                    </div>
+                    <div class="ToDoTasksitem3">
+                        <p><img src="../img/index/icon_set.png" class="write" alt=""/></p>
+                        <p id="system_shezhi">系统设置</p>
+                    </div>
+                    <h3 class="clearFloat"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two">
+        <div class="Righttop-Content">
+            <!--代办事项下拉，当待办内容较多时，点击可以展开-->
+            <div class="index_backlog_content">
+                <div class="index_backlog_container">
+                    <!--待办事项-->
+                    <div class="ToDo-Tasks">
+                        <div class="backlogcon">
+                            <img src="../img/index/icon_circle_todo.png"  class="do_matter_img"/>
+                            <span class="do_matter">待办事项</span>
+                        </div>
+                    </div>
+                    <!--按事项 按环节-->
+                    <div class="ToDo-Tasks-items">
+                        <!--按事项-->
+                        <div class="Left-items1">
+                            <div class="panelBodyTop">
+                                <div class="panelBodyTop_item">
+                                    <img src="../img/index/icon_item.png" class="do_matter_img"/>
+                                    <span class="do_matter_size">按事项</span>
+                                </div>
+                            </div>
+                            <!--表格-->
+                            <table class="table_customers">
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_01.png" class="do_matter_jg" alt=""/> <span class="do_matter_jg_h do_matter_jg_h2">（公）从本市市级其它机关（参公单位）转任审批</span> <span class="do_matter_jg_color">[13]</span></td>
+                                    <td class="HOVER"><img src="../img/index/link.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">事业编人员在省属事业单位间调动</span> <span class="do_matter_jg_color">[1]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_02.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">岗位管理</span> <span class="do_matter_jg_color">[10]</span></td>
+                                    <td class="HOVER"><img src="../img/index/gangweigli.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">岗位聘用管理</span> <span class="do_matter_jg_color">[29]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_03.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">事业单位职工人数计划管理 </span> <span class="do_matter_jg_color">[29]</span></td>
+                                    <td class="HOVER"><img src="../img/index/jiangli.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">奖励管理</span> <span class="do_matter_jg_color">[1]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_04.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">自主公开招聘业务</span> <span class="do_matter_jg_color">[3]</span></td>
+                                    <td class="HOVER"><img src="../img/index/fa.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">惩处业务</span> <span class="do_matter_jg_color">[20]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_05.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2"> 统一公开招聘业务</span> <span class="do_matter_jg_color">[3]</span></td>
+                                    <td class="HOVER"><img src="../img/index/kaohei.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">年度考核业务</span> <span class="do_matter_jg_color">[2]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_06.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">公开招聘增员业务</span> <span class="do_matter_jg_color">[10]</span></td>
+                                    <td class="HOVER"><img src="../img/index/jxiao.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">年度考核变更业务 </span> <span class="do_matter_jg_color">[1]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_07.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">编外人员的公开招聘增员业务</span> <span class="do_matter_jg_color">[1]</span></td>
+                                    <td class="HOVER"><img src="../img/index/icon_item_14.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">减员业务 </span> <span class="do_matter_jg_color">[5]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_07.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">编外人员的公开招聘增员业务</span> <span class="do_matter_jg_color">[1]</span></td>
+                                    <td class="HOVER"><img src="../img/index/icon_item_14.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">减员业务 </span> <span class="do_matter_jg_color">[5]</span></td>
+                                </tr>
+                                <!--下拉新增内容-->
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_01.png" class="do_matter_jg" alt=""/> <span class="do_matter_jg_h do_matter_jg_h2">机构管理</span> <span class="do_matter_jg_color">[13]</span></td>
+                                    <td class="HOVER"><img src="../img/index/link.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">事业编人员在省属事业单位间调动</span> <span class="do_matter_jg_color">[1]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_02.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">岗位管理</span> <span class="do_matter_jg_color">[10]</span></td>
+                                    <td class="HOVER"><img src="../img/index/gangweigli.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">岗位聘用管理</span> <span class="do_matter_jg_color">[29]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_03.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">事业单位职工人数计划管理 </span> <span class="do_matter_jg_color">[29]</span></td>
+                                    <td class="HOVER"><img src="../img/index/jiangli.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">奖励管理</span> <span class="do_matter_jg_color">[1]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_04.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">自主公开招聘业务</span> <span class="do_matter_jg_color">[3]</span></td>
+                                    <td class="HOVER"><img src="../img/index/fa.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">惩处业务</span> <span class="do_matter_jg_color">[20]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_05.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2"> 统一公开招聘业务</span> <span class="do_matter_jg_color">[3]</span></td>
+                                    <td class="HOVER"><img src="../img/index/kaohei.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">年度考核业务</span> <span class="do_matter_jg_color">[2]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_06.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">公开招聘增员业务</span> <span class="do_matter_jg_color">[10]</span></td>
+                                    <td class="HOVER"><img src="../img/index/jxiao.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">年度考核变更业务 </span> <span class="do_matter_jg_color">[1]</span></td>
+                                </tr>
+                                <tr class="tabletr1">
+                                    <td class="HOVER"><img src="../img/index/icon_item_07.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">编外人员的公开招聘增员业务</span> <span class="do_matter_jg_color">[1]</span></td>
+                                    <td class="HOVER"><img src="../img/index/icon_item_14.png" class="do_matter_jg" alt=""/><span class="do_matter_jg_h do_matter_jg_h2">减员业务 </span> <span class="do_matter_jg_color">[5]</span></td>
+                                </tr>
+                            </table>
+                            <!--表格结束-->
+                        </div>
+                        <!--按事项结束-->
+                        <div class="Right-items2">
+                            <div class="Right-items2-father">
+                                <div>
+                                <div class="panelBodyTop2">
+                                    <div class="panelBodyTop2_link">
+                                            <img src="../img/index/icon_link.png" alt="" class="do_matter_img"/>
+                                            <span class="do_matter_size">按环节</span>
+                                    </div>
+                                </div>
+                                <div class="tache_content">
+                                        <div class="container">
+                                            <ul class="panelRightmain">
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务申报</a>
+                                                    <span class="panePico_color">(20)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">单位审核</a>
+                                                    <span class="panePico_color">(30)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">信息补录</a>
+                                                    <span class="panePico_color">(25)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务受理</a>
+                                                    <span class="panePico_color">(50)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务复核</a>
+                                                    <span class="panePico_color">(2)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务审批</a>
+                                                    <span class="panePico_color">(50)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">工资核算</a>
+                                                    <span class="panePico_color">(99+)</span>
+                                                </li>
+                                               <!--点击后展开-->
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务申报</a>
+                                                    <span class="panePico_color">(20)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">单位审核</a>
+                                                    <span class="panePico_color">(30)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">信息补录</a>
+                                                    <span class="panePico_color">(25)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务受理</a>
+                                                    <span class="panePico_color">(50)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务复核</a>
+                                                    <span class="panePico_color">(2)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">业务审批</a>
+                                                    <span class="panePico_color">(50)</span>
+                                                </li>
+                                                <li>
+                                                    <img src="../img/index/dian.png"  class="panePico"alt=""/>
+                                                    <a href="#">工资核算</a>
+                                                    <span class="panePico_color">(99+)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                <!--点击展开更多结束-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--按事项 按环节结束-->
+                    <!--<img src="../img/index/I-48.png" alt=""/>-->
+                    <span class="index_backlog_morexian"></span>
+                    <div class="index_backlog_boxmore">
+                        <a href="">
+                        <span title="点击展开更多" class="index_backlog_moreimg"></span>
+                            <!---->
+                        </a>
+                    </div>
+                    <!--<span class="index_backlog_moreimg"></span>-->
+                </div>
+            </div>
+            <!--代办事项下拉，当待办内容较多时，点击可以展开结束-->
+            <div class="boxheight" ></div><!--中间高度-->
+            <!--主体下侧内容-->
+             <div class="conbottm">
+                 <div class="Left-items3">
+                     <div class="panelBodyTop">
+                         <div class="panelBodyTopitem">
+                             <img src="../img/index/icon_circle_notice.png" class="do_matter_img" alt=""/><span class="do_matter_size_tz">通知公告</span>
+                             <div class="evenMore">更多 <span class="evenMore_font">>></span> </div>
+                         </div>
+                     </div>
+                     <div class="table-content">
+                         <table id="table-customers">
+                             <tr>
+                                 <td class="table-todo">关于局信息中心上线人事系统的通知
+                                     <img src="../img/index/new.png" alt=""/>
+                                 </td>
+                                 <td class="colorHUI">行政科</td>
+                                 <td class="colorHUI">2016-07-10</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo">单位人事版本0.2发布内容
+                                     <img src="../img/index/new.png" alt=""/>
+                                 </td>
+                                 <td class="colorHUI">行政科</td>
+                                 <td class="colorHUI">2016-07-10</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo colorHUI">关于着装要求提醒</td>
+                                 <td class="colorHUI">行政科</td>
+                                 <td class="colorHUI">2天前</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo colorHUI">关于夏季高温补贴发放通知
+                                 </td>
+                                 <td class="colorHUI">财务科</td>
+                                 <td class="colorHUI">5天前</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo colorHUI">2016年三农问题会议报告
+                                 </td>
+                                 <td class="colorHUI">行政科</td>
+                                 <td class="colorHUI">2个月前</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo colorHUI tdnone">2016年端午节放假通知
+                                 </td>
+                                 <td class="colorHUI tdnone">行政科</td>
+                                 <td class="colorHUI tdnone">2个月前</td>
+                             </tr>
+                         </table>
+                         <div class="paging">
+                             <div class="pagingnum" style="float: left;margin:30px 10px 0 0;">
+                                 <span class="pagingspan1">2</span>
+                                 <span class="pagingspan2">/10</span>
+                             </div>
+                             <ul class="pagination">
+                                 <li><a href="#">«</a></li>
+                                 <li><a href="#">1</a></li>
+                                 <li><a class="active" href="#">2</a></li>
+                                 <li><a href="#">3</a></li>
+                                 <li><a href="#">4</a></li>
+                                 <li><a href="#">5</a></li>
+                                 <li><a href="#">»</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="Right-items4">
+                     <div class="panelBodyTop">
+                         <div class="panelBodyTopitem">
+                             <img src="../img/index/icon_circle_warning.png" class="do_matter_img" alt=""/><span class="do_matter_size_tz">预警（<span style="color: #dc201e">15</span>笔）</span>
+                             <div class="evenMore">更多 <span class="evenMore_font">>></span> </div>
+                         </div>
+                     </div>
+                     <div class="table-content">
+                         <table id="table-customers">
+                             <tr>
+                                 <td class="table-todo">休假到期预警
+                                 </td>
+                                 <td class="colorHUI" >
+                                     <img src="../img/index/icon_time_black.png" alt="" style="position: relative;top:3px;"/> <span>倒计时：</span>
+                                 </td>
+                                 <td class="colorRED">1天 10:00:30</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo">试用期到期转正预警
+                                 </td>
+                                 <td class="colorHUI">
+                                     <img src="../img/index/icon_time_black.png" alt="" style="position: relative;top:3px;"/> <span>倒计时：</span>
+                                 </td>
+                                 <td class="colorRED">2天 10:00:30</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo"> 处分到期预警
+                                 </td>
+                                 <td class="colorHUI">
+                                     <img src="../img/index/icon_time_black.png" alt="" style="position: relative;top:3px;"/> <span>倒计时：</span>
+                                 </td>
+                                 <td class="colorRED">10天 10:00:30</td>
+                             </tr>
+                             <tr>
+                                 <td class="table-todo">离退休预警
+                                 </td>
+                                 <td class="colorHUI">
+                                     <img src="../img/index/icon_time_black.png" alt="" style="position: relative;top:3px;"/> <span>倒计时：</span>
+                                 </td>
+                                 <td class="colorRED">1天 10:00:30</td>
+                             </tr>
+                         </table>
+                         <div class="paging_r">
+                             <div class="pagingnum_r" style="float: left;margin:37px 10px 0 0;">
+                                 <span class="pagingspan1">2</span>
+                                 <span class="pagingspan2">/10</span>
+                             </div>
+                             <ul class="pagination_r" style="margin-top: 30px;">
+                                 <li><a href="#">«</a></li>
+                                 <li><a href="#">1</a></li>
+                                 <li><a class="active" href="#">2</a></li>
+                                 <li><a href="#">3</a></li>
+                                 <li><a href="#">4</a></li>
+                                 <li><a href="#">5</a></li>
+                                 <li><a href="#">»</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+                 <div style="clear:both"></div><!--清除浮动-->
+             </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!--主体内容结束-->
+<div class="footer">
+    <div class="footer-conter">© 衢州市人力资源和社会保障局<a href="" style="margin-left: 20px;color:#0084e2">帮助中心</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,547 @@
+@charset "utf-8";
+
+/*基础按钮样式*/
+.btn-default{
+    padding: 6px 14px;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+/*类似查询区按钮样式*/
+.btn-search{
+    background-color: #1cc6a3;
+    color: #ffffff;
+}
+.btn-like-search{
+	background-color: #1cc6a3;
+    color: #ffffff;
+}
+.btn-search:hover{
+    background-color: #11b08f;
+}
+.btn-like-search:hover{
+    background-color: #11b08f;
+}
+.btn-search-icon{
+    background: url("../../images/components/hadle_btn/search-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-upload-icon{
+    background: url("../../images/components/hadle_btn/upload16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-export-icon{
+    background: url("../../images/components/hadle_btn/export16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-browse-icon{
+    background: url("../../images/components/hadle_btn/browse-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+    background-size: 15px;
+}
+.btn-delete-icon{
+    background: url("../../images/components/hadle_btn/delete16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-look-icon{
+    background: url("../../images/components/hadle_btn/look16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-modify-icon{
+    background: url("../../images/components/hadle_btn/modify16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-print-icon{
+    background: url("../../images/components/hadle_btn/print16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-save-icon{
+    background: url("../../images/components/hadle_btn/save16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-add-icon{
+    background: url("../../images/components/hadle_btn/add16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-declare-icon{
+    background: url("../../images/components/hadle_btn/declare16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-agree-icon{
+    background: url("../../images/components/hadle_btn/agree16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-termination-icon{
+    background: url("../../images/components/hadle_btn/termination16-white.png")no-repeat 12px #1cc6a3;
+    padding-left: 30px;
+}
+.btn-recall-icon{
+    background: url("../../images/components/hadle_btn/recall16-white.png")no-repeat 10px #1cc6a3;
+    padding-left: 30px;
+}
+
+/*带左边icon按钮添加样式*/
+.btn-left-icon{
+    padding-left: 32px;
+    background-position: 14px;
+    background-repeat: no-repeat;
+    border: 1px solid #ced0da;
+    color: #282828;
+    border-radius: 3px;
+}
+.btn-left-icon:hover{
+    background-color: #1cc6a3;
+    border: 1px solid #1cc6a3;
+    color: #fff;
+}
+/*单纯图标、划上去有背景色的按钮样式*/
+.btn-icon-default{
+    float: right;
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 2px;
+}
+/*.btn-icon-default:hover{*/
+    /*background-color: #eaeaea;*/
+    /*border-radius: 2px;*/
+/*}*/
+/*.btn-search-gray{*/
+    /*background-image: url("../../images/components/hadle_btn/search-white.png");*/
+/*}*/
+/*单纯图标操作:原本显示灰色按钮，划上去变红色按钮*/
+.btn-icon-only{
+    display: inline-block;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.btn-add-gray{
+    background-image: url("../../images/components/hadle_btn/add16-gray.png");
+}
+.btn-add-gray:hover{
+    background-image: url("../../images/components/hadle_btn/add16-red.png");
+}
+.btn-modify-gray{
+    background-image: url("../../images/components/hadle_btn/modify16-gray.png");
+}
+.btn-modify-gray:hover{
+    background-image: url("../../images/components/hadle_btn/modify16-red.png");
+}
+.btn-delete-gray{
+    background-image: url("../../images/components/hadle_btn/delete16-gray.png");
+}
+.btn-delete-gray:hover{
+    background-image: url("../../images/components/hadle_btn/delete16-red.png");
+}
+.btn-upload-gray{
+    background-image: url("../../images/components/hadle_btn/upload16-gray.png");
+}
+.btn-upload-gray:hover{
+    background-image: url("../../images/components/hadle_btn/upload16-red.png");
+}
+.btn-export-gray{
+    background-image: url("../../images/components/hadle_btn/export16-gray.png");
+}
+.btn-export-gray:hover{
+    background-image: url("../../images/components/hadle_btn/export16-red.png");
+}
+.btn-look-gray{
+    background-image: url("../../images/components/hadle_btn/look16-gray.png");
+}
+.btn-look-gray:hover{
+    background-image: url("../../images/components/hadle_btn/look16-red.png");
+}
+.btn-modify-gray{
+    background-image: url("../../images/components/hadle_btn/modify16-gray.png");
+}
+.btn-modify-gray:hover{
+    background-image: url("../../images/components/hadle_btn/modify16-red.png");
+}
+
+/*按钮icon:默认是绿色按钮*/
+.btn-add{
+    background-image: url("../../images/components/hadle_btn/add16-green.png");
+}
+.btn-add:hover{
+    background-image: url("../../images/components/hadle_btn/add16-white.png");
+}
+.btn-delete{
+    background-image: url("../../images/components/hadle_btn/delete.png");
+}
+.btn-delete:hover{
+    background-image: url("../../images/components/hadle_btn/delete16-white.png");
+}
+.btn-modify{
+    background-image: url("../../images/components/hadle_btn/modify.png");
+}
+.btn-modify:hover{
+    background-image: url("../../images/components/hadle_btn/modify16-white.png");
+}
+.btn-download{
+    background-image: url("../../images/components/hadle_btn/download.png");
+}
+.btn-download:hover{
+    background-image: url("../../images/components/hadle_btn/download-hover.png") ;
+}
+.btn-declare{
+    background-image: url("../../images/components/hadle_btn/declare16-green.png");
+}
+.btn-declare:hover{
+    background-image: url("../../images/components/hadle_btn/declare16-white.png");
+}
+.btn-look{
+    background-image: url("../../images/components/hadle_btn/look.png");
+}
+.btn-look:hover{
+    background-image: url("../../images/components/hadle_btn/look16-white.png");
+}
+.btn-print{
+    background-image: url("../../images/components/hadle_btn/print.png");
+}
+.btn-print:hover{
+    background-image: url("../../images/components/hadle_btn/print16-white.png");
+}
+.btn-export{
+    background-image: url("../../images/components/hadle_btn/export16-green.png");
+}
+.btn-export:hover{
+    background-image: url("../../images/components/hadle_btn/export16-white.png");
+}
+.btn-copy{
+    background-image: url("../../images/components/hadle_btn/copy.png");
+}
+.btn-copy:hover{
+    background-image: url("../../images/components/hadle_btn/copy-hover.png");
+}
+.btn-set{
+    background-image: url("../../images/components/hadle_btn/set.png");
+}
+.btn-set:hover{
+    background-image: url("../../images/components/hadle_btn/set-hover.png");
+}
+.btn-upload{
+    background-image: url("../../images/components/hadle_btn/upload16-green.png");
+}
+.btn-upload:hover{
+    background-image: url("../../images/components/hadle_btn/upload16-white.png");
+}
+.btn-save{
+    background-image: url("../../images/components/hadle_btn/save16-green.png");
+}
+.btn-save:hover{
+    background-image: url("../../images/components/hadle_btn/save16-white.png");
+}
+.btn-recall{
+    background-image: url("../../images/components/hadle_btn/recall16-green.png");
+}
+.btn-recall:hover{
+    background-image: url("../../images/components/hadle_btn/recall16-white.png");
+}
+.btn-agree{
+    background-image: url("../../images/components/hadle_btn/agree16-green.png");
+}
+.btn-agree:hover{
+    background-image: url("../../images/components/hadle_btn/agree16-white.png");
+}
+.btn-termination{
+    background-image: url("../../images/components/hadle_btn/termination16-green.png");
+}
+.btn-termination:hover{
+    background-image: url("../../images/components/hadle_btn/termination16-white.png");
+}
+
+
+/*下拉按钮区样式*/
+.btn-list{
+    float: left;
+    position: relative;
+}
+.btn-list>li{
+    float: left;
+    padding-right: 30px;
+    margin-right: 10px;
+    position: relative;
+}
+.btn-list-icon {
+    position: absolute;
+    top: 12px;
+    right: 4px;
+    width: 16px;
+    height: 10px;
+    background: url("../../images/components/hadle_btn/arrow-triangle.png") no-repeat center transparent;
+}
+.btn-list>li:hover{
+    background-color: #1cc6a3;
+    color: #fff;
+}
+.btn-list>li:hover .btn-list-icon{
+    background-image: url("../../images/components/hadle_btn/arrow-triangle-white.png");
+}
+.btn-list>li:hover .btn-list-ul{
+    display: block;
+}
+.btn-list-ul{
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    -webkit-box-shadow: 0px 2px 15px rgba(28, 198, 163, 0.3);
+    -moz-box-shadow: 0px 2px 15px rgba(28, 198, 163, 0.3);
+    box-shadow: 0px 2px 15px rgba(28, 198, 163, 0.3);
+    z-index: 99;
+}
+.btn-list-ul li a{
+    display: block;
+    height: 30px;
+    background: #fff;
+    padding: 0 10px;
+    line-height: 30px;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 13px;
+    color: #1cc6a3;
+    cursor: pointer;
+}
+.btn-list-ul li a:hover{
+    background-color: #e1f5e3;
+    color: #4bae4f;
+}
+
+/*操作按钮区样式*/
+.handle-btn-group{
+    padding-left: 20px;
+    background: #fff;
+}
+.handle-btn{
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 1px solid #e3e3e3;
+    position: relative;
+}
+.handle-btn button{
+    float: left;
+    margin-right: 10px;
+}
+.handle-btn .btn-set{
+    float: right;margin-right: 0;
+}
+
+/*信息设置区*/
+.btn-set-selected{
+    color: #ffffff;
+    background-image: url("../../images/components/hadle_btn/set-hover.png");
+    background-color: #1cc6a3;
+}
+.btn-set-selected+.mt-info-set{
+    display: block;
+}
+.mt-info-set{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: 900px;
+    -webkit-box-shadow: 0px 0px 15px #d4d7db;
+    -moz-box-shadow: 0px 0px 15px #d4d7db;
+    box-shadow: 0px 0px 15px #d4d7db;
+    background: #fff;
+    font-size: 14px;
+    z-index: 99;
+}
+.mt-info{
+    width: 49.9%;
+    float: left;
+}
+.mt-info:first-of-type{
+    border-right: 1px solid #d9dfe9;
+}
+.mt-info-title{
+    width: 140px;
+    margin: 10px auto;
+    color: #363f45;
+    border: 2px solid #f0f4fb;
+    text-align: center;
+    border-radius: 8px;
+    height: 38px;
+    line-height: 40px;
+    font-weight: bold;
+    position: relative;
+}
+.message-alert{
+    display: none;
+    position: absolute;
+    top: 48px;
+    right: -20px;
+    width: 140px;
+    height: 40px;
+    line-height: 36px;
+    background: url("../../images/components/hadle_btn/message-alert.png") no-repeat center transparent;
+    color: #ff0000;
+    font-size: 12px;
+    text-align: center;
+    z-index: 3;
+}
+.mt-info-search{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    border-bottom: 1px solid #d9dfe9;
+    background: url(../../images/components/hadle_btn/search.png) no-repeat 4% transparent;
+    display: block;
+    text-indent: 30px;
+    font-size: inherit;
+}
+.mt-infoset-ul{
+    width: 94%;
+    margin: 0 auto;
+    height: 235px;
+    border: 1px dashed #d9dfe9;
+    overflow-y: auto;
+}
+.mt-infoset-li{
+    height: 30px;
+    line-height: 30px;
+    border: 1px dashed #fff;
+    cursor: all-scroll;
+}
+.mt-infoset-li i{
+    display: block;
+    float: left;
+    margin-left: 6px;
+    margin-right: 8px;
+    width: 16px;
+    text-align: right;
+}
+.mt-infoset-li a{
+    display: inline-block;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    color: #363f45;
+}
+.mt-info-show .mt-infoset-li a{
+    max-width: calc(100% - 120px);
+}
+.mt-info-sort .mt-infoset-li a{
+    max-width: calc(100% - 150px);
+    cursor: all-scroll;
+}
+a.mt-infoset-lia{
+    color: #363f45;
+    padding: 0;
+    margin: 0;
+    padding-left: 22px;
+    background: url(../../images/components/hadle_btn/checkbox.png) no-repeat left 50% transparent;
+}
+a.mt-infoset-lia:hover{
+    /*background-color: #fff;*/
+    color: #ff0000;
+}
+a.mt-infoset-liaselect{
+    background-image: url("../../images/components/hadle_btn/checkbox-selected.png");
+    color: #ff0000;
+}
+.mt-info-show .mt-infoset-li:hover{
+    border: 1px dashed #d9dfe9 !important;
+}
+.mt-info-checkall,.mt-info-empty{
+    display: inline-block;
+    color: #363f45;
+    font-size: 14px;
+    margin: 10px 0 10px 15px;
+    border-bottom: 1px solid transparent;
+}
+.mt-info-checkall:hover,.mt-info-empty:hover{
+    border-bottom: 1px solid #363f45;
+}
+.mt-infoset-li span{
+    display: block;
+    float: right;
+    width: 30px;
+    height: inherit;
+    cursor: pointer;
+}
+.mt-set-bottom{
+    background: url("../../images/components/hadle_btn/set-bottom.png") no-repeat center transparent;
+}
+.mt-set-bottom:hover{
+    background: url("../../images/components/hadle_btn/set-bottom-hover.png") no-repeat center #e64a19;
+}
+.mt-set-top{
+    background: url("../../images/components/hadle_btn/set-top.png") no-repeat center transparent;
+}
+.mt-set-top:hover{
+    background: url("../../images/components/hadle_btn/set-top-hover.png") no-repeat center #e64a19;
+}
+span.mt-radio{
+    width: 20px;
+    padding-left: 14px;
+    font-size: 14px;
+    color:#282828;
+    background: url("../../images/components/hadle_btn/radio.png") no-repeat left transparent;
+}
+span.mt-radioselect{
+    color: #ff0000;
+    background-image: url("../../images/components/hadle_btn/radio-selected.png");
+}
+.mt-close{
+    background: url("../../images/components/hadle_btn/close-icon.png")no-repeat center transparent;
+}
+.mt-close:hover{
+    background-image: url("../../images/components/hadle_btn/close-hover.png");
+}
+.mt-infoset-btn{
+    width: 100%;
+    background: #f0f4fb;
+    border-top: 1px solid #d9dfe9;
+}
+.mt-infoset-btn button{
+    font-size: 14px;
+    padding: 8px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+.mt-infoset-btn .mt-infoset-sure{
+    background: #4caf50;
+    color: #fff;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.mt-infoset-btn .mt-infoset-cancel{
+    background: #fff;
+    color: #000;
+}
+.mt-infoset-btn .mt-infoset-sure:hover{
+    background: #4caf50;
+}
+.mt-infoset-btn .mt-infoset-cancel:hover{
+    background: #fff;
+    color: #000;
+}

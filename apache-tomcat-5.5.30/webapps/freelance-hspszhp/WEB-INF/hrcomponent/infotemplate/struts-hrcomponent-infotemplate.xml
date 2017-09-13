@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<action-mappings>
+		<action path="/goFindInformationList"
+				scope="request"
+				type="com.yh.hr.component.infotemplate.web.action.PersonInformationAction"
+				parameter="method">
+			<description>根据人员类别查询人所对应的信息集修改</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/verperson_main.jsp"/>
+		</action>
+		
+		<action path="/goFindInformationListView"
+				scope="request"
+				type="com.yh.hr.component.infotemplate.web.action.PersonInformationAction"
+				parameter="method">
+			<description>根据人员类别查询人所对应的信息集查看</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/view_verperson_main.jsp"/>
+		</action>
+		
+		<action path="/findUnitType"
+				scope="request"
+				type="com.yh.hr.component.infotemplate.web.action.PersonInformationAction"
+				parameter="method">
+			<description>根据单位id查看单位类别</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/view_verperson_main.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	</form-beans>
+	<action-mappings>
+
+		<!--跳转到文件上传页面 -->
+		<action path="/goUploadFile"
+			type="com.yh.component.upload.web.action.UploadFileAction"
+			scope="request"
+			parameter="method">
+			<description>跳转到文件上传页面</description>
+			<forward name="success" path="/component/upload/files_upload.jsp" />
+		</action>
+		<action path="/uploadFile"
+			type="com.yh.component.upload.web.action.UploadFileAction"
+			scope="request"
+			parameter="method">
+			<description>上传文件</description>
+		</action>
+		<action path="/listUploadFile"
+			type="com.yh.component.upload.web.action.UploadFileDetailAction"
+			scope="request"
+			parameter="method">
+			<description>查询文件列表</description>
+		</action>
+		<action path="/deleteUploadFile"
+			type="com.yh.component.upload.web.action.UploadFileDetailAction"
+			scope="request"
+			parameter="method">
+			<description>删除文件</description>
+		</action>
+		<action path="/downloadUploadFile"
+			type="com.yh.component.upload.web.action.UploadFileDetailAction"
+			scope="request"
+			parameter="method">
+			<description>下载文件</description>
+		</action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>岗位使用情况统计表</title>
+    <link rel="stylesheet" href="../../css/common/reset.css">
+    <link rel="stylesheet" href="../../css/common/modalstyle.css">
+    <link rel="stylesheet" href="../../css/components/institution_basic_table.css">
+    <link rel="stylesheet" href="../../css/components/handle_btn.css">
+    <link rel="stylesheet" href="../../css/components/modal_dialog.css">
+    <script src="../../js/jquery-1.12.4.js"></script>
+    <script src="../../js/jquery.popdown.js"></script>
+</head>
+<body style="padding: 40px;">
+<h3 style="height: 30px"><a href="post_use_situation_a.html" class="btn-search btn-default popdown btn1">模态框表格</a><span style="margin-left: 30px;color: red">*模态框页面在同级目录下，post_use_situation_a.html</span></h3>
+<table class="institution_basic">
+    <tr class="border_top border_bottom">
+        <td colspan="1" class="institution_basic_td_bg border_right">单位名称</td>
+        <td colspan="16" class="border_right" style="text-align: left;padding-left: 20px;">深圳市儿童医院</td>
+    </tr>
+    <tr class="border_bottom">
+        <td colspan="1" class="institution_basic_td_bg border_right">岗位数</td>
+        <td colspan="8" class="institution_basic_td_color border_right">100</td>
+        <td colspan="2" class="institution_basic_td_bg border_right border_bottom">双肩挑人数</td>
+        <td colspan="6" class="institution_basic_td_color border_right">20</td>
+    </tr>
+    <tr class="border_bottom">
+        <td colspan="2" class="institution_basic_td_bg border_right">现聘总人员</td>
+        <td colspan="3" class="institution_basic_td_bg border_right">类别</td>
+        <td colspan="4" class="institution_basic_td_bg border_right">管理岗位</td>
+        <td colspan="4" class="institution_basic_td_bg border_right">专业技术岗位</td>
+        <td colspan="4" class="institution_basic_td_bg border_right">工勤技能岗位</td>
+    </tr>
+    <tr class="border_bottom">
+        <td colspan="2" class="institution_basic_td_color border_right"></td>
+        <td colspan="3" class="institution_basic_td_bg border_right">在聘人数</td>
+        <td colspan="4" class="institution_basic_td_color border_right"></td>
+        <td colspan="4" class="institution_basic_td_color border_right"></td>
+        <td colspan="4" class="institution_basic_td_color border_right"></td>
+    </tr>
+    <tr class="border_top institution_basic_td_bg border_bottom">
+        <td rowspan="4" colspan="1" class="border_right">管理岗位</td>
+        <td colspan="1" class="border_right">等级</td>
+        <td colspan="2" class="border_right">三</td>
+        <td colspan="2" class="border_right">四</td>
+        <td colspan="2" class="border_right">五</td>
+        <td colspan="2" class="border_right">六</td>
+        <td colspan="2" class="border_right">七</td>
+        <td colspan="2" class="border_right">八</td>
+        <td colspan="1" class="border_right">九</td>
+        <td colspan="1" class="border_right">十</td>
+        <td colspan="1" class="border_right">未定</td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right institution_basic_td_bg border_bottom">比例</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1" class="border_right"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right institution_basic_td_bg border_bottom">数量</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1" class="border_right"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right institution_basic_td_bg border_bottom">其中双肩挑人数</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1" class="border_right"></td>
+    </tr>
+    <tr class="border_top institution_basic_td_bg border_bottom">
+        <td rowspan="8" colspan="1" class="border_right">专业技术岗位</td>
+        <td colspan="1" class="border_right">层级</td>
+        <td colspan="3" class="border_right">正高级</td>
+        <td colspan="4" class="border_right">副高级</td>
+        <td colspan="4" class="border_right">中级</td>
+        <td colspan="4" class="border_right">初级</td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="institution_basic_td_bg border_right border_bottom">核定数</td>
+        <td colspan="3"></td>
+        <td colspan="4"></td>
+        <td colspan="4"></td>
+        <td colspan="4" class="border_right"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="institution_basic_td_bg border_right border_bottom">现聘人数</td>
+        <td colspan="3"></td>
+        <td colspan="4"></td>
+        <td colspan="4"></td>
+        <td colspan="4" class="border_right"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="institution_basic_td_bg border_right border_bottom">其中双肩挑人数</td>
+        <td colspan="3"></td>
+        <td colspan="4"></td>
+        <td colspan="4"></td>
+        <td colspan="4" class="border_right"></td>
+    </tr>
+    <tr class="border_top institution_basic_td_bg border_bottom">
+        <td colspan="1" class="border_right">等级</td>
+        <td colspan="2" class="border_right">三</td>
+        <td colspan="2" class="border_right">四</td>
+        <td colspan="2" class="border_right">五</td>
+        <td colspan="2" class="border_right">六</td>
+        <td colspan="2" class="border_right">七</td>
+        <td colspan="2" class="border_right">八</td>
+        <td colspan="1" class="border_right">九</td>
+        <td colspan="1" class="border_right">十</td>
+        <td colspan="1" class="border_right">未定</td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right institution_basic_td_bg border_bottom">比例</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1" class="border_right"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right institution_basic_td_bg border_bottom">数量</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1" class="border_right"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right institution_basic_td_bg border_bottom">其中双肩挑人数</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+        <td colspan="1" class="border_right"></td>
+    </tr>
+    <tr class="border_top institution_basic_td_bg border_bottom">
+        <td rowspan="4" colspan="1" class="border_right">工勤技能岗位</td>
+        <td rowspan="2" colspan="1" class="border_right">等级</td>
+        <td colspan="10" class="border_right">技术工</td>
+        <td rowspan="2" colspan="5" class="border_right">普通工</td>
+    </tr>
+    <tr class="institution_basic_td_bg border_bottom">
+        <td colspan="2" class="border_right">一</td>
+        <td colspan="2" class="border_right">二</td>
+        <td colspan="2" class="border_right">三</td>
+        <td colspan="2" class="border_right">四</td>
+        <td colspan="2" class="border_right">五</td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right border_bottom institution_basic_td_bg">核定数</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="5" class="border_right"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="1" class="border_right border_bottom institution_basic_td_bg">现聘人数</td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="5" class="border_right"></td>
+    </tr>
+</table>
+<div class="excel-btn">
+    <button class="btn-search btn-default">保存</button>
+</div>
+</body>
+<script>
+    $(function(){
+        $('.popdown').popdown();
+    });
+</script>
+</html>

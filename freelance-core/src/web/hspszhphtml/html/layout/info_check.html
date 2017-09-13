@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <title>医院信息校核页</title>
+    <link rel="stylesheet" href="../../css/common/reset.css">
+    <link rel="stylesheet" href="../../css/common/base.css">
+    <link rel="stylesheet" href="../../css/common/layout.css">
+    <link rel="stylesheet" href="../../css/components/info_check.css">
+    <link rel="stylesheet" href="../../css/components/head_nav.css">
+    <link rel="stylesheet" href="../../css/components/search_result_table.css">
+
+</head>
+<body class="main-body">
+<!--style="position:fixed;width:100%;top:0;"-->
+<div id="head-nav" ></div>
+<!--style="position:fixed;top: 60px;"-->
+<div class="current-position" >当前位置 : <span>信息管理</span> > 信息校核
+    <button class="btn-return"> < 返回</button>
+</div>
+
+<!--style="position:fixed;width:100%;height:100%;top:100px;overflow-y: auto;"-->
+<div class="main-container">
+    <div id="left-column" class="left-column"></div>
+    <div id="main-column" class="main-column">
+        <div id="info-list1"></div>
+        <div id="info-list2"></div>
+        <div id="info-table1"></div>
+    </div>
+    <div id="right-column" class="right-column"></div>
+    <div class="clear"></div>
+</div>
+
+<script src="../../js/jquery-1.12.4.js"></script>
+<script>
+    //加载子页面
+    $('#head-nav').load('../components/head_nav.html');
+    $('#left-column').load('../components/infoCheck_nameList.html');
+    $('#right-column').load('../components/infoCheck_showNav.html');
+    $('#info-list1').load('../components/infoCheck_showList.html');
+    $('#info-list2').load('../components/infoCheck_showLists_group.html');
+    $('#info-table1').load('../components/infoCheck_showTable.html');
+
+</script>
+</body>
+</html>

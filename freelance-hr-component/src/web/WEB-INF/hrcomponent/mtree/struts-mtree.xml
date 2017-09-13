@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+    </form-beans>
+	<action-mappings>
+		<!-- ****************************************事项环节树****************************************** -->
+		<action path="/findJhdMtMenu"
+				scope="request"
+				type="com.yh.hr.component.mtree.action.JhdMtMenuAction"
+				parameter="method">
+			<description>跳转到事项环节树</description>
+			<forward name="success" path="/LeftNav.jsp"/>
+		</action>
+		<action path="/findIndexMtMenu"
+				scope="request"
+				type="com.yh.hr.component.mtree.action.JhdMtMenuAction"
+				parameter="method">
+			<description>跳转到事项环节树</description>
+			<forward name="success" path="/welcome.jsp"/>
+		</action>
+		<!-- 业务办理跳转-->
+		<action path="/goBusinessWorktop"
+				scope="request"
+				type="com.yh.hr.component.mtree.action.JhdMtMenuAction"
+				parameter="method">
+			<description>跳转到业务办理页面</description>
+			<forward name="success" path="/hrcomponent/mtree/LeftNav.jsp"/>
+		</action>
+		
+		<action path="/goWorktopViewport"
+				scope="request"
+				type="org.apache.struts.actions.ForwardAction"
+				parameter="/hrcomponent/worktop/worktop_viewport.jsp">
+			<description>跳转到业务办理工作台页面</description>
+		</action>
+		
+		<action path="/goBizViewport"
+				scope="request"
+				type="com.yh.hr.component.mtree.action.JhdMtMenuAction"
+				parameter="method">
+			<description>跳转到业务办理待办/已办页面</description>
+			<forward name="success1" path="/hrcomponent/worktop/worktop_daiban.jsp"/>
+			<forward name="success2" path="/hrcomponent/worktop/worktop_yiban.jsp"/>
+		</action>
+		<action path="/loadRightNav"
+				scope="request"
+				type="com.yh.hr.component.mtree.action.JhdMtMenuAction"
+				parameter="method">
+			<description>跳转到事项环节树</description>
+			<forward name="success" path="/hrcomponent/mtree/RightNav.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<!--家庭成员与社会关系facade -->
+	<bean name="verPbFamilyInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="verPbFamilyInfoFacadeTarget" />
+		</property>
+	</bean>
+	
+	<bean id="pbSyGwEmployInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbSyGwEmployInfoFacade">
+	            <property name="pbSyGwEmployInfoService" ref="pbSyGwEmployInfoService" />
+			</bean>
+        </property>
+    </bean>
+    
+    
+    <bean id="pbYnGwEmployInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbYnGwEmployInfoFacade">
+	            <property name="pbYnGwEmployInfoService">
+						<ref bean="pbYnGwEmployInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    
+    <bean id="pbEngageContractInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbEngageContractInfoFacade">
+	            <property name="pbEngageContractInfoService" ref="pbEngageContractInfoService" />
+				<property name="saoUbUnitService" ref="saoUbUnitService"/>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbEngageConHistInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbEngageConHistInfoFacade">
+	            <property name="pbEngageConHistInfoService">
+						<ref bean="pbEngageConHistInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbEducationLevelDegreeFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbEducationLevelDegreeFacade">
+	            <property name="pbEducationLevelDegreeService">
+						<ref bean="pbEducationLevelDegreeService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbEducationTrainingInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbEducationTrainingInfoFacade">
+	            <property name="pbEducationTrainingInfoService">
+						<ref bean="pbEducationTrainingInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    <bean id="pbProfTechQualifInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbProfTechQualifInfoFacade">
+	            <property name="pbProfTechQualifInfoService">
+						<ref bean="pbProfTechQualifInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbQualificationsInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbQualificationsInfoFacade">
+	            <property name="pbQualificationsInfoService">
+						<ref bean="pbQualificationsInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbCertificateInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbCertificateInfoFacade">
+	            <property name="pbCertificateInfoService">
+						<ref bean="pbCertificateInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbCertificateHistInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbCertificateHistInfoFacade">
+	            <property name="pbCertificateHistInfoService">
+						<ref bean="pbCertificateHistInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbDeathInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbDeathInfoFacade">
+	            <property name="pbDeathInfoService">
+						<ref bean="pbDeathInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbInjuryInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbInjuryInfoFacade">
+	            <property name="pbInjuryInfoService">
+						<ref bean="pbInjuryInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbPoliticInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbPoliticInfoFacade">
+	            <property name="pbPoliticInfoService">
+						<ref bean="pbPoliticInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbPunishmentInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbPunishmentInfoFacade">
+	            <property name="pbPunishmentInfoService">
+						<ref bean="pbPunishmentInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean id="pbResumeInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbResumeInfoFacade">
+	            <property name="pbResumeInfoService">
+						<ref bean="pbResumeInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+
+    <bean id="pbRetrieInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbRetrieInfoFacade">
+	            <property name="pbRetrieInfoService">
+						<ref bean="pbRetrieInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+
+    <bean id="pbReviewInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbReviewInfoFacade">
+	            <property name="pbReviewInfoService">
+						<ref bean="pbReviewInfoService" />
+				</property>
+	            <property name="utOrgService">
+						<ref bean="utOrgService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+
+    <bean id="pbRewardInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbRewardInfoFacade">
+	            <property name="pbRewardInfoService">
+						<ref bean="pbRewardInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+
+    <bean id="pbSpeciaAuthFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbSpeciaAuthFacade">
+	            <property name="pbSpeciaAuthService">
+						<ref bean="pbSpeciaAuthService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <bean name="verPbFamilyInfoFacadeTarget"
+		class="com.yh.hr.info.ver.unit.comm.facade.VerPbFamilyInfoFacade">
+		<property name="pbFamilyInfoService">
+			<ref bean="pbFamilyInfoService" />
+		</property>
+	</bean>
+	<!--照片信息 -->
+	<bean id="verPbImageFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.ver.unit.comm.facade.VerPbImageFacade">
+				<property name="pbImageService">
+					<ref bean="pbImageService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="verPbPhotoFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.ver.unit.comm.facade.VerPbPhotoFacade">
+				<property name="pbPhotoService">
+					<ref bean="pbPhotoService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+    
+	<!-- 院内中层职务任职信息 -->
+	 <bean id="pbDutyInfoFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbDutyInfoFacade">
+	            <property name="pbDutyInfoService">
+						<ref bean="pbDutyInfoService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    
+    <!-- 人员进入信息 -->
+	 <bean id="pbPersonInFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbPersonInFacade">
+	            <property name="pbPersonInService">
+						<ref bean="pbPersonInService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+     <!-- 人员离开信息 -->
+	 <bean id="pbPersonOutFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.info.ver.unit.comm.facade.PbPersonOutFacade">
+	            <property name="pbPersonOutService">
+						<ref bean="pbPersonOutService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+	
+	
+	<bean id="pbPersonInService" class="com.yh.hr.res.pb.service.impl.PbPersonInServiceImpl"/>
+    <bean id="pbPersonOutService" class="com.yh.hr.res.pb.service.impl.PbPersonOutServiceImpl"/>
+    <bean id="pbSyGwEmployInfoService" class="com.yh.hr.res.pb.service.impl.PbSyGwEmployInfoServiceImpl"/>
+    <bean id="pbYnGwEmployInfoService" class="com.yh.hr.res.pb.service.impl.PbYnGwEmployInfoServiceImpl"/>
+    <bean id="pbEngageContractInfoService" class="com.yh.hr.res.pb.service.impl.PbEngageContractInfoServiceImpl"/>
+    <bean id="pbEngageConHistInfoService" class="com.yh.hr.res.pb.service.impl.PbEngageConHistInfoServiceImpl"/>
+    <bean id="pbEducationLevelDegreeService" class="com.yh.hr.res.pb.service.impl.PbEducationLevelDegreeServiceImpl"/>
+    <bean id="pbEducationTrainingInfoService" class="com.yh.hr.res.pb.service.impl.PbEducationTrainingInfoServiceImpl"/>
+    <bean id="pbProfTechQualifInfoService" class="com.yh.hr.res.pb.service.impl.PbProfTechQualifInfoServiceImpl"/>
+    <bean id="pbQualificationsInfoService" class="com.yh.hr.res.pb.service.impl.PbQualificationsInfoServiceImpl"/>
+    <bean id="pbCertificateInfoService" class="com.yh.hr.res.pb.service.impl.PbCertificateInfoServiceImpl"/>
+    <bean id="pbCertificateHistInfoService" class="com.yh.hr.res.pb.service.impl.PbCertificateHistInfoServiceImpl"/>
+    
+    <bean id="pbDeathInfoService" class="com.yh.hr.res.pb.service.impl.PbDeathInfoServiceImpl"/>
+    <bean id="pbInjuryInfoService" class="com.yh.hr.res.pb.service.impl.PbInjuryInfoServiceImpl"/>
+    <bean id="pbPoliticInfoService" class="com.yh.hr.res.pb.service.impl.PbPoliticInfoServiceImpl"/>
+    <bean id="pbPunishmentInfoService" class="com.yh.hr.res.pb.service.impl.PbPunishmentInfoServiceImpl"/>
+    <bean id="pbResumeInfoService" class="com.yh.hr.res.pb.service.impl.PbResumeInfoServiceImpl"/>
+    <bean id="pbRetrieInfoService" class="com.yh.hr.res.pb.service.impl.PbRetrieInfoServiceImpl"/>
+    <bean id="pbReviewInfoService" class="com.yh.hr.res.pb.service.impl.PbReviewInfoServiceImpl"/>
+    <bean id="pbRewardInfoService" class="com.yh.hr.res.pb.service.impl.PbRewardInfoServiceImpl"/>
+    <bean id="pbSpeciaAuthService" class="com.yh.hr.res.pb.service.impl.PbSpeciaAuthServiceImpl"/>
+    
+    <bean id="pbDutyInfoService" class="com.yh.hr.res.pb.service.impl.PbDutyInfoServiceImpl"/>
+    
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+ 	<!--照片信息 -->
+	<!--<bean id="verPbImageFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="VerPbImageFacade">
+				<property name="pbImageService">
+					<ref bean="pbImageService" />
+				</property>
+			</bean>
+		</property>
+	</bean> -->
+	
+	
+
+	
+</beans>

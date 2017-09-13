@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="importUnitForm" type="com.yh.hr.info.dataimport.unit.web.form.ImportUnitForm" />
+    </form-beans>
+	<action-mappings>
+		<action path="/goUnitInfoImportWorkBench"
+				scope="request"
+				type="com.yh.hr.info.dataimport.unit.web.action.ImportUnitAction"
+				parameter="method">
+			<description>跳转到单位人员信息校核页面</description>
+			<forward name="success" path="/hrinfo/dataimport/unit/unit_import_view.jsp"/>
+		</action>
+		
+		<action path="/importUnit"
+				scope="request"
+				type="com.yh.hr.info.dataimport.unit.web.action.ImportUnitAction"
+				name="importUnitForm"
+				parameter="method"
+				validate="false">
+			<description>单位机构信息导入</description>
+			<forward name="success" path="/hrinfo/dataimport/unit/unit_import_view.jsp"/>
+		</action>
+		
+		<action path="/downImportExcel"
+				 parameter="method"
+				 input="/hrinfo/dataimport/unit/unit_import_view.jsp"
+				 scope="request"
+				 type="com.yh.hr.info.dataimport.unit.web.action.ImportUnitAction"
+				 validate="false">				 
+		 </action>
+		
+	</action-mappings>
+</struts-config>

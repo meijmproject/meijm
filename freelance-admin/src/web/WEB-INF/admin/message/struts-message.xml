@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+    <form-bean name="messageBoardForm" type="com.yh.admin.message.web.form.MessageBoardForm" />
+  </form-beans>
+	<action-mappings>
+		<action path="/goToNoticeManageWorkbench"
+            scope="request"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+      <forward name="success" path="/admin/message/message_worktop.jsp" />
+    </action>
+    <action path="/listMessageBoard"
+            scope="request"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+    </action>
+    <action path="/goCreateMessageBoardPage"
+            scope="request"
+            name="messageBoardForm"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+      <forward name="success" path="/admin/message/message_add.jsp" />
+    </action>
+    <action path="/createMessageBoard"
+            scope="request"
+            name="messageBoardForm"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+    </action>
+    <action path="/goUpdateMessageBoardPage"
+            scope="request"
+            name="messageBoardForm"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+      <forward name="success" path="/admin/message/message_update.jsp" />
+    </action>
+    <action path="/updateMessageBoard"
+            scope="request"
+            name="messageBoardForm"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+    </action>
+    <action path="/deleteMessageBoard"
+            scope="request"
+            name="messageBoardForm"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+    </action>
+    <action path="/goViewMessageBoardPage"
+            scope="request"
+            name="messageBoardForm"
+            type="com.yh.admin.message.web.action.MessageBoardAction"
+            parameter="method">
+    	<forward name="success" path="/admin/message/message_view.jsp" />
+    </action>
+	</action-mappings>
+</struts-config>

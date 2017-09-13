@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 选择单位-->
+	<bean id="unitSelectFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.select.unit.facade.UnitSelectFacade"/>
+		</property>
+	</bean>
+	
+	<!-- 选择单位默认实现 service -->
+	<bean id="selectUnitDefault" class="com.yh.hr.select.unit.service.impl.UnitSelectServiceImpl" >
+		<property name="checkServices">
+			<list>
+				<!--人员待办事项验证 -->
+				<ref bean="unitSelectItemsCheckServiceImpl"/>
+			</list>
+		</property>
+	</bean>
+	<!--待办事项验证 -->
+	<bean id="unitSelectItemsCheckServiceImpl" class="com.yh.hr.select.unit.service.check.impl.UnitSelectItemsCheckServiceImpl" />
+</beans>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <title>人员名册栏目设置</title>
+    <link rel="stylesheet" href="/hspszhphtml/css/common/reset.css">
+    <link rel="stylesheet" href="/hspszhphtml/css/common/base.css">
+    <link rel="stylesheet" href="/hspszhphtml/css/common/layout.css">
+    <link rel="stylesheet" href="/hspszhphtml/css/components/handle_btn.css">
+    <link rel="stylesheet" href="/hspszhphtml/css/layout/people_column.css">
+
+</head>
+<body class="main-body">
+
+    <div id="head-nav"></div>
+    <div class="current-position">当前位置 : <span>人员名册栏目设置</span></div>
+
+    <div class="main-container">
+        <div class="pcs-search">
+            <span class="pcs-symbol">数据集</span>
+            <select class="pcs-select">
+                <option>学历学位信息</option>
+                <option>学历学位信息</option>
+                <option>学历学位信息</option>
+                <option>学历学位信息</option>
+                <option>学历学位信息</option>
+            </select>
+            <input class="pcs-input pcs-input-query" type="text">
+            <button class="btn-search btn-default">保存</button>
+        </div>
+        <div id="twoway-choice" class="pcs-content"></div>
+    </div>
+<script src="/hspszhphtml/js/jquery-1.12.4.js"></script>
+<script src="/hspszhphtml/js/components/twoway_choice.js"></script>
+<script>
+    //加载子页面
+    $('#head-nav').load('/hspszhphtml/html/components/head_nav.html');
+    $('#twoway-choice').load('/hspszhphtml/html/components/twoway_choice.html');
+
+    $(function(){
+        // 页面加载后各区域的高度设置
+        function eachAreaHeight(){
+            var windowHeight = $(window).height();
+
+            //主内容区高度
+            $('.main-container').height(windowHeight-$('#head-nav').outerHeight(true)-$('.current-position').outerHeight(true)-2);
+        }
+        eachAreaHeight();
+
+        $(window).resize(
+            function(){
+                eachAreaHeight();
+            }
+        );
+    });
+</script>
+</body>
+</html>

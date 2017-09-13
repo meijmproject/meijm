@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<bean id="reportFacade" parent="txnProxyParent">
+    <property name="target">
+      <ref bean="reportFacadeTarget"/>
+    </property>
+  </bean>
+  <bean id="reportFacadeTarget" class="com.yh.hr.report.facade.impl.ReportFacadeImpl">
+    <property name="reportService">
+      <ref bean="reportService"/>
+    </property>
+  </bean>
+  <bean id="reportService" class="com.yh.hr.report.service.impl.ReportServiceImpl"></bean>
+	
+	
+	<!-- 打印工作人员信息、打印个人专技信息 -->
+	 <bean id="baseReportFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="baseReportFacadeTarget"/>
+		</property>
+	</bean>
+	
+	<bean id="baseReportFacadeTarget" class="com.yh.hr.report.facade.impl.BaseReportFacadeImpl">
+		<property name="dataSource">
+			<ref bean="dataSource"/>
+		</property>
+		<property name="baseReportService">
+			<ref bean="baseReportService"/>
+		</property>
+	</bean>
+	<bean id="baseReportService" class="com.yh.hr.report.service.impl.BaseReportServiceImpl">
+		<property name="pbPersonInfoService">
+			<ref bean="pbPersonInfoService"/>
+		</property>
+		<property name="pbPersonAttachService">
+			<ref bean="pbPersonAttachService"/>
+		</property>
+		<property name="pbImageService">
+			<ref bean="pbImageService"/>
+		</property>
+		<property name="officeCommonService">
+			<ref bean="officeCommonService"/>
+		</property>
+		<property name="pbRewardInfoService">
+			<ref bean="pbRewardInfoService"/>
+		</property>
+		<property name="pbPunishmentInfoService">
+			<ref bean="pbPunishmentInfoService"/>
+		</property>
+		<property name="pbFamilyInfoService">
+			<ref bean="pbFamilyInfoService"/>
+		</property>
+		<property name="utUnitService">
+			<ref bean="utUnitService"/>
+		</property>
+		<property name="saoUbOrgService">
+			<ref bean="saoUbOrgService"/>
+		</property>
+		<property name="pbCertificateInfoService">
+			<ref bean="pbCertificateInfoService"/>
+		</property>
+		<property name="pbPersonInService">
+			<ref bean="pbPersonInService"/>
+		</property>
+	</bean>
+	 <!-- 报表查询通用方法  -->
+	<bean id="officeCommonService"
+		class="com.yh.hr.report.service.impl.OfficeCommonServiceImpl">
+		<property name="pbResumeInfoService" ref="pbResumeInfoService" />
+		<property name="pbEducationLevelDegreeService" ref="pbEducationLevelDegreeService" />
+		<property name="pbReviewInfoService" ref="pbReviewInfoService" />
+	</bean>
+
+	<!--全院员工汇总表-->
+	 <bean id="allPersonStatisticsFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="allPersonStatisticsFacadeTarget"/>
+		</property>
+	</bean>
+	<bean id="allPersonStatisticsFacadeTarget" class="com.yh.hr.report.facade.impl.AllPersonStatisticsFacadeImpl">
+		<property name="allPersonStatisticsService">
+			<ref bean="allPersonStatisticsService"/>
+		</property>
+	</bean>
+	<bean id="allPersonStatisticsService" class="com.yh.hr.report.service.impl.AllPersonStatisticsServiceImpl"/>
+	<!--科主任及护士长系列人员汇总-->
+	 <bean id="matronStatisticsFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="matronStatisticsFacadeTarget"/>
+		</property>
+	</bean>
+	<bean id="matronStatisticsFacadeTarget" class="com.yh.hr.report.facade.impl.MatronStatisticsFacadeImpl">
+		<property name="matronStatisticsService">
+			<ref bean="matronStatisticsService"/>
+		</property>
+	</bean>
+	<bean id="matronStatisticsService" class="com.yh.hr.report.service.impl.MatronStatisticsServiceImpl"/>
+	<!--卫生技术人员依据职称等级汇总的年龄、性别架构表-->
+	 <bean id="technicalTitleAgeStatisticsFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="technicalTitleAgeStatisticsFacadeTarget"/>
+		</property>
+	</bean>
+	<bean id="technicalTitleAgeStatisticsFacadeTarget" class="com.yh.hr.report.facade.impl.TechnicalTitleAgeStatisticsFacadeImpl">
+		<property name="technicalTitleAgeStatisticsService">
+			<ref bean="technicalTitleAgeStatisticsService"/>
+		</property>
+	</bean>
+	<bean id="technicalTitleAgeStatisticsService" class="com.yh.hr.report.service.impl.TechnicalTitleAgeStatisticsServiceImpl"/>
+	
+	<!-- 全院人员框架图  -->
+	<bean id="personFloorDiagramFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.report.facade.impl.PersonFloorDiagramFacadeImpl">
+	        	<property name="personFloorDiagramService" ref="personFloorDiagramService"/>
+			</bean>
+		</property>
+    </bean>
+    <!-- 全院人员框架图  -->
+	<bean id="personFloorDiagramService"
+		class="com.yh.hr.report.service.impl.PersonFloorDiagramServiceImpl">
+	</bean>
+	
+	<!-- 管理人员明细报表相关 -->
+	<bean id="managerDetailsReportFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="managerDetailsReportFacadeTarget"/>
+		</property>
+	</bean>
+	<bean id="managerDetailsReportFacadeTarget" class="com.yh.hr.report.facade.impl.ManagerDetailsReportFacadeImpl">
+		<property name="managerDetailsReportService">
+			<ref bean="managerDetailsReportService"/>
+		</property>
+	</bean>
+	<bean id="managerDetailsReportService" class="com.yh.hr.report.service.impl.ManagerDetailsReportServiceImpl">
+	</bean>
+	
+	<!-- 在岗人员总表 -->
+	<bean id="zgEmployedPersonFacade" parent="txnProxyParent">
+    <property name="target">
+      <ref bean="zgEmployedPersonFacadeTarget"/>
+    </property>
+  </bean>
+  <bean id="zgEmployedPersonFacadeTarget" class="com.yh.hr.report.facade.impl.ZgEmployedPersonFacadeImpl">
+    <property name="zgEmployedPersonService">
+      <ref bean="zgEmployedPersonService"/>
+    </property>
+  </bean>
+  <bean id="zgEmployedPersonService" class="com.yh.hr.report.service.impl.ZgEmployedPersonServiceImpl">
+  </bean>
+</beans>

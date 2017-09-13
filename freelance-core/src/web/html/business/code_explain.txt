@@ -1,0 +1,18 @@
+check_transaction页面
+1、<li class="" _t_nav="Business">
+      <h2>
+         <a href="#">业务办理</a>
+      </h2>
+   </li>
+改动之后（37行）
+<li class="" _t_nav="Business">
+     <h2>
+       <a href="check_transaction_a.html" class="check_transaction_popdown" title="Grumpy Demo">业务办理</a>
+     </h2>
+</li>
+
+
+小伙伴们，有些细节需要修改一下
+  
+
+.spance_nbsp （48行）

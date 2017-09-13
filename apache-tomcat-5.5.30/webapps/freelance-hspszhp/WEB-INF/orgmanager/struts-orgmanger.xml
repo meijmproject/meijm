@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    </form-beans>
+    <action-mappings>
+	<action path="/goToOrgManageWorkBench"
+	       scope="request"
+	       type="com.yh.hr.orghc.unit.orgmanger.web.action.OrgMangerAction"
+	       parameter="method">
+	     <description>科室管理主页面</description>
+	     <forward name="success" path="/unit/orgmanager/orgmanager_workbench_main.jsp"/>
+   	</action>
+	
+	<action path="/goToOrgManage"
+	       scope="request"
+	       type="com.yh.hr.orghc.unit.orgmanger.web.action.OrgMangerAction"
+	       parameter="method">
+	     <description>科室管理工作台</description>
+	     <forward name="success" path="/unit/orgmanager/orgmanager_workbench.jsp"/>
+   	</action>
+	
+	<action path="/goToViewOrg"
+	       scope="request"
+	       name="orgForm"
+	       type="com.yh.hr.orghc.unit.orgmanger.web.action.OrgMangerAction"
+	       parameter="method">
+	     <description>跳转查看大页面</description>
+	     <forward name="success" path="/unit/orgmanager/unitmanager_org_view.jsp"/>
+   	</action>
+	
+	</action-mappings>
+</struts-config>

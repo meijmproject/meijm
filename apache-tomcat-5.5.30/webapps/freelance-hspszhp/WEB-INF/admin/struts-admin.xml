@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+          
+<struts-config>
+	<form-beans>
+		<form-bean name="loginForm" type="com.yh.admin.login.web.form.LoginForm" />
+    	<form-bean name="usersForm"	type="com.yh.admin.users.web.form.UsersForm" />
+		<form-bean name="rolesForm" type="com.yh.admin.roles.web.form.RolesForm" />
+		<form-bean name="systemPositionForm" type="com.yh.admin.position.web.form.SystemPositionForm" />
+    	<form-bean name="userSystemPositionForm" type="com.yh.admin.users.web.form.UserSystemPositionForm" />
+    	<form-bean name="opLogForm" type="com.yh.admin.oplog.web.form.OpLogForm" />
+    </form-beans>
+	<action-mappings>
+		
+		<action path="/login"
+				scope="request"
+				name="loginForm"
+				type="com.yh.admin.login.web.action.LoginAction"
+				input="/login.jsp"
+				parameter="method">
+			<description>登录</description>
+			<forward name="success" path="/index.jsp" />
+			<forward name="fail" path="/login.jsp" />
+		</action>
+		
+		<action path="/logout"
+			type="com.yh.admin.login.web.action.LoginAction"
+			name="loginForm"
+			validate="false" 
+			input="/login.jsp" 
+			parameter="method">
+			<description>退出系统</description>
+			<forward name="success" path="/" redirect="true" />
+		</action>
+		
+		<action path="/downFile"
+			type="com.yh.admin.docs.web.action.DocsAction"
+			parameter="method">
+			<description>下载文件公共do</description>
+		</action>
+		
+		<action path="/goHomepage"
+				scope="request"
+				type="org.apache.struts.actions.ForwardAction"
+				parameter="/welcome.jsp">
+			<description>首页</description>
+		</action>
+		
+		<action path="/listSysMenuTree"
+				scope="request"
+				type="com.yh.admin.menu.web.action.SysMenuAction"
+				parameter="method">
+			<description>查询菜单列表</description>
+		</action>
+		
+		<!-- 用户管理  begin-->
+		<action path="/updateUserPassword"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户密码修改</description>
+		</action>
+		
+		<action path="/goUsersPasswordUpdatePage"
+				scope="request"
+				name="usersForm"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户密码修改页面</description>
+				<forward name="success"
+				path="/admin/users/userinfo_updatepassword.jsp" />
+		</action>
+		
+		<action path="/checkPasswordForUpdate"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>检查是否为默认密码</description>
+		</action>
+		
+		<action path="/goUsersDefaultPasswordUpdatePage"
+				scope="request"
+				name="usersForm"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户默认密码修改页面</description>
+				<forward name="success"
+				path="/admin/users/userinfo_updatedefaultpassword.jsp" />
+		</action>
+		
+		<action path="/goUsersList"
+				scope="request"
+				name="usersForm"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户维护工作台</description>
+				<forward name="success"
+				path="/admin/users/users_worktop.jsp" />
+		</action>
+		
+		<action path="/listUsersInfo"
+				scope="request"
+				name="usersForm"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户基本信息查询</description>
+		</action>	
+		<action path="/listPbPersonInfo"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>人员基本信息查询</description>
+		</action>
+		<action path="/getHireDeptName"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>获取hireDeptName</description>
+		</action>
+		
+		<action path="/goShowUsersMain"
+				 name="usersForm"
+				 scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户详细信息查询</description>
+				<forward name="success"
+				path="/admin/users/users_show_main.jsp" />
+		</action>
+		
+		<action path="/showUserInfo"
+				 name="usersForm"
+				 scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户详细信息查询</description>
+				<forward name="success"
+				path="/admin/users/users_show.jsp" />
+		</action>
+		
+		<action path="/updateUserInfo"
+				 name="usersForm"
+				 scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户详细信息查询</description>
+				<forward name="success"
+				path="/admin/users/users_update.jsp" />
+		</action>
+		
+		<action path="/goUpdateUsersWorkTop"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>跳转到用户信息修改页面</description>
+				<forward name="success" path="/admin/users/users_update_worktop.jsp"/>
+		</action>
+		
+		<action path="/goUpdateUsers"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户信息修改模态框</description>
+				<forward name="success" path="/admin/users/users_update_model.jsp"/>
+		</action>
+		<action path="/usersUpdate"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户信息修改页面</description>
+				<forward name="success" path="/goUsersList.do?method=goUsersList"/>
+		</action>
+		
+		<action path="/goUsersCreatePage"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>跳转到添加用户信息页面</description>
+				<forward name="success" path="/admin/users/users_create.jsp"/>
+		</action>
+		
+		<action path="/createUsers"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>添加用户信息</description>
+		</action>
+		
+		<action path="/deleteUsers"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>删除用户信息</description>
+		</action>
+		<action path="/reSetPs"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>重置密码</description>
+		</action>
+		<action path="/goUsersPositionPage"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>跳转到用户岗位管理页面</description>
+				<forward name="success" path="/admin/users/users_position_list.jsp"/>
+		</action>
+		
+		<action path="/goUsersPositionUpdate"
+				name="usersForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>跳转到用户岗位修改页面</description>
+				<forward name="success" path="/admin/users/users_position_update_model.jsp"/>
+		</action>
+		
+		<action path="/updateUsersPosition"
+				name="userSystemPositionForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户岗位修改</description>
+		</action>
+		
+		<action path="/updateUSP"
+				name="userSystemPositionForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户岗位修改信息展示</description>
+				<forward name="success" path="/admin/users/users_position_update.jsp"/>
+		</action>
+		
+		<action path="/usersPositionListPage"
+				name="userSystemPositionForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>跳转到用户岗位修改页面</description>
+				<forward name="success" path="/admin/users/users_position_add.jsp"/>
+		</action> 
+				
+		<action path="/goUsersPositionAddPage"
+				name="userSystemPositionForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>跳转到用户岗位修改页面</description>
+		</action>
+		
+		<action path="/showUsersPosition"
+				name="userSystemPositionForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>查看用户岗位信息</description>
+				<forward name="success" path="/admin/users/users_position_show.jsp"/>
+		</action>
+		
+		<action path="/usersPositionAdd"
+				name="userSystemPositionForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>跳转到用户岗位修改页面</description>
+		</action>
+		
+		<action path="/removeUsersPosition"
+				name="userSystemPositionForm"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>用户岗位移除</description>
+		</action>
+		
+		
+		<action path="/changeOrgByUnitOid"
+				scope="request"
+				type="com.yh.admin.users.web.action.UsersAction"
+				parameter="method">
+				<description>根据选择单位查询单位内设机构信息</description>
+		</action>
+		
+		
+		
+		
+		<!-- 用户管理  end-->
+		
+		<!-- 功能角色  begin-->
+		<action path="/goFuncRoleList"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转到功能角色列表工作台</description>
+			<forward name="success" path="/admin/funcroles/funcroles_worktop.jsp" />
+		</action>
+		<action path="/listFuncRole"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>查询功能角色列表</description>
+		</action>
+		<action path="/goAddFuncRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转到功能角色新增页面</description>
+			<forward name="success" path="/admin/funcroles/funcroles_add.jsp" />
+		</action>
+		<action path="/addFuncRole"
+				scope="request"
+				name="rolesForm"
+				validate="true"
+				input="/goAddFuncRole.do?method=goAddFuncRole"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>新增功能角色</description>
+		</action>
+		<action path="/goUpdateFuncRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转到功能角色修改工作台</description>
+			<forward name="success" path="/admin/funcroles/funcroles_update.jsp" />
+		</action>
+		
+		<action path="/goUpdateFuncRoleModel"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转到功能角色修改工作台</description>
+			<forward name="success" path="/admin/funcroles/funcroles_update_model.jsp" />
+		</action>
+		
+		<action path="/updateFuncRole"
+				scope="request"
+				name="rolesForm"
+				validate="true"
+				input="/goUpdateFuncRole.do?method=goUpdateFuncRole"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>修改功能角色</description>
+		</action>
+		<action path="/showleftFuncRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>查看功能角色信息</description>
+			<forward name="success" path="/admin/funcroles/funcroles_left.jsp" />
+		</action>
+		
+		<action path="/showFuncRoleWorktop"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>查看功能角色信息</description>
+			<forward name="success" path="/admin/funcroles/funcroles_show.jsp" />
+		</action>
+		
+		<action path="/deleteFuncRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>删除功能角色</description>
+		</action>
+		
+		<!-- 功能角色  end-->
+		<!-- 数据角色 begin-->
+		
+		<!--<action path="/goDataRoleList"
+				scope="request"
+				type="DataRolesAction"
+				parameter="method">
+			<description>查询数据角色列表</description>
+			<forward name="success" path="/admin/dataroles/dataroles_worktop.jsp" />
+		</action> -->
+		
+		<action path="/listDataRole"
+				scope="request"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+		<description>查询数据角色列表</description>
+		</action>	
+		<action path="/goCreateDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>跳转到数据角色新增页面</description>
+			<forward name="success" path="/admin/dataroles/dataroles_add.jsp" />
+		</action>
+		
+		<action path="/createDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="true"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>数据角色新增</description>
+		</action>
+		
+		
+		<action path="/goUpdateDataRole"
+				scope="request"
+				validate="false"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>跳转数据角色修改</description>
+			<forward name="success" path="/admin/dataroles/dataroles_update.jsp" />
+		</action>
+		
+		<action path="/goUpdateDataleModel"
+				scope="request"
+				validate="false"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>跳转数据角色修改模态框</description>
+			<forward name="success" path="/admin/dataroles/dataroles_update_model.jsp" />
+		</action>
+		
+		<action path="/updateDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="true"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>数据角色修改</description>
+		</action>
+		
+		<action path="/showDataRole"
+				scope="request"
+				validate="true"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>查看数据角色信息</description>
+			<forward name="success" path="/admin/dataroles/dataroles_show.jsp" />
+		</action>	
+		
+		<action path="/deleteDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>删除数据角色</description>
+		</action>
+		
+		<!-- 数据角色 end-->
+		<!-- 岗位管理  begin-->
+		<action path="/goSystemPoistionList"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到岗位管理列表工作台</description>
+			<forward name="success" path="/admin/systemposition/systemposition_worktop.jsp" />
+		</action>
+		<action path="/listPosition"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>查询岗位管理列表</description>
+		</action>
+		<action path="/goViewSystemPoistion"
+				scope="request"
+				name="systemPositionForm"
+				validate="false" 
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到岗位管理查看页面</description>
+			<forward name="success" path="/admin/systemposition/systemposition_worktop_view.jsp" />
+		</action>
+		<action path="/findUserBySpId"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>根据岗位ID查询用户</description>
+		</action>
+		<action path="/goUpdateSystemPoistion"
+				scope="request"
+				name="systemPositionForm"
+				validate="false" 
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到岗位管理修改页面</description>
+			<forward name="success" path="/admin/systemposition/systemposition_worktop_update.jsp" />
+		</action>
+		<action path="/goToUpdateSystemPoistion"
+				scope="request"
+				name="systemPositionForm"
+				validate="false" 
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到岗位管理修改页面</description>
+			<forward name="success" path="/admin/systemposition/systemposition_worktop_update_model.jsp" />
+		</action>
+		<action path="/goUpdateSystemPoistionLeft"
+				scope="request"
+				name="systemPositionForm"
+				validate="false" 
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>刷新左边的div</description>
+			<forward name="success" path="/admin/systemposition/systemposition_left.jsp" />
+		</action>
+		<action path="/updateSystemPoistion"
+				scope="request"
+				name="systemPositionForm"
+				validate="false" 
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>根据岗位ID修改岗位</description>
+			<forward name="success" path="/admin/systemposition/systemposition_worktop.jsp" />
+		</action>
+		<action path="/goAddSystemPoistion"
+				scope="request"
+				name="systemPositionForm"
+				validate="false" 
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到新增岗位摸态框</description>
+			<forward name="success" path="/admin/systemposition/systemposition_worktop_add_model.jsp" />
+		</action>
+		<action path="/addSystemPoistion"
+				scope="request"
+				name="systemPositionForm"
+				validate="false" 
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>新增岗位</description>
+			<forward name="success" path="/goSystemPoistionList.do?method=goSystemPoistionList"/>
+		</action>
+		<action path="/deleteSystemPoistion"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>删除岗位</description>
+		</action>
+		<action path="/goAddPositionUser"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到新增岗位用户摸态框</description>
+			<forward name="success" path="/admin/systemposition/position_user_add_model.jsp" />
+		</action>
+		<action path="/goFindPositionUser"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到新增岗位用户摸态框</description>
+		</action>
+		<action path="/addPositionUser"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>新增岗位用户</description>
+			<forward name="success" path="/admin/systemposition/position_user_add_model.jsp" />
+		</action>
+		<action path="/deletePositionUser"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>删除岗位用户</description>
+		</action>
+		<action path="/updatePositionUser"
+				scope="request"
+				name="usersForm"
+				validate="false"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转修改岗位用户</description>
+			<forward name="success" path="/admin/systemposition/position_user_update_model.jsp" />
+		</action>
+		<action path="/updatePoistionUserSuc"
+				scope="request"
+				name="usersForm"
+				validate="false"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>修改岗位用户</description>
+		</action>
+		<action path="/goFindRoleList"
+				scope="request"
+				name="usersForm"
+				validate="false"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>跳转到角色列表</description>
+			<forward name="success" path="/admin/systemposition/position_role_model.jsp" />
+		</action>
+		<action path="/findRoleList"
+				scope="request"
+				name="usersForm"
+				validate="false"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>查询角色列表</description>
+		</action>
+		<action path="/updatePositionRole"
+				scope="request"
+				type="com.yh.admin.position.web.action.SystemPositionAction"
+				parameter="method">
+			<description>修改岗位角色</description>
+		</action>
+		<!-- 岗位管理  begin-->
+		<!-- 数据角色  begin-->
+		<action path="/goDataRoleList"
+				scope="request"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>跳转到数据角色列表工作台</description>
+			<forward name="success" path="/admin/dataroles/dataroles_worktop.jsp" />
+		</action>
+		<action path="/listDataRole"
+				scope="request"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>查询数据角色列表</description>
+		</action>
+		<action path="/goAddDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>跳转到数据角色新增页面</description>
+			<forward name="success" path="/admin/dataroles/dataroles_add.jsp" />
+		</action>
+		<action path="/addDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="true"
+				input="/goAddDataRole.do?method=goAddDataRole"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>新增数据角色</description>
+		</action>
+		<action path="/goUpdateDataRoleMain"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.RoleDataAuthAction"
+				parameter="method">
+			<description>跳转到数据角色修改综合页面</description>
+			<forward name="success" path="/admin/dataroles/dataroles_update_main.jsp" />
+		</action>
+		<action path="/orgAuthorized"
+				scope="request"
+				type="com.yh.admin.roles.web.action.RoleDataAuthAction"
+				parameter="method">
+			<description>保存授权</description>
+		</action>
+		<action path="/listDataAuthOrgList"
+				scope="request"
+				type="com.yh.admin.roles.web.action.RoleDataAuthAction"
+				parameter="method">
+			<description>左边授权数据</description>
+		</action>
+		<action path="/goUpdateDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="false"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>跳转到数据角色修改页面</description>
+			<forward name="success" path="/admin/dataroles/dataroles_update.jsp" />
+		</action>
+		<action path="/updateDataRole"
+				scope="request"
+				name="rolesForm"
+				validate="true"
+				input="/goUpdateDataRole.do?method=goUpdateDataRole"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>修改数据角色</description>
+		</action>
+		<action path="/showDataRoleMain"
+				scope="request"
+				type="com.yh.admin.roles.web.action.DataRolesAction"
+				parameter="method">
+			<description>查看数据角色</description>
+			<forward name="success" path="/admin/dataroles/dataroles_show_main.jsp" />
+		</action>
+		<action path="/showDataRoleMains"
+				scope="request"
+				type="com.yh.admin.roles.web.action.RoleDataAuthAction"
+				parameter="method">
+			<description>查看数据角色（授权）</description>
+			<forward name="success" path="/admin/dataroles/dataroles_show_main.jsp" />
+		</action>
+		
+	<!--	<action path="/showDataRole"
+				scope="request"
+				type="DataRolesAction"
+				parameter="method">
+			<description>查看数据角色</description>
+			<forward name="success" path="/admin/dataroles/dataroles_show.jsp" />
+		</action>-->
+		<!-- 数据角色  end-->
+		<!-- 功能授权 begin-->
+		<action path="/findFunction"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>查看功能模块</description>
+		</action>
+		<action path="/getPowerByFunId"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>根据功能角色查询对应权限</description>
+		</action>
+		<action path="/updateRoleFunction"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>授权</description>
+		</action>
+		<!-- 功能授权  end-->
+		
+		<!-- 系统日志  begin-->
+		<action path="/goOpLogList"
+				scope="request"
+				name="opLogForm"
+				type="com.yh.admin.oplog.web.action.OpLogAction"
+				parameter="method">
+			<description>系统日志信息工作台</description>
+			<forward name="success" path="/admin/oplog/oplog_worktop.jsp" />
+		</action>
+		
+		<action path="/showOpLogList"
+				scope="request"
+				name="opLogForm"
+				type="com.yh.admin.oplog.web.action.OpLogAction"
+				parameter="method">
+			<description>系统日志信息</description>
+		</action>
+		<!-- 系统日志  end-->
+		<!-- 跳转功能授权  begin-->
+		<action path="/goToFuncTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转功能授权</description>
+			<forward name="success" path="/admin/funcroles/funcroles_update_func.jsp" />
+		</action>
+		<action path="/goToViewFuncTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转功能授权</description>
+			<forward name="success" path="/admin/funcroles/funcroles_view_func.jsp" />
+		</action>
+		<!-- 跳转功能授权  end-->
+		<!-- 事项树  begin-->
+		<action path="/goToItemTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转事项授权</description>
+			<forward name="success" path="/admin/funcroles/funcroles_update_item.jsp" />
+		</action>
+		<action path="/goToViewItemTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转查看事项授权</description>
+			<forward name="success" path="/admin/funcroles/funcroles_view_item.jsp" />
+		</action>
+		<action path="/findItemTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>加载事项树</description>
+		</action>
+		<action path="/updateRoleItem"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>事项树授权</description>
+		</action>
+		<!-- 事项树  end-->
+		<!-- 环节树  begin-->
+		<action path="/goToNodeTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转环节授权</description>
+			<forward name="success" path="/admin/funcroles/funcroles_update_node.jsp" />
+		</action>
+		<action path="/goToViewNodeTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>跳转查看环节授权</description>
+			<forward name="success" path="/admin/funcroles/funcroles_view_node.jsp" />
+		</action>
+		<action path="/findNodeTree"
+				scope="request"
+				type="com.yh.admin.roles.web.action.FuncRolesAction"
+				parameter="method">
+			<description>加载环节树</description>
+		</action>
+		<!-- 事项树  end-->
+	</action-mappings>
+</struts-config>

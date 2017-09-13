@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="cfWardForm" type="com.yh.hr.component.wardset.web.form.CfWardForm" />
+    </form-beans>
+	<action-mappings>
+		<action path="/getUnits"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>获取病区科室</description>
+		</action>
+		<action path="/goWardSetList"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>跳转到病区配置管理工作台</description>
+			<forward name="success" path="/ward/wardset_worktop.jsp"/>
+		</action>
+		<action path="/listWardSetList"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>查询病区配置列表</description>
+		</action>
+		<action path="/goWardCreatePage"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>跳转到新增病区界面</description>
+			<forward name="success" path="/ward/wardset_create.jsp"/>
+		</action>
+		<action path="/createWard"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				input="/goWardCreatePage?method=goCreate"
+				parameter="method">
+			<description>新增病区记录</description>
+		</action>
+		<action path="/goWardUpdatePage"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>跳转到修改病区界面</description>
+			<forward name="success" path="/ward/wardset_update.jsp"/>
+		</action>
+		<action path="/updateWard"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				input="/goWardUpdatePage?method=goUpdate"
+				parameter="method">
+			<description>修改病区</description>
+		</action>
+		<action path="/deleteWard"
+				scope="request"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>删除病区</description>
+		</action>
+		<action path="/goWardViewPage"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>查看病区</description>
+			<forward name="success" path="/ward/wardset_view.jsp"/>
+		</action>
+		<action path="/goViewTechnicalPersonEquipInfo"
+				scope="request"
+				name="cfWardForm"
+				validate="false"
+				type="com.yh.hr.component.wardset.web.action.WardSetAction"
+				parameter="method">
+			<description>跳转或导出《医院各病区卫技人员配备情况一览表》</description>
+			<forward name="success" path="/ward/wardset_collection_view.jsp"/>
+			<forward name="export" path="/ward/wardset_collection_export.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

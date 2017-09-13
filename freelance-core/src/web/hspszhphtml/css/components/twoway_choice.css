@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.twoway-choice{
+    width: 100%;
+    height: 100%;
+    color: #282828;
+    font-size: 14px;
+}
+.first-choice,.second-choice{
+    width: 43%;
+    height: 100%;
+}
+.first-choice{
+    float: left;
+}
+.second-choice{
+    float: right;
+}
+.tws-title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+}
+.first-choice .tws-title{
+    background: #1dc6a6;
+}
+.second-choice .tws-title{
+    background: #75b1ff;
+}
+.tws-ul{
+    width: calc(100% - 20px);
+    height: calc(100% - 40px);
+    padding-left: 20px;
+    background: #fff;
+    overflow-y: auto;
+}
+
+.tws-li a{
+    display: inline-block;
+    padding:10px;
+    border-radius: 2px;
+}
+.tws-li a:hover{
+    background: #edf0f5;
+}
+.tws-li a.tws-liaselect{
+    background: #edf0f5;
+}
+.tws-btn{
+    float: left;
+    width: calc(14% - 40px);
+    margin: 150px 20px;
+}
+.tws-btn button{
+    display: block;
+    width: 100%;
+    height: 35px;
+    line-height: 33px;
+    margin-bottom: 10px;
+    background: #f5f7f9;
+    border: 1px solid #e3e3e3;
+    font-size: 14px;
+    color: #282828;
+}
+.tws-btn button span{
+    font-family: SimSun;
+    font-weight: bold;
+}
+.tws-btn button:hover{
+    background: #1cc6a3;
+    color: #fff;
+}

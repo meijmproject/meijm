@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<!-- 定义web应用的名字-->
+	<display-name>freelance-admin</display-name>
+	
+	<!-- 声明应用范围内的初始化参数。 -->
+	<context-param>
+		<param-name>weblogic.httpd.inputCharset./*</param-name>
+		<param-value>UTF-8</param-value>
+	</context-param>
+	
+	<!-- yh flow init servlet-->
+	<!-- 在向servlet或JSP页面制定初始化参数或定制URL时，必须首先命名servlet或JSP页面。Servlet元素就是用来完成此项任务的。 -->
+	<!--<servlet>
+		<servlet-name>FlowContextServlet</servlet-name>
+		<servlet-class>
+			jade.workflow.context.FlowContextLoaderServlet
+		</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>-->
+	
+	<!-- jade flow context config -->
+	<!-- 声明应用范围内的初始化参数。 -->
+	<!--<context-param>
+		<param-name>flowContextConfigLocation</param-name>
+		<param-value>
+			flow/standard/management/contract/flows_contract.xml,
+			flow/standard/management/goout/flows_goout.xml,
+			flow/standard/management/changeoff/flows_changeoff.xml,
+			flow/standard/management/attendance/flows_attendance.xml,
+			flow/standard/management/overtime/flows_overtime.xml,
+			flow/standard/management/vacation/flows_vacation.xml
+        </param-value>
+	</context-param>
+	<context-param>
+		<param-name>bizzContextConfigLocation</param-name>
+		<param-value>
+			flow/standard/management/contract/items_contract.xml,
+			flow/standard/management/goout/items_goout.xml,
+			flow/standard/management/changeoff/items_changeoff.xml,
+			flow/standard/management/attendance/items_attendance.xml,
+			flow/standard/management/overtime/items_overtime.xml,
+			flow/standard/management/vacation/items_vacation.xml
+        </param-value>
+	</context-param>-->
+	<!-- spring context config -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			<!-- ======================================================================== -->
+			<!--							 基础平台引用文件						          -->	
+			<!-- ======================================================================== -->
+<!-- 			classpath*:component/**/spring*.xml -->
+			classpath:spring-workflow.xml,
+			/WEB-INF/core/spring-transaction.xml,
+			/WEB-INF/**/spring*.xml
+			
+			<!--classpath*:jade/**/spring-*.xml,
+			/WEB-INF/hrres/**/spring-*.xml,
+			/WEB-INF/hrcomponent/**/spring-*.xml,
+			/WEB-INF/core/spring-core.xml,
+			/WEB-INF/admin/**/spring-*.xml,
+			/WEB-INF/core/spring-transaction.xml,
+			/WEB-INF/component/validate/spring-*.xml-->
+			
+			<!--classpath*:qz/**/spring-*.xml,
+			classpath*:wagebusiness/spring-*.xml,
+			classpath*:wagecalculate/spring-*.xml,
+			/WEB-INF/core/spring-transaction.xml,-->
+			<!--/WEB-INF/**/spring*.xml-->
+		</param-value>		
+	</context-param>
+	
+	<!-- requestion character encoding -->  
+	<!-- 过滤器元素将一个名字与一个实现javax.servlet.Filter接口的类相关联。 -->
+	<filter>
+		<filter-name>defaultFilter</filter-name>
+		<filter-class>com.yh.platform.core.web.filter.DefaultFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>out_encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<!-- safe char filter -->
+	<!-- 过滤器元素将一个名字与一个实现javax.servlet.Filter接口的类相关联。 -->
+	<filter>
+		<filter-name>safeFilter</filter-name>
+		<filter-class>com.yh.platform.core.web.filter.SafeFilter</filter-class>
+		<init-param>
+			<param-name>use_safe</param-name>
+			<param-value>Y</param-value>
+		</init-param>	
+		<init-param>
+			<param-name>s_sign</param-name>
+			<param-value>():;,onmouseover,../,./,javascript:,alert,eval(,tostring:,valueof:,newfunction</param-value>
+		</init-param>	
+		<init-param>
+			<param-name>s_sign_replace</param-name>
+			<param-value>%00</param-value>
+		</init-param>	
+		<init-param>
+			<param-name>s_and</param-name>
+			<param-value>window.location</param-value>
+		</init-param>	
+		<init-param>
+			<param-name>s_or</param-name>
+			<param-value>or,union,and,select,delete,insert,update,for,where,join,in,||,new</param-value>
+		</init-param>
+		<init-param>
+			<param-name>s_rejectPage</param-name>
+			<param-value>/error.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>s_referer</param-name>
+			<param-value>http://localhost,http://127.0.0.1,http://192.168.</param-value>
+		</init-param>
+		<init-param>
+			<param-name>s_to_sdc</param-name>
+			<param-value>&lt;&gt;</param-value>
+		</init-param>
+	</filter>
+	<!-- 过滤器元素将一个名字与一个实现javax.servlet.Filter接口的类相关联。 -->
+	<filter>
+		<filter-name>securityFilter</filter-name>
+		<filter-class>com.yh.platform.core.web.filter.SecurityFilter</filter-class>
+		<init-param>
+			<param-name>login_url</param-name>
+			<param-value>/login.jsp</param-value>
+		</init-param>
+		<init-param>
+			<!-- not check authentication dir(prefix) -->
+			<param-name>filter_skip_dir</param-name>	
+			<param-value>/login,/goChangeSystem,/logout</param-value>
+		</init-param>
+		<init-param>
+			<!-- not check authentication -->
+			<param-name>security_check_skip_uri</param-name>
+			<param-value>login,logout,changeSystem,changeSystemPosition,listSysMenuTree,goUsersPasswordUpdatePage,updateUserPassword,downFile,checkPasswordForUpdate,goUsersDefaultPasswordUpdatePage,findCfgPropertiesValue</param-value>
+		</init-param>
+		<init-param>
+			<param-name>security_check_fail_uri</param-name>
+			<param-value>/noAuthority.jsp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>sso_check_enabled</param-name>
+			<param-value>N</param-value>
+		</init-param>
+		<init-param>
+			<param-name>sso_login_url</param-name>
+			<param-value>http://localhost:9090/cas/logout</param-value>
+		</init-param>
+	</filter>
+        
+  <!-- requestion character encoding -->	
+  <!-- 一旦命名了一个过滤器，就要利用filter-mapping元素把它与一个或多个servlet或JSP页面相关联。   -->
+	<filter-mapping>
+		<filter-name>defaultFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>safeFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>securityFilter</filter-name>
+		 <url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>securityFilter</filter-name>
+		 <url-pattern>/dwr/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- spring init servlet-->
+	<!-- 过滤器元素将一个名字与一个实现javax.servlet.Filter接口的类相关联。 -->
+	<servlet>
+		<servlet-name>SpringContextServlet</servlet-name>
+		<servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!--  <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener> -->
+	
+	<!-- remote interface for checking user authzation -->
+	<!-- <servlet>
+		<servlet-name>userAuthzationServlet</servlet-name>
+		<servlet-class>jade.remotecall.impl.UserAuthzationRemoteServiceImpl</servlet-class>
+	</servlet>			
+	<servlet-mapping>
+		<servlet-name>userAuthzationServlet</servlet-name>
+		<url-pattern>/isAuthed</url-pattern>
+	</servlet-mapping> -->
+	
+	<!-- struts config -->
+	<!-- 过滤器元素将一个名字与一个实现javax.servlet.Filter接口的类相关联。 -->
+	<servlet> 
+		<servlet-name>action</servlet-name>
+<!-- 		<servlet-class>org.apache.struts.action.ActionServlet</servlet-class> -->
+		<servlet-class>com.yh.platform.core.web.yhstrutsservlet.BaseServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+<!-- 				classpath*:component/**/struts*.xml, -->
+				/WEB-INF/**/struts*.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<!-- convertNull - Force simulation of the Struts 1.0 behavior when populating forms. 
+			If set to true, the numeric Java wrapper class types (like java.lang.Integer) will default to null (rather than 0). -->
+			<param-name>convertNull</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<!-- 
+	<servlet>
+		<display-name>DWR Servlet</display-name>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>config-dictionary</param-name>
+			<param-value>/component/dictionary/dwr-dictionary.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	 -->
+		
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- welcome page -->
+	<!-- 指示服务器在收到引用一个目录名而不是文件名的URL时，使用哪个文件 -->
+	<welcome-file-list>
+	      <welcome-file>/login.jsp</welcome-file>
+	</welcome-file-list> 
+	
+	<!-- gloable error  page -->
+	<!-- 返回特定HTTP状态代码时，或者特定类型的异常被抛出时，能够制定将要显示的页面。 -->
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    <!-- session timeout -->
+    <!-- 如果某个会话在一定时间内未被访问，服务器可以抛弃它以节省内存。    
+          可通过使用HttpSession的setMaxInactiveInterval方法明确设置单个会话对象的超时值，或者可利用session-config元素制定缺省超时值。    -->
+    <session-config> 
+         <session-timeout>30</session-timeout> 
+   	</session-config>
+   <!-- jsp-config元素主要用来设定JSP的相关配置-->
+	<jsp-config>
+		<!-- core tlds -->
+		<!-- 对标记库描述符文件（Tag Libraryu Descriptor file）指定别名。此功能使你能够更改TLD文件的位置，    
+                  而不用编辑使用这些文件的JSP页面。     -->
+		<taglib>
+	        <taglib-uri>struts-bean.tld</taglib-uri>
+	        <taglib-location>/WEB-INF/core/tlds/struts-bean.tld</taglib-location>
+		</taglib>
+		<taglib>
+	        <taglib-uri>struts-bean-el.tld</taglib-uri>
+	        <taglib-location>/WEB-INF/core/tlds/struts-bean-el.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>struts-html.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/struts-html.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>struts-html-el.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/struts-html-el.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>struts-logic.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/struts-logic.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>struts-logic-el.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/struts-logic-el.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>struts-nested.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/struts-nested.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>struts-template.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/struts-template.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>struts-tiles.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/struts-tiles.tld</taglib-location>
+		</taglib>	
+		<taglib>
+			<taglib-uri>c.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/c.tld</taglib-location>
+		</taglib>	
+		<taglib>
+			<taglib-uri>fmt.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/fmt.tld</taglib-location>
+		</taglib>	
+		<taglib>
+			<taglib-uri>sql.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/sql.tld</taglib-location>
+		</taglib>	
+		<taglib>
+			<taglib-uri>x.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/x.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>fn.tld</taglib-uri>
+			<taglib-location>/WEB-INF/core/tlds/fn.tld</taglib-location>
+		</taglib>
+		<!-- xxx tlds -->
+		<taglib>
+			<taglib-uri>dictionary.tld</taglib-uri>
+			<taglib-location>/WEB-INF/component/dictionary/tlds/dictionary.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+	
+	<!-- 如果Web应用具有想到特殊的文件，希望能保证给他们分配特定的MIME类型，则mime-mapping元素提供这种保证。 -->
+	<mime-mapping>
+		<extension>doc</extension>
+		<mime-type>application/msword</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>rar</extension>
+		<mime-type>application/rar</mime-type>
+	</mime-mapping>
+</web-app>

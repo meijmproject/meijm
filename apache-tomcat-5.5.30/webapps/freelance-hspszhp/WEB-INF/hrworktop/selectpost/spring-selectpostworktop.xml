@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 选择人员 -->
+	<bean id="postSelectFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.select.post.facade.PostSelectFacade">
+				<property name="postSelectService">
+					<ref bean="postSelectService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 选择人员默认实现 service -->
+	<bean id="postSelectService" class="com.yh.hr.select.post.service.impl.PostSelectServiceImpl" />
+	
+</beans>

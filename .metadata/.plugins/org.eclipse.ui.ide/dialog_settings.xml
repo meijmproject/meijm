@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="false" key="ShowDerived"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-component/src/java/com/yh/component/flow/service/impl/YhWorkflowServiceImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-component/src/java/com/yh/component/dictionary/dto/DicItemDTO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-component/src/java/com/yh/component/taglib/TableTagBean.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-report/src/java/com/yh/hr/report/facade/impl/BaseReportFacadeImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-core/src/java/com/yh/platform/core/web/yhstrutsservlet/BaseServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-res/src/java/com/yh/hr/res/dictionary/DicConstants.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hspszhp/src/web/login.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-core/src/web/include/jsp_headers.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-admin/src/java/com/yh/admin/message/bo/MessageBoard.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-admin/src/java/com/yh/admin/login/web/action/LoginAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-core/conf/common-config.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-admin/src/java/com/yh/admin/util/AdminConstants.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hspszhp/src/web/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-worktop/src/web/WEB-INF/hrworktop/struts-hrworktop-wb-workbench.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-orghc/src/web/unit/unitmanger/unit_main.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/web/action/UnitMangerAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-info/src/java/com/yh/hr/info/biz/unit/workbench/web/action/VerPbPersonWorkbenchAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-info/src/java/com/yh/hr/info/ver/unit/workbench/web/action/VerPbPersonWorkbenchAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-res/conf/hbm/hrres/cf/JhcCfShowResultSet.hbm.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-component/src/java/com/yh/hr/component/orgtree/action/JhcOrgTreeAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-info/src/web/hrinfo/ver/unit/workbench/ver_person_workbench_main.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-admin/src/web/admin/message/message_add.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-admin/src/java/com/yh/admin/roles/web/action/RoleDataAuthAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-admin/src/java/com/yh/admin/roles/queryhelper/RoleDataAuthQueryHelper.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-component/src/java/com/yh/hr/component/infotemplate/web/action/PersonInformationAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-admin/src/java/com/yh/admin/users/web/action/UsersAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/web/action/PersonalInfoUpdateAction.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/freelance-hspszhp/src/web/WEB-INF/core/spring-core.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="493" key="DIALOG_WIDTH"/>
+			<item value="300" key="DIALOG_Y_ORIGIN"/>
+			<item value="568" key="DIALOG_HEIGHT"/>
+			<item value="678" key="DIALOG_X_ORIGIN"/>
+			<item value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+	</section>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1503568005875" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="false" key="LINK_NAVIGATOR_TO_EDITOR"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="581" key="DIALOG_WIDTH"/>
+		<item value="464" key="DIALOG_Y_ORIGIN"/>
+		<item value="756" key="DIALOG_X_ORIGIN"/>
+		<item value="423" key="DIALOG_HEIGHT"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+	</section>
+</section>

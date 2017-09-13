@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+    </form-beans>
+	<action-mappings>
+		<action path="/goVerPbPersonWorkbench"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.workbench.web.action.VerPbPersonWorkbenchAction"
+				parameter="method">
+			<description>跳转到单位人员信息校核页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/workbench/ver_person_workbench_main.jsp"/>
+		</action>
+		<action path="/goToPersonWorkBench"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.workbench.web.action.VerPbPersonWorkbenchAction"
+				parameter="method">
+			<description>跳转到单位人员信息校核页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/workbench/ver_perosn_workbench.jsp"/>
+		</action>
+		<action path="/listVerPerson"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.workbench.web.action.VerPbPersonWorkbenchAction"
+				parameter="method">
+			<description>查询校核单位人员基础信息列表</description>
+		</action>
+            <action path="/findVerDept"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.workbench.web.action.VerPbPersonWorkbenchAction"
+				parameter="method">
+			<description>查询校核部门列表</description>
+		</action>
+	</action-mappings>
+</struts-config>

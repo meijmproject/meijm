@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- 领导职数资源使用信息服务接口 -->
+    <bean id="ldInfoService" class="com.yh.hr.res.ld.service.impl.LdInfoServiceImpl" />
+    <bean id="ldCashService" class="com.yh.hr.res.ld.service.impl.LdCashServiceImpl" />
+</beans>

@@ -1,0 +1,102 @@
+@charset "utf-8";
+.dl-horizontal{
+    line-height: 42px;
+    width: 350px;
+}
+.dl-horizontal dt{
+    float: left;
+    width: 36%;
+    min-width: 30px;
+    background-color: #f5f9fc;
+    clear: left;
+    text-align: right;
+    padding-right: 3px;
+    margin-right: 1%;
+    font-size: 12px;
+    color: #888;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dl-horizontal dd{
+    font-size: 12px;
+    color: #333;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.input_wrap_model_min {
+    position: relative;
+    /* display: inline-block; */
+}
+.dl-horizontal input{
+    width: 60%;
+    height: 26px;
+    color: #333;
+    font-size: 12px;
+    padding-left: 1%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.organ-select{
+    display: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 300px;
+    position: absolute;
+    left: 36%;
+}
+.organ-btn{
+    height: 40px;
+    line-height: 40px;
+}
+.organ-left-icon,.organ-right-icon{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+.organ-search{
+    padding-right: 30px;
+    background: url("organ-search.png") no-repeat 97% transparent;
+}
+.organ-left-icon{
+    background: url("left-arrow.png") no-repeat center transparent;
+    float: left;
+}
+.organ-right-icon{
+    background: url("right-arrow.png") no-repeat center transparent;
+    float: right;
+}
+.organ-table{
+    width: 100%;
+    height: 150px;
+    table-layout: fixed;
+}
+.organ-table tr{
+    cursor: pointer;
+}
+.organ-table tr:hover{
+    background-color:#eaf6f9 ;
+}
+.organ-table tr th{
+    font-weight: bold;
+    background: #e5f1f5;
+    cursor: default;
+}
+.organ-table tr th,.organ-table tr td{
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+}

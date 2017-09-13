@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事业单位岗位分类管理</title>
+</head>
+<link rel="stylesheet" href="../../css/common/reset.css">
+<link rel="stylesheet" href="../../css/common/modalstyle.css">
+<link rel="stylesheet" href="../../css/components/institution_basic_table.css">
+<script src="../../js/jquery-1.12.4.js"></script>
+<script src="../../js/jquery.popdown.js"></script>
+<script>
+    $(function(){
+        $('.popdown').popdown();
+    });
+</script>
+<style>
+    .btn1{
+        border: 1px solid #DDDDDD;
+        padding: 2px 6px;
+        background: #c1e7ff;
+    }
+</style>
+<body>
+    <h3 style="height: 30px"><a href="institution_basic_4_a.html" class="popdown btn1">信息修改</a><span style="margin-left: 30px;color: red">*模态框页面在同级目录下，institution_basic_4_a.html</span></h3>
+    <table class="institution_basic">
+        <!--说明，关于第一个tr .example，这个页面所特有（不要在其他页面也添加），请一并添加到js中去，但请勿添加数据，
+        该tr有17个td,不要写数据到该td中，主要为解决colspan计算不准确的问题-->
+        <tr class="example  no_data">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="institution_basic_td_bg border_right">单位名称</td>
+            <td colspan="15" class="institution_basic_td_color">21</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="institution_basic_td_bg border_right">内设机构名称</td>
+            <td colspan="7" class="institution_basic_td_color">23</td>
+            <td colspan="2" class="institution_basic_td_bg">岗位名称</td>
+            <td colspan="6" class="institution_basic_td_color">21</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="institution_basic_td_bg border_right">岗位类别</td>
+            <td colspan="7" class="institution_basic_td_color">23</td>
+            <td colspan="2" class="institution_basic_td_bg">岗位等级</td>
+            <td colspan="6" class="institution_basic_td_color">21</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="institution_basic_td_bg border_right">管理岗位等级</td>
+            <td colspan="7" class="institution_basic_td_color">23</td>
+            <td colspan="2" class="institution_basic_td_bg">专技岗位等级</td>
+            <td colspan="6" class="institution_basic_td_color">21</td>
+        </tr>
+        <tr class="border_top">
+           <td colspan="2" class="condition institution_basic_td_bg border_right">岗位聘用条件</td>
+           <td colspan="15" class="condition text_no_center institution_basic_td_color">
+               <p>条件1</p>
+               <p>条件1</p>
+               <p>条件1</p>
+               <p>条件1</p>
+           </td>
+        </tr>
+        <tr class="border_top">
+            <td colspan="2" class="condition institution_basic_td_bg border_right">岗位职责</td>
+            <td colspan="15" class="condition text_no_center institution_basic_td_color">
+                <p>条件1</p>
+                <p>条件1</p>
+                <p>条件1</p>
+                <p>条件1</p>
+            </td>
+        </tr>
+        <tr class="border_top">
+            <td colspan="2" class="condition institution_basic_td_bg border_right">岗位目标任务</td>
+            <td colspan="15" class="condition text_no_center institution_basic_td_color">
+                <p>条件1</p>
+                <p>条件1</p>
+                <p>条件1</p>
+                <p>条件1</p>
+            </td>
+        </tr>
+        <tr class="border_top">
+            <td colspan="2" class="condition institution_basic_td_bg border_right">岗位绩效考核标准</td>
+            <td colspan="15" class="condition text_no_center institution_basic_td_color">
+                <p>条件1</p>
+                <p>条件1</p>
+                <p>条件1</p>
+                <p>条件1</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

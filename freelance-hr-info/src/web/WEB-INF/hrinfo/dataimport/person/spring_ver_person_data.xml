@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- 导入信息  -->
+	  <bean id="verPersonDataFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.VerPersonDataFacade">
+	        	<property name="verPersonDataService" ref="verPersonDataService"/>
+	        	
+			</bean>
+		</property>
+    </bean>
+	 
+    <bean id="verPersonDataService" class="com.yh.hr.info.dataimport.person.service.impl.VerPersonDataServiceImpl" >
+    		<property name="imDicItemMappingService" ref="imDicItemMappingService"/>
+    		<property name="imDicTypeMappingService" ref="imDicTypeMappingService"/>
+    		<property name="imImportBatchService" ref="imImportBatchService"/>
+    		<property name="checkUnusualHandleService" ref="checkUnusualHandleService"/>
+    		<property name="dicMappingLogHandleService" ref="dicMappingLogHandleService"/>
+    		<property name="checkBatchHandleService" ref="checkBatchHandleService"/>
+    		<property name="imCollectTemplateService" ref="imCollectTemplateService"/>
+    </bean>
+
+</beans>

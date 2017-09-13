@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    
+     <!-- 领导职数检查（验证接口） -->
+    <bean id="ldCheckService" class="com.yh.hr.leader.validate.service.impl.LdCheckServiceImpl" >
+    	<property name="rules">
+    		<list>
+    			<ref bean="ldCheckRuleService"/>
+    		</list>
+    	</property>
+    </bean>
+    
+   <!-- 领导职务职级验证纬度 -->
+    <bean id="ldCheckRuleService" class="com.yh.hr.leader.validate.service.impl.LdCheckRuleServiceImpl" >
+    	<property name="ldCashService">
+    		<ref bean="ldCashService"/>
+    	</property>
+    </bean>
+    
+    <!-- 上报业务-信息领导职数验证默认实现（验证入口）   -->
+    <bean id="ldDefaultValidateService" class="com.yh.hr.leader.validate.service.impl.LdDefaultValidateServiceImpl" >
+    	<property name="ldCheckService">
+    		<ref bean="ldCheckService"/>
+    	</property>
+    </bean>
+   
+</beans>

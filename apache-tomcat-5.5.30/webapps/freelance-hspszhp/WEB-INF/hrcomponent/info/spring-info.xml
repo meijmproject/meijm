@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="infoManageFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean
+				class="com.yh.hr.component.info.facade.InfoManageFacade">
+				<property name="infoManageService" ref="infoManageService" />
+			</bean>
+		</property>
+	</bean>
+   <bean id="infoManageService" class="com.yh.hr.component.info.service.impl.InfoManageServiceImpl"/>
+   
+   
+   <bean id="jhcCfShowResultSetFacade" parent="txnProxyParent">
+  	<property name="target">
+  		<bean class="com.yh.hr.component.info.facade.JhcCfShowResultSetFacade">
+  			<property name="jhcCfShowResultSetService" ref="jhcCfShowResultSetService" />
+  		</bean>
+  	</property>
+  </bean>
+  
+  <bean id="jhcCfShowResultOrderFacade" parent="txnProxyParent">
+    <property name="target">
+      <bean class="com.yh.hr.component.info.facade.JhcCfShowResultOrderFacade">
+        <property name="jhcCfShowResultOrderService" ref="jhcCfShowResultOrderService" />
+      </bean>
+    </property>
+  </bean>
+  
+  <bean id="jhcCfShowFieldOrderFacade" parent="txnProxyParent">
+    <property name="target">
+      <bean class="com.yh.hr.component.info.facade.JhcCfShowFieldOrderFacade">
+        <property name="jhcCfShowFieldOrderService" ref="jhcCfShowFieldOrderService" />
+      </bean>
+    </property>
+  </bean>
+</beans>

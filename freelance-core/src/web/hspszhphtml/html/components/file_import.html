@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <meta charset="utf-8">
+    <title>文件导入</title>
+    <link rel="stylesheet" href="..\..\css\common\reset.css">
+    <link rel="stylesheet" href="..\..\css\common\base.css">
+    <link rel="stylesheet" href="..\..\css\components\file_import.css">
+    <link rel="stylesheet" href="..\..\css\components\handle_btn.css">
+</head>
+
+<body style="background: #e3e3e3;">
+
+<div class="file-import">
+    <div class="file-import-process">
+        <h2 class="fi-title">导入文件指引</h2>
+        <ol class="progress progress-4 clearfix">
+            <li>
+                <div class="process-line"></div>
+                <div class="process-cont">
+                    <div class="process-cont-number">1</div>
+                    <div class="process-cont-text">下载模板</div>
+                </div>
+            </li>
+            <li>
+                <div class="process-line"></div>
+                <div class="process-cont">
+                    <div class="process-cont-number">2</div>
+                    <div class="process-cont-text">采集数据</div>
+                </div>
+            </li>
+            <li>
+                <div class="process-line"></div>
+                <div class="process-cont">
+                    <div class="process-cont-number">3</div>
+                    <div class="process-cont-text">上传文件</div>
+                </div>
+            </li>
+            <li>
+                <div class="process-cont">
+                    <div class="process-cont-number">4</div>
+                    <div class="process-cont-text">查看导入状态</div>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="file-import-cont">
+        <button class="btn-search btn-default import-download-btn">下载模板</button>
+        <span class="fi-title">上传资料</span>
+        <div class="show-fileName" type="text"></div>
+        <a class="btn-browse-icon btn-search btn-default">浏览<input type="file" class="file-choice"></a>
+        <button class="btn-upload-icon btn-search btn-default">上传</button>
+    </div>
+
+</div>
+
+</body>
+<script src="..\..\js\jquery-1.12.4.js"></script>
+<script>
+    $(function() {
+        $(".btn-browse-icon").on("change", "input[type='file']", function () {
+            var filePath = $(this).val();
+            var arr = filePath.split('\\');
+            var fileName = arr[arr.length - 1];
+            $(".show-fileName").html(fileName);
+        });
+
+        $(document).on('click',".btn-upload-icon",function (e) {
+            e.stopPropagation();
+            var filePath = $(".file-choice").val();
+
+            $(".fic-result-failed").remove();
+            $(".fic-result-successed").remove();
+            if (filePath.indexOf("jpg") != -1 || filePath.indexOf("png") != -1) {
+                $(".btn-upload-icon").append("<span class=\"fic-result-successed\">上传成功</span>")
+            } else {
+                $(".btn-upload-icon").append("<span class=\"fic-result-failed\">上传失败<a class=\"failed-data\">请查看失败数据</a></span>")
+                return false;
+            }
+        })
+    });
+</script>
+</html>

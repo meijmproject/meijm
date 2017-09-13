@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+.statistica-excels .left-content{
+    margin-right: 0;
+    border-right: 1px solid #e3e3e3;
+}
+.statistica-excels .left-content .leftnav-fold{
+    height: 39px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.excels-tab{
+    width: calc(100% - 70px);
+    padding-right: 70px;
+    background-color: #f5f5f5;
+    height: 39px;
+    border-bottom: 1px solid #e3e3e3;
+    overflow: hidden;
+    position: relative;
+}
+.excels-tab li a{
+    display: block;
+    float: left;
+    height: 39px;
+    line-height: 40px;
+    padding: 0 25px 0 10px;
+    color: #666666;
+    font-size: 14px;
+    border-right: 1px solid #e3e3e3;
+    position: relative;
+}
+.tab-li-close{
+    display: block;
+    position: absolute;
+    top:0;
+    right:0;
+    width: 25px;
+    height: 39px;
+    background: url("../../images/common/close8.png") no-repeat center transparent;
+}
+
+.excels-tab li a:hover{
+    background-color: #1cc6a3;
+    color: #fff;
+}
+.excels-tab li a:hover .tab-li-close{
+    background-image: url("../../images/common/close8-hover.png");
+}
+.excels-tab li a.tab-selected{
+    background-color: #1cc6a3;
+    color: #fff;
+}
+.excels-tab li a.tab-selected .tab-li-close{
+    background-image: url("../../images/common/close8-hover.png");
+}
+
+.tab-handle-icon{
+    position: absolute;
+    right: 0;
+    float: right;
+}
+.tab-handle-icon span{
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.tab-li-add{
+    background: url("../../images/components/hadle_btn/add12-gray.png")no-repeat center transparent;
+}
+.tab-handle-icon span:hover{
+    background-color: #eaeaea;
+    border-radius: 2px;
+}
+.right-move{
+    margin-right: 10px;
+    background: url("../../images/common/right-fold-move.png") no-repeat center transparent;
+}
+.left-move{
+    right: 40px;
+    background: url("../../images/common/left-flod-move.png") no-repeat center transparent;
+}
+.right-excels-show{
+    background: #fff;
+}
+.right-excels-show .excel-content{
+	  /* width:100%; */
+	  height:calc(100% - 40px);
+    padding:10px; 
+    box-sizing: border-box;
+    overflow: auto;
+    position:relative;
+}
+
+.pd10-clear{
+	padding:0!important;
+}

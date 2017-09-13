@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.yh.admin.bo.UserAgent" table="YHB_USER_AGENT">
+		<id name="userAgentOid" column="USER_AGENT_OID" type="java.lang.Long">
+            <generator class="identity"/>
+        </id>
+        <property name="systemPositionOid" type="java.lang.Long">
+            <column name="SYSTEM_POSITION_OID" />
+        </property>
+        <property name="userId" type="java.lang.String">
+            <column name="USER_ID">
+                <comment>被代理人USER_ID</comment>
+            </column>
+        </property>
+        <property name="agentUserId" type="java.lang.String">
+            <column name="AGENT_USER_ID">
+                <comment>指定代理人USER_ID</comment>
+            </column>
+        </property>
+		<property name="effectiveDate" column="EFFECTIVE_DATE" type="java.util.Date" />
+		<property name="expiredDt" column="EXPIRED_DT" type="java.util.Date" />
+		<property name="isActive" column="IS_ACTIVE" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

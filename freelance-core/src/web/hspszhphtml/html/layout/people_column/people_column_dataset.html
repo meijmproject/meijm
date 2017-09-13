@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <title>人员名册栏目数据集</title>
+    <link rel="stylesheet" href="../../../css/common/reset.css">
+    <link rel="stylesheet" href="../../../css/common/base.css">
+    <link rel="stylesheet" href="../../../css/common/layout.css">
+    <link rel="stylesheet" href="../../../css/components/handle_btn.css">
+    <link rel="stylesheet" href="../../../css/components/head_nav.css">
+    <link rel="stylesheet" href="../../../css/components/modal_dialog.css">
+    <link rel="stylesheet" href="../../../css/components/search_result_table.css">
+    <link rel="stylesheet" href="../../../css/layout/people_column.css">
+</head>
+<body class="main-body">
+
+<div id="head-nav"></div>
+<div class="current-position">当前位置 : <span>人员名册栏目设置 > </span>数据集</div>
+
+<div class="main-container">
+
+    <!--数据集-->
+    <div class="pcs-template main-dataset">
+        <div class="pcs-handle-area">
+            <h3 class="pcs-title">数据集</h3>
+            <div class="pcs-search">
+                <span class="pcs-symbol">数据集名称</span>
+                <input class="pcs-input" type="text">
+                <button class="btn-search btn-default">查询</button>
+            </div>
+            <div class="handle-btn clearfix">
+                <button href="#" class="btn-add btn-left-icon btn-default check_transaction_popdown">新增</button>
+                <button href="#" class="btn-delete btn-left-icon btn-default">删除</button>
+                <button href="#" class="btn-look btn-left-icon btn-default">查看</button>
+                <button href="#" class="btn-modify btn-left-icon btn-default">修改</button>
+            </div>
+        </div>
+
+        <div class="sr-dataset-table">
+            <table class="sr-table">
+                <thead class="sr-table-thead"></thead>
+                <tbody class="sr-table-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--字段-->
+    <div class="pcs-template main-field">
+        <div class="pcs-handle-area">
+            <h3 class="pcs-title">字段</h3>
+            <div class="pcs-search">
+                <span class="pcs-symbol">字段名称</span>
+                <input class="pcs-input" type="text">
+                <button class="btn-search btn-default">查询</button>
+            </div>
+            <div class="handle-btn clearfix">
+                <button href="#" class="btn-add btn-left-icon btn-default">新增</button>
+                <button href="#" class="btn-delete btn-left-icon btn-default">删除</button>
+                <button href="#" class="btn-look btn-left-icon btn-default">查看</button>
+                <button href="#" class="btn-modify btn-left-icon btn-default">修改</button>
+            </div>
+        </div>
+
+        <div class="sr-field-table">
+            <table class="sr-table">
+                <thead class="sr-table-thead"></thead>
+                <tbody class="sr-table-tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+</div>
+<script src="../../../js/jquery-1.12.4.js"></script>
+<script src="../../../js/jquery.popdown.js"></script>
+<script>
+    //加载子页面
+    $('#head-nav').load('../../components/head_nav.html');
+
+    $(function(){
+        //点击各个按钮弹出模态框事件
+        $(document).ready(function () {
+            $('.check_transaction_popdown').popdown();
+        });
+
+        // 页面加载后各区域的高度设置
+        function eachAreaHeight(){
+            var windowHeight = $(window).height();
+
+            //主内容区高度
+            $('.main-container').height(windowHeight-$('#head-nav').outerHeight(true)-$('.current-position').outerHeight(true)-2);
+        }
+        eachAreaHeight();
+
+        $(window).resize(
+            function(){
+                eachAreaHeight();
+            }
+        );
+
+        // 人员栏目设置数据集表格项sr-dataset-table中插入数据
+        $.ajax({
+            url: "../../json_data.json",//json文件位置
+            type: "GET",//请求方式为get
+            dataType: "json", //返回数据格式为json
+            success: function(data) {//请求成功完成后要执行的方法
+                //each循环 使用$.each方法遍历返回的数据date
+                var index=1;
+                $.each(data.datasetTableData, function(i, item) {
+                    if (i==0){/*添加表头*/
+                        var str = '<tr><th class="md-th"></th><th class="md-th"><input type="checkbox"></th><th class="sorting"> ' +
+                            item.dsname + '</th><th class="sorting">' + item.dstable + '</th><th class="sorting">'+
+                            item.creater+'</th></tr>';
+
+                        $('.sr-dataset-table .sr-table-thead').append(str);
+                    }else{/*添加表体数据*/
+                        var str = '<tr><td class="md-th">'+index+'</td><td class="md-th"><input type="checkbox"></td><td> ' +
+                            item.dsname + '</td><td>' + item.dstable + '</td><td>'+
+                            item.creater+'</td></tr>';
+
+                        $('.sr-dataset-table .sr-table-tbody').append(str);
+                        index ++;
+                    }
+                });
+            }
+        });
+
+        // 人员栏目设置字段表格项sr-field-table中插入数据
+        $.ajax({
+            url: "/hspszhphtml/html/json_data.json",//json文件位置
+            type: "GET",//请求方式为get
+            dataType: "json", //返回数据格式为json
+            success: function(data) {//请求成功完成后要执行的方法
+                //each循环 使用$.each方法遍历返回的数据date
+                var index=1;
+                $.each(data.fieldTableData, function(i, item) {
+                    if (i==0){/*添加表头*/
+                        var str = '<tr><th class="md-th"></th><th class="md-th"><input type="checkbox"></th><th class="sorting"> ' +
+                            item.fname + '</th><th class="sorting">' + item.ftable + '</th><th>'+
+                            item.ftype+'</th><th class="sorting">' + item.fcodetype + '</th></tr>';
+                        $('.sr-field-table .sr-table-thead').append(str);
+                    }else{/*添加表体数据*/
+                        var str = '<tr><td class="md-th">'+index+'</td><td class="md-th"><input type="checkbox"></td><td> ' +
+                            item.fname + '</td><td>' + item.ftable + '</td><td>'+
+                            item.ftype+'</td><td>'+ item.fcodetype+'</td></tr>';
+                        $('.sr-field-table .sr-table-tbody').append(str);
+                        index ++;
+                    }
+                });
+            }
+        });
+
+        // 给数据集查询结果表格添加点击事件
+        $(document).on('click','.main-dataset .sr-table-tbody tr',function () {
+            $(this).addClass('pcs-table-select');
+            $(this).siblings('tr').removeClass('pcs-table-select');
+        });
+        // 给数据集查询结果表格添加点击事件
+        $(document).on('click','.main-field .sr-table-tbody tr',function () {
+            $(this).addClass('sr-tr-selected');
+            $(this).siblings('tr').removeClass('sr-tr-selected');
+        });
+    });
+</script>
+</body>
+</html>

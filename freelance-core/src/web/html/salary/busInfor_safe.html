@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html style="height: 100%;overflow: hidden;">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>信息校核详情页</title>
+    <link href="../../css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/messageCheckDetail.css" rel="stylesheet" type="text/css"/>
+    <link href="../../css/default.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/messageCheck.css"/>
+    <!--业务信息维护css-->
+    <link rel="stylesheet" href="../../css/salary/busInfor_safe.css"/>
+    <script src="../../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../../js/uijs/index.js"></script>
+    <script src="../../js/uijs/messageCheckDetail.js"></script>
+</head>
+<body style="height: 100%;overflow: hidden;">
+<!--头部导航-->
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a href="#">系统管理</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <ul  class="rt_arrow_down">
+                            <li>
+                                <a href=""><img src="../../img/index/change_password.png"  class="change_password" title="修改密码" alt=""/></a>
+                            </li>
+                            <li> <a href=""><img src="../../img/index/help_center.png"  class="change_password"  title="帮助中心" alt=""/></a></li>
+                            <h3 class="text_line"></h3><!--清除浮动-->
+                        </ul>
+                    </div>
+                    <div class="arrow_down">
+                        <img src="../../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                        <div class="hide_content">
+                            <ul>
+                                <li>
+                                    <a href="">帮助中心</a>
+                                </li>
+                                <li>
+                                    <a href="">修改密码</a>
+                                </li>
+                                <li>
+                                    <a href="">xxxxxx</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--头部导航结束-->
+ <div class="sitemap">
+        <ul style="float: left">
+            <li><b>当前位置：</b></li>
+            <li><a href="#">信息管理<span class="spanColor"> > </span></a></li>
+            <li><a href="#">信息校核<span class="spanColor"> > </span></a></li>
+            <li>单位信息管理</li>
+        </ul>
+        <div class="go_back"><span style="font-family: sans-serif;"><< </span>返回</div>
+        <div style="clear: both"></div>
+    </div>
+    <!--定位结束-->
+    <!--左边人员列表-->
+    <div class="scroll_auto">
+        <div class="left">
+            <div class="name_box" id="left_namebox">
+                <ul>
+                    <li class="arrow"><a href="#"><img src="../../img/DetailPages/arrow_up.png"/></a></li>
+                    <li><a href="#">刘晓萌</a></li>
+                    <li><a href="#">欧阳菲菲</a></li>
+                    <li><a href="#">刘晓萌</a></li>
+                    <li><a href="#">李明</a></li>
+                    <li><a href="#">刘晓萌</a></li>
+                    <li><a href="#">刘晓萌</a></li>
+                    <li><a href="#">李明</a></li>
+                    <li><a href="#">刘晓萌</a></li>
+                    <li><a href="#">刘晓萌</a></li>
+                    <li class="name_checked"><a href="#">赵晓军</a></li>
+                    <li class="arrow_bottom"><a href="#"><img src="../../img/DetailPages/arrow_down.png"/></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--右边导航-->
+        <div class="right">
+            <div class="nav_box busIn_nav_box" id="right_navbox">
+                <ul class="right_navtext" id="right_navtext">
+                    <li class="busIn_right_navLI"><a href="">业务基本信息</a> </li>
+                    <li><a href="#">人员信息</a></li>
+                    <li class="busIn_right_navLIteo"><a href="">业务核定信息</a> </li>
+                    <li><a href="#">工资历史一</a></li>
+                    <li class="nav_checked"><a href="#">工资历史二</a></li>
+                    <li><a href="#">工资历史三</a></li>
+                    <li class="busIn_right_navLIteo"><a href="">业务关联信息</a> </li>
+                    <li><a href="#">学历信息</a></li>
+                    <li><a href="#">职务信息</a></li>
+                    <li><a href="#">其他信息</a></li>
+                    <li><a href="#">工资相关信息</a></li>
+                    <li><a href="#">身份信息</a></li>
+                    <li><a href="#">其他信息</a></li>
+                    <li><a href="#">工资相关信息</a></li>
+                    <li><a href="#">身份信息</a></li>
+                    <li><a href="#">其他信息</a></li>
+                    <li><a href="#">工资相关信息</a></li>
+                    <li><a href="#">身份信息</a></li>
+                    <li><a href="#">其他信息</a></li>
+                    <li><a href="#">工资相关信息</a></li>
+                    <li><a href="#">身份信息</a></li>
+                    <li><a href="#">其他信息</a></li>
+                    <li><a href="#">工资相关信息</a></li>
+                    <li><a href="#">身份信息</a></li>
+                    <li><a href="#">其他信息</a></li>
+                    <li><a href="#">工资相关信息</a></li>
+                </ul>
+                <div class="back_top" title="回到顶部"></div>
+            </div>
+        </div>
+        <!--中间主体内容-->
+        <div class="center">
+            <!-- 正常3列，右侧有照片-->
+            <div class="sys_box">
+                <div class="sys_title_box"><p class="sys_title">业务基本信息</p></div>
+                <div class="sys_base"><span>人员信息</span>
+                </div>
+                <div class="sys_list busIn_sys_list">
+                    <!--第一列-->
+                    <div class="col_float ">
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">姓名</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>刘晓萌</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">性别</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>女</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">安置批准时间</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>2005-04-01</dd>
+                        </dl>
+                    </div>
+                    <!--第二列-->
+                    <div class="col_float">
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">工作单位</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>衢州市人力资源和社会保障局</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">人员类别</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>事业单位工作人员</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">当前工资职级</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>政府财政拨款</dd>
+                        </dl>
+                    </div>
+                    <!--第三列-->
+                    <div class="col_float">
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">出生日期</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>1974-10-25</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">是否军转干部</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>否</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>
+                            <div class="w_ellipsis">当前最高学历</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd>研究生</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!-- 影响工资基础信息-->
+            <div class="sys_box sys_box_up">
+                <div class="sys_title_box"><p class="sys_title">业务核定信息</p></div>
+                <div class="sys_base"><span>影响工资基础信息</span>
+                </div>
+                <div class="sys_list busIn_sysList">
+                    <div class="busIn_sysList_div">
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis">参加工作时间</div>
+                                <div class="w_colon"> : </div><b class="Required">* </b>
+                                <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis">参加工作转正时间</div>
+                            <div class="w_colon"> : </div><b class="Required">* </b>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis">工龄起算时间</div>
+                            <div class="w_colon"> : </div><b class="Required">* </b>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis">工龄间断年限</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis busIn_ellipsis">不计工龄大专以上全日制</div>
+                            <div class="w_colon"> : </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis busIn_ellipsis">学历年限</div>
+                            <div class="w_colon"> : </div><b class="Required">* </b>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <div style="clear: both"></div>
+                    </div>
+                    <div>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis busIn_ellipsis">工龄</div>
+                            <div class="w_colon"> : </div><b class="Required">* </b>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis busIn_ellipsis">工资关系单位</div>
+                            <div class="w_colon"> : </div><b class="Required">* </b>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <dl class="row_float">
+                            <dt>
+                            <div class="w_ellipsis busIn_ellipsis">起薪时间</div>
+                            <div class="w_colon"> : </div><b class="Required">* </b>
+                            <div style="clear: both"></div><!--清除浮动-->
+                            </dt>
+                            <dd><label><input type="text"/></label></dd>
+                        </dl>
+                        <div style="clear: both"></div>
+                    </div>
+                    <!-- 单行样式-->
+                </div>
+            </div>
+            <!-- 影响工资基础信息结束-->
+            <!--正常3列，无照片-->
+            <div class="sys_box sys_box_up">
+                <div class="sys_title_box"><p class="sys_title">业务核定信息</p></div>
+                <div class="sys_base"><span>工资历史</span>
+                </div>
+                <div class="sys_list">
+                    <table class="table_edit_bg w_table_left busIn_table" width="95%">
+                        <tr class="td_title w_tdbox_not">
+                            <td>起薪时间</td>
+                            <td>计算前工资</td>
+                            <td>计算后工资</td>
+                            <td class="busIn_tdwidth"></td>
+                            <td>修正工资</td>
+                        </tr>
+                        <tbody class="busIn_body">
+                        <!-- 第一行-->
+                        <tr class="td_content">
+                            <td>起薪时间 <span>:</span> </td>
+                            <td>2015-01</td>
+                            <td>2016-05</td>
+                            <td class="busIn_tdwidth"></td>
+                            <td class="busIn_tdinputLeft">
+                                <input type="text" class="busIn_input" value="2016-05"/>
+                            </td>
+                        </tr>
+                        <!-- 第二行-->
+                        <tr class="td_content">
+                            <td>变动类型<span>:</span> </td>
+                            <td>年度考核晋升</td>
+                            <td>调入</td>
+                            <td class="busIn_tdwidth"></td>
+                            <td>调入</td>
+                        </tr>
+                        <!-- 第三行-->
+                        <tr class="td_content">
+                            <td>工资系列<span>:</span> </td>
+                            <td>机关公务员</td>
+                            <td>机关公务员</td>
+                            <td class="busIn_tdwidth"></td>
+                            <td>机关公务员</td>
+                        </tr>
+                        <!-- 第四行-->
+                        <tr class="td_content">
+                            <td> 工资职级 | 领导标志<span>:</span> </td>
+                            <td>乡科级副职 | 非领导</td>
+                            <td>乡科级正职 | 非领导</td>
+                            <td class="busIn_tdwidth"></td>
+                            <td>
+                                <label class="busIn_label">
+                                    <select class="busIn_select">
+                                        <option>乡科级正职</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    <select class="busIn_select">
+                                        <option>乡科级正职</option>
+                                    </select>
+                                </label>
+                            </td>
+                        </tr>
+                        <!-- 第五行职务工资-->
+                        <tr class="td_content">
+                            <td>职务工资<span>:</span> </td>
+                            <td></td>
+                            <td></td>
+                            <td class="busIn_tdwidth"></td>
+                            <td></td>
+                        </tr>
+                        <!-- 第六行级别工资-->
+                        <tr class="td_content">
+                            <td>级别工资<span>:</span> </td>
+                            <td>690</td>
+                            <td>820</td>
+                            <td class="busIn_tdwidth">
+                                <img src="../../img/salary/busInfor_safe/busI_red.png" alt=""/>
+                            </td>
+                            <td>
+                                <input type="text" class="busIn_input" value="820"/>
+                            </td>
+                        </tr>
+                        <!-- 第七行-->
+                        <tr class="td_content">
+                            <td>机关工人岗位工资<span>:</span> </td>
+                            <td></td>
+                            <td></td>
+                            <td class="busIn_tdwidth"></td>
+                            <td></td>
+                        </tr>
+                        <!-- 第八行机关技术工人等级工资-->
+                        <tr class="td_content">
+                            <td>机关技术工人等级工资<span>:</span> </td>
+                            <td>690</td>
+                            <td>820</td>
+                            <td class="busIn_tdwidth">
+                                <img src="../../img/salary/busInfor_safe/busI_red.png" alt=""/>
+                            </td>
+                            <td>
+                                <input type="text" class="busIn_input" value="820"/>
+                            </td>
+                        </tr>
+                        <!-- 第九行级别 | 档次 | 级别工资-->
+                        <tr class="td_content">
+                            <td>级别 | 档次 | 级别工资<span>:</span> </td>
+                            <td>690</td>
+                            <td class="busIn_tdRED">820</td>
+                            <td class="busIn_tdwidth">
+                                <img src="../../img/salary/busInfor_safe/busI_greed.png" alt=""/>
+                            </td>
+                            <td>
+                                <label class="busIn_label">
+                                    <select class="busIn_select_three">
+                                        <option>22</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    <select class="busIn_select_three">
+                                        <option>3</option>
+                                    </select>
+                                </label>
+                                <input type="text" value="1314" class="busIn_inputThree"/>
+                            </td>
+                        </tr>
+                        <!-- 第十行生活性津贴-->
+                        <tr class="td_content">
+                            <td>生活性津贴<span>:</span> </td>
+                            <td>1368</td>
+                            <td class="busIn_tdRED">820</td>
+                            <td class="busIn_tdwidth">
+                                <img src="../../img/salary/busInfor_safe/busI_red.png" alt=""/>
+                            </td>
+                            <td>
+                                <input type="text" class="busIn_input" value="2906"/>
+                            </td>
+                        </tr>
+                        <!-- 第十一行-->
+                        <tr class="td_content">
+                            <td>生活性津贴<span>:</span> </td>
+                            <td>1368</td>
+                            <td class="busIn_tdRED">820</td>
+                            <td class="busIn_tdwidth">
+                                <img src="../../img/salary/busInfor_safe/busI_red.png" alt=""/>
+                            </td>
+                            <td>
+                                <input type="text" class="busIn_input" value="2906"/>
+                            </td>
+                        </tr>
+                        <!-- 第十二行-->
+                        <tr class="td_content">
+                            <td>工资合计 | 增减额<span>:</span> </td>
+                            <td>5914</td>
+                            <td class="busIn_tdRED">6631</td>
+                            <td class="busIn_tdwidth">
+                               <span class="busIn_tdRED">+ 717</span>
+                            </td>
+                            <td>
+                                <span class="busI_cheng">6631</span>
+                            </td>
+                        </tr>
+                        <!-- 第十二行-->
+                        <tr class="td_content">
+                            <td>计算过程<span>:</span> </td>
+                            <td class="busIn_blue">查看计算过程</td>
+                            <td>查看计算过程</td>
+                            <td class="busIn_tdwidth"></td>
+                            <td class="busIn_input_ellipsis">
+                                <!--<span class="">请在此处填写修正原因</span>-->
+                                <input type="text" value="请在此处填写修正原因请在此处填写修正原因"/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div style="clear: both"></div><!--清除浮动-->
+                </div>
+                <!-- 表格结束-->
+               <!-- 保存取消按钮-->
+                <i class="busIn_saveDel">
+                    <button class="btn_save busIn_btn_save">
+                        <img src="../../img/salary/busInfor_safe/busi_dui.png" alt=""/>
+                        提交
+                    </button>
+                    <button class="btn_cancel busIn_btn_cancel">取消</button>
+                </i>
+                <div style="clear: both"></div><!--清除浮动-->
+            </div>
+            <!-- 学历信息-->
+            <div class="sys_box sys_box_up busIn_xueli">
+                <div class="sys_base"><span>学历信息</span></div>
+                <div class="sys_list">
+                    <table class="table_edit_bg" width="95%">
+                        <tr class="td_title">
+                            <td>学历等级</td>
+                            <td>毕（肄）业日期</td>
+                            <td>学制（年）</td>
+                            <td> 教育类别</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>硕士</td>
+                            <td>2016-06</td>
+                            <td>3</td>
+                            <td>全日制</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>4</td>
+                            <td>2016-06</td>
+                            <td>4</td>
+                            <td>全日制</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 职务信息-->
+            <div class="sys_box sys_box_up busIn_xueli">
+                <div class="sys_base"><span>职务信息</span></div>
+                <div class="sys_list">
+                    <table class="table_edit_bg" width="95%">
+                        <tr class="td_title">
+                            <td>职务类别</td>
+                            <td>工资职级</td>
+                            <td>职务属性</td>
+                            <td>任职开始时间</td>
+                            <td>任职结束时间</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xxxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                            <td>xxxx</td>
+                            <td>xxxx</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 军队任职经历信息-->
+            <div class="sys_box sys_box_up busIn_xueli">
+                <div class="sys_base"><span>军队任职经历信息</span></div>
+                <div class="sys_list">
+                    <table class="table_edit_bg" width="95%">
+                        <tr class="td_title">
+                            <td>军队职级</td>
+                            <td>军队专业技术等级</td>
+                            <td>任军职时间</td>
+                            <td>任军职结束时间</td>
+                            <td>是否领导职务</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xxxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                            <td>xxxx</td>
+                            <td>xxxx</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 年度考核信息-->
+            <div class="sys_box sys_box_up busIn_xueli">
+                <div class="sys_base"><span>年度考核信息</span></div>
+                <div class="sys_list">
+                    <table class="table_edit_bg" width="95%">
+                        <tr class="td_title">
+                            <td>考核类别</td>
+                            <td>考核年度</td>
+                            <td>考核结论类别</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xxxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 处分信息-->
+            <div class="sys_box sys_box_up busIn__bottommargin">
+                <div class="sys_base"><span>处分信息</span></div>
+                <div class="sys_list">
+                    <table class="table_edit_bg" width="95%">
+                        <tr class="td_title">
+                            <td>惩处类别</td>
+                            <td>处分开始时间</td>
+                            <td>处分结束时间</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xxxx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                        </tr>
+                        <tr class="td_content">
+                            <td>xx</td>
+                            <td>xxx</td>
+                            <td>xxx</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 增加大容器div-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+2015-12-2 9:40:54 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2015-12-2 9:40:54 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2015-12-2 9:40:55 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8088
+2015-12-2 9:40:55 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8045
+2015-12-2 9:40:55 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 1108 ms
+2015-12-2 9:40:55 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2015-12-2 9:40:55 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.30
+2015-12-2 9:40:55 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2015-12-2 9:40:57 org.apache.catalina.core.StandardContext start
+严重: Error listenerStart
+2015-12-2 9:40:57 org.apache.catalina.core.StandardContext start
+严重: Context [/jade] startup failed due to previous errors
+2015-12-2 9:40:58 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8088
+2015-12-2 9:40:58 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8045
+2015-12-2 9:40:58 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2015-12-2 9:40:58 org.apache.catalina.startup.Catalina start
+信息: Server startup in 3073 ms
+2015-12-2 9:51:01 org.apache.catalina.startup.Catalina stopServer
+严重: Catalina.stop: 
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
+	at java.net.Socket.connect(Socket.java:529)
+	at java.net.Socket.connect(Socket.java:478)
+	at java.net.Socket.<init>(Socket.java:375)
+	at java.net.Socket.<init>(Socket.java:189)
+	at org.apache.catalina.startup.Catalina.stopServer(Catalina.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.stopServer(Bootstrap.java:344)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:435)
+2015-12-2 9:51:05 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2015-12-2 9:51:06 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2015-12-2 9:51:06 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-8088
+2015-12-2 9:51:06 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8045
+2015-12-2 9:51:06 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 718 ms
+2015-12-2 9:51:06 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2015-12-2 9:51:06 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.30
+2015-12-2 9:51:06 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2015-12-2 9:51:07 org.apache.catalina.core.StandardContext start
+严重: Error listenerStart
+2015-12-2 9:51:07 org.apache.catalina.core.StandardContext start
+严重: Context [/jade] startup failed due to previous errors
+2015-12-2 9:51:07 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-8088
+2015-12-2 9:51:07 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8045
+2015-12-2 9:51:07 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2015-12-2 9:51:07 org.apache.catalina.startup.Catalina start
+信息: Server startup in 717 ms

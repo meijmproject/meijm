@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <title>医院业务办理首页</title>
+    <link rel="stylesheet" href="/hspszhphtml/css/common/reset.css">
+    <link rel="stylesheet" href="/hspszhphtml/css/common/base.css">
+    <link rel="stylesheet" href="/hspszhphtml/css/common/layout.css">
+    <link rel="stylesheet" href="/hspszhphtml/css/layout/business_handle.css">
+
+</head>
+<body class="main-body">
+
+<div id="head-nav"></div>
+
+<div class="main-container">
+    <div id="left-content" class="left-content"></div>
+
+    <div id="right-content" class="right-content">
+        <div class="current-position">当前位置 : <span>业务办理</span></div>
+        <div class="business-index">
+            <div class="b-hp-bg"></div>
+            <p class="b-hp-text">欢迎进入医院人事管理系统</p>
+        </div>
+    </div>
+</div>
+
+<script src="/hspszhphtml/js/jquery-1.12.4.js"></script>
+<script>
+    //加载子页面
+    $('#head-nav').load('/hspszhphtml/html/components/head_nav.html');
+    $('#left-content').load('/hspszhphtml/html/components/leftnav_business.html');
+
+    $(function(){
+        // 页面加载后各区域的高度设置
+        function eachAreaHeight(){
+            var windowHeight = $(window).height();
+
+            //主内容区高度
+            $('.main-container').height(windowHeight-$('#head-nav').outerHeight(true)-2);
+        }
+        eachAreaHeight();
+
+        $(window).resize(
+            function(){
+                eachAreaHeight();
+            }
+        );
+    });
+</script>
+</body>
+</html>

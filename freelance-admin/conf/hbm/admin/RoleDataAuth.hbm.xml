@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.yh.admin.bo.RoleDataAuth" table="YHB_ROLE_DATA_AUTH">
+		<id name="roleDataAuthOid" type="java.lang.Long">
+			<column name="ROLE_DATA_AUTH_OID" precision="12" scale="0" />
+			<generator class="identity"/>
+		</id>
+		<property name="authCode" type="java.lang.String">
+			<column name="AUTH_CODE" />
+		</property>
+		<property name="authType" type="java.lang.String">
+			<column name="AUTH_TYPE" />
+		</property>
+		<property name="authLevel" type="java.lang.String">
+			<column name="AUTH_LEVEL" />
+		</property>
+		<property name="roleId" type="java.lang.Long">
+			<column name="ROLE_ID" />
+		</property>
+		<property name="isOnlyOwn" type="java.lang.String">
+			<column name="IS_ONLY_OWN" />
+		</property>
+	</class>
+</hibernate-mapping>

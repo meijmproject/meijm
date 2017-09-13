@@ -1,0 +1,109 @@
+package com.yh.hr.orghc.unit.unitmanger.util;
+
+import java.util.List;
+
+import com.yh.hr.orghc.unit.unitmanger.dto.OrgResponseDTO;
+import org.apache.commons.lang.StringUtils;
+
+/**
+ * 操作事项操作返回信息 - 帮助类
+ * 
+ * @author chenjl
+ * @created 2017-04-18
+ * @version 1.0
+ */
+public class OrgResponseUtil {
+	/**
+	 * 操作转换成返回提示信息
+	 * 
+	 * @param applyResponseDTOs
+	 *            操作返回信息-集合
+	 * @return message 操作返回信息
+	 */
+	public static String conversionReportDTO(List<OrgResponseDTO> taskResponseDTOs) {
+		return conversionReportDTO(taskResponseDTOs, null);
+	}
+
+	/**
+	 * 操作转换成返回提示信息
+	 * 
+	 * @param applyResponseDTOs
+	 *            操作返回信息-集合
+	 * @return message 操作返回信息
+	 */
+	public static String conversionReportDTO(List<OrgResponseDTO> taskResponseDTOs, String definedmessage) {
+		int failureNum = 0;
+		// 计算出操作失败的笔数
+		for (OrgResponseDTO taskResponseDTO : taskResponseDTOs) {
+			if (taskResponseDTO.getIsSuccess().equalsIgnoreCase("Y")) {
+				failureNum++;
+			}
+		}
+		StringBuffer messageBuf = new StringBuffer();
+		if (failureNum > 10) {
+			messageBuf.append("<div style=\"overflow:auto\" style=\"height:200px\" style=\"width:450px\"><table><tr><td style=\"width:60px\">[序号]&nbsp;&nbsp;</td><td>[名称]&nbsp;&nbsp;</td><td>&nbsp;&nbsp;[原因]&nbsp;&nbsp;</td></tr>");
+		} else {
+			messageBuf.append("<table><tr><td style=\"width:60px\">[序号]&nbsp;&nbsp;</td><td style=\"width:120px\">[名称]&nbsp;&nbsp;</td><td>&nbsp;&nbsp;[原因]&nbsp;&nbsp;</td></tr>");
+		}
+		int successNum = 0;
+		int totalNum = 0;
+		int failNum = 1;
+		for (OrgResponseDTO taskResponseDTO : taskResponseDTOs) {
+			if (taskResponseDTO.getIsSuccess().equalsIgnoreCase("Y"))// 操作成功
+			{
+				successNum++;
+			} 
+			// 操作失败
+			else if (taskResponseDTO.getIsSuccess().equalsIgnoreCase("N"))
+			{
+				messageBuf.append("<tr ><td>" + failNum + "&nbsp;</td><td>" + (StringUtils.isEmpty(taskResponseDTO.getApplyName()) ? "" : taskResponseDTO.getApplyName()) + "&nbsp;</td><td>"
+						+ (StringUtils.isEmpty(taskResponseDTO.getResultDesc()) ? "" : taskResponseDTO.getResultDesc()) + "&nbsp;</td></tr>");
+				failNum++;
+			}
+			totalNum++;
+		}
+		messageBuf.append("</table></div>");
+		if (StringUtils.isBlank(definedmessage)) {
+			messageBuf.append("<table align=\"center\"><tr><td>该操作成功[" + successNum + "]笔。&nbsp;</td></tr></table>");
+			if (totalNum == successNum)// 如果所有操作均操作成功，则不需要显示头信息。
+			{
+				String message = "<table align=\"center\"><tr><td>该操作成功[" + successNum + "]笔。&nbsp;</td></tr></table>";
+				return message;
+			}
+		} else {
+			messageBuf.append(definedmessage);
+		}
+
+		return messageBuf.toString();
+	}
+
+	/**
+	 * 获取错误信息反馈
+	 * 
+	 * @param message
+	 *            错误信息
+	 * @param applyName
+	 *            申请名称
+	 * @return applyResponseDTO 操作返回信息
+	 * @throws Exception
+	 */
+	public static OrgResponseDTO getFailResponseDTO(String message, String applyName) {
+		OrgResponseDTO taskResponseDTO = new OrgResponseDTO();
+		taskResponseDTO.setIsSuccess("N");
+		taskResponseDTO.setResultDesc(message);
+		taskResponseDTO.setApplyName(applyName);
+		return taskResponseDTO;
+	}
+
+	/**
+	 * 获取成功信息反馈
+	 * 
+	 * @return taskResponseDTO 操作返回信息
+	 * @throws Exception
+	 */
+	public static OrgResponseDTO getSuccessResponseDTO() {
+		OrgResponseDTO taskResponseDTO = new OrgResponseDTO();
+		taskResponseDTO.setIsSuccess("Y");
+		return taskResponseDTO;
+	}
+}

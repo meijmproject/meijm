@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- 导入信息  -->
+	  <bean id="importUnitFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.unit.facade.ImportUnitFacade">
+	        	<property name="importUnitService" ref="importUnitService"/>
+			</bean>
+		</property>
+    </bean>
+	 
+    <bean id="importUnitService" class="com.yh.hr.info.dataimport.unit.service.impl.ImportUnitServiceImpl" >
+       	<property name="ubUnitService" ref="ubUnitService"/>
+       	<property name="ubOrgService" ref="ubOrgService"/>
+    </bean>
+
+</beans>

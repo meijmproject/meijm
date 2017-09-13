@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出窗/弹出表格</title>
+
+    <link href="../css/modalstyle.css" rel="stylesheet" type="text/css" media="all" >
+    <link href="../css/jquery.popdown.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../js/jquery.popdown.js"></script>
+
+
+</head>
+
+<body class="demo-page">
+
+<div>
+    <div class="contain">
+        <p >
+            <center>
+                <a href="modal_a.html" class="popdown flatbtn" title="Grumpy Demo">Modal A</a>
+                <a href="modal_b.html" class="popdown flatbtn" title="Youtube Demo">Modal B</a>
+                <a href="modal_c.html" class="popdown flatbtn" title="Content Demo">Modal C</a>
+            </center>
+        </p>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.popdown').popdown();
+        });
+    </script>
+
+</body>
+</html>

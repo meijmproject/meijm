@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- AppContextAware -->
+	<bean id="springBeanUtil" class="com.yh.platform.core.util.SpringBeanUtil" />
+	
+	<!-- Transaction manager for a single JDBC DataSource -->
+	<bean id="springJdbcTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+ 
+	<!--  A parent bean definition which is a base definition for transaction proxies.	-->
+	<bean id="jdbcTransactionProxy"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager"
+			ref="springJdbcTransactionManager" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="insert*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="remove*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
+	<!-- Desc the hibernate transaction -->
+	<bean id="txnProxyParent" abstract="true" lazy-init="true"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="springTransactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="create*">
+					PROPAGATION_REQUIRED,-GenericException
+				</prop>
+				<prop key="list*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="search*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="show*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="view*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="conv*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="update*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="reset*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="modify*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="build*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="insert*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="add*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="edit*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="count*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="save*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="create*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="check*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="is*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="has*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="cancel*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="process*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="apply*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="terminate*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="accept*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="reject*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="return*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="approve*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="input*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="confirm*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="stop*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="trans*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="print*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="refe*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="agree*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="disagree*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="processBatch*">PROPAGATION_REQUIRES_NEW,-Exception</prop>
+				<prop key="force*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="complete*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="start*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="auditing*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="submit*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="recheck*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="recall*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="report*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="validate*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="write*">PROPAGATION_REQUIRED,-Exception</prop>		
+				<prop key="empty*">PROPAGATION_REQUIRED,-Exception</prop>			
+			</props>
+		</property>
+		<property name="preInterceptors">
+			<list>
+				<!--系统日志前置拦截  -->
+<!--  				<ref bean="yhSystemLogBeforeAdvice"/> -->
+ 				<ref bean="yhValidateBeforeAdvice"/><!--业务检查前置拦截 -->
+		 	</list>
+		</property>
+	</bean>
+
+
+	<!-- Desc the hibernate transaction -->
+	<bean id="singleTxnProxyParent" abstract="true" lazy-init="true"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="springTransactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">
+					PROPAGATION_REQUIRED,-GenericException
+				</prop>
+				<prop key="check*">
+					PROPAGATION_REQUIRED,-Exception
+				</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!--  Jdbc Template  -->
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<bean id="hibernateTemplate"
+		class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!--Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+	<bean id="springTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<!-- 审计字段填充拦截器 -->
+		<property name="entityInterceptor">
+			<bean class="com.yh.platform.core.interceptor.AuditFieldsInterceptor" />
+		</property>
+	</bean>
+	
+	<!-- Blob define  -->
+	<bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor" />
+	
+     <bean id="oracleLobHandler" class="org.springframework.jdbc.support.lob.OracleLobHandler" lazy-init="true">
+        <property name="nativeJdbcExtractor">
+            <ref bean="nativeJdbcExtractor" />
+        </property>
+     </bean>
+	
+	
+</beans>

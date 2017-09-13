@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html class="scroll_fiexd">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>权限维护</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/messageCheckDetail.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/jurisdiction_maintain2.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <!--<script src="../js/uijs/index.js"></script>-->
+    <script src="../js/uijs/jurisdiction_maintain.js"></script>
+</head>
+<body class="scroll_fiexd">
+<!--头部导航-->
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a href="#">系统管理</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <ul  class="rt_arrow_down">
+                            <li>
+                                <a href=""><img src="../img/index/change_password.png"  class="change_password" title="修改密码" alt=""/></a>
+                            </li>
+                            <li> <a href=""><img src="../img/index/help_center.png"  class="change_password"  title="帮助中心" alt=""/></a></li>
+                            <h3 class="text_line"></h3><!--清除浮动-->
+                        </ul>
+                    </div>
+                    <div class="arrow_down">
+                        <img src="../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                        <div class="hide_content">
+                            <ul>
+                                <li>
+                                    <a href="">帮助中心</a>
+                                </li>
+                                <li>
+                                    <a href="">修改密码</a>
+                                </li>
+                                <li>
+                                    <a href="">xxxxxx</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+<!--定位-->
+<!--当前位置-->
+<div class="sitemap w_position_backg">
+    <ul class="w_current_position">
+        <li class="w_current_position">当前位置：</li>
+        <li>
+            <a href="#">
+                <select class="select_JG JGGL" style="">
+                    <option value="volvo"> &nbsp; 机构管理</option>
+                    <option value="saab">xxx</option>
+                </select>
+                <span class="w_hui"> > </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <select class="select_JG JGGL" style="">
+                    <option value="volvo">机构管理</option>
+                    <option value="saab">xxx</option>
+                </select>
+                <span class="w_hui"> > </span>
+            </a>
+        </li>
+        <li><a href="#" class="w_black">数据权限维护</a></li>
+    </ul>
+    <div class="w_Permission_maintain_return">
+        返回  <span class="w_hui margin_left_5"> >> </span>
+    </div>
+    <div style="clear: both"></div><!--清除浮动-->
+</div>
+<div class="accredit_scroll_auto"><!--包裹滚动条-->
+    <!--左导航-->
+    <div class="left_nav" id="left_nav">
+        <ul class="user_infor">
+            <li class="user_front">姓名</li>
+            <li class="user_latter">刘晓萌</li>
+        </ul>
+        <div style="clear: both"></div>
+        <ul class="user_infor">
+            <li class="user_front">用户ID</li>
+            <li class="user_latter">admin</li>
+        </ul>
+        <div style="clear: both"></div>
+        <ul class="user_infor">
+            <li class="user_front">所属单位</li>
+            <li class="user_latter">衢州市人力资源和社会保障局</li>
+        </ul>
+        <div style="clear: both"></div>
+        <ul class="user_infor">
+            <li class="user_front">用户类型</li>
+            <li class="user_latter">普通用户</li>
+        </ul>
+        <div style="clear: both"></div>
+        <ul class="user_infor">
+            <li class="user_front">当前状态</li>
+            <li class="user_latter">正常</li>
+        </ul>
+        <div style="clear: both"></div>
+        <div>
+            <button class="btn_add_post">新增岗位</button>
+        </div>
+    </div>
+    <!-- 右边部分-->
+    <!--中间主体内容-->
+    <div class="right_content main_bg role_right_margin">
+        <div class="area_System_all"><!--地区、系统类别、单位性质、仅包含主管单位-->
+            <!--地区-->
+            <div class="w_area_container">
+                <div class="w_area_box margin_left_2">
+                    <div class="w_area_dashed area_box_width">
+                        <div class="w_area_inside">地区 <span>:</span></div>
+                    </div>
+                    <div class="w_area_select">
+                        <div class="w_area_inside_container">
+                            <div class="w_select_color" >
+                                <span class="BlueBackground_GreyWords all_border leftall_radius">全选</span>
+                                <span class="GreyBackground_RedWords all_border">清除</span>
+                                <span class="BlueBackground_GreyWords rightall_radius">反选</span>
+                                <div style="clear: both"></div><!--清除浮动-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SZ_area SZ_priv">
+                        <div class="SZ_area_container">
+                            <div class="">
+                                <div class="w_area_full w_area_full_a">
+                                    <ul class="w_area_full_ul">
+                                        <li class="w_area_full_ulone"><a href=""  class="gray_1">福田区</a></li>
+                                        <li class="w_area_full_ulone"><a href=""  class="gray_1">罗湖区</a></li>
+                                        <li class="w_area_full_ulone "><a href=""  class="gray_1">南山区</a></li>
+                                        <li class="w_area_full_ulone"><a href=""  class="gray_1">宝安区</a></li>
+                                        <li class="w_area_full_ulone"><a href=""  class="gray_1">龙岗区</a></li>
+                                        <li class="w_area_full_ulone"><a href=""  class="gray_1">坪山新区</a></li>
+                                        <li class="w_area_full_ulone"><a href=""  class="gray_1">盐田区</a></li>
+                                        <li class="w_area_full_ulone"><a href=""  class="gray_1">龙华新区</a></li>
+                                        <div class="w_Hidden_content">
+                                            <li><a href="" target="_blank" class="gray_1">大鹏新区</a></li>
+                                            <li><a href="" target="_blank" class="gray_1">光明新区</a></li>
+                                        </div>
+                                    </ul>
+                                    <div class="w_area_more"><a href="" class="gray_1"><span class="w_area_more_span">更多</span><span class="drop_down_arrow"></span> </a></div>
+                                    <div style="clear: both;"></div><!--清除浮动-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div><!--清除浮动-->
+                </div>
+            </div>
+            <!--系统类别-->
+            <div class="w_System_Class">
+                <div class="w_System_box">
+                    <div class="w_area_dashed System_box_width">
+                        <div class="w_area_inside">系统类别<span>:</span></div>
+                    </div>
+                    <div class="w_area_select" onclick="toggleColor();">
+                        <div class="w_area_inside_container">
+                            <div class="w_select_color sys_slect_color">
+                                <span class="BlueBackground_GreyWords all_border leftall_radius">全选</span>
+                                <span class="GreyBackground_RedWords all_border">清除</span>
+                                <span class="BlueBackground_GreyWords rightall_radius">反选</span>
+                                <div style="clear: both"></div><!--清除浮动-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SZ_area SZ_System">
+                        <div class="SZ_area_container">
+                            <div class="">
+                                <div class="w_area_full">
+                                    <ul class="w_area_full_ul">
+                                        <li><a href=""  class="gray_1">党委系统</a></li>
+                                        <li class=" "><a href=""  class="gray_1">人大系统</a></li>
+                                        <li class=" "><a href=""  class="gray_1">政府系统</a></li>
+                                        <li><a href=""  class="gray_1">政协系统</a></li>
+                                        <li><a href=""  class="gray_1">民主党派系统</a></li>
+                                        <li><a href=""  class="gray_1">检察院系统</a></li>
+                                      <div class="w_System_Hidden_content">
+                                            <li><a href=""  class="gray_1">其它系统</a></li>
+                                            <li><a href=""  class="gray_1 XT_hidde_con">法院系统</a></li>
+                                            <li><a href="" target="_blank" class="gray_1">人大系统</a></li>
+                                            <li><a href="" target="_blank" class="gray_1">政府系统</a></li>
+                                        </div>
+                                    </ul>
+                                    <div class="w_System_more"><a href="" class="gray_1"><span class="w_area_more_span">更多</span><span class="drop_down_arrow"></span> </a></div>
+                                    <div style="clear: both;"></div><!--清除浮动-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="clear: both"></div><!--清除浮动-->
+                </div>
+            </div>
+            <!--单位性质-->
+            <div class="w_nature_unit_Class">
+                <div class="w_area_box w_System_box">
+                    <div class="w_area_dashed danwei_box_width">
+                        <div class="w_area_inside">单位性质<span>:</span></div>
+                    </div>
+                    <div class="w_area_select">
+                        <div class="w_area_inside_container">
+                            <div class="w_select_color">
+                                <span class="BlueBackground_GreyWords all_border leftall_radius">全选</span>
+                                <span class="GreyBackground_RedWords all_border ">清除</span>
+                                <span class="BlueBackground_GreyWords   rightall_radius">反选</span>
+                                <div style="clear: both"></div><!--清除浮动-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SZ_area SZ_System">
+                        <div class="SZ_area_container">
+                            <div class="">
+                                <div class="w_area_full">
+                                    <ul class="w_area_full_ul">
+                                        <li><a href=""  class="gray_1">行政机关</a></li>
+                                        <li><a href=""  class="gray_1">行政机关</a></li>
+                                        <li class=" "><a href=""  class="gray_1">参共管理事业单位</a></li>
+                                        <li><a href=""  class="gray_1">事业单位</a></li>
+                                        <li><a href=""  class="gray_1">群团机关</a></li>
+                                        <li><a href=""  class="gray_1"></a></li>
+                                        <li><a href=""  class="gray_1"></a></li>
+                                        <li><a href=""  class="gray_1"></a></li>
+                                        <div class="w_nature_unit_Hidden_content">
+                                            <li><a href="" target="_blank" class="gray_1">事业单位</a></li>
+                                            <li><a href="" target="_blank" class="gray_1">群团机关</a></li>
+                                            <li><a href="" target="_blank" class="gray_1">群团机关</a></li>
+                                            <li><a href="" target="_blank" class="gray_1">群团机关</a></li>
+                                        </div>
+                                    </ul>
+                                    <div class="w_nature_unit_more"><a href="" class="gray_1"><span class="w_area_more_span">更多</span><span class="drop_down_arrow"></span> </a></div>
+                                    <div style="clear: both;"></div><!--清除浮动-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div><!--清除浮动-->
+                </div>
+            </div>
+            <!--仅包含主管单位-->
+            <div class="w_competent_organization">
+                <div class="w_area_box only_orga">
+                    <div class="w_area_dashed only_box_width">
+                        <div class="w_area_inside">仅包含主管单位<span>:</span></div>
+                    </div>
+                    <div class="w_area_select">
+                        <div class="w_area_inside_container">
+                            <div class=" w_select_YES">
+                                <span class="w_select_no all_border leftall_radius">是</span>
+                                <span class="w_select_no rightall_radius">否</span>
+                                <div style="clear: both"></div><!--清除浮动-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SZ_area Auth_confirm_all">
+                        <div class="SZ_area_container">
+                            <div class="">
+                                <div class="w_area_full">
+                                    <div class="w_inquire quire_left">
+                                        <form action="">
+                                            <input type="text" name="fname" class="w_inquire_input" value="请输入单位名称">
+                                        </form>
+                                    </div>
+                                    <div class="w_query_btn"><a href="">查询</a></div>
+                                    <div class=" Authorization_confirm">
+                                        <div class="Auth_confirm_btn">
+                                            <img src="../img/jurisdiction_maintain/Auth_confirm_img.png" class="Auth_confirm_img" alt=""/>
+                                            授权确认
+                                        </div>
+                                    </div>
+                                    <div style="clear: both;"></div><!--清除浮动-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both"></div><!--清除浮动-->
+                </div>
+            </div>
+        </div><!--地区、系统类别、单位性质、仅包含主管单位-->
+        <!-- 表格-->
+        <div class="limits_box_wrap">
+            <div class="limits_theme_popover">
+                <div class="limits_theme-popbod">
+                    <div class="limits_popover_content">
+                        <div class="theme_popover_content_Main" style="display:block">
+                            <!--主体内容左侧-->
+                            <div class="theme_popover_content_Left">
+                                <!-- 表格开始 -->
+                                <div>
+                                    <table class="table table_scroll table_first_per">
+                                        <thead class="table_project_thead">
+                                        <tr>
+                                            <th class="table_first_per_ONE1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </th>
+                                            <th class="table_first_per_ONE2">单位名称</th>
+                                            <th>隶属单位</th>
+                                            <th>所属地区</th>
+                                            <th>系统类别</th>
+                                            <th>单位性质</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="people_scroll">
+                                    <table class="tbody_scroll">
+                                        <tr>
+                                            <td class="table_first_per_ONE1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">深圳中级人民法院</td>
+                                            <td>法院系统</td>
+                                            <td>福田</td>
+                                            <td>法院系统</td>
+                                            <td>行政执法</td>
+                                        </tr>
+                                        <tr class="w_backg_blue">
+                                            <td class="table_first_per_ONE1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">深圳中级人民法院</td>
+                                            <td>法院系统</td>
+                                            <td>福田</td>
+                                            <td>法院系统</td>
+                                            <td>行政执法</td>
+                                        </tr>
+                                        <tr class="w_backg_blue">
+                                            <td class="table_first_per_ONE1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">深圳中级人民法院</td>
+                                            <td>法院系统</td>
+                                            <td>福田</td>
+                                            <td>法院系统</td>
+                                            <td>行政执法</td>
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td class="table_first_per_ONE1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">深圳中级人民法院</td>
+                                            <td>法院系统</td>
+                                            <td>福田</td>
+                                            <td>法院系统</td>
+                                            <td>行政执法</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_ONE1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">深圳中级人民法院</td>
+                                            <td>法院系统</td>
+                                            <td>福田</td>
+                                            <td>法院系统</td>
+                                            <td>行政执法</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_ONE1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">深圳中级人民法院</td>
+                                            <td>法院系统</td>
+                                            <td>福田</td>
+                                            <td>法院系统</td>
+                                            <td>行政执法</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- 表格结束 -->
+                                <div class="theme_popover_content_Left_paging">
+                                    <ul class="paging_pagination">
+                                        <li><a href="#">«</a></li>
+                                        <li><a class="active" href="#">2</a></li>
+                                        <li>
+                                            <input type="text" placeholder="输入" class="w_padding_input"/>
+                                        </li>
+                                        <li><a style="color:#4d4d4d;">go</a></li>
+                                        <li><a style="color:#4d4d4d;">总记录数:</a></li>
+                                        <li><a href="#">»</a></li>
+                                        <li><a>6</a></li>
+                                    </ul>
+                                </div>
+                                <div style="clear: both"></div><!--清除浮动-->
+                            </div>
+                            <!--弹出框中间-->
+                            <div class="theme_popover_content_Middle" style="width:8%;margin-left:10px;margin-right:10px;;">
+                                    <ul>
+                                        <li class="accredit_addElement">授权 <span class="accredit_addElement_arrows"></span></li>
+                                        <li class="accredit_removeElement"> <span class="accredit_removeElement_arrows"></span>解除授权</li>
+                                    </ul>
+                            </div>
+                            <!--体内容右侧-->
+                            <div class="theme_popover_content_Right">
+                                <!-- 表格开始 -->
+                                <div>
+                                    <table class="table table_scroll table_first_per">
+                                        <thead class="table_project_thead">
+                                        <tr>
+                                            <th class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </th>
+                                            <th class="table_first_per_ONE2">本节点权限</th>
+                                            <th>单位名称</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="people_scroll">
+                                    <table class="tbody_scroll">
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="table_first_per_TWO1">
+                                                <label><input type="checkbox"  class="checkbox_select"/> </label>
+                                            </td>
+                                            <td class="table_first_per_ONE2">已授权</td>
+                                            <td>深圳中级人民法院</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- 表格结束 -->
+                                <div class="theme_popover_content_Left_paging">
+                                    <ul class="paging_pagination">
+                                        <li><a href="#">«</a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a class="active" href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">»</a></li>
+                                    </ul>
+                                </div>
+                                <div style="clear: both"></div><!--清除浮动-->
+                            </div>
+                            <div style="clear: both"></div><!--清除浮动-->
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <!--脚部-->
+            </div>
+        </div>
+        <!-- -->
+    </div>
+    <!-- 授权确认-->
+    <div class="w_Auth_confirm_bottom">
+        <div class="Auth_confirm_btn">
+            <img src="../img/jurisdiction_maintain/Auth_confirm_img.png" class="Auth_confirm_img" alt=""/>
+            授权确认
+        </div>
+    </div>
+    <div style="clear: both"></div><!--清除浮动-->
+</div><!--包裹滚动条-->
+
+</body>
+</html>

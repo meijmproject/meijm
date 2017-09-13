@@ -1,0 +1,149 @@
+/** modal dialog css **/
+.modal-dialog {
+	font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+}
+
+.modal-dialog .modal-mask {
+	position: fixed;
+	z-index: 999998;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	display: block;
+	opacity: 0.35;
+}
+
+.modal-dialog .modal-content {
+	z-index: 999999;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	padding: 10px;
+	border-radius: 6px;
+	/*
+		width: 400px;
+		margin-left: -200px;
+		margin-top: -81.5px;
+		*/
+}
+.modal-dialog .modal-content-min {
+	z-index: 999999;
+	position: fixed;
+	top: 38%;
+	left: 38%;
+	padding: 10px;
+	border-radius: 6px;
+	/*
+		width: 400px;
+		margin-left: -200px;
+		margin-top: -81.5px;
+		*/
+}
+
+.modal-dialog .modal-body {
+	min-height: 50px;
+	min-width: 300px;
+	position: static;
+	padding: 8px 15px;
+	overflow-y: auto;
+}
+
+.modal-dialog .modal-title {
+	margin: 0 5px;
+}
+
+.modal-dialog .modal-footer {
+	padding: 5px 15px 10px 15px;
+	border-top: 0;
+}
+
+.modal-dialog .modal-header {
+	padding: 8px 10px 10px 5px;
+	border-bottom: 0;
+	border-top: 0;
+}
+.modal-dialog .modal-header-min {
+	padding: 8px 10px 10px 5px;
+	border-bottom: 0;
+	border-top: 0;
+}
+
+.modal-dialog .modal-header button {
+	/*margin-top: 1px;*/
+	
+}
+
+.modal-dialog .modal-icon {
+	/*float:left;*/
+	
+}
+
+.modal-dialog .modal-text {
+	word-wrap: break-word;
+	word-break: break-all;
+	margin-left: 48px;
+	font-size: 14px;
+	line-height: 18px;
+	margin-top:20px;
+}
+
+.modal-dialog .modal-icon i {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	position: absolute;
+	top: 38%;
+}
+
+.modal-dialog .modal-icon .md-success {
+	background: url('../img/icon/succeed.png') no-repeat;
+}
+
+.modal-dialog .modal-icon .md-error {
+	background: url('../img/icon/error.png') no-repeat;
+}
+
+.modal-dialog .modal-icon .md-tips {
+	background: url('../../images/common/tips_etyy.png') no-repeat;
+}
+
+.modal-dialog .modal-icon .md-warning {
+	background: url('../img/icon/warning.png') no-repeat;
+}
+
+.modal-dialog .modal-icon .md-question {
+	background: url("../../images/common/md-question.png")no-repeat;
+/* 	background: url('../img/icon/confirm.png') no-repeat; */
+}
+.modal-footer .btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+}
+.modal-footer .btn-primary{
+	color: #fff;
+    background-color: #1cc6a3;
+    border-color: #FFFFFF;
+    font-family: 'Microsoft Yahei', Helvetica, Arial, sans-serif;
+    border: none;
+    text-decoration: none;
+}

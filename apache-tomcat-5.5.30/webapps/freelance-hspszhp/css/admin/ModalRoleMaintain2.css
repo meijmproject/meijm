@@ -1,0 +1,337 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+body{font: normal 100% 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;min-width: 1280px;overflow: auto; width: 100%;}
+select{font: normal 100% 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;}
+a{color:#0088DB;text-decoration:none;cursor:pointer}
+.theme-signin{font-size:15px;}
+.clearfloat{clear:both;}
+
+/*主题弹出框*/
+.theme_popover_mask{z-index:100;position:absolute;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);-moz-opacity:0.5;}
+.theme_popover{height:auto;z-index:999;position:absolute;left:50%;margin:26px 0 0 -500px;background-color:#fff;box-shadow:0 0 10px #666;background:#fff;}
+.theme_poptit{background: #0071b9;}
+.theme_poptit_RoleMaintain{line-height: 40px;margin-left: 20px;font-size: 16px;color: #fff;}
+.theme_poptit .theme_poptit_close{float:right;color:#fff;background: url(../img/ModalRoleMaintain/close_circle1.png) no-repeat  right center;margin:7px 10px 10px 0;width: 25px;height: 25px;}
+.theme-popbod_box{margin:20px auto;}
+.theme-popbod_box_left,.theme-popbod_box_right{border:1px solid #ccc;overflow:auto;}
+.theme-popbod_box_left{float:left;}
+.theme-popbod_box_right{float:left;}
+.theme-popbod_box_center{float:left;text-align:center;}
+.theme-popbod_box_center a{padding:5px 10px;border:1px solid #ccc;display:block;width:70px;margin:10px auto;border-radius:5px;}
+.theme_popover_content{margin:0 auto;margin-top: 30px;}
+/*选择系统*/
+.theme_popbod_box{background: #f7faff;}
+.theme_popbod_form{line-height:70px;margin-left: 30px;font-size: 14px;}
+/*去掉select下拉*/
+.theme_popbod_form .select{appearance: none;-moz-appearance: none;-webkit-appearance: none;}
+.theme_popbod_form .select{padding-left:10px;height: 30px;width:225px;color: #333333;font-size: 14px;background: url(../img/ModalRoleMaintain/icon_down2.png) no-repeat 95% center; }
+.theme_popbod_form label{color:#666666;}
+.theme_popover_content_Main{display:none;width: 95%;margin:0 auto;background:#f5f9fc;padding-bottom:10px;margin-bottom: 10px;overflow: auto;max-height:350px;}
+.theme_popover_content_Main_func{display:none;width: 95%;margin:0 auto;background:#f5f9fc;}
+.theme_popover_content_Left{margin-left: 30px;width: 40%;}
+.theme_popover_content_Left,.theme_popover_content_Right{float:left;}
+.theme_popover_content_Middle{float:left;height:100%;width: 14%;}
+.addElement_arrows,.removeElement_arrows,.RoleMaintain_arrows{font-family: SimSun;}
+/*.theme_popover_content_Middle div{width: 145px;}*/
+.theme_popover_content_Middle div ul{padding-top:140px;}
+.theme_popover_content_Middle ul li{font-size:14px;text-align:center;display:block;cursor:pointer;margin: 0 15px 0 15px;line-height:40px;width:80%;background:#0084e2;border-radius: 5px;color: #fff;margin-bottom: 20px;}
+.theme_popover_content_Middle ul li.last{padding-top:25px;}
+
+/*右侧弹出框*/
+.theme_popover_content_Right{width: 40%;background-color:#fff;border-left:1px solid #eee;}
+.customers{ width:100%;border-collapse:collapse;}
+.customers tbody{overflow:auto;}
+.popover_right_onscroll{ /*height: 556px;*/ overflow: auto;}
+.customers_title{line-height: 50px;border-bottom: 1px solid #ddd;font-size: 14px;font-weight: bold;color: #333;}
+tbody>tr{line-height: 40px;}
+.customers_contet_input,.customers_title_input{padding-left: 20px;}
+.customers_contet_td{font-size: 14px;padding-left: 2px;color:#7c7c7c;}
+.tbodyhover{background-color:#e9edf0;}
+/*.close{background-color:#007bd2;}*/
+.customers tbody .customers_tr_height td{}
+
+/*左侧弹出框*/
+/*系统安全*/
+.popover_list{background:#f7faff;}
+.popover_system{/*margin: 0 20px 0 20px;*/background: #fff;width: 80%;}
+.popover_list ul li a{padding-left:50px;color: #333333; font-size:14px; display: block;height:36px;line-height: 36px;position: relative;}
+.popover_list .popover_system .popover_system_PerInformation .popover_inactive{background:url(../img/ModalRoleMaintain/icon-folder-close1.png) no-repeat 20px center;}
+.popover_list .popover_system .popover_system_PerInformation .popover_inactives{background:url(../img/ModalRoleMaintain/icon-folder-open1.png) no-repeat 20px center;}
+.popover_list ul li ul{display: none;}
+.popover_list ul li ul li{ margin-left: 50px;line-height:28px;}
+/*二级*/
+.popover_list .popover_system .popover_system_PerInformation .popover_inactive_systemSafety li .popover_inactive{background:url(../img/ModalRoleMaintain/Role_document.png) no-repeat 1px center;}
+.popover_list .popover_system li .popover_inactive_systemSafety li .popover_inactives{background:url(../img/ModalRoleMaintain/Role_document.png) no-repeat 1px center;}
+.popover_list ul li ul li ul{display: none;}
+.popover_list ul li ul li a{ padding-left:30px;}
+.popover_list ul li ul li ul li {  border-color:#ddd; }
+.popover_list ul li ul li ul li a{ color:black; margin-left: -30px;}
+.popover_system li a.active{background:#6ee58d;}
+/*三级下拉菜单*/
+.popover_list ul li ul li ul li a{background:url(../img/ModalRoleMaintain/Role_document.png) no-repeat 0px center;}
+.popover_list .popover_system .popover_system_PerInformation ul li .popover_inactive{background:url(../img/ModalRoleMaintain/icon-folder-close1.png) no-repeat 0px center;}
+.popover_list .popover_system .popover_system_PerInformation ul li .popover_inactives{background:url(../img/ModalRoleMaintain/icon-folder-open1.png) no-repeat 0px center;}
+/*切换颜色*/
+.toggleClass_systemSafety{color:#fff;background: #e0e3e6;border:1px dashed #ddd;}
+/*隔行变色*/
+#tbody tr:nth-child(2n+1){background-color:#f5f9fc;}
+
+/*滚动条*/
+.popover_left_onscroll{height:215px;overflow:auto;overflow-y:scroll;width: 100%;}
+
+/*脚部*/
+.popover_footer{margin-left: 43%;margin-top: 60px;margin-bottom: 25px;}
+.popover_footer_save{float: left;}
+.popover_footer_save_bt{line-height: 30px;width: 75px;background: #00ab3f;border: none;font-size: 16px;color: #fff;}
+.popover_footer_cancel{float: left;margin-left: 30px;font-size: 16px;margin-top: 5px;color: #666666;text-decoration: underline !important;}
+
+/*表格*/
+.Role_table{
+    width: 100%;
+    display: table;
+    vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-all;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+.Role_tableTbody1{
+    border-bottom: 1px solid #ddd;
+    border-collapse: separate;
+    empty-cells: show;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+.Role_tableTbody1 th{line-height: 20px;}
+.Role_tableTbody1_th1{
+  width:10%;
+}
+.Role_tableDiv1{
+    height: 292px;
+    width: auto;
+    overflow: auto;
+    overflow-y: scroll;
+}
+.Role_tableTbody2{
+    width:100%;
+    display: table;
+    vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-all;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+}
+.Role_tableTbody2 tbody tr{
+    text-align: center;
+
+}
+.Role_tableTbody2 tbody tr td{
+    font-size: 14px;
+    color: #7c7c7c;
+}
+.Role_tableTbody2 tbody tr:nth-child(2n+1) {
+    background-color: #f5f9fc;
+}
+/*选项卡*/
+.role_tabPanelUl{
+    height: 41px;
+    border-bottom: 1px solid #2196fd;
+    margin-bottom:15px;
+    margin-left:5px;
+}
+.role_tabPanelUl .role_hit{
+    cursor: pointer;
+    color:#fff;
+    font-style:normal;
+    background-color:#2196fd;
+    border-bottom: 1px solid #2196fd;
+    font-weight:normal;
+}
+/*.role_hit span{color:#fff;font-style:normal;}*/
+.role_tabPanelUl li{
+    float: left;
+    /*margin: 0 2px 0 0;*/
+    font-size: 14px;
+    line-height: 40px;
+    width: 111px;
+    text-align: center;
+    cursor: pointer;
+   color:#2196fd;
+}
+.role_hit_lilfet{margin-left:20px;}
+.role_hit{
+    border-bottom:1px solid #fff;cursor:pointer;color:black;
+    background:#fff;
+}
+.Role_Bigbog{
+    width: 95%;
+    margin: 0 auto;
+    background: #f5f9fc;
+    margin-bottom: 10px;
+}
+.Role_nameSelect,.Role_describe,.Role_savecCancel{float:left;}
+.Role_nameSelect{width: 35%;margin-top:30px;}
+.Role_describe{width: 40%;}
+.Role_savecCancel{width:15%;margin-top:30px;}
+.Role_form input{
+    line-height: 30px;
+    width:75%;
+    border:1px solid #ddd;
+}
+.Role_form input:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+textarea{ resize : none;width: 80%;border:1px solid #dddddd;}
+.Role_save{
+    line-height: 30px;
+    width: 60px;
+    background: #00ab3f;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    cursor:pointer;
+}
+.Role_save:hover{
+    background-color:#00983f;
+}
+.Role_Cancel{
+    margin-left: 15px;
+    font-size: 16px;
+    margin-top: 5px;
+    color: #666666;
+}
+.Role_Cancel:hover{
+    text-decoration: underline !important;
+}
+.Role_nameSelect{
+ color:#7c7c7c;
+    font-size:14px;
+}
+.Role_nameSelect input{
+    padding-left: 10px;font-size:14px;
+    color:#333;
+    background:#fff;
+    line-height:30px;
+
+}
+.Role_form{margin-left:10px;}
+.Role_describeSpan{
+    color:#7c7c7c;
+    font-size: 14px;
+    float: left;
+    margin-top: 25px;
+}
+.theme_popover_content_Middle ul li:hover{background:#005fe2;}
+.Role_describe {margin:10px 0px 10px 30px; }
+.RoleMiddle_save{margin:0 auto;text-align:center;margin-top: 80px;}
+@media screen and (max-width:1441px){
+    .Role_form input { width: 70%;}
+    .theme_popover_content_Middle { width: 15%;}
+    .role_tabPanelUl li { font-size: 14px;}
+    .theme_popover_content_Middle ul li {
+        font-size: 14px;
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        margin: 0 15px 0 15px;
+        line-height: 40px;
+        width: 80%;
+        background: #0084e2;
+        border-radius: 5px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-height:769px){
+    #transaction_modal_box{top:60px;}
+}
+@media screen and (max-width:1281px){
+    .theme_popover_content_Middle ul li {margin: 0 10px 0 10px; margin-bottom: 20px;}
+    .Role_form input { width: 65%;}
+    .Role_save {font-size: 14px;}
+    .Role_Cancel { margin-left: 5px; font-size: 14px;}
+    .role_tabPanelUl li { font-size: 14px;}
+}
+@media screen and (max-width:1367px){
+    .theme_popover_content_Middle ul li {margin: 0 10px 0 10px; margin-bottom: 20px;}
+    .Role_form input { width: 65%;}
+    .Role_save {font-size: 14px;}
+    .Role_Cancel { margin-left: 5px; font-size: 14px;}
+    .role_tabPanelUl li { font-size: 14px;}
+}
+
+/*保存之后的按钮*/
+.Role_Bigbog_save{
+    border: 1px solid #00ab3f;
+}
+.Role_crook_save{float:right;}
+.Role_save_span{background: url("../../img/ModalRoleMaintain/Role_save_span.png") no-repeat center top;display:inline-block;width:22px;height:22px;position:relative;top: -12px;
+    left: 8px;}
+.Role_save_span2{background: url("../../img/ModalRoleMaintain/Role_save_span.png") no-repeat center top;display:inline-block;width:22px;height:22px;position:relative;top: -12px;
+    left: 10px;}
+.role_hit_span{position: relative;margin-left:20px;}
+.role_save_style{
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    color: #00ab3f;
+    border-left: 1px solid #00ab3f;
+    border-right: 1px solid #00ab3f;
+    border-top: 1px solid #00ab3f;
+    border-bottom: 1px solid #2196fd;
+    background-color: #ebffeb;}
+.Role_savecCancel_revamp{background: url(../../img/handel_icon/handle_25.png) -51px -51px no-repeat;display:inline-block;width:25px;height:25px;}
+/* .Role_Bigbog{height:89px;} */
+.Role_describe_text{position:relative;top:26px;font-size: 14px;color:#7c7c7c;}
+
+@media screen and (max-width: 1661px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 1441px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 1367px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .theme_popover_content_Middle ul li {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1281px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .theme_popover_content_Middle ul li {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:1600px){
+    .Role_form input {
+        width: 72%;
+    }
+}

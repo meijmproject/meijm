@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/salary/institution_basic_table.css">
+<script src="../../js/jquery-1.12.4.js" type="text/javascript"></script>
+<script src="../../js/uijs/salary/institution_basic_training_job.js"></script>
+<style>
+    body{
+        margin: 1%;
+    }
+</style>
+<body>
+    <table class="institution_basic">
+        <tr>
+            <td colspan="3" class="institution_basic_td_bg border_right">单位名称</td>
+            <td colspan="7" class="institution_basic_td_color">12</td>
+            <td colspan="2" class="institution_basic_td_bg">主管部门</td>
+            <td colspan="5" class="institution_basic_td_color">12</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="institution_basic_td_bg border_right">单位规格</td>
+            <td colspan="3" class="institution_basic_td_color">12</td>
+            <td colspan="2" class="institution_basic_td_bg">经费来源</td>
+            <td colspan="2" class="institution_basic_td_color">12</td>
+            <td colspan="2" class="institution_basic_td_bg">定编文号及时间</td>
+            <td colspan="5" class="institution_basic_td_color">12</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="3" class="institution_basic_td_bg border_right">编制数</td>
+            <td rowspan="2" colspan="3" class="institution_basic_td_color">12</td>
+            <td rowspan="2" colspan="2" class="institution_basic_td_bg">领导职数</td>
+            <td rowspan="2" colspan="2" class="institution_basic_td_color">12</td>
+            <td colspan="2" class="institution_basic_td_bg">内设机构个数</td>
+            <td colspan="5" class="institution_basic_td_color">4</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="institution_basic_td_bg">内设机构领导职数</td>
+            <td colspan="5" class="institution_basic_td_color">12</td>
+        </tr>
+        <tr class="border_top institution_basic_td_bg">
+            <td colspan="3" class="border_right">现有在册人数总数</td>
+            <td colspan="3">类别</td>
+            <td colspan="3">管理人员</td>
+            <td colspan="3">专业技术人员</td>
+            <td colspan="3" class="border_right">工勤人员</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="3" class="border_right institution_basic_td_color">12</td>
+            <td colspan="3" class="institution_basic_td_bg">人数</td>
+            <td colspan="3" class="institution_basic_td_color">10</td>
+            <td colspan="3" class="institution_basic_td_color">10</td>
+            <td colspan="3" class="institution_basic_td_color border_right">10</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="institution_basic_td_bg">占人员总比例</td>
+            <td colspan="3" class="institution_basic_td_color">10%</td>
+            <td colspan="3" class="institution_basic_td_color">10</td>
+            <td colspan="3" class="institution_basic_td_color border_right">10</td>
+        </tr>
+        <tr class="border_top institution_basic_td_bg">
+            <td rowspan="2" colspan="1" class="border_right">管理人员</td>
+            <td colspan="2" class="border_right">级别</td>
+            <td colspan="1">厅级正职</td>
+            <td colspan="1">厅级副职</td>
+            <td colspan="1">局级正职</td>
+            <td colspan="1">局级副职</td>
+            <td colspan="1">处级正职</td>
+            <td colspan="1">处级副职</td>
+            <td colspan="1">科级正职</td>
+            <td colspan="1">科级副职</td>
+            <td colspan="1">科员</td>
+            <td colspan="1">办事员</td>
+            <td colspan="1" class="border_right">未定级</td>
+        </tr>
+        <tr class="institution_basic_td_color">
+            <td colspan="2" class="border_right institution_basic_td_bg">现聘人数</td>
+            <td colspan="1">123</td>
+            <td colspan="1">123</td>
+            <td colspan="1">123</td>
+            <td colspan="1"></td>
+            <td colspan="1"></td>
+            <td colspan="1"></td>
+            <td colspan="1"></td>
+            <td colspan="1">2</td>
+            <td colspan="1"></td>
+            <td colspan="1"></td>
+            <td colspan="1" class="border_right"></td>
+        </tr>
+        <tr class="border_top institution_basic_td_bg">
+            <td rowspan="3" colspan="1" class="border_right">专业技术人员</td>
+            <td colspan="2" class="border_right">级别</td>
+            <td colspan="3">正高</td>
+            <td colspan="3">副高</td>
+            <td colspan="2">中级</td>
+            <td colspan="2">处级</td>
+            <td colspan="2" class="border_right">未定级</td>
+        </tr>
+        <tr class="institution_basic_td_color">
+            <td colspan="2" class="border_right institution_basic_td_bg">取得资格人数</td>
+            <td colspan="3">3</td>
+            <td colspan="3">3</td>
+            <td colspan="2">2</td>
+            <td colspan="2">2</td>
+            <td colspan="2" class="border_right">2</td>
+        </tr>
+        <tr class="institution_basic_td_color">
+            <td colspan="2" class="border_right institution_basic_td_bg">现聘人数</td>
+            <td colspan="3">3</td>
+            <td colspan="3">3</td>
+            <td colspan="2">2</td>
+            <td colspan="2">2</td>
+            <td colspan="2" class="border_right">2</td>
+        </tr>
+        <tr class="border_top institution_basic_td_bg">
+            <td rowspan="3" colspan="1" class="border_right">工勤技能人员</td>
+            <td colspan="2" class="border_right">级别</td>
+            <td colspan="2">高级技师</td>
+            <td colspan="2">技师</td>
+            <td colspan="2">高级工</td>
+            <td colspan="2">中级工</td>
+            <td colspan="1">初级工</td>
+            <td colspan="1">普工</td>
+            <td colspan="1" class="border_right">未定级</td>
+        </tr>
+        <tr class="institution_basic_td_color">
+            <td colspan="2" class="border_right institution_basic_td_bg">取得资格人数</td>
+            <td colspan="2">2</td>
+            <td colspan="2">2</td>
+            <td colspan="2">2</td>
+            <td colspan="2">2</td>
+            <td colspan="1">1</td>
+            <td colspan="1">1</td>
+            <td colspan="1" class="border_right">1</td>
+        </tr>
+        <tr class="institution_basic_td_color">
+            <td colspan="2" class="border_right institution_basic_td_bg">现聘人数</td>
+            <td colspan="2">2</td>
+            <td colspan="2">2</td>
+            <td colspan="2">2</td>
+            <td colspan="2">1</td>
+            <td colspan="1">1</td>
+            <td colspan="1">1</td>
+            <td colspan="1" class="border_right">1</td>
+        </tr>
+        <tr class="border_top">
+            <td colspan="3" class="border_right institution_basic_td_bg">临时用工数</td>
+            <td colspan="11" class="institution_basic_td_color border_right double_click_modify">
+                <span>345</span>
+                <input type="text" class="hide">
+            </td>
+        </tr>
+        <tr class="border_top border_right">
+            <td colspan="3" rowspan="2" class="border_right institution_basic_td_bg">单位功能</td>
+            <td colspan="11" rowspan="2" class="text_no_center border_right">
+                <p><input type="checkbox">主要以专业技术提供社会公益服务</p>
+                <p><input type="checkbox">主要承担社会事务管理职责</p>
+                <p><input type="checkbox">主要承担技能操作、维护和服务保障</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

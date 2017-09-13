@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+   <!--   人员基础信息 -->
+    <bean id="pbPersonInfoService" class="com.yh.hr.res.pb.service.impl.PbPersonInfoServiceImpl" />
+ <!-- 照片信息 -->  
+    <bean id="pbImageService" class="com.yh.hr.res.pb.service.impl.PbImageServiceImpl" />
+    
+     <bean id="pbPhotoService" class="com.yh.hr.res.pb.service.impl.PbPhotoServiceImpl" />
+    <!-- 人员附属信息 -->
+    <bean id="pbPersonAttachService" class="com.yh.hr.res.pb.service.impl.PbPersonAttachServiceImpl" />
+	
+	<!-- 家庭成员与社会关系service -->
+	<bean name="pbFamilyInfoService" class="com.yh.hr.res.pb.service.impl.PbFamilyInfoServiceImpl" />
+     <!-- 普通外出基础service -->
+     <bean name="pbGoOutInfoService" class="com.yh.hr.res.pb.service.impl.PbGoOutInfoServiceImpl" />
+     <!-- 外出进修基础service -->
+     <bean name="pbGoOutStudyService" class="com.yh.hr.res.pb.service.impl.PbGoOutStudyServiceImpl" />
+     <!-- 普通外出销假基础service -->
+     <bean name="pbRevokeGoOutService" class="com.yh.hr.res.pb.service.impl.PbRevokeGoOutServiceImpl" />
+     <!-- 外出进修销假基础service -->
+     <bean name="pbRevokeGoOutStudyService" class="com.yh.hr.res.pb.service.impl.PbRevokeGoOutStudyServiceImpl" />
+     <bean name="pbChangeOffInfoService" class="com.yh.hr.res.pb.service.impl.PbChangeOffInfoServiceImpl" />
+     <!-- 请休假基础service -->
+     <bean name="pbVacationService" class="com.yh.hr.res.pb.service.impl.PbVacationServiceImpl" />
+     <!-- 工伤假基础service -->
+     <bean name="pbWorkInjuryVacationService" class="com.yh.hr.res.pb.service.impl.PbWorkInjuryVacationServiceImpl" />
+     <!-- 延长产假基础service -->
+     <bean name="pbProlongMaternityLeaveService" class="com.yh.hr.res.pb.service.impl.PbProlongMaternityLeaveServiceImpl" />
+     
+     <bean name="pbOverTimeInfoService" class="com.yh.hr.res.pb.service.impl.PbOverTimeInfoServiceImpl" />
+     
+     <bean name="pbRevokeService" class="com.yh.hr.res.pb.service.impl.PbRevokeServiceImpl" />
+     <!-- 人员科室变动基础service -->
+     <bean name="pbDepartmentChangeService" class="com.yh.hr.res.pb.service.impl.PbDepartmentChangeServiceImpl" />
+</beans>

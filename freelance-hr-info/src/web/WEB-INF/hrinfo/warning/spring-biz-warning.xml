@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 预警信息 -->
+	<!-- <bean id="bizWarningInfoDao" class="gov.szghrs.warning.dao.impl.BizWarningInfoDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>	 -->
+	<bean id="bizWarningInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.warning.facade.impl.BizWarningInfoFacadeImpl">
+			<property name="bizWarningInfoService" ref="bizWarningInfoService" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="bizWarningInfoService" class="com.yh.hr.info.warning.service.impl.BizWarningInfoServiceImpl"></bean>
+
+	<!-- 合同到期预警 -->
+	<bean id="YJHTDQ" class="com.yh.hr.info.warning.service.impl.BizWarningForContractExtendServiceImpl">
+	</bean>	
+	<!-- 离退休预警 -->
+	<bean id="YJLTX" class="com.yh.hr.info.warning.service.impl.BizWarningForOutRetireServiceImpl">
+	</bean>	
+</beans>

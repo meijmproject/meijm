@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<struts-config>
+	<form-beans>
+		
+    </form-beans>
+    
+    <action-mappings>
+    	
+    	<action path="/goToQueryStasCommReportWorkbench"
+        		  parameter="method"
+              scope="request"
+              type="com.yh.hr.report.web.action.ReportAction"
+              validate="false">
+    		<description>跳转到常用查询统计报表管理工作台</description>
+    		<forward name="success" path="/report/report_comm_worktop_main.jsp"/>
+    	</action>
+    	<action path="/goToQueryStasMappingReportWorkbench"
+        		  parameter="method"
+              scope="request"
+              type="com.yh.hr.report.web.action.ReportAction"
+              validate="false">
+    		<description>跳转到图形类查询统计报表管理工作台</description>
+    		<forward name="success" path="/report/report_mapping_worktop_main.jsp"/>
+    	</action>
+    	<action path="/goToQueryStasAttendanceReportWorkbench"
+        		  parameter="method"
+              scope="request"
+              type="com.yh.hr.report.web.action.ReportAction"
+              validate="false">
+    		<description>跳转到考勤业务查询统计报表管理工作台</description>
+    		<forward name="success" path="/report/report_attendance_worktop_main.jsp"/>
+    	</action>
+    	<action path="/findReportsTree"
+              parameter="method"
+              scope="request"
+              type="com.yh.hr.report.web.action.ReportAction"
+              validate="false">
+    		<description>查询报表树</description>
+      </action>
+    	
+    	<!-- 打印人员基础信息，学历学位，任免信息 -->
+		 <action path="/printPublicInfo"
+				 parameter="method"
+				 input="/report/print_public_person_info.jsp"
+				 scope="request"
+				 type="com.yh.hr.report.web.action.PersonReportAction"
+				 validate="false">				 
+		 </action>
+		 <!-- 查看全院人员框架图 -->
+		  <action path="/goViewFloorPersonDiagramInfo"
+				 parameter="method"
+				 scope="request"
+				 type="com.yh.hr.report.web.action.PersonFloorDiagramAction">
+				<description>跳转到全院人员框架图页面</description>
+			<forward name="success" path="/report/diagram/view_floor_person_diagram.jsp"/>			 
+		 </action>
+		 <!--跳转到全院员工汇总表显示页面-->
+		 <action path="/goViewEveryOfficeSummaryInfo"
+				 parameter="method"
+				 scope="request"
+				 type="com.yh.hr.report.web.action.AllPersonStatisticsAction"
+				 validate="false">	
+				 <forward name="success" path="/report/personstatistics/allperson_statistics_display.jsp"/>			 
+				 <forward name="excel" path="/report/personstatistics/allperson_statistics_by_excel.jsp"/>	
+		 </action>
+		 <!--跳转到 科主任及护士长系列人员汇总 显示页面-->
+		 <action path="/goViewMatronInfo"
+				 parameter="method"
+				 scope="request"
+				 type="com.yh.hr.report.web.action.MatronStatisticsAction"
+				 validate="false">	
+				 <forward name="success" path="/report/matronstatistics/matron_statistics_display.jsp"/>			 
+				 <forward name="excel" path="/report/matronstatistics/matron_statistics_by_excel.jsp"/>	
+		 </action>
+		  <!--跳转到 卫生技术人员依据职称等级汇总的年龄、性别架构表 显示页面-->
+		<action path="/goViewTechnicalTitleAgeInfo"
+				 parameter="method"
+				 scope="request"
+				 type="com.yh.hr.report.web.action.TechnicalTitleAgeStatisticsAction"
+				 validate="false">	
+				 <forward name="success" path="/report/technicaltitleagestatistics/technicaltitleage_statistics_display.jsp"/>			 
+				 <forward name="excel" path="/report/technicaltitleagestatistics/technicaltitleage_statistics_by_excel.jsp"/>	
+		 </action>
+		 <!-- 跳转到管理人员明细页面 -->
+    	<action path="/goViewManagePersonInfo"
+    			type="com.yh.hr.report.web.action.ManagerDetailsReportAction"
+				parameter="method"
+				scope="request">
+				<forward name="success" path="/report/list_manage_person_info.jsp" />
+				<forward name="excel" path="/report/print_manage_person_info.jsp" />			 
+		</action>
+		
+		<action path="/goViewEmployedPersonInfo"
+        scope="request"
+        name="cfWardForm"
+        validate="false"
+        type="com.yh.hr.report.web.action.ZgEmployedPersonAction"
+        parameter="method">
+      <description>跳转到在岗人员总表的统计页面</description>
+      <forward name="success" path="/report/zgemployedperson/zgemployedperson_view.jsp"/>
+      <forward name="export" path="/report/zgemployedperson/zgemployedperson_export.jsp"/>
+    </action>
+    </action-mappings>
+        
+</struts-config>

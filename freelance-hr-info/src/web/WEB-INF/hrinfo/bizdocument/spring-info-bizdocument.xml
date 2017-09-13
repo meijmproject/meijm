@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="bizDocumentFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.bizdocument.facade.BizDocumentFacade">
+				<property name="uploadNodeRefService" ref="uploadNodeRefService" />
+				<property name="bizDocumentService" ref="bizDocumentService" />
+				<property name="uploadFileService" ref="uploadFileService" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean name="bizDocumentService" class="com.yh.hr.info.bizdocument.service.impl.BizDocumentServiceImpl"></bean>
+</beans>

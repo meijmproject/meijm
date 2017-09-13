@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yh.admin.bo.UserRelation" table="YHB_USER_RELATION">
+		<composite-id>
+			<key-property name="userId" column="USER_ID" type="java.lang.String" />
+			<key-property name="refType" column="REF_TYPE" type="java.lang.String" />
+		</composite-id>
+		<property name="refOid" type="java.lang.Long">
+			<column name="REF_OID" />
+		</property>
+	</class>
+</hibernate-mapping>

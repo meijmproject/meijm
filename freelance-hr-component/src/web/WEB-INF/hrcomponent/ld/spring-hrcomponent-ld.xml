@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 领导职数资源下达服务接口 -->
+    <bean id="ldFlowApprovedService" class="com.yh.hr.component.ld.service.impl.LdFlowApprovedServiceImpl" />
+    <!-- 领导职数资源占用服务接口 -->
+    <bean id="ldFlowUseInService" class="com.yh.hr.component.ld.service.impl.LdFlowUseInServiceImpl" >
+    	<property name="ldInfoService">
+    		<ref bean="ldInfoService"/>
+    	</property>
+    </bean>
+    
+    <!-- 领导职数资源释放服务接口 -->
+    <bean id="ldFlowUseOutService" class="com.yh.hr.component.ld.service.impl.LdFlowUseOutServiceImpl" >
+    	<property name="ldInfoService">
+    		<ref bean="ldInfoService"/>
+    	</property>
+    </bean>
+    
+</beans>

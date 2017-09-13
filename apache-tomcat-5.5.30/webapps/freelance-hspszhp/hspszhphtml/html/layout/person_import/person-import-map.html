@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人员导入- 映射</title>
+    <link rel="stylesheet" href="../../../css/common/reset.css">
+    <link rel="stylesheet" href="../../../css/common/base.css">
+    <link rel="stylesheet" href="../../../css/common/layout.css">
+    <link rel="stylesheet" href="../../../css/components/head_nav.css">
+    <link rel="stylesheet" href="../../../css/components/file_import.css">
+    <link rel="stylesheet" href="../../../css/components/search_result_table.css">
+    <link rel="stylesheet" href="../../../css/components/handle_btn.css">
+</head>
+<body>
+<div id="head-nav"></div>
+<div class="current-position">
+    当前位置：
+    <span>基础信息管理 &gt; </span>
+    <span>机构管理 &gt; </span>
+    <span>人员信息导入 </span>
+</div>
+<div class="main-container file-import-wrap">
+    <div class="person-info-import">
+        <div class="file-import-process">
+            <ol class="progress progress-6 clearfix">
+                <li class="active">
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">1</div>
+                        <div class="process-cont-text">导入</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">2</div>
+                        <div class="process-cont-text">信息项映射</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">3</div>
+                        <div class="process-cont-text">数据检查</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">4</div>
+                        <div class="process-cont-text">数据校核</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">5</div>
+                        <div class="process-cont-text">人员入库</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-cont">
+                        <div class="process-cont-number">6</div>
+                        <div class="process-cont-text">完成</div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="person-info-loading">
+        <div class="person-map-cont">
+            <div class="person-map-title">
+                <h2><span>使用说明：</span>左侧为系统当前已支持人员数据采集项； 右侧为即将导入的EXCEL数据表的表头，即第一行内容。</h2>
+            </div>
+            <div class="person-map-table">
+                <div class="person-map-table-title">
+                    <table class="sr-table">
+                        <thead class="sr-table-thead">
+                        <tr>
+                            <th>系统名称</th>
+                            <th>采集项名称</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="person-map-table-tbody">
+                    <table class="sr-table">
+                        <tbody class="sr-table-tbody">
+                        <tr>
+                            <td>姓名<span>*</span></td>
+                            <td><select><option>姓名</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>姓名<span>*</span></td>
+                            <td><select><option>姓名</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>姓名<span>*</span></td>
+                            <td><select><option>姓名</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>姓名<span>*</span></td>
+                            <td><select><option>姓名</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>姓名<span>*</span></td>
+                            <td><select><option>姓名</option></select></td>
+                        </tr>
+
+                        <tr>
+                            <td>性别</td>
+                            <td><select><option>性别</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td><select><option>出生日期</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td><select><option>出生日期</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td><select><option>出生日期</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td><select><option>出生日期</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td><select><option>出生日期</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td><select><option>出生日期</option></select></td>
+                        </tr>
+                        <tr>
+                            <td>出生日期</td>
+                            <td><select><option>出生日期</option></select></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--<table class="sr-table">-->
+                    <!--<thead class="sr-table-thead">-->
+                        <!--<tr>-->
+                            <!--<th>系统名称</th>-->
+                            <!--<th>采集项名称</th>-->
+                        <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody class="sr-table-tbody">-->
+                    <!--<tr>-->
+                        <!--<td>姓名<span>*</span></td>-->
+                        <!--<td><select><option>姓名</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>姓名<span>*</span></td>-->
+                        <!--<td><select><option>姓名</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>姓名<span>*</span></td>-->
+                        <!--<td><select><option>姓名</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>姓名<span>*</span></td>-->
+                        <!--<td><select><option>姓名</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>姓名<span>*</span></td>-->
+                        <!--<td><select><option>姓名</option></select></td>-->
+                    <!--</tr>-->
+
+                    <!--<tr>-->
+                        <!--<td>性别</td>-->
+                        <!--<td><select><option>性别</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>出生日期</td>-->
+                        <!--<td><select><option>出生日期</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>出生日期</td>-->
+                        <!--<td><select><option>出生日期</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>出生日期</td>-->
+                        <!--<td><select><option>出生日期</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>出生日期</td>-->
+                        <!--<td><select><option>出生日期</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>出生日期</td>-->
+                        <!--<td><select><option>出生日期</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>出生日期</td>-->
+                        <!--<td><select><option>出生日期</option></select></td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>出生日期</td>-->
+                        <!--<td><select><option>出生日期</option></select></td>-->
+                    <!--</tr>-->
+                    <!--</tbody>-->
+                <!--</table>-->
+                <div class="person-map-table-btn clearfix"><button class="btn-search btn-default">保存</button></div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="../../../js/jquery-1.12.4.js"></script>
+<script>
+    $(function() {
+        $('#head-nav').load('../../components/head_nav.html');
+        personMapTableHeight();
+
+        $(window).resize(
+            function(){
+                personMapTableHeight();
+            }
+        );
+        // 页面加载后主内容区域的高度设置
+        function eachAreaHeight() {
+            var windowHeight = $(window).height();
+            //主内容区高度
+            $('.main-container').height(windowHeight - $('.head-nav').outerHeight(true) - $('.current-position').outerHeight(true));
+        }
+
+        function personMapTableHeight() {
+            eachAreaHeight();
+            var personMapTableMaxHeight = $('.main-container').height()-$('.person-info-import').outerHeight(true)-$('.person-map-title').outerHeight(true)-$('.person-map-table-btn').outerHeight(true)-20;
+            var personMapTableRealHeight = $(".person-map-table").height();
+            if (personMapTableRealHeight>personMapTableMaxHeight){
+//                $(".person-map-table").height(personMapTableMaxHeight);
+                $(".person-map-table .person-map-table-tbody").height(personMapTableMaxHeight-$('.person-map-table-btn').outerHeight(true)-$('.person-map-table .sr-table thead').outerHeight(true));
+            }
+        }
+
+    });
+</script>
+</html>

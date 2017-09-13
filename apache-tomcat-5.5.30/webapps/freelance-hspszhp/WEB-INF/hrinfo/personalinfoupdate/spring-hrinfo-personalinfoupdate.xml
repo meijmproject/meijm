@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- 人员基础信息  -->
+	<bean id="personalInfoUpdateFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.personalinfoupdate.facade.PersonalInfoUpdateFacade">
+	        	<property name="personalInfoUpdateService" ref="personalInfoUpdateService"/>
+			</bean>
+		</property>
+    </bean>
+   <bean id="personalInfoUpdateService" class="com.yh.hr.info.personalinfoupdate.service.impl.PersonalInfoUpdateServiceImpl" />
+    
+</beans>

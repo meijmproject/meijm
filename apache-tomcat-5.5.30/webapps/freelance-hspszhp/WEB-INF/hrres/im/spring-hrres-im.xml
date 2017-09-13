@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- 采集项映射操作service -->
+    <bean id="imCollectTemplateService" class="com.yh.hr.res.im.service.impl.ImCollectTemplateServiceImpl" />
+    <!-- 数据校核检查项定义操作service -->
+    <bean id="imCheckDefinitionService" class="com.yh.hr.res.im.service.impl.ImCheckDefinitionServiceImpl" />
+    <!-- 字典映射操作service -->
+    <bean id="imDicTypeMappingService" class="com.yh.hr.res.im.service.impl.ImDicTypeMappingServiceImpl" />
+    <!-- 字典值映射操作service -->
+    <bean id="imDicItemMappingService" class="com.yh.hr.res.im.service.impl.ImDicItemMappingServiceImpl" />
+    <!-- 导入批次操作service -->
+    <bean id="imImportBatchService" class="com.yh.hr.res.im.service.impl.ImImportBatchServiceImpl" />
+    <!-- 导入数据异常日志操作service -->
+    <bean id="imDataUnusualLogService" class="com.yh.hr.res.im.service.impl.ImDataUnusualLogServiceImpl" />
+    <!-- 校核人员操作service -->
+    <bean id="imCheckPersonInfoService" class="com.yh.hr.res.im.service.impl.ImCheckPersonInfoServiceImpl" />
+    <!-- 人员检查异常明细操作service -->
+    <bean id="imCheckPersonUnusualService" class="com.yh.hr.res.im.service.impl.ImCheckPersonUnusualServiceImpl" />
+    <!-- 导入人员操作service -->
+    <bean id="imImportPersonInfoService" class="com.yh.hr.res.im.service.impl.ImImportPersonInfoServiceImpl" />
+</beans>

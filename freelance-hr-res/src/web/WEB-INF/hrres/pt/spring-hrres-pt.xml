@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	 <!-- 人员业务信息 -->
+    <bean id="ptPersonService" class="com.yh.hr.res.pt.service.impl.PtPersonServiceImpl" />
+    <!-- 照片信息 -->
+    <bean id="ptImageService" class="com.yh.hr.res.pt.service.impl.PtImageServiceImpl" />
+     <!-- 业务人员照片service -->
+     <bean id="ptPhotoService" class="com.yh.hr.res.pt.service.impl.PtPhotoServiceImpl" />
+    <!-- 人员转任信息 -->
+    <bean id="ptPersonInService" class="com.yh.hr.res.pt.service.impl.PtPersonInServiceImpl" />
+    <!-- 人员转任其他信息 -->
+    <bean id="ptPersonInOtherService" class="com.yh.hr.res.pt.service.impl.PtPersonInOtherServiceImpl" />
+    <!-- 人员家庭信息 -->
+    <bean id="ptFamilyInfoService" class="com.yh.hr.res.pt.service.impl.PtFamilyInfoServiceImpl" />
+    <!-- 人员奖励信息 -->
+    <bean id="ptRewardInfoService" class="com.yh.hr.res.pt.service.impl.PtRewardInfoServiceImpl" />
+    <!-- 人员考核信息 -->
+    <bean id="ptReviewInfoService" class="com.yh.hr.res.pt.service.impl.PtReviewInfoServiceImpl" />
+    <!-- 人员惩处信息 -->
+    <bean id="ptPunishmentInfoService" class="com.yh.hr.res.pt.service.impl.PtPunishmentInfoServiceImpl" />
+    <!-- 年度考核信息-->
+    <bean id="ptReviewBizInfoService" class="com.yh.hr.res.pt.service.impl.PtReviewBizInfoServiceImpl" />
+    <bean id="ptReviewDetailInfoService" class="com.yh.hr.res.pt.service.impl.PtReviewDetailInfoServiceImpl" />
+    
+    <!-- 工作简历 -->
+    <bean id="ptResumeInfoService" class="com.yh.hr.res.pt.service.impl.PtResumeInfoServiceImpl" />
+    <!--军队任职信息service-->
+	<bean name="ptMilitaryInfoService" class="com.yh.hr.res.pt.service.impl.PtMilitaryInfoServiceImpl" ></bean>
+    <!-- 合同业务信息 -->
+    <bean id="ptEngageContractRenewService" class="com.yh.hr.res.pt.service.impl.PtEngageContractRenewServiceImpl" />
+    <!-- 销假业务信息 -->
+    <bean id="ptRevokeService" class="com.yh.hr.res.pt.service.impl.PtRevokeServiceImpl" />
+    <!--执业注册历史信息 -->
+    <bean id="ptCertificateHistInfoService" class="com.yh.hr.res.pt.service.impl.PtCertificateHistInfoServiceImpl" />
+    <!--执业注册信息 -->
+    <bean id="ptCertificateInfoService" class="com.yh.hr.res.pt.service.impl.PtCertificateInfoServiceImpl" />
+    <!--学历学位信息 -->
+    <bean id="ptEducationLevelDegreeService" class="com.yh.hr.res.pt.service.impl.PtEducationLevelDegreeServiceImpl" />
+    <!--教育培训信息 -->
+    <bean id="ptEducationTrainingInfoService" class="com.yh.hr.res.pt.service.impl.PtEducationTrainingInfoServiceImpl" />
+    <!--合同变动历史信息 -->
+    <bean id="ptEngageConHistInfoService" class="com.yh.hr.res.pt.service.impl.PtEngageConHistInfoServiceImpl" />
+    <!--合同信息 -->
+    <bean id="ptEngageContractInfoService" class="com.yh.hr.res.pt.service.impl.PtEngageContractInfoServiceImpl" />
+    <!--政治面貌与党派信息 -->
+    <bean id="ptPoliticInfoService" class="com.yh.hr.res.pt.service.impl.PtPoliticInfoServiceImpl" />
+    <!--专业技术资格信息 -->
+    <bean id="ptProfTechQualifInfoService" class="com.yh.hr.res.pt.service.impl.PtProfTechQualifInfoServiceImpl" />
+    <!--执业(职业)资格信息 -->
+    <bean id="ptQualificationsInfoService" class="com.yh.hr.res.pt.service.impl.PtQualificationsInfoServiceImpl" />
+    <!--特殊授权情况信息 -->
+    <bean id="ptSpeciaAuthService" class="com.yh.hr.res.pt.service.impl.PtSpeciaAuthServiceImpl" />
+    <!--院内岗位聘任信息 -->
+    <bean id="ptYnGwEmployInfoService" class="com.yh.hr.res.pt.service.impl.PtYnGwEmployInfoServiceImpl" />
+     <!-- 普通外出业务service -->
+     <bean name="ptGoOutInfoService" class="com.yh.hr.res.pt.service.impl.PtGoOutInfoServiceImpl" />
+     <!-- 外出进修业务service -->
+     <bean name="ptGoOutStudyService" class="com.yh.hr.res.pt.service.impl.PtGoOutStudyServiceImpl" />
+     <!-- 普通外出销假业务service -->
+     <bean name="ptRevokeGoOutService" class="com.yh.hr.res.pt.service.impl.PtRevokeGoOutServiceImpl" />
+     <!-- 外出进修销假业务service -->
+     <bean name="ptRevokeGoOutStudyService" class="com.yh.hr.res.pt.service.impl.PtRevokeGoOutStudyServiceImpl" />
+     <!-- 工伤假业务service -->
+     <bean name="ptWorkInjuryVacationService" class="com.yh.hr.res.pt.service.impl.PtWorkInjuryVacationServiceImpl" />
+     <!-- 延长产假业务service -->
+     <bean name="ptProlongMaternityLeaveService" class="com.yh.hr.res.pt.service.impl.PtProlongMaternityLeaveServiceImpl" />
+     <!-- 人员科室变动业务service -->
+     <bean name="ptDepartmentChangeService" class="com.yh.hr.res.pt.service.impl.PtDepartmentChangeServiceImpl" />
+</beans>

@@ -1,0 +1,1 @@
+CREATE ALGORITHM=UNDEFINED VIEW `v_yhb_user_role` AS select `sp`.`DATA_ROLE_ID` AS `DATA_ROLE_ID`,`usp`.`USER_ID` AS `user_id` from (`yhb_user_sp` `usp` join `yhb_system_position` `sp`) where ((`usp`.`SYSTEM_POSITION_OID` = `sp`.`SYSTEM_POSITION_OID`) and (`sp`.`DATA_ROLE_ID` is not null));

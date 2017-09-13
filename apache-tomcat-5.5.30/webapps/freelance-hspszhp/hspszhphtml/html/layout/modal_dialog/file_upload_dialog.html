@@ -1,0 +1,157 @@
+<div id="transaction_modal_box" class="transaction_modal_box">
+    <!-- 头部-->
+    <div class="modal-dialog-container">
+        <div class="md-title">
+            文件上传
+            <a href="#" class="md-close close-popdown"></a>
+        </div>
+        <div class="md-main-content m-file-upload">
+            <div class="file-import-cont">
+                <span class="fi-title">上传资料</span>
+                <div class="show-fileName" type="text"></div>
+                <button class="btn-browse-icon btn-search btn-default">浏览<input type="file" class="file-choice"></button>
+                <button class="btn-upload-icon btn-search btn-default">上传</button>
+            </div>
+            <p class="upload-tips">请上传业务材料<span>（支持doc,docx,xls,xlsx,zip,pdf,jpg,png,tif文件类型，不得超过5MB）</span></p>
+
+            <div class="search-result-table">
+                <table class="sr-table">
+                    <thead class="sr-table-thead">
+                        <tr>
+                            <th width="30%">文件类型</th>
+                            <th width="15%">大小</th>
+                            <th width="30%">状态</th>
+                            <th width="15%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="sr-table-tbody">
+                        <tr>
+                            <td width="30%"><span class="file-icon file-unknown"></span>人员信息展示.exe</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-failed">
+                                <span>未知文件不能上传</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-delete"></a>
+                                <a class="st-handle-look look-gray"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-pdf"></span>人员信息展示.pdf</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process">
+                                <progress max="100" value="20"></progress>
+                                <span class="upload-percent">20%</span>
+                                <span>等待上传</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-upload"></a>
+                                <a class="st-handle-close"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-doc"></span>人员信息展示.doc</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-failed">
+                                <progress max="100" value="50"></progress>
+                                <span class="upload-percent">50%</span>
+                                <span>上传失败</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-upload"></a>
+                                <a class="st-handle-close"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-docx"></span>人员信息展示.docx</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-failed">
+                                <progress max="100" value="50"></progress>
+                                <span class="upload-percent">50%</span>
+                                <span>上传失败</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-upload"></a>
+                                <a class="st-handle-close"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-xls"></span>人员信息展示.xls</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-success">
+                                <span>上传成功</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-delete"></a>
+                                <a class="st-handle-look look-gray"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-xlsx"></span>人员信息展示.xlsx</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-success">
+                                <span>上传成功</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-delete"></a>
+                                <a class="st-handle-look look-gray"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-zip"></span>人员信息展示.zip</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process">
+                                <progress max="100" value="50"></progress>
+                                <span class="upload-percent">50%</span>
+                                <span>等待上传</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-delete"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-png"></span>人员信息展示.png</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-success">
+                                <span>上传成功</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-delete"></a>
+                                <a class="st-handle-look look-gray"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-tif"></span>人员信息展示.tif</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-success">
+                                <span>上传成功</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-delete"></a>
+                                <a class="st-handle-look look-gray"></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="30%"><span class="file-icon file-jpg"></span>人员信息展示.jpg</td>
+                            <td width="15%">656KB</td>
+                            <td width="30%" class="file-upload-process upload-success">
+                                <span>上传成功</span>
+                            </td>
+                            <td width="15%" class="st-handle-icons">
+                                <a class="st-handle-delete"></a>
+                                <a class="st-handle-look look-gray"></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="md-btn">
+            <button class="md-btn-save close-popdown">关闭</button>
+        </div>
+    </div>
+    <!-- 内容-->
+
+</div>

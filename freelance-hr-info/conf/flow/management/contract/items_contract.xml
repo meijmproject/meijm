@@ -1,0 +1,60 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<items>
+	<item code="11030" flow="contractrenew" name="合同续签">
+		<node code="begin" name="开始">
+			<precheck bean="beginNode" />
+			<before-do bean="beginNode" />
+			<after-do bean="beginNode" />
+		</node>
+		<!-- <node code="managementUnitReport" name="单位申报">
+			<precheck bean="managementUnitReportNode" />
+			<before-do bean="managementUnitReportNode" />
+			<after-do bean="managementUnitReportNode" />
+		</node>
+		<node code="managementUnitReported" name="单位已申报">
+			<precheck bean="managementUnitReportedNode" />
+			<before-do bean="managementUnitReportedNode" />
+			<after-do bean="managementUnitReportedNode" />
+		</node> -->
+		<node code="interruptReport" name="终止业务">
+			<precheck bean="managementInterruptReportNode" />
+			<before-do bean="managementInterruptReportNode" />
+			<after-do bean="managementInterruptReportNode" />
+		</node>
+		<!-- <node code="managementUnitRecall" name="单位撤回">
+			<precheck bean="managementUnitRecallNode" />
+			<before-do bean="managementUnitRecallNode" />
+			<after-do bean="managementUnitRecallNode" />
+		</node>
+		<node code="managementRevoke" name="业务退回">
+			<precheck bean="managementRevokeNode" />
+			<before-do bean="managementRevokeNode" />
+			<after-do bean="managementRevokeNode" />
+		</node> -->
+		<node code="managementApprove" name="审核确认">
+			<precheck bean="managementApproveNode" />
+			<before-do bean="managementApproveNode" />
+			<after-do bean="managementApproveNode" />
+		</node>
+		<node code="managementApproveAgree" name="审核同意">
+			<precheck bean="managementApproveAgreeNode" />
+			<before-do bean="managementApproveAgreeNode" />
+			<after-do bean="managementApproveAgreeNode" />
+		</node>
+		<!-- <node code="managementApproveDisAgree" name="审核不同意退回">
+			<precheck bean="managementApproveRevokeNode" />
+			<before-do bean="managementApproveRevokeNode" />
+			<after-do bean="managementApproveRevokeNode" />
+		</node> -->
+		<node code="managementTransferInfo" name="转库">
+			<precheck bean="managementTransferBaseNode" />
+			<before-do bean="managementTransferBaseNode" />
+			<after-do bean="managementTransferBaseNode" />
+		</node>
+		<node code="end" name="结束">
+			<precheck bean="managementEndNode" />
+			<before-do bean="managementEndNode" />
+			<after-do bean="managementEndNode" />
+		</node>
+	</item>
+</items>

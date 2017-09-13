@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="D:\worksoftware\jdk1.6.0_10" version="1.6.0_10-rc2">
+<bootpath>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\resources.jar"/>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\rt.jar"/>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\sunrsasign.jar"/>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\jsse.jar"/>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\jce.jar"/>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\charsets.jar"/>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\ext"/>
+<entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\worksoftware\jdk1.6.0_10\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="D:\Java6\jdk1.6.0_43" version="1.6.0_43">
+<bootpath>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\resources.jar"/>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\rt.jar"/>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\sunrsasign.jar"/>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\jsse.jar"/>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\jce.jar"/>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\charsets.jar"/>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\modules\jdk.boot.jar"/>
+<entry path="D:\Java6\jdk1.6.0_43\jre\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\ext"/>
+<entry path="C:\windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="D:\Java6\jdk1.6.0_43\jre\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- 导入信息  -->
+	  <bean id="dicMappedFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.DicMappedFacade">
+	        	<property name="dicMappedService" ref="dicMappedService"/>
+			</bean>
+		</property>
+    </bean>
+	 
+    <bean id="dicMappedService" class="com.yh.hr.info.dataimport.person.service.impl.DicMappedServiceImpl" >
+    	<property name="imDicItemMappingService" ref="imDicItemMappingService"/>
+    	<property name="imDicTypeMappingService" ref="imDicTypeMappingService"/>
+    	<property name="verPersonDataService" ref="verPersonDataService"/>
+    </bean>
+
+</beans>

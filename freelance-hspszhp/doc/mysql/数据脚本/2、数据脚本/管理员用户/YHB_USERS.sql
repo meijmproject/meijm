@@ -1,0 +1,3 @@
+insert into YHB_USERS (USER_OID, USER_ID, PASSWORD, USER_NAME, USER_SEX, ADDRESS, CONTACT_PHONE, REGIST_DATE, EFFECTIVE_DT, EXPIRED_DATE, USER_TYPE, USER_STATUS, UNIT_ID, UNIT_NAME, DEPT_ID, DEPT_NAME, UPDATED_BY_CODE, UPDATED_BY_NAME, UPDATED_DATE, DEFAULT_LOGIN_SYSTEM)
+values (1000, 'admin', 'f379eaf3c831b04de153469d1bec345e', '超级管理员', '1', null, null, null, null, null, null, null, null, null, null, null, 'admin', '超级管理员', now(), '1000');
+commit;

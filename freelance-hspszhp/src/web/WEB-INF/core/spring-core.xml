@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<!-- data source 102	-->
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<!-- 开发库	-->
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull&amp;characterEncoding=UTF-8</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value></value>
+		</property>
+
+		<!-- 测试库-->
+		<!-- <property name="url">
+			<value>jdbc:mysql://192.168.1.102:3306/hsp_testsrv?zeroDateTimeBehavior=convertToNull&amp;characterEncoding=UTF-8</value>
+		</property>
+		<property name="username">
+			<value>dpos_hspszhp_tes</value>
+		</property>
+		<property name="password">
+			<value>dpos_hspszhp_tes</value>
+		</property>	 -->
+		
+		<!-- 本地库
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/localsrv?zeroDateTimeBehavior=convertToNull&amp;characterEncoding=UTF-8</value>
+		</property>
+		<property name="username">
+			<value>dpos_hspszhp_dev</value>
+		</property>
+		<property name="password">
+			<value>dpos_hspszhp_dev</value>
+		</property>	 -->
+		
+
+		<property name="maxActive">
+			<value>10</value>
+		</property>
+		
+		<property name="maxWait">
+			<value>5000</value>
+		</property>
+	</bean>
+	<!-- Hibernate SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<!-- 注：发布到 weblogic 时 需注释 mappingJarLocations 属性  -->
+		<property name="mappingJarLocations">
+			<list>
+			 <!--遍历JAR中需要加载的hbm.xml文件 -->
+				<value>WEB-INF/lib/freelance*.jar</value>
+				
+				<!--<value>WEB-INF/lib/wage*.jar</value>-->
+			</list>
+		</property>
+		<property name="mappingLocations">
+			<list>
+			<!-- 加载服务器下需要加载的hbm.xml文件 -->
+			<!-- 注：发布到 weblogic 时 下行注释  -->
+				<value>classpath:**/*.hbm.xml</value>
+			<!-- 注：发布到 tomcat 时 下行注释  -->
+			<!-- <value>classpath*:/hbm/**/*.hbm.xml</value> -->
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					com.yh.platform.core.dialect.MySQL5Dialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.jdbc.batch_size">0</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

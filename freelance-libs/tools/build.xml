@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="js-css-depress" basedir="." default="depress">
+	<!-- =============== 引用properties属性文件 ================== -->
+	<property file="build.properties" />
+
+	<property name="resources" value="${resources}" />
+	<property name="dist" value="./release/${compressType}" />
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="./lib/ant-contrib-1.0b3.jar" />
+
+	<taskdef name="compress" classname="com.yahoo.platform.yui.compressor.YUICompressTask" classpath="./lib/yuicompressor-2.4.2.jar;./lib/YUIAnt-zh_CN.jar" />
+
+	<!-- 开始压缩JS -->
+	<target name="depress" description="压缩合并JS、CSS文件">
+		<echo message="开始压缩，文件目录：${resources}，文件类型：${compressType}" />
+
+		<delete dir="${dist}" />
+
+		<if>
+			<not>
+				<isset property="deploy_dir" />
+			</not>
+			<then>
+				<var name="deploy_dir" value="../tools" />
+			</then>
+		</if>
+
+		<var name="allName" value="${deploy_dir}/${name}.all.${compressType}" />
+		<var name="allMinName" value="${deploy_dir}/${name}.all.min.${compressType}" />
+
+		<if>
+			<isset property="core" />
+			<then>
+				<echo message="***********exec ux************" />
+				<mkdir dir="${dist}/ux" />
+				<copy todir="${dist}">
+					<fileset dir="${resources}">
+						<include name="${core}.${compressType}" />
+					</fileset>
+				</copy>
+				<copy todir="${dist}/ux">
+					<fileset dir="${resources}">
+						<exclude name="${core}.${compressType}" />
+						<exclude name="**/*.all.${compressType}" />
+						<exclude name="**/*.all.min.${compressType}" />
+					</fileset>
+				</copy>
+			</then>
+			<else>
+				<echo message="***********exec normal************" />
+				<mkdir dir="${dist}" />
+				<copy todir="${dist}">
+					<fileset dir="${resources}">
+						<exclude name="**/*.all.${compressType}" />
+						<exclude name="**/*.all.min.${compressType}" />
+					</fileset>
+				</copy>
+			</else>
+		</if>
+
+		<concat destfile="${allName}" encoding="${charset}" outputencoding="${charset}">
+			<fileset dir="./release/${compressType}">
+				<include name="**/*.${compressType}" />
+			</fileset>
+		</concat>
+
+		<compress linebreak="9000000" warn="false" charset="${charset}" encoding="${charset}" munge="yes" preserveallsemicolons="true" outputfolder="${dist}">
+			<fileset dir="${dist}">
+				<include name="**/*.${compressType}" />
+			</fileset>
+		</compress>
+
+		<concat destfile="${allMinName}" encoding="${charset}" outputencoding="${charset}">
+			<fileset dir="./release/${compressType}">
+				<include name="**/*.${compressType}" />
+			</fileset>
+		</concat>
+
+		<delete dir="${dist}" />
+		<echo message="压缩完成，文件：${allName}、${allMinName}，刷新${deploy_dir}目录后查看。" />
+	</target>
+
+</project>

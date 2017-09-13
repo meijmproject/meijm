@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="dictypeForm" type="com.yh.component.dictionary.web.form.DicTypeForm" />
+		<form-bean name="dicitemForm" type="com.yh.component.dictionary.web.form.DicItemForm" />
+    </form-beans>
+	<action-mappings>
+	
+		<action path="/goToSelTree"
+				parameter="method"
+				name="personForm"
+				scope="request"
+				type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+				validate="false">
+				<description>跳转到字典显示树</description>
+				<forward name="success" path="/index.jsp" />
+		</action>	
+		
+		<action path="/getTreeFilterSecondFloor"
+				parameter="method"
+				scope="request"
+				type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+				validate="false">
+				<description>获取字典</description>
+		</action>	
+		
+		<action path="/findDicItemUp"
+				parameter="method"
+				scope="request"
+				type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+				validate="false">
+				<description>返回上一级</description>
+		</action>	
+		
+		<action path="/findDicItemByName"
+				parameter="method"
+				scope="request"
+				type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+				validate="false">
+				<description>查询</description>
+		</action>
+		
+		<action path="/goToDictionaryManageWorkbench"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="false">
+        <description>跳转到数据字典管理工作台</description>
+        <forward name="success" path="/component/dictionary/dictionary_workbean.jsp" />
+    </action>
+    <action path="/listDicTypeList"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="false">
+        <description>数据字典类型列表</description>
+    </action>
+    <action path="/goToDicItemWorkbench"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="false">
+        <description>跳转到数据字典DICITEM工作台</description>
+        <forward name="success" path="/component/dictionary/dictionary_dicitem_workbean.jsp" />
+    </action>
+    <action path="/goViewDicTypePage"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="false">
+        <description>跳转到查看数据类型窗口</description>
+        <forward name="success" path="/component/dictionary/dictionary_dictype_view.jsp" />
+    </action>
+    <action path="/listDicItemList"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="false">
+        <description>数据字典列表</description>
+    </action>
+    <action path="/goCreateDicItemPage"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="false">
+        <description>跳转到数据字典DICITEM新增窗口</description>
+        <forward name="success" path="/component/dictionary/dictionary_dicitem_add.jsp" />
+    </action>
+    <action path="/createDicItem"
+        parameter="method"
+        scope="request"
+        name="dicitemForm"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="true">
+        <description>数据字典DICITEM新增</description>
+    </action>
+    <action path="/deleteDicItem"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="true">
+        <description>数据字典DICITEM删除</description>
+    </action>
+    <action path="/goUpdateDicItemPage"
+        parameter="method"
+        scope="request"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="true">
+        <description>跳转到数据字典DICITEM修改</description>
+        <forward name="success" path="/component/dictionary/dictionary_dicitem_update.jsp" />
+    </action>
+    <action path="/updateDicItem"
+        parameter="method"
+        scope="request"
+        name="dicitemForm"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="true">
+        <description>数据字典DICITEM修改</description>
+    </action>
+    <action path="/goViewDicItemPage"
+        parameter="method"
+        scope="request"
+        name="dicitemForm"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="true">
+        <description>跳转到查看数据字典DICITEM</description>
+        <forward name="success" path="/component/dictionary/dictionary_dicitem_view.jsp" />
+    </action>
+    <action path="/setActiveYesDicItem"
+        parameter="method"
+        scope="request"
+        name="dicitemForm"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="true">
+        <description>数据字典DICITEM置为生效</description>
+    </action>
+    <action path="/setActiveNoDicItem"
+        parameter="method"
+        scope="request"
+        name="dicitemForm"
+        type="com.yh.component.dictionary.web.action.DicTypeTreeAction"
+        validate="true">
+        <description>数据字典DICITEM置为失效</description>
+    </action>
+	</action-mappings>
+</struts-config>

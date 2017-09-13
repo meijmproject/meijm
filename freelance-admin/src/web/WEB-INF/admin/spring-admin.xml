@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 子系统 -->
+	<bean id="subSystemFacade" parent="txnProxyParent">
+		<property name="target">
+			 <bean class="com.yh.admin.subsystem.facade.SubSystemFacade">
+				<property name="subSystemService">
+					<ref bean="subSystemService" />
+				</property>		
+			</bean>
+		</property>
+	</bean>
+	<bean id="subSystemService" class="com.yh.admin.subsystem.service.SubSystemService" />
+	
+	<!-- 菜单 -->
+	<bean id="menuFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.admin.menu.facade.MenuFacade">
+				<property name="menuService">
+					<ref bean="menuService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="menuService" class="com.yh.admin.menu.service.MenuService" />
+
+	<!-- 用户 -->
+	<bean id="usersFacade" parent="txnProxyParent">
+		<property name="target">
+			 <bean class="com.yh.admin.users.facade.UsersFacade">
+				<property name="usersService">
+					<ref bean="usersService" />
+				</property>
+				<property name="resourceService">
+					<ref bean="resourceService" />
+				</property>
+				<property name="saoUnitInfoService">
+					<ref bean="saoUnitInfoService" />
+				</property>
+				<property name="saoOrgInfoService">
+					<ref bean="saoOrgInfoService" />
+				</property>
+				<property name="saoPersonInfoService">
+					<ref bean="saoPersonInfoService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="usersService" class="com.yh.admin.users.service.UsersService">
+		
+	</bean>
+	
+	<!-- 代理 user agent -->
+	<bean id="userAgentFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.admin.users.facade.UserAgentFacade">
+				<property name="userAgentService">
+					<ref bean="userAgentService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="userAgentService" class="com.yh.admin.users.service.UserAgentService">
+		
+	</bean>
+	
+	<!-- 系统岗位 -->
+	<bean id="systemPositionFacade" parent="txnProxyParent">
+		<property name="target">
+			 <bean class="com.yh.admin.position.facade.SystemPositionFacade">
+				<property name="systemPositionService">
+					<ref bean="systemPositionService" />
+				</property>
+<!-- 				<property name="userSystemPositionService"> -->
+<!-- 					<ref bean="userSystemPositionService" /> -->
+<!-- 				</property> -->
+			</bean>
+		</property>
+	</bean>
+	<bean id="systemPositionService" class="com.yh.admin.position.service.SystemPositionService" />
+	
+	<!-- 用户岗位 -->
+	<bean id="userSystemPositionService" class="com.yh.admin.users.service.UserSystemPositionService" />
+
+
+	<!-- 资源 -->
+	<bean id="resourceFacade" parent="txnProxyParent">
+		<property name="target">
+			 <bean class="com.yh.admin.res.facade.ResourceFacade">
+				<property name="resourceService" ref="resourceService" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="resourceService" class="com.yh.admin.res.service.ResourceService" />
+	
+	
+	<!-- 操作日志 -->
+	<bean id="opLogFacade" parent="txnProxyParent">
+		<property name="target">
+			 <bean class="com.yh.admin.oplog.facade.OpLogFacade">
+				<property name="opLogService" ref="opLogService" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="opLogService" class="com.yh.admin.oplog.service.OpLogService" />
+	
+	
+	<!-- 功能 -->
+	<bean id="functionFacade" parent="txnProxyParent">
+		<property name="target">
+			 <bean class="com.yh.admin.function.facade.FunctionFacade">
+				<property name="functionService" ref="functionService" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="functionService" class="com.yh.admin.function.service.FunctionService" />
+	
+	<!-- 角色 -->
+	<bean id="rolesFacade" parent="txnProxyParent">
+		<property name="target">
+			 <bean class="com.yh.admin.roles.facade.RolesFacade">
+				<property name="rolesService" ref="rolesService" />
+				<property name="saoItemNodeService" ref="saoItemNodeService" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="rolesService" class="com.yh.admin.roles.service.RolesService" />
+	<bean id="saoItemNodeService" class="com.yh.admin.sao.item.SaoItemNodeService" />
+	
+	<bean id="roleDataAuthFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.admin.roles.facade.RoleDataAuthFacade">
+				<property name="roleDataAuthService">
+					<ref local="roleDataAuthService" />
+				</property>
+				<property name="saoOrgInfoService">
+					<ref bean="saoOrgInfoService" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="roleDataAuthService" class="com.yh.admin.roles.service.RoleDataAuthService" />
+	
+	<!-- 获取人员权限接口实现类 -->
+	<bean id="userAuthorizationService" class="com.yh.admin.auth.service.impl.UserAuthorizationServiceImpl" />
+	
+</beans>

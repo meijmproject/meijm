@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="freelance-admin-sao" basedir="." default="help">
+	
+	<!--  =============== 引用properties属性文件 ================== -->
+	
+	<property file="../freelance-libs/build.properties" />
+	
+	<!-- =================================================================== -->
+	<!-- 变量设置 -->
+	<!-- =================================================================== -->
+	<!-- 代码目录 -->
+	<property name="project.java" value="../${ant.project.name}/src/java" />
+	<property name="project.web" value="../${ant.project.name}/src/web" />
+	<property name="project.conf" value="../${ant.project.name}/conf" />
+	
+	<!-- Java编译CLASSPATH -->
+	<path id="master-classpath">
+		<!-- 加入公用lib包 -->
+		<fileset dir="${lib.home.ref}">
+			<include name="**libs/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- =================================================================== -->
+	<!-- 帮助信息 -->
+	<!-- =================================================================== -->
+	<target name="help">
+		<echo message="Freelance Application Build File for JDK1.5" />
+		<echo message="用法：ant -[target]" />
+		<echo message="------------------------------------------------------" />
+		<echo message="[target]如下" />
+		<echo message="  clean        清空所有输出文件包括build和部署目录" />
+		<echo message="  exploded-app 创建展开目录形式的应用结构" />
+		<echo message="  war          创建用于发布的WAR包文件（适用于生产打包、远程部署）" />
+		<echo message="  deploy       将扩展目录直接copy到appserver运行环境下(适用于编译环境与运行环境分离)" />
+		<echo message="  i18n         将资源文件转换成UTF-8码,并copy到 classpath下(适用于热部署)" />
+		<echo message="------------------------------------------------------" />
+	</target>
+	
+	<!-- 创建时间戳 -->
+	<tstamp />
+	
+	<!-- clean -->
+	<!-- <target name="clean" description="清空所有输出文件包括build和部署目录">
+		<delete dir="${deploy_dir}/${war.name}" />
+	</target> -->
+	
+	<!--清洗包-->
+	<target name="jar">
+		<mkdir dir="../${ant.project.name}/bin"/>
+		<!--javac，编译，对应java中的javac命令。
+		其中srcdir定义源文件路径 destdir定义编译后文件路径，
+		debug 的作用是 编译后的文件允许调试，没有加上的话有些eclipse版本可能会出现警告，
+		includeantruntime作用是指定编译任务是否包含ant的classpath,可有可无，不影响编译，
+		但不写可能会出现警告-->
+		<echo message="start refresh ${ant.project.name} source" />
+		<javac destdir="../${ant.project.name}/bin" target="1.5" debug="true" deprecation="false" optimize="false" failonerror="true" fork="true" memoryMaximumSize="512m" includeantruntime="true">
+			<src path="${project.java}" />
+<!-- 			<src path="${project.conf}" /> -->
+			<!-- classpath 定义编译需要的claspath -->
+			<classpath refid="master-classpath" />
+		</javac>
+		<echo message="end refresh ${ant.project.name} source" />
+		<echo message="start build ${ant.project.name} jar" />
+		<!--jar操作，jarfile指定jar包存放路径，basedir为编译后的class的目录-->
+		<jar basedir="../${ant.project.name}/bin" jarfile="${lib.home.ref}/${lib.build}/${ant.project.name}.jar" compress="false" >
+			<manifest>
+<!-- 				指定main-class -->
+<!-- 				<attribute name="Main-Class" value="demo.SayHello" /> -->
+<!-- 				指定Class-Path -->
+				<!-- 将引用的相关说明加到MANIFEST.MF文件中 -->
+				<attribute name="Version" value="1.0" />
+				<attribute name="Date" value="${DSTAMP}"/>
+				<attribute name="Class-Path" value="${libs}" />
+				<attribute name="Discription" value="描述" />
+			</manifest>
+		</jar>
+		<echo message="success for build ${ant.project.name} jar" />
+		<delete dir="temp/building"/>
+	</target>
+		
+	<!-- expload resource -->
+	<target name="copyJSPAndXml" description="将指定的java source汇集到一起">	
+		<echo message="start copy ${ant.project.name} JSPAndXml" />	
+		<!-- 发布文件 - 把页面,配置,等拷贝到对就的发布文件夹下 -->
+		<copy todir="${deploy_dir}/${war.name.gdpos}/">
+			<fileset dir="${project.web}" />
+		</copy>
+		<!--
+		<copy todir="${deploy_dir}/${war.name.gdpos}/WEB-INF/classes">
+			<fileset dir="${project.conf}" />
+		</copy>
+		 -->
+		<!-- 配置文件集中到build项目 -->
+		<copy todir="${deploy_dir}/${project.name}/conf">
+			<fileset dir="${project.conf}" />
+		</copy>
+		<echo message="end copy ${ant.project.name} JSPAndXml" />	
+	</target>
+	 <!--创建编译任务，名字是compile,depends指定了comiple任务依赖init任务-->
+	<target name="init" description="comile target">
+		<echo message="start execute ${ant.project.name} sub build.xml" />	
+		<!-- 执行子项目build.xml文件 -->
+		<!-- <ant antfile="build-base.xml" dir="${project.root}/${project.name}" target="exploded-app"/> -->
+		<echo message="end execute ${ant.project.name} sub build.xml" />	
+	</target>
+	
+	<target name="exploded-app" depends="init,copyJSPAndXml"  description="步骤聚合"/>
+	
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="../freelance-libs/tools/lib/ant-contrib-1.0b3.jar" />
+	<target name="copyI18nXml">
+		<echo message="copyI18nXml ${ant.project.name}" />
+		<if>
+			<available file="${project.conf}/i18n" />
+			<then>
+				<copy todir="${i18nDir}">
+					<fileset dir="${project.conf}/i18n" />
+				</copy>
+			</then>
+		</if>
+	</target>
+</project>

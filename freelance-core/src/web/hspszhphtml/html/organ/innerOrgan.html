@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>内设机构选择</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="innerOrgan.css">
+    <script src="jquery-1.12.4.js"></script>
+</head>
+<body>
+
+    <dl class="dl-horizontal">
+        <dt>所在部门：</dt>
+        <dd>
+            <label>
+                <div class="input_wrap_model_min">
+                    <input id="hireDeptOid" value="1471" name="hireDeptOid" hidden="hidden">
+                    <input name="hireDeptName" id="hireDeptAllName" value="胃镜室" class="search_input_dictionary qv-valid" type="text" autocomplete="off" aria-invalid="false">
+                    <div  class="organ-select">
+                        <div class="organ-btn">
+                            <a class="organ-left-icon" href="#"></a>
+                            <input class="organ-search" type="text" placeholder="请您输入要搜索的内容">
+                            <a class="organ-right-icon" href="#"></a>
+                        </div>
+                        <table class="organ-table">
+                            <tr>
+                                <th>上级内设机构</th>
+                                <th>内设机构</th>
+                            </tr>
+                            <tr>
+                                <td>内设机构A</td>
+                                <td>内设机构B</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>内设机构C</td>
+                            </tr>
+                            <tr>
+                                <td>内设机构C</td>
+                                <td>内设机构D</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>内设机构E内设机构E内设机构E</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </label>
+        </dd>
+    </dl>
+
+</body>
+<script>
+    $(document).ready(function() {
+        $('.search_input_dictionary').click(function () {
+            if($(this).siblings('div').css('display')=='block'){
+                $(this).siblings('div').slideUp(0);
+            }else{
+                $(this).siblings('div').slideDown(0);
+            }
+        });
+    });
+</script>
+</html>

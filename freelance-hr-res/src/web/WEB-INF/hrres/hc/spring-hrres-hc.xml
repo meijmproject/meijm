@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- 编制资源资源使用信息服务接口 -->
+    <bean id="hcInfoService" class="com.yh.hr.res.hc.service.impl.HcInfoServiceImpl" />
+    <!-- 编制资源头寸信息服务接口  -->
+    <bean id="hcCashService" class="com.yh.hr.res.hc.service.impl.HcCashServiceImpl" />
+</beans>

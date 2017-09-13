@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="21" version="2.0">
+<workbenchAdvisor/>
+<window height="954" width="1932" x="-6" y="54">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="126" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="141" y="22"/>
+<coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="103" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="206" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.html.core.htmlsource.source" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ant.ui.internal.editor.AntEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.pde.ui.buildEditor" itemType="typeToolBarContribution" x="38" y="22"/>
+<coolItem id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.spket.xml.editor.xmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.businessobjects.crystalreports.integration.eclipse.jspeditor.CRJSPEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1503568005875" focus="true" label="Workspace - Java EE">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
+<part id="33"/>
+<part id="34"/>
+<part id="35"/>
+<part id="36"/>
+<part id="37"/>
+<part id="38"/>
+<part id="39"/>
+<part id="40"/>
+<part id="41"/>
+<part id="42"/>
+<part id="43"/>
+<part id="44"/>
+<part id="45"/>
+<part id="46"/>
+<part id="47"/>
+<part id="48"/>
+<part id="49"/>
+<part id="50"/>
+<part id="51"/>
+<part id="52"/>
+<part id="53"/>
+<part id="54"/>
+<part id="55"/>
+<part id="56"/>
+<part id="57"/>
+<part id="58"/>
+<part id="59"/>
+<part id="60"/>
+<part id="61"/>
+<part id="62"/>
+<part id="63"/>
+<part id="64"/>
+<part id="65"/>
+<part id="66"/>
+<part id="67"/>
+<part id="68"/>
+<part id="69"/>
+<part id="70"/>
+<part id="71"/>
+<part id="72"/>
+<part id="73"/>
+<part id="74"/>
+<part id="75"/>
+<part id="76"/>
+<part id="77"/>
+<part id="78"/>
+<part id="79"/>
+<part id="80"/>
+<part id="81"/>
+<part id="82"/>
+<part id="83"/>
+<part id="84"/>
+<part id="85"/>
+<part id="86"/>
+<part id="87"/>
+<part id="88"/>
+<part id="89"/>
+<part id="90"/>
+<part id="91"/>
+<part id="92"/>
+<part id="93"/>
+<part id="94"/>
+<part id="95"/>
+<part id="96"/>
+<part id="97"/>
+<part id="98"/>
+<part id="99"/>
+<part id="100"/>
+<part id="101"/>
+<part id="102"/>
+<part id="103"/>
+<part id="104"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.spket.xml.editor.xmlEditor" name="spring-core.xml" partName="spring-core.xml" path="D:/workspace/yh-project/freelance-hspszhp/src/web/WEB-INF/core/spring-core.xml" title="spring-core.xml" tooltip="freelance-hspszhp/src/web/WEB-INF/core/spring-core.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hspszhp/src/web/WEB-INF/core/spring-core.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="661" selectionTopPixel="162"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.PropertiesFileEditor" name="common-config.properties" partName="common-config.properties" path="D:/workspace/yh-project/freelance-core/conf/common-config.properties" title="common-config.properties" tooltip="freelance-core/conf/common-config.properties" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-core/conf/common-config.properties"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="229" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginAction.java" partName="LoginAction.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/login/web/action/LoginAction.java" title="LoginAction.java" tooltip="freelance-admin/src/java/com/yh/admin/login/web/action/LoginAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/login/web/action/LoginAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9203" selectionTopPixel="5157"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="1-YHA_DIC_TYPE.sql" partName="1-YHA_DIC_TYPE.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql" title="1-YHA_DIC_TYPE.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="724" selectionOffset="21243" selectionTopPixel="2094"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="2-YHA_DIC_ITEM.sql" partName="2-YHA_DIC_ITEM.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql" title="2-YHA_DIC_ITEM.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10039" selectionOffset="1828835" selectionTopPixel="151998"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="YHB_ROLES.sql" partName="YHB_ROLES.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_ROLES.sql" title="YHB_ROLES.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_ROLES.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_ROLES.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="394" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="YHB_SYSTEM_POSITION.sql" partName="YHB_SYSTEM_POSITION.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_SYSTEM_POSITION.sql" title="YHB_SYSTEM_POSITION.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_SYSTEM_POSITION.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_SYSTEM_POSITION.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="342" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="YHB_USER_SP.sql" partName="YHB_USER_SP.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_USER_SP.sql" title="YHB_USER_SP.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_USER_SP.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_USER_SP.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="273" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="YHB_USERS.sql" partName="YHB_USERS.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_USERS.sql" title="YHB_USERS.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_USERS.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/管理员用户/YHB_USERS.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="454" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpLogHelper.java" partName="OpLogHelper.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/oplog/OpLogHelper.java" title="OpLogHelper.java" tooltip="freelance-admin/src/java/com/yh/admin/oplog/OpLogHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/oplog/OpLogHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="737" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpLogFacade.java" partName="OpLogFacade.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/oplog/facade/OpLogFacade.java" title="OpLogFacade.java" tooltip="freelance-admin/src/java/com/yh/admin/oplog/facade/OpLogFacade.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/oplog/facade/OpLogFacade.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="798" selectionTopPixel="270"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpLogService.java" partName="OpLogService.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/oplog/service/OpLogService.java" title="OpLogService.java" tooltip="freelance-admin/src/java/com/yh/admin/oplog/service/OpLogService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/oplog/service/OpLogService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1283" selectionTopPixel="567"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpLogQueryHelper.java" partName="OpLogQueryHelper.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/oplog/queryhelper/OpLogQueryHelper.java" title="OpLogQueryHelper.java" tooltip="freelance-admin/src/java/com/yh/admin/oplog/queryhelper/OpLogQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/oplog/queryhelper/OpLogQueryHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1121" selectionTopPixel="621"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VerPbPersonWorkbenchQueryHelper.java" partName="VerPbPersonWorkbenchQueryHelper.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/ver/unit/workbench/queryhelper/VerPbPersonWorkbenchQueryHelper.java" title="VerPbPersonWorkbenchQueryHelper.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/ver/unit/workbench/queryhelper/VerPbPersonWorkbenchQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/ver/unit/workbench/queryhelper/VerPbPersonWorkbenchQueryHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9016" selectionTopPixel="4671"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="8-yhb_sub_system.sql" partName="8-yhb_sub_system.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/8-yhb_sub_system.sql" title="8-yhb_sub_system.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/8-yhb_sub_system.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/8-yhb_sub_system.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="100" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="9-权限查询视图_v_yhb_user_role.sql" partName="9-权限查询视图_v_yhb_user_role.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/9-权限查询视图_v_yhb_user_role.sql" title="9-权限查询视图_v_yhb_user_role.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/9-权限查询视图_v_yhb_user_role.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/9-权限查询视图_v_yhb_user_role.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="291" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="10-数据权限生成存储过程_updateUserAuth.sql" partName="10-数据权限生成存储过程_updateUserAuth.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/10-数据权限生成存储过程_updateUserAuth.sql" title="10-数据权限生成存储过程_updateUserAuth.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/10-数据权限生成存储过程_updateUserAuth.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/10-数据权限生成存储过程_updateUserAuth.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1672" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="11_数据权限生成存储过程_updateUserAuthBySystemPosition.sql" partName="11_数据权限生成存储过程_updateUserAuthBySystemPosition.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11_数据权限生成存储过程_updateUserAuthBySystemPosition.sql" title="11_数据权限生成存储过程_updateUserAuthBySystemPosition.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11_数据权限生成存储过程_updateUserAuthBySystemPosition.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11_数据权限生成存储过程_updateUserAuthBySystemPosition.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="908" selectionOffset="0" selectionTopPixel="648"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="11-数据权限生成存储过程_updateUserAuthByRole.sql" partName="11-数据权限生成存储过程_updateUserAuthByRole.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11-数据权限生成存储过程_updateUserAuthByRole.sql" title="11-数据权限生成存储过程_updateUserAuthByRole.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11-数据权限生成存储过程_updateUserAuthByRole.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11-数据权限生成存储过程_updateUserAuthByRole.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="782" selectionOffset="0" selectionTopPixel="619"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" partName="12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" title="12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/12-查找当前科室及其所有下级科室函数_getChildOrgList.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="878" selectionOffset="0" selectionTopPixel="322"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" partName="13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" title="13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1186" selectionOffset="0" selectionTopPixel="405"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" partName="14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" title="14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="585" selectionOffset="0" selectionTopPixel="81"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="15-系统菜单_yhb_menu_item.sql" partName="15-系统菜单_yhb_menu_item.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql" title="15-系统菜单_yhb_menu_item.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5068" selectionTopPixel="690"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="YHC_UT_建表.sql" partName="YHC_UT_建表.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM-YH-hr-res(人事信息资源)/YHC_UT(组织结构关系)/YHC_UT_建表.sql" title="YHC_UT_建表.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM-YH-hr-res(人事信息资源)/YHC_UT(组织结构关系)/YHC_UT_建表.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM-YH-hr-res(人事信息资源)/YHC_UT(组织结构关系)/YHC_UT_建表.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4365" selectionOffset="0" selectionTopPixel="810"/>
+</editor>
+<editor id="com.businessobjects.crystalreports.integration.eclipse.jspeditor.CRJSPEditor" name="unitmanager_org_create.jsp" partName="unitmanager_org_create.jsp" path="D:/workspace/yh-project/freelance-hr-orghc/src/web/unit/unitmanger/org/unitmanager_org_create.jsp" title="unitmanager_org_create.jsp" tooltip="freelance-hr-orghc/src/web/unit/unitmanger/org/unitmanager_org_create.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-orghc/src/web/unit/unitmanger/org/unitmanager_org_create.jsp"/>
+<editorState selectionHorizontalPixel="2547" selectionLength="3" selectionOffset="2049" selectionTopPixel="864"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminConstants.java" partName="AdminConstants.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/util/AdminConstants.java" title="AdminConstants.java" tooltip="freelance-admin/src/java/com/yh/admin/util/AdminConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/util/AdminConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="1032" selectionTopPixel="729"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DicConstants.java" partName="DicConstants.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/dictionary/DicConstants.java" title="DicConstants.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/dictionary/DicConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/dictionary/DicConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="23" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnitMangerQueryHelper.java" partName="UnitMangerQueryHelper.java" path="D:/workspace/yh-project/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/queryhelper/UnitMangerQueryHelper.java" title="UnitMangerQueryHelper.java" tooltip="freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/queryhelper/UnitMangerQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/queryhelper/UnitMangerQueryHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1670" selectionTopPixel="567"/>
+</editor>
+<editor id="com.spket.xml.editor.xmlEditor" name="web.xml" partName="web.xml" path="D:/workspace/yh-project/freelance-hspszhp/src/web/WEB-INF/web.xml" title="web.xml" tooltip="freelance-hspszhp/src/web/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hspszhp/src/web/WEB-INF/web.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1837" selectionTopPixel="0"/>
+</editor>
+<editor id="com.spket.xml.editor.xmlEditor" name="struts-hrworktop-wb-workbench.xml" partName="struts-hrworktop-wb-workbench.xml" path="D:/workspace/yh-project/freelance-hr-worktop/src/web/WEB-INF/hrworktop/struts-hrworktop-wb-workbench.xml" title="struts-hrworktop-wb-workbench.xml" tooltip="freelance-hr-worktop/src/web/WEB-INF/hrworktop/struts-hrworktop-wb-workbench.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-worktop/src/web/WEB-INF/hrworktop/struts-hrworktop-wb-workbench.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="186" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BtApprove.java" partName="BtApprove.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/bt/bo/BtApprove.java" title="BtApprove.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/bt/bo/BtApprove.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/bt/bo/BtApprove.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="162"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcCfQueryCondition.java" partName="JhcCfQueryCondition.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/cf/bo/JhcCfQueryCondition.java" title="JhcCfQueryCondition.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/cf/bo/JhcCfQueryCondition.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/cf/bo/JhcCfQueryCondition.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="810"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WageConstants.java" partName="WageConstants.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/dictionary/WageConstants.java" title="WageConstants.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/dictionary/WageConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/dictionary/WageConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WageRelationshipConstants.java" partName="WageRelationshipConstants.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/dictionary/WageRelationshipConstants.java" title="WageRelationshipConstants.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/dictionary/WageRelationshipConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/dictionary/WageRelationshipConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="486"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GbDescription.java" partName="GbDescription.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbDescription.java" title="GbDescription.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbDescription.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbDescription.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="486"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GbPlanDetail.java" partName="GbPlanDetail.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbPlanDetail.java" title="GbPlanDetail.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbPlanDetail.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbPlanDetail.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="243"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GbPostPercent.java" partName="GbPostPercent.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbPostPercent.java" title="GbPostPercent.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbPostPercent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbPostPercent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="162"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GbSortManagement.java" partName="GbSortManagement.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbSortManagement.java" title="GbSortManagement.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbSortManagement.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gb/bo/GbSortManagement.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="162"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GtDescription.java" partName="GtDescription.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtDescription.java" title="GtDescription.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtDescription.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtDescription.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="324"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GtOtherInfo.java" partName="GtOtherInfo.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtOtherInfo.java" title="GtOtherInfo.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtOtherInfo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtOtherInfo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="648"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GtSetPlan.java" partName="GtSetPlan.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtSetPlan.java" title="GtSetPlan.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtSetPlan.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtSetPlan.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="405"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GtSortManagement.java" partName="GtSortManagement.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtSortManagement.java" title="GtSortManagement.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtSortManagement.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gt/bo/GtSortManagement.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="243"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GwAccount.java" partName="GwAccount.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/gw/bo/GwAccount.java" title="GwAccount.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/gw/bo/GwAccount.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/gw/bo/GwAccount.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HcAccount.java" partName="HcAccount.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/hc/bo/HcAccount.java" title="HcAccount.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/hc/bo/HcAccount.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/hc/bo/HcAccount.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="648"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImCheckDefinition.java" partName="ImCheckDefinition.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImCheckDefinition.java" title="ImCheckDefinition.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImCheckDefinition.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImCheckDefinition.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="243"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImDataUnusualLog.java" partName="ImDataUnusualLog.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImDataUnusualLog.java" title="ImDataUnusualLog.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImDataUnusualLog.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImDataUnusualLog.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="162"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImDicTypeMapping.java" partName="ImDicTypeMapping.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImDicTypeMapping.java" title="ImDicTypeMapping.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImDicTypeMapping.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/im/bo/ImDicTypeMapping.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="243"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LdCash.java" partName="LdCash.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/ld/bo/LdCash.java" title="LdCash.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/ld/bo/LdCash.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/ld/bo/LdCash.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="648"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PbEngageContractInfo.java" partName="PbEngageContractInfo.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/pb/bo/PbEngageContractInfo.java" title="PbEngageContractInfo.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/pb/bo/PbEngageContractInfo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/pb/bo/PbEngageContractInfo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="243"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PtDelayRetireInfo.java" partName="PtDelayRetireInfo.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/pt/bo/PtDelayRetireInfo.java" title="PtDelayRetireInfo.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/pt/bo/PtDelayRetireInfo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/pt/bo/PtDelayRetireInfo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaoUbHcDTO.java" partName="SaoUbHcDTO.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbHcDTO.java" title="SaoUbHcDTO.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbHcDTO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbHcDTO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="405"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaoUbLeaderDTO.java" partName="SaoUbLeaderDTO.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbLeaderDTO.java" title="SaoUbLeaderDTO.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbLeaderDTO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbLeaderDTO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaoUbOrgDTO.java" partName="SaoUbOrgDTO.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbOrgDTO.java" title="SaoUbOrgDTO.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbOrgDTO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbOrgDTO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaoUbUnitDTO.java" partName="SaoUbUnitDTO.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbUnitDTO.java" title="SaoUbUnitDTO.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbUnitDTO.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/dto/SaoUbUnitDTO.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5" selectionTopPixel="324"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SaoUbGwService.java" partName="SaoUbGwService.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/service/SaoUbGwService.java" title="SaoUbGwService.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/service/SaoUbGwService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/sao/orghc/service/SaoUbGwService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="38"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BizWarConfigInfo.java" partName="BizWarConfigInfo.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/war/bo/BizWarConfigInfo.java" title="BizWarConfigInfo.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/war/bo/BizWarConfigInfo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/war/bo/BizWarConfigInfo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="106" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CfWard.java" partName="CfWard.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/wardset/bo/CfWard.java" title="CfWard.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/wardset/bo/CfWard.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/wardset/bo/CfWard.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="324"/>
+</editor>
+<editor id="com.businessobjects.crystalreports.integration.eclipse.jspeditor.CRJSPEditor" name="unit_main.jsp" partName="unit_main.jsp" path="D:/workspace/yh-project/freelance-hr-orghc/src/web/unit/unitmanger/unit_main.jsp" title="unit_main.jsp" tooltip="freelance-hr-orghc/src/web/unit/unitmanger/unit_main.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-orghc/src/web/unit/unitmanger/unit_main.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="320" selectionTopPixel="175"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnitMangerAction.java" partName="UnitMangerAction.java" path="D:/workspace/yh-project/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/web/action/UnitMangerAction.java" title="UnitMangerAction.java" tooltip="freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/web/action/UnitMangerAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/web/action/UnitMangerAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5241" selectionTopPixel="2943"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnitMangerFacade.java" partName="UnitMangerFacade.java" path="D:/workspace/yh-project/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/facade/UnitMangerFacade.java" title="UnitMangerFacade.java" tooltip="freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/facade/UnitMangerFacade.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/facade/UnitMangerFacade.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1829" selectionTopPixel="729"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnitMangerServiceImpl.java" partName="UnitMangerServiceImpl.java" path="D:/workspace/yh-project/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/service/impl/UnitMangerServiceImpl.java" title="UnitMangerServiceImpl.java" tooltip="freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/service/impl/UnitMangerServiceImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-orghc/src/java/com/yh/hr/orghc/unit/unitmanger/service/impl/UnitMangerServiceImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3040" selectionTopPixel="1566"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcOrgTreeQueryHelper.java" partName="JhcOrgTreeQueryHelper.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/orgtree/queryhelper/JhcOrgTreeQueryHelper.java" title="JhcOrgTreeQueryHelper.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/orgtree/queryhelper/JhcOrgTreeQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/orgtree/queryhelper/JhcOrgTreeQueryHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6115" selectionTopPixel="3726"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" partName="13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" title="13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/13-查找当前科室及其所有下级科室函数_getChildOrgListByType.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="186" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" partName="14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" title="14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/14-取得指定菜单编码下的所有子菜单编码_getAllChildMenuCode.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" partName="12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" title="12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/12-查找当前科室及其所有下级科室函数_getChildOrgList.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/12-查找当前科室及其所有下级科室函数_getChildOrgList.sql"/>
+<editorState selectionHorizontalPixel="800" selectionLength="0" selectionOffset="498" selectionTopPixel="243"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VerPbPersonWorkbenchAction.java" partName="VerPbPersonWorkbenchAction.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/biz/unit/workbench/web/action/VerPbPersonWorkbenchAction.java" title="VerPbPersonWorkbenchAction.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/biz/unit/workbench/web/action/VerPbPersonWorkbenchAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/biz/unit/workbench/web/action/VerPbPersonWorkbenchAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="VerPbPersonWorkbenchAction.java" partName="VerPbPersonWorkbenchAction.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/ver/unit/workbench/web/action/VerPbPersonWorkbenchAction.java" title="VerPbPersonWorkbenchAction.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/ver/unit/workbench/web/action/VerPbPersonWorkbenchAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/ver/unit/workbench/web/action/VerPbPersonWorkbenchAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5053" selectionTopPixel="1863"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcCfShowResultSetFacade.java" partName="JhcCfShowResultSetFacade.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/info/facade/JhcCfShowResultSetFacade.java" title="JhcCfShowResultSetFacade.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/info/facade/JhcCfShowResultSetFacade.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/info/facade/JhcCfShowResultSetFacade.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="757" selectionTopPixel="108"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcCfShowResultSetServiceImpl.java" partName="JhcCfShowResultSetServiceImpl.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/cf/service/impl/JhcCfShowResultSetServiceImpl.java" title="JhcCfShowResultSetServiceImpl.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/cf/service/impl/JhcCfShowResultSetServiceImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/cf/service/impl/JhcCfShowResultSetServiceImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="522" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcCfShowResultSetQueryHelper.java" partName="JhcCfShowResultSetQueryHelper.java" path="D:/workspace/yh-project/freelance-hr-res/src/java/com/yh/hr/res/cf/queryhelper/JhcCfShowResultSetQueryHelper.java" title="JhcCfShowResultSetQueryHelper.java" tooltip="freelance-hr-res/src/java/com/yh/hr/res/cf/queryhelper/JhcCfShowResultSetQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/src/java/com/yh/hr/res/cf/queryhelper/JhcCfShowResultSetQueryHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="797" selectionTopPixel="88"/>
+</editor>
+<editor id="com.spket.xml.editor.xmlEditor" name="JhcCfShowResultSet.hbm.xml" partName="JhcCfShowResultSet.hbm.xml" path="D:/workspace/yh-project/freelance-hr-res/conf/hbm/hrres/cf/JhcCfShowResultSet.hbm.xml" title="JhcCfShowResultSet.hbm.xml" tooltip="freelance-hr-res/conf/hbm/hrres/cf/JhcCfShowResultSet.hbm.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-res/conf/hbm/hrres/cf/JhcCfShowResultSet.hbm.xml"/>
+<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="437" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="4_JHD_IT_LIBRARY_GROUP.sql" partName="4_JHD_IT_LIBRARY_GROUP.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/4_JHD_IT_LIBRARY_GROUP.sql" title="4_JHD_IT_LIBRARY_GROUP.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/4_JHD_IT_LIBRARY_GROUP.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/4_JHD_IT_LIBRARY_GROUP.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4305" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="1_YHC_CF_QUERY_CONDITION.sql" partName="1_YHC_CF_QUERY_CONDITION.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/1_YHC_CF_QUERY_CONDITION.sql" title="1_YHC_CF_QUERY_CONDITION.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/1_YHC_CF_QUERY_CONDITION.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/1_YHC_CF_QUERY_CONDITION.sql"/>
+<editorState selectionHorizontalPixel="1397" selectionLength="0" selectionOffset="1792" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="2_yhc_cf_query_symbol.sql" partName="2_yhc_cf_query_symbol.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/2_yhc_cf_query_symbol.sql" title="2_yhc_cf_query_symbol.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/2_yhc_cf_query_symbol.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/2_yhc_cf_query_symbol.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="670" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="3_yhc_cf_query_condition_sym.sql" partName="3_yhc_cf_query_condition_sym.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/3_yhc_cf_query_condition_sym.sql" title="3_yhc_cf_query_condition_sym.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/3_yhc_cf_query_condition_sym.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/3_yhc_cf_query_condition_sym.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10215" selectionTopPixel="4563"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="4_yhc_CF_SHOW_RESULT_SET.sql" partName="4_yhc_CF_SHOW_RESULT_SET.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/4_yhc_CF_SHOW_RESULT_SET.sql" title="4_yhc_CF_SHOW_RESULT_SET.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/4_yhc_CF_SHOW_RESULT_SET.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/4_yhc_CF_SHOW_RESULT_SET.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10587" selectionOffset="0" selectionTopPixel="1836"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="2-YHA_CFG_建表脚本.sql" partName="2-YHA_CFG_建表脚本.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM-YH-component(平台组件)/YHA_CFG(参数配置)/2-YHA_CFG_建表脚本.sql" title="2-YHA_CFG_建表脚本.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM-YH-component(平台组件)/YHA_CFG(参数配置)/2-YHA_CFG_建表脚本.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM-YH-component(平台组件)/YHA_CFG(参数配置)/2-YHA_CFG_建表脚本.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1156" selectionOffset="0" selectionTopPixel="108"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcOrgTreeAction.java" partName="JhcOrgTreeAction.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/orgtree/action/JhcOrgTreeAction.java" title="JhcOrgTreeAction.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/orgtree/action/JhcOrgTreeAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/orgtree/action/JhcOrgTreeAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3970" selectionTopPixel="2619"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcOrgTreeFacade.java" partName="JhcOrgTreeFacade.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/orgtree/facade/JhcOrgTreeFacade.java" title="JhcOrgTreeFacade.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/orgtree/facade/JhcOrgTreeFacade.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/orgtree/facade/JhcOrgTreeFacade.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3050" selectionTopPixel="2484"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JhcOrgTreeServiceImpl.java" partName="JhcOrgTreeServiceImpl.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/orgtree/service/impl/JhcOrgTreeServiceImpl.java" title="JhcOrgTreeServiceImpl.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/orgtree/service/impl/JhcOrgTreeServiceImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/orgtree/service/impl/JhcOrgTreeServiceImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8230" selectionTopPixel="6426"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RoleDataAuthAction.java" partName="RoleDataAuthAction.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/roles/web/action/RoleDataAuthAction.java" title="RoleDataAuthAction.java" tooltip="freelance-admin/src/java/com/yh/admin/roles/web/action/RoleDataAuthAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/roles/web/action/RoleDataAuthAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6171" selectionTopPixel="3834"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RoleDataAuthFacade.java" partName="RoleDataAuthFacade.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/roles/facade/RoleDataAuthFacade.java" title="RoleDataAuthFacade.java" tooltip="freelance-admin/src/java/com/yh/admin/roles/facade/RoleDataAuthFacade.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/roles/facade/RoleDataAuthFacade.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3215" selectionTopPixel="2295"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserUnitAuthThread.java" partName="UserUnitAuthThread.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/util/UserUnitAuthThread.java" title="UserUnitAuthThread.java" tooltip="freelance-admin/src/java/com/yh/admin/util/UserUnitAuthThread.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/util/UserUnitAuthThread.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1050" selectionTopPixel="1139"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RoleDataAuthService.java" partName="RoleDataAuthService.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/roles/service/RoleDataAuthService.java" title="RoleDataAuthService.java" tooltip="freelance-admin/src/java/com/yh/admin/roles/service/RoleDataAuthService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/roles/service/RoleDataAuthService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4190" selectionTopPixel="3024"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RoleDataAuthQueryHelper.java" partName="RoleDataAuthQueryHelper.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/roles/queryhelper/RoleDataAuthQueryHelper.java" title="RoleDataAuthQueryHelper.java" tooltip="freelance-admin/src/java/com/yh/admin/roles/queryhelper/RoleDataAuthQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/roles/queryhelper/RoleDataAuthQueryHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6513" selectionTopPixel="4644"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="11-数据权限生成存储过程_updateUserAuthByRole.sql" partName="11-数据权限生成存储过程_updateUserAuthByRole.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11-数据权限生成存储过程_updateUserAuthByRole.sql" title="11-数据权限生成存储过程_updateUserAuthByRole.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11-数据权限生成存储过程_updateUserAuthByRole.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/11-数据权限生成存储过程_updateUserAuthByRole.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="517" selectionTopPixel="567"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="6_JHD_IT_LIBRARY.sql" partName="6_JHD_IT_LIBRARY.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/6_JHD_IT_LIBRARY.sql" title="6_JHD_IT_LIBRARY.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/6_JHD_IT_LIBRARY.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/6_JHD_IT_LIBRARY.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11493" selectionOffset="0" selectionTopPixel="1282"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="YHD_IT_建表.sql" partName="YHD_IT_建表.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM_YH_hr_component(人事组件)/YHD_IT(信息模板)/YHD_IT_建表.sql" title="YHD_IT_建表.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM_YH_hr_component(人事组件)/YHD_IT(信息模板)/YHD_IT_建表.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM_YH_hr_component(人事组件)/YHD_IT(信息模板)/YHD_IT_建表.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3499" selectionTopPixel="1768"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="5_JHD_IT_FUNCTION.sql" partName="5_JHD_IT_FUNCTION.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/5_JHD_IT_FUNCTION.sql" title="5_JHD_IT_FUNCTION.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/5_JHD_IT_FUNCTION.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/5_JHD_IT_FUNCTION.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="309" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonInformationAction.java" partName="PersonInformationAction.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/infotemplate/web/action/PersonInformationAction.java" title="PersonInformationAction.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/infotemplate/web/action/PersonInformationAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/infotemplate/web/action/PersonInformationAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1143" selectionTopPixel="81"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" partName="7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" title="7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/7_JHD_IT_LIBRARY_GROUP_DETAIL.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="18955" selectionOffset="0" selectionTopPixel="2943"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="1-YHA_DIC_TYPE.sql" partName="1-YHA_DIC_TYPE.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql" title="1-YHA_DIC_TYPE.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql"/>
+<editorState selectionHorizontalPixel="2026" selectionLength="4" selectionOffset="13988" selectionTopPixel="1566"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="2-YHA_DIC_ITEM.sql" partName="2-YHA_DIC_ITEM.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql" title="2-YHA_DIC_ITEM.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql"/>
+<editorState selectionHorizontalPixel="1815" selectionLength="4" selectionOffset="1700125" selectionTopPixel="139671"/>
+</editor>
+<editor id="com.spket.xml.editor.xmlEditor" name="struts-hrinfo-personalinfoupdate.xml" partName="struts-hrinfo-personalinfoupdate.xml" path="D:/workspace/yh-project/freelance-hr-info/src/web/WEB-INF/hrinfo/personalinfoupdate/struts-hrinfo-personalinfoupdate.xml" title="struts-hrinfo-personalinfoupdate.xml" tooltip="freelance-hr-info/src/web/WEB-INF/hrinfo/personalinfoupdate/struts-hrinfo-personalinfoupdate.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/web/WEB-INF/hrinfo/personalinfoupdate/struts-hrinfo-personalinfoupdate.xml"/>
+<editorState selectionHorizontalPixel="76" selectionLength="24" selectionOffset="359" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersAction.java" partName="UsersAction.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/users/web/action/UsersAction.java" title="UsersAction.java" tooltip="freelance-admin/src/java/com/yh/admin/users/web/action/UsersAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/users/web/action/UsersAction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11675" selectionTopPixel="6777"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersFacade.java" partName="UsersFacade.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/users/facade/UsersFacade.java" title="UsersFacade.java" tooltip="freelance-admin/src/java/com/yh/admin/users/facade/UsersFacade.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/users/facade/UsersFacade.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4197" selectionTopPixel="3429"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersService.java" partName="UsersService.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/users/service/UsersService.java" title="UsersService.java" tooltip="freelance-admin/src/java/com/yh/admin/users/service/UsersService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/users/service/UsersService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3121" selectionTopPixel="1566"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersQueryHelper.java" partName="UsersQueryHelper.java" path="D:/workspace/yh-project/freelance-admin/src/java/com/yh/admin/users/queryhelper/UsersQueryHelper.java" title="UsersQueryHelper.java" tooltip="freelance-admin/src/java/com/yh/admin/users/queryhelper/UsersQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-admin/src/java/com/yh/admin/users/queryhelper/UsersQueryHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="7440" selectionTopPixel="5211"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateAction.java" partName="PersonalInfoUpdateAction.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/web/action/PersonalInfoUpdateAction.java" title="PersonalInfoUpdateAction.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/web/action/PersonalInfoUpdateAction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/web/action/PersonalInfoUpdateAction.java"/>
+<editorState selectionHorizontalPixel="27" selectionLength="0" selectionOffset="1138" selectionTopPixel="234"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateFacade.java" partName="PersonalInfoUpdateFacade.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/facade/PersonalInfoUpdateFacade.java" title="PersonalInfoUpdateFacade.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/facade/PersonalInfoUpdateFacade.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/facade/PersonalInfoUpdateFacade.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="625" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateService.java" partName="PersonalInfoUpdateService.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/PersonalInfoUpdateService.java" title="PersonalInfoUpdateService.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/PersonalInfoUpdateService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/PersonalInfoUpdateService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="18" selectionOffset="224" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateServiceImpl.java" partName="PersonalInfoUpdateServiceImpl.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/impl/PersonalInfoUpdateServiceImpl.java" title="PersonalInfoUpdateServiceImpl.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/impl/PersonalInfoUpdateServiceImpl.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/impl/PersonalInfoUpdateServiceImpl.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="518" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PbPersonInfoQueryHelper.java" partName="PbPersonInfoQueryHelper.java" path="D:/workspace/yh-project/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/queryhelper/PbPersonInfoQueryHelper.java" title="PbPersonInfoQueryHelper.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/queryhelper/PbPersonInfoQueryHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/queryhelper/PbPersonInfoQueryHelper.java"/>
+<editorState selectionHorizontalPixel="1531" selectionLength="11" selectionOffset="783" selectionTopPixel="135"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminConstants.java" partName="AdminConstants.java" path="D:/workspace/yh-project/freelance-hr-component/src/java/com/yh/hr/component/util/AdminConstants.java" title="AdminConstants.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/util/AdminConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/freelance-hr-component/src/java/com/yh/hr/component/util/AdminConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="1507" selectionTopPixel="1134"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="15-系统菜单_yhb_menu_item.sql" partName="15-系统菜单_yhb_menu_item.sql" path="D:/workspace/yh-project/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql" title="15-系统菜单_yhb_menu_item.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql"/>
+<editorState selectionHorizontalPixel="1892" selectionLength="0" selectionOffset="4361" selectionTopPixel="486"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="1" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
+<columnWidths org.eclipse.ui.ide.allSeverityField="0" org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.allSeverityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ResourceNavigator" partName="Navigator">
+<viewState LINK_NAVIGATOR_TO_EDITOR="1" sorter="1">
+<filters>
+<filter element="*.class" isEnabled="false"/>
+<filter element="RemoteSystemsConnections" isEnabled="true"/>
+<filter element="RemoteSystemsTempFiles" isEnabled="true"/>
+<filter element=".*" isEnabled="false"/>
+<filter element="*.class" isEnabled="false"/>
+<filter element="*.scc" isEnabled="true"/>
+</filters>
+</viewState>
+</view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ant.ui.views.AntView" partName="Ant">
+<viewState>
+<project default="help" error="false" name="freelance-hspszhp" path="/freelance-hspszhp/dpos-hspszhp.xml"/>
+<filterInternalTargets value="false"/>
+</viewState>
+</view>
+<view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
+</views>
+<perspectives activePart="org.eclipse.ui.views.ResourceNavigator" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
+<alwaysOnActionSet id="org.eclipse.ui.tfs.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.jst.j2ee.J2eeMainActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.ws.explorer.explorer"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.wst.server.ui.ServersView"/>
+<show_view_action id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<show_view_action id="org.eclipse.ui.views.AllMarkersView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<new_wizard_action id="org.eclipse.jpt.ui.wizard.newJpaProject"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.EarProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.project.facet.EjbProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.jca.ui.internal.wizard.ConnectorProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.appclient.AppClientProjectWizard"/>
+<new_wizard_action id="org.eclipse.wst.web.ui.internal.wizards.SimpleWebProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.servlet.ui.internal.wizard.AddServletWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddSessionBeanWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddMessageDrivenBeanWizard"/>
+<new_wizard_action id="org.eclipse.jpt.ui.wizard.newEntity"/>
+<new_wizard_action id="org.eclipse.jst.ws.creation.ui.wizard.serverwizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="org.eclipse.jpt.ui.jpaPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.ui.resourcePerspective"/>
+<perspective_action id="org.eclipse.wst.web.ui.webDevPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ResourceNavigator"/>
+<view id="org.eclipse.ui.views.AllMarkersView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.wst.server.ui.ServersView"/>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ant.ui.views.AntView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.views.ResourceNavigator" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="Navigator"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackagesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@11c9fcc" ratio="0.749499" ratioLeft="748" ratioRight="250" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.32320586" ratioLeft="617" ratioRight="1292" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.5714286" ratioLeft="464" ratioRight="348" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.AllMarkersView" label="Markers"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
+<page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="Data Source Explorer"/>
+<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="Snippets"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="Ant"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="topRight" ratio="0.69959944" ratioLeft="524" ratioRight="225" relationship="2" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/6_JHD_IT_LIBRARY.sql"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/1、建表脚本/DBM_YH_hr_component(人事组件)/YHD_IT(信息模板)/YHD_IT_建表.sql"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/4_JHD_IT_LIBRARY_GROUP.sql"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/5_JHD_IT_FUNCTION.sql"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-hr-component/src/java/com/yh/hr/component/infotemplate/web/action/PersonInformationAction.java"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.2信息集/1.人员基础信息集/7_JHD_IT_LIBRARY_GROUP_DETAIL.sql"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM_YH_hr_res(人事资源信息)/YHC_CF(配置信息)/1_YHC_CF_QUERY_CONDITION.sql"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.businessobjects.crystalreports.integration.eclipse.jspeditor.CRJSPEditor" path="/freelance-admin/src/web/admin/users/users_create.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-admin/src/java/com/yh/admin/util/AdminConstants.java"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-admin/src/java/com/yh/admin/users/web/action/UsersAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-admin/src/java/com/yh/admin/roles/facade/RoleDataAuthFacade.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-admin/src/java/com/yh/admin/roles/service/RoleDataAuthService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.spket.xml.editor.xmlEditor" path="/freelance-hr-info/src/web/WEB-INF/hrinfo/personalinfoupdate/struts-hrinfo-personalinfoupdate.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/web/action/PersonalInfoUpdateAction.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/facade/PersonalInfoUpdateFacade.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/PersonalInfoUpdateService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/impl/PersonalInfoUpdateServiceImpl.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/queryhelper/PbPersonInfoQueryHelper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/freelance-hr-component/src/java/com/yh/hr/component/util/AdminConstants.java"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql"/>
+</editors>
+<item historyLabel="5_JHD_IT_FUNCTION.sql" index="3">
+<position/>
+</item>
+<item historyLabel="4_JHD_IT_LIBRARY_GROUP.sql" index="2">
+<position info="not_deleted" x="4170" y="4"/>
+</item>
+<item historyLabel="6_JHD_IT_LIBRARY.sql" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="5_JHD_IT_FUNCTION.sql" index="3">
+<position info="not_deleted" x="169" y="0"/>
+</item>
+<item historyLabel="6_JHD_IT_LIBRARY.sql" index="0">
+<position info="not_deleted" x="11316" y="4"/>
+</item>
+<item historyLabel="7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" index="5">
+<position/>
+</item>
+<item historyLabel="6_JHD_IT_LIBRARY.sql" index="0">
+<position info="not_deleted" x="11316" y="4"/>
+</item>
+<item historyLabel="5_JHD_IT_FUNCTION.sql" index="3">
+<position info="not_deleted" x="169" y="0"/>
+</item>
+<item historyLabel="7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" index="5">
+<position/>
+</item>
+<item historyLabel="5_JHD_IT_FUNCTION.sql" index="3">
+<position info="not_deleted" x="169" y="0"/>
+</item>
+<item historyLabel="4_JHD_IT_LIBRARY_GROUP.sql" index="2">
+<position info="not_deleted" x="4170" y="4"/>
+</item>
+<item historyLabel="5_JHD_IT_FUNCTION.sql" index="3">
+<position info="not_deleted" x="169" y="0"/>
+</item>
+<item historyLabel="4_JHD_IT_LIBRARY_GROUP.sql" index="2">
+<position info="not_deleted" x="0" y="4305"/>
+</item>
+<item historyLabel="6_JHD_IT_LIBRARY.sql" index="0">
+<position info="not_deleted" x="11316" y="4"/>
+</item>
+<item historyLabel="5_JHD_IT_FUNCTION.sql" index="3">
+<position info="not_deleted" x="0" y="309"/>
+</item>
+<item historyLabel="6_JHD_IT_LIBRARY.sql" index="0">
+<position info="not_deleted" x="0" y="11493"/>
+</item>
+<item historyLabel="7_JHD_IT_LIBRARY_GROUP_DETAIL.sql" index="5">
+<position info="not_deleted" x="0" y="18955"/>
+</item>
+<item historyLabel="YHD_IT_建表.sql" index="1">
+<position info="not_deleted" x="3499" y="0"/>
+</item>
+<item historyLabel="PersonInformationAction.java" index="4">
+<position info="not_deleted" x="1143" y="0"/>
+</item>
+<item historyLabel="1_YHC_CF_QUERY_CONDITION.sql" index="6">
+<position info="not_deleted" x="1792" y="0"/>
+</item>
+<item historyLabel="users_create.jsp" index="7">
+<position info="not_deleted" x="5422" y="4"/>
+</item>
+<item historyLabel="users_create.jsp" index="7">
+<position info="not_deleted" x="10197" y="4"/>
+</item>
+<item historyLabel="users_create.jsp" index="7">
+<position info="not_deleted" x="5422" y="4"/>
+</item>
+<item historyLabel="AdminConstants.java" index="8">
+<position info="not_deleted" x="955" y="8"/>
+</item>
+<item historyLabel="AdminConstants.java" index="8">
+<position info="not_deleted" x="1032" y="8"/>
+</item>
+<item historyLabel="users_create.jsp" index="7">
+<position info="not_deleted" x="190" y="0"/>
+</item>
+<item historyLabel="YHD_IT_建表.sql" index="1">
+<position info="not_deleted" x="3499" y="0"/>
+</item>
+<item historyLabel="1-YHA_DIC_TYPE.sql" index="9">
+<position info="not_deleted" x="13988" y="4"/>
+</item>
+<item historyLabel="2-YHA_DIC_ITEM.sql" index="10">
+<position info="not_deleted" x="1700125" y="4"/>
+</item>
+<item historyLabel="users_create.jsp" index="7">
+<position info="not_deleted" x="5669" y="0"/>
+</item>
+<item historyLabel="2-YHA_DIC_ITEM.sql" index="10">
+<position info="not_deleted" x="1700125" y="4"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="11675" y="11"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="12010" y="0"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="12235" y="0"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="12298" y="0"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="12326" y="0"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="12438" y="9"/>
+</item>
+<item historyLabel="UsersAction.java" index="11">
+<position info="not_deleted" x="11675" y="0"/>
+</item>
+<item historyLabel="RoleDataAuthFacade.java" index="12">
+<position info="not_deleted" x="3215" y="0"/>
+</item>
+<item historyLabel="RoleDataAuthService.java" index="13">
+<position info="not_deleted" x="4190" y="0"/>
+</item>
+<item historyLabel="struts-hrinfo-personalinfoupdate.xml" index="14">
+<position info="not_deleted" x="359" y="24"/>
+</item>
+<item historyLabel="PersonalInfoUpdateAction.java" index="15">
+<position info="not_deleted" x="1138" y="0"/>
+</item>
+<item historyLabel="PersonalInfoUpdateFacade.java" index="16">
+<position info="not_deleted" x="625" y="0"/>
+</item>
+<item historyLabel="PersonalInfoUpdateService.java" index="17">
+<position info="not_deleted" x="224" y="18"/>
+</item>
+<item historyLabel="PersonalInfoUpdateServiceImpl.java" index="18">
+<position info="not_deleted" x="518" y="0"/>
+</item>
+<item historyLabel="PbPersonInfoQueryHelper.java" index="19">
+<position info="not_deleted" x="789" y="0"/>
+</item>
+<item historyLabel="AdminConstants.java" index="20">
+<position info="not_deleted" x="1507" y="11"/>
+</item>
+<item historyLabel="PbPersonInfoQueryHelper.java" index="19">
+<position info="not_deleted" x="783" y="11"/>
+</item>
+<item active="true" historyLabel="15-系统菜单_yhb_menu_item.sql" index="21">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="15-系统菜单_yhb_menu_item.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql">
+<persistable path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/DBM-YH-admin(系统管理)/15-系统菜单_yhb_menu_item.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdminConstants.java" tooltip="freelance-hr-component/src/java/com/yh/hr/component/util/AdminConstants.java">
+<persistable path="/freelance-hr-component/src/java/com/yh/hr/component/util/AdminConstants.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PbPersonInfoQueryHelper.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/queryhelper/PbPersonInfoQueryHelper.java">
+<persistable path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/queryhelper/PbPersonInfoQueryHelper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateServiceImpl.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/impl/PersonalInfoUpdateServiceImpl.java">
+<persistable path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/impl/PersonalInfoUpdateServiceImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateService.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/PersonalInfoUpdateService.java">
+<persistable path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/service/PersonalInfoUpdateService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateFacade.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/facade/PersonalInfoUpdateFacade.java">
+<persistable path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/facade/PersonalInfoUpdateFacade.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonalInfoUpdateAction.java" tooltip="freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/web/action/PersonalInfoUpdateAction.java">
+<persistable path="/freelance-hr-info/src/java/com/yh/hr/info/personalinfoupdate/web/action/PersonalInfoUpdateAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersQueryHelper.java" tooltip="freelance-admin/src/java/com/yh/admin/users/queryhelper/UsersQueryHelper.java">
+<persistable path="/freelance-admin/src/java/com/yh/admin/users/queryhelper/UsersQueryHelper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersService.java" tooltip="freelance-admin/src/java/com/yh/admin/users/service/UsersService.java">
+<persistable path="/freelance-admin/src/java/com/yh/admin/users/service/UsersService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersFacade.java" tooltip="freelance-admin/src/java/com/yh/admin/users/facade/UsersFacade.java">
+<persistable path="/freelance-admin/src/java/com/yh/admin/users/facade/UsersFacade.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UsersAction.java" tooltip="freelance-admin/src/java/com/yh/admin/users/web/action/UsersAction.java">
+<persistable path="/freelance-admin/src/java/com/yh/admin/users/web/action/UsersAction.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.spket.xml.editor.xmlEditor" name="struts-admin.xml" tooltip="freelance-admin/src/web/WEB-INF/admin/struts-admin.xml">
+<persistable path="/freelance-admin/src/web/WEB-INF/admin/struts-admin.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="2-YHA_DIC_ITEM.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql">
+<persistable path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/2-YHA_DIC_ITEM.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="1-YHA_DIC_TYPE.sql" tooltip="freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql">
+<persistable path="/freelance-hspszhp/doc/mysql/数据脚本/2、数据脚本/2.1数据字典/1-YHA_DIC_TYPE.sql"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.businessobjects.crystalreports.integration.eclipse.jspeditor.CRJSPEditor" name="users_create.jsp" tooltip="freelance-admin/src/web/admin/users/users_create.jsp">
+<persistable path="/freelance-admin/src/web/admin/users/users_create.jsp"/>
+</file>
+</mruList>
+</workbench>

@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+.infoshow-container{
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+.multi-info-group:last-of-type{
+    margin-bottom: 0;
+}
+.padding-lrb{
+    padding: 0 20px 20px 20px ;
+}
+.isc-title-box{
+    border-bottom: 1px solid #d9dfe9;
+    height:50px;
+}
+.isc-title-box h3{
+    display: inline-block;
+    padding-right: 30px;
+    height: 50px;
+    line-height: 50px;
+    color: #fe5621;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #fe5621;
+}
+
+
+/*数据显示操作区域样式*/
+.infoshow-title{
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    color: #282828;
+    font-size: 16px;
+    font-weight: bold;
+}
+.infoshow-title button{
+   margin-top: 10px;
+}
+.infoshow-title button.btn-right{
+	float:right;
+	height:26px;
+	line-height:14px;
+	margin-left:5px;
+	margin-top: 4px!important;
+}
+.multi-info-group{
+    padding:0 10px;
+}
+.multi-info-group .infoshow-title{
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+    border-bottom: 1px solid #d9dfe9;
+}
+.multi-info-group .infoshow-title button{
+    margin-top: 2px;
+}
+.multi-info-group .data-units{
+    border-top:  none;
+}
+.data-units{
+    overflow-x: hidden;
+    border-top: 1px solid #d9dfe9;
+}
+.maxheight250{
+	max-height:250px;
+	overflow-y:auto;
+}
+.data-unit-dl{
+    width: 25%;
+    float: left;
+    font-size: 14px;
+    border-bottom:1px dashed #d2e1de;
+    box-sizing: border-box;
+    height:39px;
+}
+/* .data-unit-dl.aud-no-content dd,.data-unit-dl.aud-no-content dt{
+  border-color:#fff;
+} */
+.data-unit-dl dt,.data-unit-dl dd{
+	float:left;
+	height:100%;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+.data-unit-dl dt{
+    color: #666666;
+    line-height: 39px;
+    width: 45%;
+    text-align: right;
+    background-color: #effbf9;
+    padding:0 2px;
+}
+.data-unit-dl dd{
+	width:55%;
+    line-height: 39px;
+    color: #282828;
+    padding: 0 6px;
+}
+/*图片域：占3列*/
+.data-unit-dl.photo-unit{
+    height: 156px;
+}
+.data-unit-dl.photo-unit dt{
+	height:159px;
+	line-height:159px;
+	display:none;
+}
+.photo-unit dd{
+    width: 100px;
+    height: 150px;
+    padding: 6px;
+    position: relative;
+    left: 50%;
+    margin-left: -50px;
+}
+.photo-unit dd img{
+    height: 100%;
+    width: 100%;
+
+}
+/*备注域:占一整行*/
+.data-unit-dl.remark-unit{
+    width: 100%;
+    box-sizing: border-box;
+    height: 70px;
+}
+.remark-unit dd{
+	width:88.75%;
+    line-height: 70px;
+}
+.remark-unit dt{
+	width:11.25%;
+    line-height: 70px;
+}
+.remark-unit textarea{
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 20px;
+    border:none;
+    padding:6px;
+}
+
+.infoshow-table{
+    padding: 10px;
+}
+
+
+/*信息校核名字选择列表样式区*/
+.nl-previous,.nl-next{
+    display: block;
+    width: 100%;
+    height: 20px;
+}
+.nl-previous {
+    padding-top: 20px;
+    background: url("../../images/components/info_check/up.png") no-repeat center transparent;
+}
+.nl-next{
+    padding-bottom: 20px;
+    background: url("../../images/components/info_check/down.png") no-repeat center transparent;
+}
+.nl-previous:hover{
+    background: url("../../images/components/info_check/up-hocer.png") no-repeat center transparent;
+}
+.nl-next:hover{
+    background: url("../../images/components/info_check/down-hover.png") no-repeat center transparent;
+}
+.nl-main{
+    width: 100%;
+    max-height: 520px;
+    overflow: hidden;
+}
+.nl-name-a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+.nl-name-a:hover{
+    background: url("../../images/components/info_check/right.png")no-repeat 100% #1cc6a3;
+    color: #fff;
+}
+.nl-name-aselect{
+    background: url("../../images/components/info_check/right.png")no-repeat 100% #1cc6a3;
+    color: #fff;
+}
+
+/*信息校核信息集导航样式*/
+.infoshow-nav{
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.infoshow-nav>li{
+    padding:10px 10px 0 10px;
+    color: #323232;
+    font-size: 14px;
+    font-weight: bold;
+}
+.sn-nav{
+    margin-top: 5px;
+    /*max-height: 100px;*/
+    /*overflow-y: auto;*/
+}
+.sn-nav-a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    color: #666666;
+    padding-left: 15px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    font-weight: normal;
+}
+.sn-nav-a:hover{
+    background-color: #1cc6a3;
+    color: #ffffff;
+}
+.sn-nav-aselect{
+    background-color: #1cc6a3;
+    color: #ffffff;
+}
+.sn-to-top {
+    height: 60px;
+    display: block;
+    background: url("../../images/components/info_check/return-to-top.png") no-repeat center transparent;
+}
+.sn-to-top:hover{
+    background: url("../../images/components/info_check/return-to-top-hover.png")no-repeat center transparent;
+}
+
+/*信息校核信息集表格项展示*/
+.infoshow-container .x-table thead th,.infoshow-container .x-table tbody tr{
+	border-bottom-color: #ffffff;
+}
+.st-container{
+    padding: 0 20px 20px 20px;
+    width: calc( 100% - 40px );
+}
+.st-title-box{
+    border-bottom: 1px solid #d9dfe9;
+    position: relative;
+}
+.st-title-text{
+    display: inline-block;
+    padding-right: 30px;
+    height: 50px;
+    line-height: 58px;
+    color: #fe5621;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #fe5621;
+}
+.st-title-icon,.st-title-select{
+    float: right;
+}
+.st-title-icon.st-title-button{
+	position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -15px;
+}
+.st-title-icon a{
+    display: inline-block;
+    padding: 0 5px;
+    width: 20px;
+   	height: 60px;
+    vertical-align: middle;
+}
+.st-title-select{
+	line-height:60px;
+	margin-right:20px;
+}
+.st-title-select label,.st-title-select input,.st-title-select select{
+	display:inline-block;
+	vertical-align: middle;
+	font-size:14px;
+}
+.st-title-select label{
+	margin-right:15px;
+}
+.st-add-icon{
+    background: url("../../images/components/hadle_btn/add16-gray.png") no-repeat center transparent;
+}
+.st-add-icon:hover{
+    background-image: url("../../images/components/hadle_btn/add16-red.png");
+}
+.st-delete-icon{
+    background: url("../../images/components/hadle_btn/delete16-gray.png") no-repeat center transparent;
+}
+.st-delete-icon:hover{
+    background-image: url("../../images/components/hadle_btn/delete16-red.png");
+}
+.st-upload-icon:hover{
+    background-image: url("../../images/components/hadle_btn/upload16-red.png");
+}
+.st-upload-icon{
+    background: url("../../images/components/hadle_btn/upload16-gray.png") no-repeat center transparent;
+}
+.st-modify-icon:hover{
+    background-image: url("../../images/components/hadle_btn/modify16-red.png");
+}
+.st-modify-icon{
+    background: url("../../images/components/hadle_btn/modify16-gray.png") no-repeat center transparent;
+}
+
+.st-main-table{
+    /*min-height: 100px;*/
+}
+.st-handle-delete,.st-handle-modify,.st-handle-save{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.st-main-table .sr-table-tbody{
+    height: auto;
+}
+
+
+@media screen and (max-height: 700px){
+    .infoshow-nav{max-height: 380px;}
+    .nl-main{max-height: 500px;}
+}
+@media screen and (max-width: 1600px){
+    .data-unit-dl{  width: 33%;  }
+    .remark-unit dt{width: 15%;}
+    .remark-unit dd{width: 85%;}
+    .maxheight250 .data-unit-dl{  width: 25%;  }
+    .maxheight250 .remark-unit dt{width: 11.25%;}
+    .maxheight250 .remark-unit dd{width:88.75%;}
+}
+@media screen and (max-width: 1280px){
+    .data-unit-dl{  width: 50%;  }
+    .remark-unit dt{width: 22.55%;}
+    .remark-unit dd{width: 77.45%;}
+    .maxheight250 .data-unit-dl{  width: 25%;  }
+    .maxheight250 .remark-unit dt{width: 11.25%;}
+    .maxheight250 .remark-unit dd{width:88.75%;}
+}
+@media screen and (max-height: 800px){
+    .maxheight250 {
+        max-height: 200px;
+    }
+    .isc-title-box{
+        height:40px;
+    }
+    .isc-title-box h3{
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+
+
+

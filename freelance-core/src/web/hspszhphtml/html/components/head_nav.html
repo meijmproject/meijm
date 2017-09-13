@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <meta charset="utf-8">
+    <title>头部导航</title>
+    <link rel="stylesheet" href="..\..\css\components\head_nav.css">
+    <link rel="stylesheet" href="..\..\css\common\reset.css">
+</head>
+
+<body style="background: #e3e3e3;">
+
+    <div class="head-nav">
+        <div class="index-logo"></div>
+        <ul class="h-nav-ul h-nav-item">
+            <li class="h-nav-li"><a class="h-nav-link" _t_nav="home" href="../layout/index.html">首页</a></li>
+            <li class="h-nav-li"><a class="h-nav-link"  _t_nav="business" href="../layout/business_handle.html">业务办理</a></li>
+            <li class="h-nav-li"><a class="h-nav-link"  _t_nav="infomanage" href="../layout/info_manage.html">信息管理</a></li>
+            <li class="h-nav-li"><a class="h-nav-link"  _t_nav="checktj" href="../table/statistical_tables_show.html">查询统计</a></li>
+        </ul>
+
+        <ul class="h-nav-ul h-nav-icon">
+            <li class="h-nav-li h-person-info">
+                当前用户：张医师
+            </li>
+            <li class="h-nav-li">
+                <a class="h-nav-link hn-question" href="#" title="帮助中心"></a>
+            </li>
+            <li class="h-nav-li">
+                <a class="h-nav-link hn-key" href="#" title="修改密码"></a>
+            </li>
+            <li class="h-nav-li">
+                <a class="h-nav-link hn-exit" href="#" title="退出"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navigation-down">
+        <div id="infomanage" class="nav-down-menu menu-1" style="display: none;" _t_nav="infomanage">
+            <div class="navigation-down-inner">
+                <dl>
+                    <dd>
+                        <a   href="#">信息校核</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a   href="#">信息查看</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a   href="#">信息修改</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="checktj" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="checktj">
+            <div class="navigation-down-inner">
+                <dl>
+                    <dt>资源配置</dt>
+                    <dd>
+                        <a  href="#">在岗人员总表</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">管理人员明细</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">离职退休人员</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>年各科室人数统计</dt>
+                    <dd>
+                        <a  href="#">年各科室人数统计</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>全院人员汇总</dt>
+                    <dd>
+                        <a  href="#">本院各科室人员汇总表</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">中层干部人员汇总表</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">卫技人员按职称人员架构表</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">卫技人员按学历人员架构表</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">执业医师系列</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">技师系列</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">药师系列</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">护理系列</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">科主任、护士长系列</a>
+                    </dd>
+                    <dd>
+                        <a  href="#">科主任</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>各病区卫技人员配备</dt>
+                    <dd>
+                        <a href="#">各病区卫技人员配备一览表</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>全院人员框图</dt>
+                    <dd>
+                        <a href="#">全院人员分布图</a>
+                    </dd>
+                    <dd>
+                        <a href="#">中层干部分布图</a>
+                    </dd>
+                    <dd>
+                        <a href="#">护士分布图</a>
+                    </dd>
+                    <dd>
+                        <a href="#">技师、药师分布图</a>
+                    </dd>
+                    <dd>
+                        <a href="#">执业医师分布图</a>
+                    </dd>
+                    <dd>
+                        <a href="#">卫生技术人员学历、职称、年龄分布表</a>
+                    </dd>
+                    <dd>
+                        <a href="#">全院人员科室分布图</a>
+                    </dd>
+                    <dd>
+                        <a href="#">全院人员学历、职称年龄架构表</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!--<script src="..\..\js\jquery-1.12.4.js"></script>-->
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+
+        var qcloud={};
+        $('[_t_nav]').hover(function(){
+            var _nav = $(this).attr('_t_nav');
+            clearTimeout( qcloud[ _nav + '_timer' ] );
+            qcloud[ _nav + '_timer' ] = setTimeout(function(){
+                $('[_t_nav]').each(function(){
+                    $(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('h-nav-linkactive');
+                });
+                $('#'+_nav).stop(true,true).slideDown(200);
+            }, 150);
+        },function(){
+            var _nav = $(this).attr('_t_nav');
+            clearTimeout( qcloud[ _nav + '_timer' ] );
+            qcloud[ _nav + '_timer' ] = setTimeout(function(){
+                $('[_t_nav]').removeClass('h-nav-linkactive');
+                $('#'+_nav).stop(true,true).slideUp(200);
+            }, 150);
+        });
+
+    });
+</script>
+</html>

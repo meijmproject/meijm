@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	
+	<!--                              基础配置                                                                                            -->
+	
+	<!--业务检查前置拦截器-->
+	<bean id="yhValidateBeforeAdvice" class="com.yh.component.validate.advice.YhValidateBeforeAdvice">
+		<property name="yhValidateFacade">
+			<ref bean="yhValidateFacade"/>
+		</property>
+	</bean>
+	
+	<!--业务检查 begin-->
+	<bean id="yhValidateFacade" parent="singleTxnProxyParent">
+		<property name="target">
+			<ref bean="yhValidateFacadeTarget"/>
+		</property>
+	</bean>
+	<bean id="yhValidateFacadeTarget" class="com.yh.component.validate.facade.YhValidateFacade">
+		<property name="yhValidateService">
+			<list>
+				<!-- 根据读配置文件检查 -->
+				<ref bean="yhValidateService"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="yhValidateService" class="com.yh.component.validate.service.impl.YhValidateServiceImpl" />
+	<!--                              基础配置 结束                                                                                           -->
+</beans>

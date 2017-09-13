@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="uploadFileFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.component.upload.facade.UploadFileFacade">
+				<property name="uploadFileService" ref="uploadFileService" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="uploadFileDetailFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.component.upload.facade.UploadFileDetailFacade">
+				<property name="uploadFileDetailService" ref="uploadFileDetailService" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="uploadNodeRefFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.component.upload.facade.UploadNodeRefFacade">
+				<property name="uploadNodeRefService" ref="uploadNodeRefService" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="uploadRefAuthFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.component.upload.facade.UploadRefAuthFacade">
+				<property name="uploadRefAuthService" ref="uploadRefAuthService" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="uploadStatusFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.component.upload.facade.UploadStatusFacade" />
+		</property>
+	</bean>
+	
+	<bean id="uploadFileService" class="com.yh.component.upload.service.UploadFileService" />
+	<bean id="uploadFileDetailService" class="com.yh.component.upload.service.UploadFileDetailService" />
+	<bean id="uploadNodeRefService" class="com.yh.component.upload.service.UploadNodeRefService" />
+	<bean id="uploadRefAuthService" class="com.yh.component.upload.service.UploadRefAuthService" />
+</beans>

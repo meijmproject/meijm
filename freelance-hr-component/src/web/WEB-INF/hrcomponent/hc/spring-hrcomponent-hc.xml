@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 编制资源资源下达服务接口 -->
+    <bean id="hcFlowApprovedService" class="com.yh.hr.component.hc.service.impl.HcFlowApprovedServiceImpl" />
+    <!-- 编制资源资源占用服务接口 -->
+    <bean id="hcFlowUseInService" class="com.yh.hr.component.hc.service.impl.HcFlowUseInServiceImpl" >
+    	<property name="hcInfoService">
+    		<ref bean="hcInfoService"/>
+    	</property>
+    </bean>
+    
+    <!-- 编制资源释放服务接口 -->
+    <bean id="hcFlowUseOutService" class="com.yh.hr.component.hc.service.impl.HcFlowUseOutServiceImpl" >
+    	<property name="hcInfoService">
+    		<ref bean="hcInfoService"/>
+    	</property>
+    </bean>
+    
+</beans>

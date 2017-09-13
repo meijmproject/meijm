@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 选择人员 -->
+	<bean id="personSelectFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.select.person.facade.PersonSelectFacade"/>
+		</property>
+	</bean>
+	
+	<bean id="select22140221401211" class="com.yh.hr.select.person.service.impl.GoOutPersonSelectServiceImpl" >
+		
+	</bean>
+	
+	<!--人员信息是否校核完成验证  -->
+	<bean id="personIsVerifiedCheckServiceImpl" class="com.yh.hr.select.person.service.check.impl.PersonIsVerifiedCheckServiceImpl" />
+</beans>

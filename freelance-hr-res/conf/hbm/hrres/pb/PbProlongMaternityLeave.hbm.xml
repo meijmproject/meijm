@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.yh.hr.res.pb.bo">
+    <class name="com.yh.hr.res.pb.bo.PbProlongMaternityLeave" table="YHC_PB_PROLONG_MATERNITY_LEAVE">
+        <id name="vacationOid" column="VACATION_OID" type="java.lang.Long">
+            <generator class="assigned"/>
+        </id>
+        <property name="proLongStartDate" type="java.util.Date">
+            <column name="PROLONG_START_DATE">
+                <comment>延长产假开始日期</comment>
+            </column>
+        </property>
+        <property name="proLOngEndDate" type="java.util.Date">
+            <column name="PROLONG_END_DATE">
+                <comment>延长产假结束日期</comment>
+            </column>
+        </property>
+        <property name="startDateDays" type="java.lang.Double">
+            <column name="START_DATE_DAYS">
+                <comment>开始当天假长</comment>
+            </column>
+        </property>
+        <property name="endDateDays" type="java.lang.Double">
+            <column name="END_DATE_DAYS">
+                <comment>结束当天假长</comment>
+            </column>
+        </property>
+        <property name="vacationDays" type="java.lang.Double">
+            <column name="VACATION_DAYS">
+                <comment>请假天数</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="createBy" type="java.lang.String">
+            <column name="CREATE_BY">
+                <comment>创建人ID</comment>
+            </column>
+        </property>
+        <property name="createName" type="java.lang.String">
+            <column name="CREATE_NAME">
+                <comment>创建人名称</comment>
+            </column>
+        </property>
+        <property name="createDate" type="java.util.Date">
+            <column name="CREATE_DATE">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+        <property name="updateBy" type="java.lang.String">
+            <column name="UPDATE_BY">
+                <comment>修改人ID</comment>
+            </column>
+        </property>
+        <property name="updateName" type="java.lang.String">
+            <column name="UPDATE_NAME">
+                <comment>修改人名称</comment>
+            </column>
+        </property>
+        <property name="updateDate" type="java.util.Date">
+            <column name="UPDATE_DATE">
+                <comment>修改时间</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

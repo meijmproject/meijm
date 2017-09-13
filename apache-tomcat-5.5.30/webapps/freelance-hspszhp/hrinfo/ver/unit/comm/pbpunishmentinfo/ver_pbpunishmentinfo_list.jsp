@@ -1,0 +1,118 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.yh.platform.core.constant.Constant"%>
+<%@ page import="com.yh.hr.res.dictionary.DicConstants"%>
+<%@ include file="/include/jsp_headers.jsp"%>
+
+<!--
+ * @function    人员惩处信息列表页面
+ * @page name   /freelance-hr-info/src/web/hrinfo/ver/unit/comm/pbpunishmentinfo/ver_pbpunishmentinfo_list.jsp
+ * @author      wuxq
+ * @created     2016/08/18
+ * @version     1.0
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0"/>
+	<title>信息校核列表页</title>
+	<script type="text/javascript" src="hrinfo/ver/unit/comm/js/personinfocommeffect.js"></script>
+	<script type="text/javascript" src="hrworktop/flow/BizDefaultTaskFlowAction.js"></script>
+	<script type="text/javascript">
+		 $(document).ready(function(){
+		        $('.popdown').popdown({width:1200});
+		    })
+	</script>
+</head>
+<logic:messagesPresent>
+		<bean:message key="errors.header" />
+			<ul>
+				<html:messages id="error">
+					<li>
+						<bean:write name="error" />
+					</li>
+				</html:messages>
+			</ul>
+</logic:messagesPresent>
+<body>
+<div class="infoshow-container padding-lrb">
+  <div class="st-title-box">
+    <h3 class="st-title-text">处分信息</h3>
+    <div class="st-title-icon st-title-button">
+      <button class="popdown btn-add btn-left-icon btn-default btn-right" href="goToCreatePbPunishmentInfoPage.do?method=goCreate&personOid=${param.personOid}&urlId=${param.Id}">新增</button>
+      <button title="上传附件" class="btn-upload btn-left-icon btn-default btn-right"  href="javascript:void(0);" onclick="uploadPbPunishmentInfo('${param.personOid}')">上传附件</button>
+    </div>
+  </div>
+  <div class="st-main-table">
+    <table class="sr-table">
+      <thead class="sr-table-thead">
+        <tr>
+          <th class="md-th"><input type="checkbox"></th>
+          <th>处分名称</th>
+          <th>处分原因</th>
+          <th>处分批准日期</th>
+          <th>处分是否撤销</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody class="sr-table-tbody">
+        <c:forEach var ="dto" items="${list}">
+          <tr class="td_content">
+            <td class="md-th"><input type="checkbox"/></td>
+            <td title="${dto.punishmentName }">${dto.punishmentName }</td>
+            <td title="${dto.punishmentReason }">${dto.punishmentReason }</td>
+            <td title="${dto.punishmentDateStr }">${dto.punishmentDateStr }</td>
+            <td title='<dictionary:viewDicItemName dicTypeCode="<%=DicConstants.YHRS0003%>" dicItemCode="${dto.isCancalPunishment}" />'><dictionary:viewDicItemName dicTypeCode="<%=DicConstants.YHRS0003%>" dicItemCode="${dto.isCancalPunishment}" />&nbsp;</td>
+            <td>
+              <a class="st-handle-delete" href="javascript:void(0);" onclick="deletePbPunishmentInfo('${dto.punishmentOid}')"></a>
+              <a class="st-handle-modify popdown btn" href="goToUpdatePbPunishmentInfoPage.do?method=goUpdate&urlId=${param.Id}&punishmentOid=${dto.punishmentOid}"></a>
+            </td>
+          </tr>
+        </c:forEach>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.popdown').popdown({width:1200});
+})
+function deletePbPunishmentInfo(punishmentOid){
+	MessageBox.confirm('提示', '确认删除？',function(action)
+	{
+     if (action == 'yes') {
+	$.ajax({
+		url : 'deletePbPunishmentInfo.do?method=delete',
+		data :  {punishmentOid:punishmentOid},
+		 dataType : 'json',  
+		error : function(x,t) {
+			alert(t)
+			alert("error occured!!!");
+		},
+		async : false,
+		success : function(data) {
+			if (data.success) {
+				$('#${param.Id}').load($('#${param.Id}').attr('url'),{personOid:'${param.personOid}',Id:'${param.Id}'});
+			}
+		}
+	});
+     }
+	});
+}
+function close_modalPbPunishmentInfo(){
+	$("#lean_overlay").fadeOut(200);
+	$("#updatemodalPunishmentInfo").css({"display":"none"})
+	$("#createmodalPunishmentInfo").css({"display":"none"})
+	
+}
+function uploadPbPunishmentInfo(personOid){
+	
+	var params = {
+		personOid : personOid//字节 5MB
+		,refType : '18'
+	}
+	BizDefaultTaskFlowAction.photoUpload.call(null,null,null,params);
+}
+</script>
+</html>

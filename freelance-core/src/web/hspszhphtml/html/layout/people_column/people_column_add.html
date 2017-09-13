@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <title>新增人员名册模板页面</title>
+    <link rel="stylesheet" href="../../../css/common/reset.css">
+    <link rel="stylesheet" href="../../../css/common/base.css">
+    <link rel="stylesheet" href="../../../css/common/layout.css">
+    <link rel="stylesheet" href="../../../css/components/handle_btn.css">
+    <link rel="stylesheet" href="../../../css/components/search_result_table.css">
+    <link rel="stylesheet" href="../../../css/layout/people_column.css">
+    <link rel="stylesheet" href="../../../css/components/modal_dialog.css">
+</head>
+<body class="main-body">
+
+<div id="transaction_modal_box" class="big-madal-dialog transaction_modal_box">
+    <!-- 头部-->
+    <div class="modal-dialog-container">
+        <div class="md-title">
+            新增人员名册模板
+            <a href="#" class="md-close close-popdown"></a>
+        </div>
+
+        <div class="md-main-content max-height-none" id="addTml-tabs">
+            <ul class="addTml-tabs">
+                <li><a href="#addTml-tabs-name" class="addTml-tab-a">人员名册模板名称</a></li>
+                <li><a href="#addTml-tabs-condition" class="addTml-tab-a">人员名册模板条件</a></li>
+                <li><a href="#addTml-tabs-column" class="addTml-tab-a">人员名册模板栏目</a></li>
+            </ul>
+            <div class="addTml-cont">
+                <div id="addTml-tabs-name" class="addTml-tabs-name">
+                    <h2 class="atc-title">人员名册模板名称</h2>
+                    <div  class="atc-main-cont">
+                        <div class="md-units md-two-column clearfix">
+                            <dl >
+                                <dt><span>人员名册模板名称</span></dt>
+                                <dd><input type="text"></input></dd>
+                            </dl>
+                            <dl >
+                                <dt><span>所属单位</span></dt>
+                                <dd><input type="text"></input></dd>
+                            </dl>
+                            <dl class="updown-remark">
+                                <dt>人员名册模板描述</dt>
+                                <dd class="height130"><textarea class="atc-description">请填写具体描述信息</textarea></dd>
+                            </dl>
+                        </div>
+                        <div class="md-btn">
+                            <button class="md-btn-save close-popdown">保存</button>
+                            <button class="md-btn-cancel close-popdown">取消</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="addTml-tabs-condition">
+                    <h2 class="atc-title">人员名册模板条件</h2>
+                    <div class="pcs-search">
+                        <span class="pcs-symbol pl0">信息集</span>
+                        <select class="pcs-select width125">
+                            <option>人员信息集</option>
+                            <option>学历信息集</option>
+                            <option>岗位信息集</option>
+                            <option>岗位信息集1</option>
+                            <option>岗位信息集2</option>
+                        </select>
+                        <select class="pcs-select width200">
+                            <option>岗位类别</option>
+                            <option>岗位类别1</option>
+                            <option>岗位类别2</option>
+                            <option>岗位类别3</option>
+                            <option>岗位类别4</option>
+                        </select>
+                        <select class="pcs-select width125">
+                            <option>等于</option>
+                            <option>全部</option>
+                        </select>
+                        <input class="pcs-input width125" type="text">
+                    </div>
+                    <div class="atc-description"></div>
+                    <div class="pcs-search">
+                       <span class="atc-radio">同时满足</span>
+                       <span class="atc-radio">满足其一</span>
+                       <span class="atc-radio atc-radio-select">自定义</span>
+                    </div>
+                    <textarea class="atc-description height80"></textarea>
+                    <div class="tips-red">+ 为同时满足  * 为满足其一</div>
+                </div>
+
+                <div id="addTml-tabs-column">
+                    <h2 class="atc-title">人员名册模板栏目</h2>
+                    <div id="twoway-choice"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容-->
+</div>
+
+
+<script src="../../../js/jquery-1.12.4.js"></script>
+<script src="../../../js/jquery-ui.js"></script>
+<script src="../../../js/jquery.popdown.js"></script>
+<script>
+    //加载子页面
+    $('#head-nav').load('/hspszhphtml/html/components/head_nav.html');
+    $('#twoway-choice').load('/hspszhphtml/html/components/twoway_choice.html');
+
+    $(function(){
+        // 锚点定位
+       document.getElementById("addTml-tabs-name").scrollIntoView();
+       document.getElementById("addTml-tabs-condition").scrollIntoView();
+       document.getElementById("addTml-tabs-column").scrollIntoView();
+
+        // 页面加载后各区域的高度设置
+        function eachAreaHeight(){
+            var windowHeight = $(window).height();
+            //主内容区高度
+            $('.main-container').height(windowHeight-$('#head-nav').outerHeight(true)-$('.current-position').outerHeight(true)-2);
+        }
+        eachAreaHeight();
+
+        $(window).resize(
+            function(){
+                eachAreaHeight();
+            }
+        );
+
+        // 人员栏目设置数据集表格项sr-dataset-table中插入数据
+        $.ajax({
+            url: "/hspszhphtml/html/json_data.json",//json文件位置
+            type: "GET",//请求方式为get
+            dataType: "json", //返回数据格式为json
+            success: function(data) {//请求成功完成后要执行的方法
+                //each循环 使用$.each方法遍历返回的数据date
+                var index=1;
+                $.each(data.pcstemplateData, function(i, item) {
+                    if (i==0){/*添加表头*/
+                        var str = '<tr><th class="md-th"></th><th class="md-th"><input type="checkbox"></th><th class="sorting"> ' +
+                            item.fname + '</th><th class="sorting">' + item.ftable + '</th><th>'+
+                            item.ftype+'</th><th class="sorting">' + item.fcodetype + '</th></tr>';
+                        $('.pcs-template-table .sr-table-thead').append(str);
+                    }else{/*添加表体数据*/
+                        var str = '<tr><td class="md-th">'+index+'</td><td class="md-th"><input type="checkbox"></td><td> ' +
+                            item.fname + '</td><td>' + item.ftable + '</td><td>'+
+                            item.ftype+'</td><td>'+ item.fcodetype+'</td></tr>';
+                        $('.pcs-template-table .sr-table-tbody').append(str);
+                        index ++;
+                    }
+                });
+            }
+        });
+
+        // 给数据集查询结果表格添加点击事件
+        $(document).on('click','.sr-table-tbody tr',function () {
+            $(this).addClass('sr-tr-selected');
+            $(this).siblings('tr').removeClass('sr-tr-selected');
+        });
+
+    });
+</script>
+</body>
+</html>

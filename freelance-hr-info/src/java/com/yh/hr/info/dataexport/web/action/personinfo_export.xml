@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<export>
+
+
+	<info title="基础信息" bean="viewPbPersonInfoFacade" method="getPbPersonInfoDTOById">
+		<column title="序号" />
+		<column title="姓名" field="name" required="true"/>
+		<column title="工号" field="personCode" required="true"/>
+		<column title="性别" field="sexCode" required="true" dicCode="YHRS0001"/>
+		<column title="所在部门" field="hireDeptName" required="true"/>
+		<column title="人员状态" field="personStatus" required="true" dicCode="YHRS0009"/>
+		<column title="人员类别" field="personType" required="true" dicCode="YHRS0010"/>
+		<column title="参加工作时间" field="startWorkDate" required="true" format="yyyy-MM-dd"/>
+		<column title="民族" field="peopleCode" dicCode="YHRS0004"/>
+		<column title="国籍" field="nationalityCode" dicCode="YHRS0005"/>
+		<column title="籍贯" field="ancestorPlaceCode" dicCode="YHRS0006"/>
+		<br />
+		<column title="出生地" field="birthplaceCode" dicCode="YHRS0006"/>
+		<column title="户口所在地" field="hukouPlace" dicCode="YHRS0006"/>
+		<column title="是否本地户口" field="isSz" required="true" dicCode="YHRS0003"/>
+		<column title="家庭住址" field="address"/>
+		<column title="证件类别" field="idCode" required="true" dicCode="YHRS0002"/>
+		<column title="证件号码" field="idNo" required="true" />
+		<column title="出生日期" field="birthday" required="true" format="yyyy-MM-dd"/>
+		<column title="婚姻状况" field="marriageStatusCode" dicCode="YHRS0008"/>
+		<column title="健康状况" field="healthStatusCode" dicCode="YHRS0007"/>
+		<column title="手机号码" field="mobilePhone" required="true" />
+		<column title="紧急联系人" field="emergContact" />
+		<br />
+		<!-- <column title="办公电话" field="officePhone" />
+		<column title="个人Email地址" field="email" /> -->
+		<column title="紧急联系人手机号码" field="emergPhone" />
+		<!-- <column title="编制类型" field="dPositionType" dicCode="YHRS0012"/>
+		<column title="经费形式" field="bankpoll" dicCode="YHRS0013"/> -->
+		<column title="护士层级" field="levelCode" dicCode="YHRS0122"/>
+		<!-- <column title="人员排序号" field="personOrderView" /> -->
+	    <column title="政治面貌" field="politicStatusCode"  dicCode="YHRS0025"/> 
+		<column title="外文姓名" field="englishName" />
+		<column title="曾用名" field="alternativeName" />
+		<column title="港澳台侨属标识" field="flagOfHkmctwChineseCode" dicCode="YHRS0003"/>
+		<column title="是否专业技术人员标识" field="protTechFlag" dicCode="YHRS0003"/>
+		<column title="是否专家标志" field="exportFlag" dicCode="YHRS0003"/>
+		<column title="是否博士后研究人员" field="doctorFlag" dicCode="YHRS0003"/>
+		<column title="是否海外专家" field="isAbordExpert" dicCode="YHRS0003"/>
+		<column title="是否留学回国专家" field="isStudyAbordExpert" dicCode="YHRS0003"/>
+		<br />
+		<column title="是否来华定居专家" field="isComesChinaExpert" dicCode="YHRS0003"/>
+		<column title="是否退役军人标识" field="isVeteran" dicCode="YHRS0003"/>
+		<column title="是否军转安置干部" field="isAllocation" dicCode="YHRS0003"/>
+		<column title="是否干部身份" field="isCadre" dicCode="YHRS0003"/>
+	</info>
+	<info title="家庭成员信息" bean="viewPbFamilyInfoFacade" method="listPbFamilyInfoByPersonOid">
+		<column title="序号" />
+		<column title="姓名" field="name" required="true" />
+		<column title="证件类型" field="idType" dicCode="YHRS0002"/>
+		<column title="证件号码" field="idNo" />
+		<column title="与本人关系" field="relationship" dicCode="YHRS0024" required="true"/>
+		<column title="出生日期" field="birthday" format="yyyy-MM-dd" required="true"/>
+		<column title="政治面貌" field="politicsVisage" dicCode="YHRS0025" required="true"/>
+		<column title="工作单位" field="unit" />
+		<column title="职务" field="duty" />
+		<column title="现住址" field="address" />
+		<column title="联系电话" field="phone" />
+	</info>
+	<!-- <info title="事业岗位聘任信息" bean="pbSyGwEmployInfoFacade" method="listPbSyGwEmployInfoByPersonOid">
+		<column title="序号" />
+		<column title="岗位聘任状态" field="positioningStatus" dicCode="YHRS0026" required="true"/>
+		<column title="聘任单位名称" field="dutyUnitName" required="true"/>
+		<column title="内设机构名称" field="deptName" required="true"/>
+		<column title="岗位名称" field="positionName" required="true"/>
+		<column title="岗位类别" field="positionType" dicCode="YHRS0022" required="true"/>
+		<column title="岗位级别" field="positionLevel" dicCode="YHRS0023" required="true"/>
+		<column title="职务类型" field="dutyRecordType" dicCode="YHRS0036" required="true"/>
+		<column title="是否主岗位" field="isMPosition" dicCode="YHRS0003" required="true"/>
+		<column title="岗位聘任开始时间" field="beginDate" format="yyyy-MM-dd" required="true"/>
+		<column title="岗位聘任拟截止时间" field="endDate" format="yyyy-MM-dd" />
+		<br />
+		<column title="岗位聘任实际截止时间" field="endDateActual" format="yyyy-MM-dd" />
+		<column title="职务属性" field="dutyAttribute" dicCode="YHRS0028" />
+		<column title="备注" field="remark" />
+	</info> -->
+	<info title="院内岗位聘任信息" bean="pbYnGwEmployInfoFacade" method="listPbYnGwEmployInfoByPersonOid">
+		<column title="序号" />
+		<column title="岗位聘任状态" field="hisPositionStatus" dicCode="YHRS0026" required="true"/>
+		<column title="内设机构名称" field="deptName" required="true"/>
+		<column title="岗位名称" field="hisPositionName" required="true"/>
+		<column title="工作类别" field="hisWorkType" dicCode="YHRS0112" required="true"/>
+		<column title="岗位类别" field="hisPositionType" dicCode="YHRS0113" required="true"/>
+		<column title="岗位级别" field="hisPositionLevel" dicCode="YHRS0124" required="true"/>
+		<column title="岗位聘任开始时间" field="hisBeginDate" format="yyyy-MM-dd" required="true"/>
+		<column title="岗位聘任拟截止时间" field="endDate" format="yyyy-MM-dd"/>
+		<column title="岗位聘任实际截止时间" field="endDateActual" format="yyyy-MM-dd"/>
+		<column title="备注" field="remark" />
+	</info>
+  	<info title="工作经历信息" bean="pbResumeInfoFacade" method="listPbResumeInfoByPersonOid">
+		<column title="序号" />
+		<column title="开始时间" field="startDate" required="true"/>
+		<column title="截止时间" field="endDate" required="true"/>
+		<column title="工作单位" field="unit" required="true"/>
+		<column title="职务" field="duty" />
+		<column title="备注" field="remark" />
+	</info>
+	<info title="合同信息" bean="pbEngageContractInfoFacade" method="listPbEngageContractInfoByPersonOid">
+		<column title="序号" />
+		<column title="合同编号" field="contractNo" required="true"/>
+		<column title="合同签订方式" field="contractType" dicCode="YHRS0114" required="true"/>
+		<column title="合同类型" field="changeType" dicCode="YHRS0115" required="true"/>
+		<column title="合同开始时间" field="contractBegin" required="true"/>
+		<column title="合同截止时间" field="contractEnd" required="true"/>
+		<column title="合同实际结束日期" field="contractEndActual" />
+		<column title="合同状态" field="status" dicCode="YHRS0116" required="true"/>
+		<column title="是否存在试用期" field="probationFlag" dicCode="YHRS0003"/>
+		<column title="试用期开始时间" field="probationBegin" />
+		<br />
+		<column title="试用期结束时间" field="probationEnd" />
+		<column title="合同签订时间" field="signDate" />
+		<column title="工作岗位" field="contractJob" />
+		<column title="常住住址" field="addressPermanant" />
+		<column title="通信地址" field="addressCommunication" />
+		<column title="联系电话" field="contactPhone" />
+		<column title="用人单位" field="unitName" />
+		<column title="用人单位主要负责人" field="unitMaster" />
+		<column title="用人单位地址" field="unitAddress" />
+		<column title="用人单位联系电话" field="unitPhone" />
+		<br />
+		<column title="其他事项" field="others" />
+	</info>
+	<info title="合同历史信息" bean="pbEngageConHistInfoFacade" method="listPbEngageConHistInfoByPersonOid">
+		<column title="序号" />
+		<column title="合同编号" field="contractNo" required="true"/>
+		<column title="合同签订方式" field="contractType" dicCode="YHRS0114" required="true"/>
+		<column title="合同类型" field="changeType" dicCode="YHRS0115" required="true"/>
+		<column title="合同开始时间" field="contractBegin" required="true"/>
+		<column title="合同截止时间" field="contractEnd" />
+		<column title="合同实际结束日期" field="contractEndActual" />
+		<column title="合同签订时间" field="signDate" />
+		<column title="工作岗位" field="contractJob" />
+		<column title="常住住址" field="addressPermanant" />
+		<column title="通信地址" field="addressCommunication" />
+		<column title="联系电话" field="contactPhone" />
+		<column title="其他事项" field="others" />
+	</info>
+	<!-- <info title="院内中层职务任职信息" bean="pbDutyInfoFacade" method="listExportPbDutyInfoByPersonOid">
+		<column title="序号" />
+		<column title="任职状态" field="dutyStatus" dicCode="YHRS0026" required="true"/>
+		<column title="任职部门" field="deptName" required="true"/>
+		<column title="任职职务" field="dutyName" dicCode="YHRS0126" required="true"/>
+		<column title="任职时间" field="startDate" />
+		<column title="离任时间" field="endDate" />
+		<column title="是否主要职务" field="isMainDutyInfo" dicCode="YHRS0003"/>
+		<column title="备注" field="remark" />
+	</info> -->
+	<info title="学历学位信息" bean="pbEducationLevelDegreeFacade" method="listPbEducationInfoByPersonOid">
+    <column title="序号" />
+    <column title="学校名称" field="schoolName" required="true" />
+    <column title="入学日期" field="schoolEnrollDate" format="yyyy-MM-dd" required="true" />
+    <column title="学历证书号码" field="educationCertificate"/>
+    <column title="是否最高学历" field="isHighestEducationLevel" dicCode="YHRS0003"/>
+    <column title="学位授予日期" field="degreeGrantDate" format="yyyy-MM-dd"/>
+    <column title="是否最高学位" field="isHighestDegree" dicCode="YHRS0003"/>
+    <column title="学习形式" field="studyTypeCode" dicCode="YHRS0042" required="true" />
+    <column title="毕（肄）业日期" field="graduateDate" format="yyyy-MM-dd" required="true" />
+    <column title="学制（年）" field="eductionalSystem"  />
+    <column title="专业" field="academyName" />
+    <column title="所学专业" field="majorCode" required="true" />
+    <column title="学历" field="educationCode" dicCode="YHRS0039" />
+    <column title="学位" field="degreeCode" dicCode="YHRS0040" />
+    <column title="教育类别" field="eduType" dicCode="YHRS0043" required="true" />
+    <column title="学历等级" field="educationLevel" dicCode="YHRS0041" />
+    <column title="学位授予单位" field="degreeGrantUnit" />
+    <column title="学位证书号码" field="degreeCertificateCode" />
+    <column title="学位授予国家" field="degreeGrantCountryCode" dicCode="YHRS0005" />
+    <column title="备注" field="remark" />
+  </info>
+  <info title="教育培训经历" bean="pbEducationTrainingInfoFacade" method="listPbEducationTrainingInfoByPersonOid">
+    <column title="序号" />
+    <column title="教育培训性质" field="educationTrainingKinkCode" dicCode="YHRS0050" required="true" />
+    <column title="培训类别" field="trainingType" dicCode="YHRS0053" required="true" />
+    <column title="起始时间" field="trainingBeginDate" format="yyyy-MM-dd" required="true" />
+    <column title="培训结果" field="trainingResult"/>
+    <column title="批准日期" field="approveDate" format="yyyy-MM-dd"/>
+    <column title="培训离岗状态" field="trainingStatus" dicCode="YHRS0051"/>
+    <column title="培训名称" field="trainingName" />
+    <column title="终止时间" field="trainingEndDate" format="yyyy-MM-dd" required="true" />
+    <column title="是否出国（出境）培训" field="isAbroadStatus" dicCode="YHRS0003"  />
+    <column title="从学单位" field="trainingUnitName" />
+    <column title="培训内容" field="trainingContent" />
+    <column title="考核成绩" field="trainingGrade" />
+    <column title="批准机构名称" field="approveOfficeName" />
+    <column title="备注" field="remark" />
+  </info>
+  <info title="专业技术资格信息" bean="pbProfTechQualifInfoFacade" method="listProfTechQualifInfoByPersonOid">
+    <column title="序号" />
+    <column title="资格证书编号" field="certificateNo" required="true" />
+    <column title="专业名称" field="specialityName" required="true" />
+    <column title="取得途径" field="acquireApproachCode" dicCode="YHRS0048" />
+    <column title="是否主要专业技术资格" field="isHighestLevel" dicCode="YHRS0003" required="true" />
+    <column title="专业技术资格名称" field="profTechCode" dicCode="YHRS0117" />
+    <column title="取得资格日期" field="procureDate" format="yyyy-MM-dd"/>
+    <column title="发证机构" field="issueOrgan" />
+    <column title="专业技术资格等级" field="profTechLevel" dicCode="YHRS0047" required="true" />
+    <column title="有效期" field="validityDate" format="yyyy-MM-dd"/>
+    <column title="资格审批机构名称" field="approveOrganName" />
+    <column title="备注" field="remark" />
+  </info>
+  <info title="执业（职业）资格信息" bean="pbQualificationsInfoFacade" method="listQualificationsInfoByPersonOid">
+    <column title="序号" />
+    <column title="职业资格证书编号" field="certificateNo" />
+    <column title="执业资格类型" field="qualificationsType" dicCode="YHRS0127" required="true" />
+    <column title="取得日期" field="procureDate" format="yyyy-MM-dd" />
+    <column title="发证机构" field="issueOrgan" />
+    <column title="职业资格名称" field="qualificationsCode" dicCode="YHRS9004" required="true" />
+    <column title="有效期" field="validityDate" format="yyyy-MM-dd"/>
+    <column title="是否本人当前最高资格" field="isHighestLevel" dicCode="YHRS0003" required="true" />
+    <column title="职业资格等级" field="qualificationsLevelCode" dicCode="YHRS0049" />
+    <column title="取得途径" field="acquireApproachCode" dicCode="YHRS0048" />
+    <column title="备注" field="remark" />
+  </info>
+  
+  <info title="执业注册信息" bean="pbCertificateInfoFacade" method="getCertificateInfoById">
+    <column title="序号" />
+    <column title="执业注册证书编号" field="certificateNo" required="true"/>
+    <column title="签发日期" field="issuedDateStr"/>
+    <column title="当前注册日期" field="certificateBeginDateStr" />
+    <column title="注销日期" field="cancelDateStr"/>
+    <column title="发证机构" field="approveOrganName"  />
+    <column title="执业范围" field="scopeCode"  />
+    <column title="当前注册有效截止日期" field="certificateEndDateStr" />
+    <column title="备注" field="remark" />
+    <column title="审批日期" field="approvedDateStr"  />
+    <column title="执业地点" field="certificateUnit" />
+    <column title="是否注销" field="cancelFlag" required="true" dicCode="YHRS0003"/>
+  </info>
+  <info title="执业注册历史信息" bean="pbCertificateHistInfoFacade" method="getPbCertificateHistInfoById">
+    <column title="序号" />
+    <column title="注册类型" field="certificateType" dicCode="YHRS0118"/>
+    <column title="注册日期" field="certificateBeginDateStr"/>
+    <column title="注册有效截止日期" field="certificateEndDateStr" />
+  </info>
+  <info title="特殊授权情况" bean="pbSpeciaAuthFacade" method="getPbSpeciaAuthById">
+    <column title="序号" />
+    <column title="权限类型" field="authType" dicCode="YHRS0120" required="true"/>
+    <column title="授权级别" field="authLevel" dicCode="YHRS0119" required="true"/>
+    <column title="授权状态" field="authStatus" dicCode="YHRS0121" required="true"/>
+  </info>
+  <info title="年度考核信息" bean="pbReviewInfoFacade" method="getPbReviewInfoById">
+    <column title="序号" />
+    <column title="考核类别" field="reviewTypeCode" dicCode="YHRS0069" required="true" />
+    <column title="考核结论类别" field="reviewResultCode" dicCode="YHRS0070" required="true" />
+    <column title="考核时所在单位" field="reviewUnitName" required="true"/>
+    <column title="考核年度" field="reviewYearStr" required="true"/>
+    <column title="考核日期" field="reviewDateStr" />
+    <column title="备注" field="remark" />
+  </info> 
+  <info title="政治面貌" bean="pbPoliticInfoFacade" method="listPoliticInfo">
+    <column title="序号" />
+    <column title="政治面貌" field="politicStatusCode" dicCode="YHRS0025" required="true" />
+    <column title="介绍人" field="introducer" />
+    <column title="参加党派时间" field="joinPoliticDate" />
+    <column title="转正时间" field="probationDate" />
+    <column title="参加党派时所在单位" field="unitOfJoinParty" />
+    <column title="备注" field="remark" />
+  </info> 
+  <info title="奖励信息" bean="pbRewardInfoFacade" method="getRewardInfoByPersonOid">
+		<column title="序号" />
+		<column title="奖励名称" field="rewardName" required="true"/>
+		<column title="奖励原因" field="encouragementReason"  />
+		<column title="奖励类别" field="rewardTypeCode" dicCode="YHRS0076" required="true"/>
+		<column title="奖励批准单位" field="rewardUnit" required="true"/>
+		<column title="授予荣誉称号级别" field="honourLevel" dicCode="YHRS0077" required="true"/>
+		<column title="奖励批准日期" field="rewardDate" required="true"/>
+		<column title="备注" field="remark"/>
+	</info>
+	<info title="处分信息" bean="pbPunishmentInfoFacade" method="getPunishmentInfoByPersonOid">
+		<column title="序号" />
+		<column title="处分名称" field="punishmentName" required="true"/>
+		<column title="处分批准日期" field="punishmentDate" required="true"/>
+		<column title="处分截止日期" field="punishmentEndDate" />
+		<column title="处分期限（月）" field="punishmentMonth" />
+		<column title="处分是否撤销标识" field="isCancalPunishment" dicCode="YHRS0003" required="true"/>
+		<column title="处分原因" field="punishmentReason" required="true"/>
+		<column title="处分批准机关名称" field="punishmentApprovalUnit" required="true"/>
+		<column title="备注" field="remark"/>
+	</info>
+	<info title="工伤信息" bean="pbInjuryInfoFacade" method="getInjuryInfoByPersonOid">
+		<column title="序号" />
+		<column title="受伤日期" field="hurtDate" required="true"/>
+		<column title="伤残等级" field="hurtLevel" required="true" dicCode="YHRS0087"/>
+		<column title="认定公函" field="congizanceLetter" />
+		<column title="认定单位" field="judgeOrgan" required="true"/>
+		<column title="备注" field="remark"/>
+	</info>
+	<info title="离退休信息" bean="pbRetrieInfoFacade" method="get">
+		<column title="序号" />
+		<column title="离退类别" field="retrieTypeCode" dicCode="YHRS0057" required="true"/>
+		<column title="离退日期" field="retrieDate"/>
+		<column title="离退后享受待遇类别" field="retireTreatmentTypeCode" dicCode="YHRS0109"/>
+		<column title="离退休费支付单位" field="retirtPaymentUnit" dicCode="YHRS0059"/>
+		<column title="离退休批准文号" field="retrieApproveFileno" />
+		<column title="特殊贡献比例" field="specialContributionRatio" />
+		<column title="归国华侨标志" field="returnedOverseasFlag" dicCode="YHRS0003"/>
+		<column title="审查部门" field="approvalUnit"/>
+		<column title="提前退休原因" field="retrieReason" dicCode="YHRS0058"/>
+		<br />
+		<column title="离退休费比例" field="retireFeeRatio" />
+		<column title="离退休后管理单位" field="retireManageUnit" />
+		<column title="离退休证号" field="retireNo"/>
+		<column title="特殊贡献标志" field="specialContributionFlag" dicCode="YHRS0003"/>
+		<column title="是否终身无子女" field="isNoChildForLife" dicCode="YHRS0003"/>
+		<column title="符合条例" field="compliedClause"/>
+		<column title="离退后享受待遇级别" field="retireTreatmentLevelCode" dicCode="YHRS0015"/>
+		<column title="离退休补助比例" field="retireAllowanceRatio" />
+		<column title="离退休批准机关" field="retritApproveUnit"/>
+		<column title="有害工种增加工龄" field="serviceYearsAdded" />
+		<br />
+		<column title="归侨加发比例" field="returnedOverseasChiScale" />
+		<column title="审批类型" field="approvalType" dicCode="YHRS0060"/>
+		<column title="计生奖励" field="familyPlanningAward"/>
+		<column title="备注" field="remark"/>
+	</info>
+	<info title="自然减员信息" bean="pbDeathInfoFacade" method="listPbDeathInfoByPersonOid">
+		<column title="序号" />
+		<column title="死亡时间" field="deathDate" format="yyyy-MM-dd" required="true"/>
+		<column title="死亡原因类别" field="deathType" dicCode="YHRS0103" required="true"/>
+		<column title="死亡原因" field="deathReason" dicCode="YHRS0104" required="true"/>		
+		<column title="抚恤金" field="smartMoney"/>
+		<column title="丧葬费" field="funeralMoney"/>
+	</info>
+<info title="人员进入信息" bean="pbPersonInFacade" method="listPbPersonInByPersonOid">
+		<column title="序号" />
+		<column title="进入单位类型" field="entryCurrentUnitType" dicCode="YHRS0110" required="true"/>
+		<column title="进入单位时间" field="entryCurrentUnitDateStr" required="true"/>
+		<column title="进入前所在单位" field="personInFrom"/>
+		<column title="备注" field="remark"/>
+	</info>
+	<info title="人员离开信息" bean="pbPersonOutFacade" method="listPbPersonOutByPersonOid">
+		<column title="序号" />
+		<column title="减员类型" field="personOutType" dicCode="YHRS0128" required="true"/>
+		<column title="离开时间" field="outDateStr" required="true"/>
+		<column title="离开去向" field="personOutTo"/>
+		<column title="备注" field="remark"/>
+	</info>
+</export>

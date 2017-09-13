@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+          
+<struts-config>
+	<action-mappings>
+		<action path="/goToDicMapped"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.DicMappedAction"
+				parameter="method">
+			<description>弹出导入人员窗口</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/dictionaryMapped.jsp"/>
+		</action>
+		<action path="/listNoDicMapped"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.DicMappedAction"
+				parameter="method">
+			<description>弹出导入人员窗口</description>
+		</action>
+			<action path="/goToMainTabDicPanel"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.DicMappedAction"
+				parameter="method">
+			<description>跳转到字典映射工作台页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/dictionaryMapped_viewport.jsp"/>
+		</action>
+		<action path="/goDicMappedViewport"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.DicMappedAction"
+				parameter="method">
+			<description>跳转到业务办理未映射/已映射页面</description>
+			<forward name="success0" path="/hrinfo/ver/unit/person/dictionaryMapped_daiban.jsp"/>
+			<forward name="success1" path="/hrinfo/ver/unit/person/dictionaryMapped_yiban.jsp"/>
+		</action>
+		<action path="/saveDicMapped"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.DicMappedAction"
+				parameter="method">
+			<description>保存映射的字典</description>
+		</action>
+		
+		<action path="/goTocheckPersonDicRepeat"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.DicMappedAction"
+				parameter="method">
+			<description>字典映射完到入库界面</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/person-import-ver-repeat.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>	

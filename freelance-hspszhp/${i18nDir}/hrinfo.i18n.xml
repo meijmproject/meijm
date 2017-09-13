@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<i18n>
+	<!-- 
+		文件后缀为 i18n.xml
+		
+		按包结构定义名称 ， 如 hr-info机关单位校核前缀为：hr.info.ver.unit.jg
+	-->
+	
+	<!-- 
+	<entry key="hr.info.ver.unit.jg.officialinfo.xxx1">
+		<zh_CN>中文1</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.jg.officialinfo.xxx2">
+		<zh_CN>中文2</zh_CN>
+	</entry>
+	--> 
+	<!-- 家庭成员与社会关系start -->
+	<entry key="hr.info.ver.unit.comm.pbFamilyInfo.name">
+		<zh_CN>姓名</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbFamilyInfo.idType">
+		<zh_CN>证件类别</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbFamilyInfo.idNo">
+		<zh_CN>证件号码</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbFamilyInfo.relationship">
+		<zh_CN>与本人关系</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbFamilyInfo.birthdayStr">
+		<zh_CN>出生日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbFamilyInfo.nationalityCode">
+		<zh_CN>国籍</zh_CN>
+	</entry>
+	<!-- 家庭成员与社会关系end -->
+	<!-- 学历学位信息start -->
+	<entry key="hr.info.ver.unit.comm.pbEducationInfo.schoolName">
+		<zh_CN>学校</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbEducationInfo.eductionalSystem">
+		<zh_CN>学制(年)</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbEducationInfo.majorName">
+		<zh_CN>专业</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbEducationInfo.schoolEnrollDateStr">
+		<zh_CN>入学日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.pbEducationInfo.graduateDateStr">
+		<zh_CN>毕(肄)业日期</zh_CN>
+	</entry>
+	<!-- 学历学位信息end -->
+	<!-- 政治面貌与党派start -->
+	<entry key="hr.info.ver.unit.comm.pbPoliticInfo.politicStatusCode">
+		<zh_CN>政治面貌</zh_CN>
+	</entry>
+	<!-- 政治面貌与党派end -->
+	
+	 <!-- 专业技术资格信息start -->
+	 <entry key="hr.info.ver.unit.comm.verProfTechInfo.certificateNo">
+		<zh_CN>资格证书编号</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verProfTechInfo.profTechName">
+		<zh_CN>专业技术资格名称</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verProfTechInfo.profTechLevel">
+		<zh_CN>专业技术资格等级</zh_CN>
+	</entry>
+	<!-- 专业技术资格信息end -->
+	<!-- 职业（执业）资格信息start -->
+	<entry key="hr.info.ver.unit.comm.verProfessionalInfo.certificateNo">
+		<zh_CN>职业资格证书编号</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verProfessionalInfo.qualificationsName">
+		<zh_CN>职业资格名称</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verProfessionalInfo.qualificationsLevelCode">
+		<zh_CN>职业资格等级</zh_CN>
+	</entry>
+	<!-- 职业（执业）资格信息end -->
+	<!-- 休假信息start -->
+	<entry key="hr.info.ver.unit.comm.verVacationInfo.startDate">
+		<zh_CN>开始日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verVacationInfo.vacationType">
+		<zh_CN>休假类型</zh_CN>
+	</entry>
+	<!-- 休假信息end -->
+	<!--衔称信息-->
+	<entry key="hr.info.ver.unit.comm.verPbRankInfo.rankCode">
+		<zh_CN>衔称</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbRankInfo.promoteDateStr">
+		<zh_CN>授(晋)日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbRankInfo.approveUnit">
+		<zh_CN>批准单位</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbRankInfo.rankEndDateStr">
+		<zh_CN>衔称终止日期</zh_CN>
+	</entry>
+	<!--衔称信息-->
+	<!--工伤信息-->
+	<entry key="hr.info.ver.unit.comm.verPbIndusInfo.startDateStr">
+		<zh_CN>工作起始日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbIndusInfo.endDateStr">
+		<zh_CN>工作结束日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbIndusInfo.unit">
+		<zh_CN>所在单位</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbIndusInfo.duty">
+		<zh_CN>从事工作或担任职务</zh_CN>
+	</entry>
+	<!--工伤信息-->
+	<!--工作简历-->
+	<entry key="hr.info.ver.unit.comm.verPbResumeInfo.hurtDateStr">
+		<zh_CN>受伤日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbResumeInfo.hurtLevel">
+		<zh_CN>伤残等级</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.comm.verPbResumeInfo.judgeOrgan">
+		<zh_CN>认定单位</zh_CN>
+	</entry>
+	<!--工作简历-->
+	<!--人员信息开始-->
+
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.name">
+		<zh_CN>姓名</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.sexCode">
+		<zh_CN>性别</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.idCode">
+		<zh_CN>证件类别</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.idNo">
+		<zh_CN>证件号码</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.birthdayStr">
+		<zh_CN>出生日期</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.nationalityCode">
+		<zh_CN>国籍</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.healthStatusCode">
+		<zh_CN>健康状况</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.marriageStatusCode">
+		<zh_CN>婚姻状况</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPersonForm.personStatus">
+		<zh_CN>人员状态</zh_CN>
+	</entry>
+	<!--人员信息结束-->
+	<!--任职信息开始-->
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.positionStatus">
+		<zh_CN>任职状态</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.dutyUnitName">
+		<zh_CN>单位名称</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.deptName">
+		<zh_CN>任职内设机构</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.dutyRecordType">
+		<zh_CN>职务类型</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.dutyType">
+		<zh_CN>职务类别</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.dutyLevel">
+		<zh_CN>职务级别</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.wageDutyLevel">
+		<zh_CN>工资职级</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.dutyAttribute">
+		<zh_CN>职务属性</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.positioningReason">
+		<zh_CN>任职原因</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.positioningTypeCode">
+		<zh_CN>任职方式</zh_CN>
+	</entry>
+	<entry key="hr.info.ver.unit.sy.verSyPbPostForm.dutyDateStr">
+		<zh_CN>任职开始日期</zh_CN>
+	</entry>
+	<!--任职信息结束-->
+	
+	<!--军队任职信息begin-->
+	  <entry key="ver.pb.militaryinfo.militaryDuty">
+		<zh_CN>军队职务</zh_CN>
+	  </entry>
+	  <entry key="ver.pb.militaryinfo.militaryDutyGrade">
+		<zh_CN>军队职级</zh_CN>
+	  </entry>
+	<!--军队任职信息end-->
+	
+	<!--军人退役信息begin-->
+	  <entry key="ver.pb.exserviceinfo.militaryInPlace">
+		<zh_CN>入伍地</zh_CN>
+	  </entry>
+	  <entry key="ver.pb.exserviceinfo.retireType">
+		<zh_CN>退役类别</zh_CN>
+	  </entry>
+	  <entry key="ver.pb.exserviceinfo.exserviceApprovalDateStr">
+		<zh_CN>批准退役日期</zh_CN>
+	  </entry>
+	  <entry key="ver.pb.exserviceinfo.retireExserviceDuty">
+		<zh_CN>退役前军队职务（军官职务)</zh_CN>
+	  </entry>
+	  <entry key="ver.pb.exserviceinfo.retireExserviceDateStr">
+		<zh_CN>退役前任军职时间</zh_CN>
+	  </entry>
+	  
+	<!--军人退役信息end-->
+</i18n>

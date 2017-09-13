@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- dicItem -->
+	<bean id="dicItemFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref local="dicItemFacadeTarget" />
+		</property>
+	</bean>
+	<bean id="dicItemFacadeTarget" class="com.yh.component.dictionary.facade.impl.DicItemFacadeImpl">
+		<property name="dicItemService">
+			<ref local="dicItemService"/>
+		</property>
+	</bean>
+	<bean id="dicItemService" class="com.yh.component.dictionary.service.impl.DicItemServiceImpl">
+	</bean>
+	
+	<!-- dicType -->
+	<bean id="dicTypeFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref local="dicTypeFacadeTarget" />
+		</property>
+	</bean>
+	<bean id="dicTypeFacadeTarget" class="com.yh.component.dictionary.facade.impl.DicTypeFacadeImpl">
+		<property name="dicTypeService">
+			<ref local="dicTypeService"/>
+		</property>
+	</bean>
+	<bean id="dicTypeService" class="com.yh.component.dictionary.service.impl.DicTypeServiceImpl">
+	</bean>
+</beans>

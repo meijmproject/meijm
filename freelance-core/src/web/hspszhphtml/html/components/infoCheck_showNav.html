@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <meta charset="utf-8">
+    <title>信息校核信息集导航</title>
+    <link rel="stylesheet" href="..\..\css\common\reset.css">
+    <link rel="stylesheet" href="..\..\css\components\info_check.css">
+</head>
+<body style="background: #edf0f5;width:170px;margin: 20px; ">
+
+    <div class="infoshow-container">
+        <ul class="infoshow-nav">
+            <li>人员信息
+                <ul class="sn-nav">
+                    <li><a class="sn-nav-a" href="#">人员基础信息</a></li>
+                    <li><a class="sn-nav-a sn-nav-aselect" href="#">家庭成员信息</a></li>
+                </ul>
+            </li>
+            <li>聘任任职经历
+                <ul class="sn-nav">
+                    <li><a class="sn-nav-a" href="#">事业岗位聘任信息</a></li>
+                    <li><a class="sn-nav-a" href="#">院内岗位聘任信息</a></li>
+                    <li><a class="sn-nav-a" href="#">工作经历信息</a></li>
+                    <li><a class="sn-nav-a" href="#">合同信息</a></li>
+                    <li><a class="sn-nav-a" href="#">合同变动历史信息</a></li>
+                    <li><a class="sn-nav-a" href="#" title="院内中层职务任职信息">院内中层职务任职信息</a></li>
+                </ul>
+            </li>
+            <li>人员职业能力
+                <ul class="sn-nav">
+                    <li><a class="sn-nav-a" href="#">学历学位信息</a></li>
+                    <li><a class="sn-nav-a" href="#">教育培训信息</a></li>
+                    <li><a class="sn-nav-a" href="#">专业技术资格信息</a></li>
+                    <li><a class="sn-nav-a" href="#" title="执业（职业）资格信息">执业（职业）资格信息</a></li>
+                    <li><a class="sn-nav-a" href="#">执业注册信息</a></li>
+                    <li><a class="sn-nav-a" href="#">职业注册历史信息</a></li>
+                    <li><a class="sn-nav-a" href="#">特殊授权情况</a></li>
+                </ul>
+            </li>
+            <li>工作与政治表现
+                <ul class="sn-nav">
+                    <li><a class="sn-nav-a" href="#">年度考核信息</a></li>
+                    <li><a class="sn-nav-a" href="#">政治面貌与党派信息</a></li>
+                    <li><a class="sn-nav-a" href="#">奖励信息</a></li>
+                    <li><a class="sn-nav-a" href="#">处分信息</a></li>
+                    <li><a class="sn-nav-a" href="#">工商信息</a></li>
+                </ul>
+            </li>
+            <li>人员流动信息
+                <ul class="sn-nav">
+                    <li><a class="sn-nav-a" href="#">离退休信息</a></li>
+                    <li><a class="sn-nav-a" href="#">自然减员信息</a></li>
+                    <li><a class="sn-nav-a" href="#">人员进入信息</a></li>
+                    <li><a class="sn-nav-a" href="#">人员离开信息</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <a class="sn-to-top" href="#"></a>
+    </div>
+
+<!--<script src="..\..\js\jquery-1.12.4.js"></script>-->
+<script>
+    $(function () {
+        $(document).on('click','.sn-nav-a',function (e) {
+            e.stopPropagation();
+            $(this).addClass('sn-nav-aselect');
+            $(this).parent('li').siblings('li').children('a').removeClass('sn-nav-aselect');
+            return false;
+        });
+    })
+</script>
+</body>
+</html>

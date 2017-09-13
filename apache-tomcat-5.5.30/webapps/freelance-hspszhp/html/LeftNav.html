@@ -1,0 +1,3423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0" />
+    <title>衢州人事管理系统</title>
+    <link media="screen" rel="stylesheet" href="../css/index.css"/>
+    <link href="../css/base.css" rel="stylesheet" type="text/css"/>
+    <!--事项 环节树样式-->
+    <link rel="stylesheet" href="../css/LeftNav.css"/>
+    <script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../js/uijs/index.js"></script>
+    <script src="../js/uijs/messageCheck.js"></script>
+    <!--  -->
+    <script src="../js/uijs/LeftNav.js"></script>
+</head>
+<body style="height: 100%;  overflow: hidden">
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a href="#">系统管理</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <img src="../img/index/icon_time_white.png"  class="icon_time_white" alt=""/>&nbsp;
+                        <span class="icon_time_white_time">2016-8-12&nbsp;&nbsp;12:00:00</span>
+                    </div>
+                </div>
+                <div class="arrow_down">
+                    <img src="../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                    <div class="hide_content">
+                        <ul>
+                            <li>修改密码</li>
+                            <li>xxxxx</li>
+                            <li>xxxxx</li>
+                            <li>xxxxx</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+<!--主体内容-->
+<div class="sitemap">
+    <ul>
+        <li>当前位置：</li>
+        <li><a href="#">业务办理 <span class="spanColor"> > </span></a></li>
+        <li><a href="#">
+            <select class="select_JG JGGL" style="">
+                <option value="volvo">机构管理</option>
+                <option value="saab">xxx</option>
+            </select>
+            <span class="spanColor">></span>
+        </a>
+        </li>
+        <li><a href="#">
+            <select class="select_JG ZGDW" style="">
+                <option value="volvo">主管单位管理</option>
+                <option value="saab">xxx</option>
+            </select>
+        </a>
+        </li>
+    </ul>
+</div>
+<!--定位结束-->
+<!--左导航-->
+<div class="left_nav" id="left_nav">
+<!--搜索 事项树 环节树切换-->
+<div class="LeftNav_top">
+    <input type="text"  class="LeftNav_input"/>
+    <button class="LeftNav_search">搜 索</button>
+    <ul class="tabPanel">
+        <li class="hit tabpane_shixiang dianji" id="colorType"><img src="../img/LeftNav/LeftNav_shixiang03.png" class="shixiang03" alt=""/></li>
+        <li class="tabpane_huanjie dianji"><img src="../img/LeftNav/LeftNav_huanjie03.png" class="huanjie03" alt=""/></li>
+        <div  class="clearFloat"></div><!--清除浮动-->
+    </ul>
+    <div class="clearFloat"></div><!--清除浮动-->
+</div>
+<!--第一事项树三级菜单栏-->
+<div class="panes">
+    <div class="pane" style="display:block;">
+    <div class="left_nav-list list">
+    <ul id="firstUl" class="left_nav-ul yiji">
+    <!--机构管理01-->
+    <li class="left_nav_whole">
+        <a href="#"  class="inactive active left_backgroud" title="机构管理">
+            <div class="left_arrows_r ">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav01.png" class="LeftNav01" alt=""/>
+                </div>
+                <span class="ellipsis_text" >&nbsp机构管理机构管理机管理机构管理机<span class="inactiveA">100</span></span>
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p  class="spance_box ">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <span class="spance-B2 xianyindong"></span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <span class="spance-B2 xianyindong"></span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--岗位管理02-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="岗位管理">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav02.png" class="LeftNav02" alt=""/>
+                </div>
+                &nbsp;岗位管理
+                <span class="inactiveA">100</span>
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--事业单位职工人数计划管理03-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="事业单位职工人数计划管理">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav03.png" style="margin-left: -4px;" alt=""/>
+                </div>
+                &nbsp;事业单位职工人数计划管理
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                       岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong"></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--自主公开招聘业务 04-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="自主公开招聘业务">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav06.png" class="LeftNav06" alt=""/>
+                </div>
+                &nbsp;自主公开招聘业务
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--统一公开招聘业务 05-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="统一公开招聘业务">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav05 .png" class="LeftNav02" alt=""/>
+                </div>
+                &nbsp;统一公开招聘业务
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                         岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--公开招聘增员业务 06-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="公开招聘增员业务">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav11.png" class="LeftNav02" alt=""/>
+                </div>
+                &nbsp;公开招聘增员业务
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--编外人员的公开招聘增员业务 07-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="编外人员的公开招聘增员业务">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav12.png" class="LeftNav02" alt=""/>
+                </div>
+                &nbsp;编外人员的公开招聘增员业务
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--其他增员 08-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="其他增员">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav07.png" class="LeftNav02" alt=""/>
+                </div>
+                &nbsp;其他增员
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--军转干部报到备案业务 09-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="军转干部报到备案业务">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav08.png" class="LeftNav02" alt=""/>
+                </div>
+                &nbsp;军转干部报到备案业务
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                         岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--事业编人员在省属事业单位间调动10-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="事业编人员在省属事业单位间调动">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav09.png" style="margin-left: -8px;" alt=""/>
+                </div>
+                &nbsp;事业编人员在省属事业....
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                 <span class="spance-B2 xianyindong"></span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                         岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--岗位聘用管理 11-->
+    <li class="left_nav_whole">
+        <a href="#" class="inactive active left_backgroud" title="岗位聘用管理">
+            <div class="left_arrows_r">
+                <div class="left_nav_frame">
+                    <img src="../img/LeftNav/LeftNav10.png" class="LeftNav02" alt=""/>
+                </div>
+                &nbsp;岗位聘用管理
+                <span class="inactiveB"></span>
+            </div>
+        </a>
+        <h3 class="clearF"></h3><!--清除浮动-->
+        <ul style="display: none">
+            <!--岗位等级管理01-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span  class="gwdjgl">--</span>
+                        岗位等级管理01
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <span class="spance-B2 xianyindong"></span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!--岗位说明书管理02-->
+            <li class="nav-TWO">
+                <a href="#"   class="inactive active Acolor">
+                    <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                    <p class="spance_box">
+                        <span class="gwdjgl">--</span>
+                        岗位说明书管理02
+                    </p>
+                </a>
+                <ul style="display: none" class="nav-THREE">
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                            <p class="spance_box_boxtop">
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <span class="spance-B2 xianyindong" style=""></span>
+                            <a href="#" >单位申报</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >经办人受理</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室分管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >业务处室主管领导审核</a>
+                        </div>
+                    </li>
+                    <li class="THREE-LI">
+                        <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                        <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                            <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                            <span class="dwsbxian">-</span>
+                            <a href="#" >厅领导审批</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li class="left_nav_whole">
+            <a href="#" class="inactive active left_backgroud" title="岗位聘用管理">
+                <div class="left_arrows_r">
+                    <div class="left_nav_frame">
+                        <img src="../img/LeftNav/LeftNav10.png" class="LeftNav02" alt=""/>
+                    </div>
+                    &nbsp;岗位聘用管理
+                    <span class="inactiveB"></span>
+                </div>
+            </a>
+            <h3 class="clearF"></h3><!--清除浮动-->
+            <ul style="display: none">
+                <!--岗位等级管理01-->
+                <li class="nav-TWO">
+                    <a href="#"   class="inactive active Acolor">
+                        <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                        <p class="spance_box">
+                            <span  class="gwdjgl">--</span>
+                            岗位等级管理01
+                        </p>
+                    </a>
+                    <ul style="display: none" class="nav-THREE">
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                <p class="spance_box_boxtop">
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <span class="spance-B2 xianyindong" style=""></span>
+                                <a href="#" >单位申报</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >经办人受理</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室分管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室主管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                <span class="spance-B2 xianyindong"></span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >厅领导审批</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--岗位说明书管理02-->
+                <li class="nav-TWO">
+                    <a href="#"   class="inactive active Acolor">
+                        <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                        <p class="spance_box">
+                            <span class="gwdjgl">--</span>
+                            岗位说明书管理02
+                        </p>
+                    </a>
+                    <ul style="display: none" class="nav-THREE">
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                <p class="spance_box_boxtop">
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <span class="spance-B2 xianyindong" style=""></span>
+                                <a href="#" >单位申报</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >经办人受理</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室分管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室主管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >厅领导审批</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    <li class="left_nav_whole">
+            <a href="#" class="inactive active left_backgroud" title="岗位聘用管理">
+                <div class="left_arrows_r">
+                    <div class="left_nav_frame">
+                        <img src="../img/LeftNav/LeftNav10.png" class="LeftNav02" alt=""/>
+                    </div>
+                    &nbsp;岗位聘用管理
+                    <span class="inactiveB"></span>
+                </div>
+            </a>
+            <h3 class="clearF"></h3><!--清除浮动-->
+            <ul style="display: none">
+                <!--岗位等级管理01-->
+                <li class="nav-TWO">
+                    <a href="#"   class="inactive active Acolor">
+                        <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                        <p class="spance_box">
+                            <span  class="gwdjgl">--</span>
+                            岗位等级管理01
+                        </p>
+                    </a>
+                    <ul style="display: none" class="nav-THREE">
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                <p class="spance_box_boxtop">
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <span class="spance-B2 xianyindong" style=""></span>
+                                <a href="#" >单位申报</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >经办人受理</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室分管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室主管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                <span class="spance-B2 xianyindong"></span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >厅领导审批</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--岗位说明书管理02-->
+                <li class="nav-TWO">
+                    <a href="#"   class="inactive active Acolor">
+                        <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                        <p class="spance_box">
+                            <span class="gwdjgl">--</span>
+                            岗位说明书管理02
+                        </p>
+                    </a>
+                    <ul style="display: none" class="nav-THREE">
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                <p class="spance_box_boxtop">
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <span class="spance-B2 xianyindong" style=""></span>
+                                <a href="#" >单位申报</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >经办人受理</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室分管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >业务处室主管领导审核</a>
+                            </div>
+                        </li>
+                        <li class="THREE-LI">
+                            <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                            <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                <span class="dwsbxian">-</span>
+                                <a href="#" >厅领导审批</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+    </div>
+    </div>
+    <!--第二2环节树三级菜单栏-->
+     <div class="pane">
+         <div class="pane" style="display:block;">
+         <div class="left_nav-list list">
+         <ul id="firstUl" class="left_nav-ul yiji">
+         <!--业务申报01-->
+         <li class="left_nav_whole">
+             <a href="#" onclick="" id="zg01" class="inactive active left_backgroud" title="业务申报">
+                 <div class="left_arrows_r">
+                     <div class="left_nav_frame">
+                         <p class="chang left_nav_frame_xian"></p>
+                         <img src="../img/LeftNav/yuan_kong.png" class="yuan_kong"alt=""/>
+                     </div>
+                     &nbsp;业务申报
+                     <span class="inactiveB"></span>
+                 </div>
+             </a>
+             <h3 class="clearF"></h3><!--清除浮动-->
+             <ul style="display: none">
+                 <!--岗位管理01-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+                 <!--自主公开招聘02-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+         <!--业务受理02-->
+         <li class="left_nav_whole">
+             <a href="#" onclick="" id="zg01" class="inactive active left_backgroud" title="业务受理">
+                 <div class="left_arrows_r">
+                     <div class="left_nav_frame">
+                         <p  class="left_nav_frame_chang02"></p>
+                         <img src="../img/LeftNav/yuan_kong.png" class="yuan_kong" alt=""/>
+                     </div>
+                     &nbsp;业务受理<span class="inactiveA">100</span>
+                     <span class="inactiveB"></span>
+                 </div>
+             </a>
+             <h3 class="clearF"></h3><!--清除浮动-->
+             <ul style="display: none">
+                 <!--岗位管理01-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+                 <!--自主公开招聘02-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+         <!--审批03-->
+         <li class="left_nav_whole">
+             <a href="#" onclick="" id="zg01" class="inactive active left_backgroud" title="审批">
+                 <div class="left_arrows_r">
+                     <div class="left_nav_frame">
+                         <p class="left_nav_frame_chang03"></p>
+                         <img src="../img/LeftNav/yuan_kong.png" class="yuan_kong" alt=""/>
+                     </div>
+                     &nbsp;审批
+                     <span class="inactiveB"></span>
+                 </div>
+             </a>
+             <h3 class="clearF"></h3><!--清除浮动-->
+             <ul style="display: none">
+                 <!--岗位管理01-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+                 <!--自主公开招聘02-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+         <!--信息补录04-->
+         <li class="left_nav_whole">
+             <a href="#" onclick="" id="zg01" class="inactive active left_backgroud" title="信息补录">
+                 <div class="left_arrows_r">
+                     <div class="left_nav_frame">
+                         <p class="left_nav_frame_chang03"></p>
+                         <img src="../img/LeftNav/yuan_kong.png" class="yuan_kong" alt=""/>
+                     </div>
+                     &nbsp;信息补录
+                     <span class="inactiveB"></span>
+                 </div>
+             </a>
+             <h3 class="clearF"></h3><!--清除浮动-->
+             <ul style="display: none">
+                 <!--岗位管理01-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+                 <!--自主公开招聘02-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+         <!--业务复核5-->
+         <li class="left_nav_whole">
+             <a href="#" onclick="" id="zg01" class="inactive active left_backgroud" title="业务复核">
+                 <div class="left_arrows_r">
+                     <div class="left_nav_frame">
+                         <p class="left_nav_frame_chang03"></p>
+                         <img src="../img/LeftNav/yuan_kong.png" class="yuan_kong" alt=""/>
+                     </div>
+                     &nbsp;业务复核
+                     <span class="inactiveB"></span>
+                 </div>
+             </a>
+             <h3 class="clearF"></h3><!--清除浮动-->
+             <ul style="display: none">
+                 <!--岗位管理01-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+                 <!--自主公开招聘02-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+         <!--工资核算06-->
+         <li class="left_nav_whole">
+             <a href="#" onclick="" id="zg01" class="inactive active left_backgroud" title="工资核算">
+                 <div class="left_arrows_r">
+                     <div class="left_nav_frame">
+                         <p class="left_nav_frame_chang03"></p>
+                         <img src="../img/LeftNav/yuan_kong.png" class="yuan_kong" alt=""/>
+                     </div>
+                     &nbsp;工资核算
+                     <span class="inactiveB"></span>
+                 </div>
+             </a>
+             <h3 class="clearF"></h3><!--清除浮动-->
+             <ul style="display: none">
+                 <!--岗位管理01-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+                 <!--自主公开招聘02-->
+                 <li class="nav-TWO">
+                     <a href="#"   class="inactive active Acolor">
+                         <p class="spance-A"><b class="spance_nbsp"></b><span class="spance-B"></span></p>
+                         <p class="spance_box">
+                             <img src="../img/LeftNav/gwgl.png" class="icon_shi1" alt=""/>
+                             岗位管理
+                         </p>
+                     </a>
+                     <ul style="display: none" class="nav-THREE">
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <span class="spance-B2 xianyindong"></span>
+                                 <a href="#" >单位申报</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >主管部门审核</a><span class="inactiveA">55</span>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >经办人受理</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室分管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >业务处室主管领导审核</a>
+                             </div>
+                         </li>
+                         <li class="THREE-LI">
+                             <div class="spance-A">&nbsp;<span class="spance-B"></span></div>
+                             <div class="THREE-A">
+                                    <span class="spance-B2 xianyindong">
+                                    </span>
+                                 <img src="../img/messageCheck/circle_small.png" class="circle_small"/>
+                                 <span class="yw_gwglxian">--</span>
+                                 <a href="#" >厅领导审批</a>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+         </ul>
+         </div>
+         </div>
+     </div>
+</div>
+</div>
+<!--右边整体-->
+<div class="right_content">
+<!-- 已办/待办事项选项卡-->
+<ul class="nav_tab" id="nav_tab">
+    <li class="nav_tab_checked"><a href="#">单位人员查询</a></li>
+    <li><a href="#">单位信息 </a></li>
+    <li style="float: right" class="nav_tab_li"><img src="../img/DetailPages/ico07-left.png"/>  <span>返回</span></li>
+</ul>
+
+<!-- 查询条件-->
+    <div class="search" id="query-condition">
+        <dl class="search-horizontal">
+            <dt>人员姓名：</dt>
+            <dd><label><input type="text"/></label></dd>
+        </dl>
+        <dl class="search-horizontal search-horizontal-double">
+            <dt>人员状态：</dt>
+            <dd><input type="text"/><div><input type="checkbox" checked/>一般在职</div></dd>
+        </dl>
+        <dl class="search-horizontal">
+            <dt>证件号码：</dt>
+            <dd><label><input type="text"/></label></dd>
+        </dl>
+        <dl class="search-horizontal search-horizontal-double">
+            <dt>人员类别：</dt>
+            <dd>
+                <select>
+                    <option>身份证</option>
+                    <option>驾驶证</option>
+                </select></dd>
+        </dl>
+        <dl class="search-horizontal">
+            <dt>岗位级别：</dt>
+            <dd><label><input type="text"/></label></dd>
+        </dl>
+        <dl class="search-horizontal">
+            <dt>是否包含下设机构：</dt>
+            <dd><label>
+                <div><input type="radio" name="print" value="yes" checked="checked">是</div>
+                <div><input type="radio" name="print" value="no">否</div>
+            </label>
+            </dd>
+        </dl>
+        <dl class="search-horizontal">
+            <dt></dt>
+            <dd><button class="btn_search">查询</button></dd>
+        </dl>
+        <div style="clear: both"></div>
+    </div>
+<!-- 操作按钮-->
+<div class="handel" id="handel-button">
+    <button class="btn_add">新增</button>
+    <button class="btn_delete">删除</button>
+</div>
+<!-- 列表内容展示-->
+<div class="main_list">
+<div style="width: auto;overflow: auto" >
+<table id="infoTable" class="table_edit_bg2">
+    <tr class="td_title2" style="border-bottom: 1px solid #ddd">
+        <td><input type="checkbox"/></td>
+        <td>单位锁定</td>
+        <td>人员锁定</td>
+        <td>校核完成</td>
+        <td>校验是否通过</td>
+        <td>姓名</td>
+        <td>人员类别</td>
+        <td>在编单位</td>
+        <td>在编内设机构</td>
+        <td>现任岗位名称</td>
+        <td>现任岗位级别</td>
+        <td>现任职务名称</td>
+        <td>现任职务属性</td>
+    </tr>
+</table>
+<div id="gridDiv">
+<table class="table_edit_bg2">
+<tr class="td_content2">
+    <td><input type="checkbox"/></td>
+    <td>否</td>
+    <td>否</td>
+    <td>否</td>
+    <td>通过</td>
+    <td>刘晓萌</td>
+    <td>高层次人才</td>
+    <td>下设单位01</td>
+    <td>其他在职人员</td>
+    <td>管理类-六级</td>
+    <td>管理类</td>
+    <td>副处长</td>
+    <td>单位领导</td>
+</tr>
+<tr class="td_content2">
+    <td><input type="checkbox"/></td>
+    <td>否</td>
+    <td>否</td>
+    <td>否</td>
+    <td>通过</td>
+    <td>刘晓萌</td>
+    <td>高层次人才</td>
+    <td>下设单位01</td>
+    <td>其他在职人员</td>
+    <td>管理类-六级</td>
+    <td>管理类</td>
+    <td>副处长</td>
+    <td>单位领导</td>
+</tr>
+</table>
+</div>
+</div>
+<!-- 页码部分-->
+<div class="page fixed_pade">
+    <ul>
+        <li style="margin-left: 15px;"><a href="#">首页</a></li>
+        <li><a href="#">上一页</a></li>
+        <li><input type="text" value="1" class="input_page"/></li>
+        <li><a href="#" class="page_disabled">下一页</a></li>
+        <li><a href="#">末页</a></li>
+        <li>当前页：1</li>
+        <li>总页数：1</li>
+        <li>总记录数：10</li>
+    </ul>
+</div>
+</div>
+</div>
+<!--主体内容结束-->
+<!--脚部-->
+<script>
+//调用屏幕高度自适应方法
+    $.aoutHeight();
+//滚动条优化
+function layout(){
+    $(".panes_scroll").css("height",$(window).height() - 152);
+}
+layout();
+$(window).resize(function(){layout()});
+$(".panes_scroll").niceScroll({
+    cursorcolor:"#ddd",
+    cursoropacitymax:1,
+    touchbehavior:false,
+    cursorwidth:"10px",
+    cursorheight:"10px",
+    cursorborder:"0",
+    cursorborderradius:"5px"
+});
+</script>
+</body>
+</html>

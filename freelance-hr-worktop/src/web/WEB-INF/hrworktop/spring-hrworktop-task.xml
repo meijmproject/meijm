@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 默认创建业务流程工作台facade -->
+    <bean id="taskCreateFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskCreateFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认上报业务流程工作台facade -->
+    <bean id="taskReportFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskReportFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认复核业务流程工作台facade -->
+    <bean id="taskRecheckFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskRecheckFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认复核业务不同意流程工作台facade -->
+    <bean id="taskRecheckDisAgreeFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskRecheckDisAgreeFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认终止业务流程工作台facade -->
+    <bean id="taskStopFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskStopFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认删除业务流程工作台facade -->
+    <bean id="taskDeleteFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskDeleteFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认撤回业务流程工作台facade -->
+    <bean id="taskRevokeFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskRevokeFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认退回业务流程工作台facade -->
+    <bean id="taskBackFlowFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskBackFlowFacade" />
+       </property>
+    </bean>
+    <!-- 默认查询待办已办工作台facade -->
+    <bean id="taskItemFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskItemFacade" />
+       </property>
+    </bean>
+    <!-- 默认业务提醒信息facade -->
+    <bean id="taskCheckFacade" parent="txnProxyParent">
+       <property name="target">
+           <bean class="com.yh.hr.worktop.facade.impl.TaskCheckFacade" />
+       </property>
+    </bean>
+</beans>

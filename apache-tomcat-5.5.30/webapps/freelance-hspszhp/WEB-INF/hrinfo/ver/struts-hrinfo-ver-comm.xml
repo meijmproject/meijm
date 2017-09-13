@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="verPbFamilyInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.VerPbFamilyInfoForm" />
+		<form-bean name="pbSyGwEmployInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbSyGwEmployInfoForm" />
+		<form-bean name="pbYnGwEmployInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbYnGwEmployInfoForm" />
+		<form-bean name="pbEngageContractInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEngageContractInfoForm" />
+		<form-bean name="pbEngageConHistInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEngageConHistInfoForm" />
+		<form-bean name="pbEducationLevelDegreeForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEducationLevelDegreeForm" />
+		<form-bean name="pbEducationTrainingInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEducationTrainingInfoForm" />
+		<form-bean name="pbQualificationsInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbQualificationsInfoForm" />
+		<form-bean name="pbProfTechQualifInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbProfTechQualifInfoForm" />
+		<form-bean name="pbCertificateInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbCertificateInfoForm" />
+		<form-bean name="pbCertificateHistInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbCertificateHistInfoForm" />
+			
+		<form-bean name="pbDeathInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbDeathInfoForm" />
+		<form-bean name="pbInjuryInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbInjuryInfoForm" />
+		<form-bean name="pbPoliticInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbPoliticInfoForm" />
+		<form-bean name="pbPunishmentInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbPunishmentInfoForm" />
+		<form-bean name="pbResumeInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbResumeInfoForm" />
+		<form-bean name="pbRetrieInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbRetrieInfoForm" />
+		<form-bean name="pbReviewInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbReviewInfoForm" />
+		<form-bean name="pbRewardInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbRewardInfoForm" />
+		<form-bean name="pbSpeciaAuthForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbSpeciaAuthForm" />
+		
+		<form-bean name="pbDutyInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbDutyInfoForm" />
+		<form-bean name="pbPersonInForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbPersonInForm" />
+		<form-bean name="pbPersonOutForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbPersonOutForm" />
+		
+	
+	<!-- ======================================================================================== -->
+		<!-- <form-bean name="verPbMilitaryInfoForm" type="VerPbMilitaryInfoForm" />
+		<form-bean name="verPbExserviceInfoForm" type="VerPbExserviceInfoForm" />
+		<form-bean name="verPbRankInfoForm" type="VerPbRankInfoForm" />
+		<form-bean name="verPbResumeInfoForm" type="VerPbResumeInfoForm" />
+		<form-bean name="verPbIndusInfoForm" type="VerPbIndusInfoForm" />
+		<form-bean name="verPbFamilyInfoForm" type="VerPbFamilyInfoForm" />
+		<form-bean name="verPbEducationInfoForm" type="VerPbEducationInfoForm" />
+		<form-bean name="verPbPoliticInfoForm" type="VerPbPoliticInfoForm" />
+		<form-bean name="verProfTechInfoForm" type="VerPbProfTechInfoForm" />
+		<form-bean name="verProfessionalInfoForm" type="VerPbProfessionalInfoForm" />
+	    <form-bean name="verVacationInfoForm" type="VerPbVacationInfoForm" />
+	    <form-bean name="pbRewardInfoForm" type="PbRewardInfoForm"></form-bean>
+	    <form-bean name="pbPunishmentInfoForm" type="PbPunishmentInfoForm"></form-bean>
+	    <form-bean name="pbLanguageInfoForm" type="PbLanguageInfoForm" />
+		<form-bean name="pbTrainingInfoForm" type="PbTrainingInfoForm" />
+	    <form-bean name="pbRetrieInfoForm" type="PbRetrieInfoForm" />
+		<form-bean name="pbReviewInfoForm" type="PbReviewInfoForm" />
+		<form-bean name="pbAllocationInfoForm" type="VerPbAllocationInfoForm" />
+		<form-bean name="pbWInfluenceInfoForm" type="VerPbWageInfluenceForm" />
+		<form-bean name="verPbWageHistoryForm" type="VerPbWageHistoryForm" />
+		<form-bean name="verPbWageHistoryItemsForm" type="VerPbWageHistoryItemsForm" />
+		<form-bean name="verPbWageHistoryLogicForm" type="VerPbWageHistoryLogicForm" />
+		<form-bean name="verPbOwnAllowanceForm" type="VerPbOwnAllowanceForm" />
+		<form-bean name="verPbPositioningOtherInfoForm" type="VerPbPositioningOtherInfoForm" /> -->
+	</form-beans>
+	<action-mappings>
+		<action path="/goFindPersonList"
+				scope="request"
+				type="com.yh.hr.info.view.web.action.ViewPersonAction"
+				parameter="method">
+			<description>跳转到单位人员信息校核修改页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/verperson_main.jsp"/>
+		</action>
+	<!--家庭成员与社会关系begin -->
+		<action path="/listPbFamilyInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerPbFamilyInfoAction"
+			parameter="method" 
+			scope="request"
+			name="verPbFamilyInfoForm"
+			input="/hrinfo/ver/unit/comm/pbfamilyinfo/verpb_familyinfo_list.jsp"
+			validate="false">
+			<description>查看家庭成员与社会关系列表</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbfamilyinfo/verpb_familyinfo_list.jsp"/>
+		</action>
+		<action path="/goInsertPbFamilyInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerPbFamilyInfoAction"
+			parameter="method" 
+			scope="request"
+			name="verPbFamilyInfoForm"
+			validate="false"
+			input="/hrinfo/ver/unit/comm/pbfamilyinfo/verpb_familyinfo_list.jsp">
+			<description>跳转到家庭成员与社会关系新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbfamilyinfo/verpb_familyinfo_create.jsp"/>
+		</action>
+		<action path="/insertPbFamilyInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerPbFamilyInfoAction"
+			parameter="method" 
+			scope="request"
+			name="verPbFamilyInfoForm"
+			validate="true">
+			<description>新增家庭成员与社会关系</description>
+		</action>
+		<action path="/goUpdatePbFamilyInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerPbFamilyInfoAction"
+			parameter="method" 
+			scope="request" 
+			name="verPbFamilyInfoForm"
+			input="/hrinfo/ver/unit/comm/pbfamilyinfo/verpb_familyinfo_list.jsp"
+			validate="false">
+			<description>跳转到家庭成员与社会关系修改页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbfamilyinfo/verpb_familyinfo_update.jsp"/>
+		</action>
+		<action path="/updatePbFamilyInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerPbFamilyInfoAction"
+			parameter="method"
+			scope="request"
+			name="verPbFamilyInfoForm"
+			validate="true">
+			<description>修改家庭成员与社会关系</description>
+		</action>
+		<action path="/deletePbFamilyInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerPbFamilyInfoAction"
+			parameter="method" 
+			scope="request" 
+			name="verPbFamilyInfoForm"
+			validate="false">
+			<description>删除家庭成员与社会关系</description>
+		</action>
+		<!-- 家庭成员与社会关系end -->
+
+<!-- ++++++++PbSyGwEmployInfo相关操作+++++++++ -->
+		<action path="/showPbSyGwEmployInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+			parameter="method"
+			name="pbSyGwEmployInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbSyGwEmployInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbsygwemployinfo_show.jsp"/>
+		</action>
+
+    <action path="/listPbSyGwEmployInfo"
+				scope="request"
+				name="pbSyGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbSyGwEmployInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbsygwemployinfo/ver_pbsygwemployinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbSyGwEmployInfoPage"
+				scope="request"
+				name="pbSyGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbSyGwEmployInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbsygwemployinfo/verpb_pbsygwemployinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbSyGwEmployInfo"
+				scope="request"
+				name="pbSyGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbSyGwEmployInfo信息</description>
+		 </action>
+		 
+		 <action path="/goInsertPbPbSyGwEmployInfo"
+				scope="request"
+				name="pbSyGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbSyGwEmployInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbsygwemployinfo/verpb_pbsygwemployinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbSyGwEmployInfo"
+				scope="request"
+				name="pbSyGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbSyGwEmployInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbSyGwEmployInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbSyGwEmployInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbYnGwEmployInfo相关操作+++++++++ -->
+		<action path="/showPbYnGwEmployInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+			parameter="method"
+			name="pbYnGwEmployInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbYnGwEmployInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbyngwemployinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbYnGwEmployInfo"
+				scope="request"
+				name="pbYnGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbYnGwEmployInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbyngwemployinfo/ver_pbyngwemployinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbYnGwEmployInfoPage"
+				scope="request"
+				name="pbYnGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbYnGwEmployInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbyngwemployinfo/verpb_pbyngwemployinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbYnGwEmployInfo"
+				scope="request"
+				name="pbYnGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbYnGwEmployInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbYnGwEmployInfoPage"
+				scope="request"
+				name="pbYnGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbYnGwEmployInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbyngwemployinfo/verpb_pbyngwemployinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbYnGwEmployInfo"
+				scope="request"
+				name="pbYnGwEmployInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbYnGwEmployInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbYnGwEmployInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbYnGwEmployInfo信息</description>
+		   </action>
+		   
+		   <!-- ++++++++合同信息相关操作+++++++++ -->
+		<action path="/showPbEngageContractInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+			parameter="method"
+			name="pbEngageContractInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbEngageContractInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbengagecontractinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbContractInfo"
+				scope="request"
+				name="pbEngageContractInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbEngageContractInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbengagecontractinfo/ver_pbengagecontractinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbEngageContractInfoPage"
+				scope="request"
+				name="pbEngageContractInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEngageContractInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbengagecontractinfo/verpb_pbengagecontractinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbEngageContractInfo"
+				scope="request"
+				name="pbEngageContractInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbEngageContractInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbEngageContractInfoPage"
+				scope="request"
+				name="pbEngageContractInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEngageContractInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbengagecontractinfo/verpb_pbengagecontractinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbEngageContractInfo"
+				scope="request"
+				name="pbEngageContractInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbEngageContractInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbEngageContractInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbEngageContractInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbEngageConHistInfo相关操作+++++++++ -->
+		<action path="/showPbEngageConHistInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+			parameter="method"
+			name="pbEngageConHistInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbEngageConHistInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbengageconhistinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbContractChangeInfo"
+				scope="request"
+				name="pbEngageConHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbEngageConHistInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbengageconhistinfo/ver_pbengageconhistinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbEngageConHistInfoPage"
+				scope="request"
+				name="pbEngageConHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEngageConHistInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbengageconhistinfo/verpb_pbengageconhistinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbEngageConHistInfo"
+				scope="request"
+				name="pbEngageConHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbEngageConHistInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbEngageConHistInfoPage"
+				scope="request"
+				name="pbEngageConHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEngageConHistInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbengageconhistinfo/verpb_pbengageconhistinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbEngageConHistInfo"
+				scope="request"
+				name="pbEngageConHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbEngageConHistInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbEngageConHistInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbEngageConHistInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbEducationLevelDegree相关操作+++++++++ -->
+		<!-- 学历学位信息 -->
+		<action path="/showPbEducationLevelDegree" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+			parameter="method"
+			name="pbEducationLevelDegreeForm" 
+			scope="request" 
+			validate="false">
+			<description>PbEducationLevelDegree详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbeducationleveldegree_show.jsp"/>
+		</action>
+
+        <action path="/listPbEducationLevelInfo"
+				scope="request"
+				name="pbEducationLevelDegreeForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbEducationLevelDegree信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbeducatioleveldegree/ver_pbeducationleveldegree_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbEducationLevelDegreePage"
+				scope="request"
+				name="pbEducationLevelDegreeForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEducationLevelDegree信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbeducatioleveldegree/verpb_pbeducationleveldegree_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbEducationLevelDegree"
+				scope="request"
+				name="pbEducationLevelDegreeForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbEducationLevelDegree信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbEducationLevelDegreePage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEducationLevelDegree信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbeducatioleveldegree/verpb_pbeducationleveldegree_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbEducationLevelDegree"
+				scope="request"
+				name="pbEducationLevelDegreeForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbEducationLevelDegree信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbEducationLevelDegree"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbEducationLevelDegree信息</description>
+		   </action>
+		   
+		   <action path="/uniqueCheckPbEducationLevelDegree"
+				scope="request"
+				name="pbEducationLevelDegreeForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				validate="false"
+				parameter="method">
+			<description>验证学历学位信息中的信息是否唯一</description>
+		  </action>
+		  
+		  <action path="/getEducationLevel"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>根据学历学位的选择获取对应的学历等级代码</description>
+		   </action>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbEducationTrainingInfo相关操作+++++++++ -->
+		<action path="/showPbEducationTrainingInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+			parameter="method"
+			name="pbEducationTrainingInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbEducationTrainingInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbeducationtraininginfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbEducationTraning"
+				scope="request"
+				name="pbEducationTrainingInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbEducationTrainingInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbeducationtraininginfo/ver_pbeducationtraininginfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbEducationTrainingInfoPage"
+				scope="request"
+				name="pbEducationTrainingInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEducationTrainingInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbeducationtraininginfo/verpb_pbeducationtraininginfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbEducationTrainingInfo"
+				scope="request"
+				name="pbEducationTrainingInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbEducationTrainingInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbEducationTrainingInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbEducationTrainingInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbeducationtraininginfo/verpb_pbeducationtraininginfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbEducationTrainingInfo"
+				scope="request"
+				name="pbEducationTrainingInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbEducationTrainingInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbEducationTrainingInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbEducationTrainingInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbQualificationsInfo相关操作+++++++++ -->
+		<action path="/showPbQualificationsInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+			parameter="method"
+			name="pbQualificationsInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbQualificationsInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbqualificationsinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbQualificationsInfo"
+				scope="request"
+				name="pbQualificationsInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbQualificationsInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbqualificationsinfo/ver_pbqualificationsinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbQualificationsInfoPage"
+				scope="request"
+				name="pbQualificationsInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbQualificationsInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbqualificationsinfo/verpb_pbqualificationsinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbQualificationsInfo"
+				scope="request"
+				name="pbQualificationsInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbQualificationsInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbQualificationsInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbQualificationsInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbqualificationsinfo/verpb_pbqualificationsinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbQualificationsInfo"
+				scope="request"
+				name="pbQualificationsInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbQualificationsInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbQualificationsInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbQualificationsInfo信息</description>
+		   </action>
+		   
+		   <action path="/uniqueCheckQualificationsInfo"
+				scope="request"
+				name="pbQualificationsInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				validate="false"
+				parameter="method">
+			<description>执业（职业）资格信息唯一校验</description>
+		  	</action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<!-- ++++++++PbProfTechQualifInfo相关操作+++++++++ -->
+		<action path="/showPbProfTechQualifInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+			parameter="method"
+			name="pbProfTechQualifInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbProfTechQualifInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbproftechqualifinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbProfTechQualifInfo"
+				scope="request"
+				name="pbProfTechQualifInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbProfTechQualifInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbprotechqualifinfo/ver_pbprotechqualifinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbProfTechQualifInfoPage"
+				scope="request"
+				name="pbProfTechQualifInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbProfTechQualifInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbprotechqualifinfo/verpb_pbproftechqualifinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbProfTechQualifInfo"
+				scope="request"
+				name="pbProfTechQualifInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbProfTechQualifInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbProfTechQualifInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbProfTechQualifInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbprotechqualifinfo/verpb_pbproftechqualifinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbProfTechQualifInfo"
+				scope="request"
+				name="pbProfTechQualifInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbProfTechQualifInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbProfTechQualifInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbProfTechQualifInfo信息</description>
+		   </action>
+		   
+		   <action path="/uniqueCheckProfTechQualifInfo"
+				scope="request"
+				name="pbProfTechQualifInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				validate="false"
+				parameter="method">
+			<description>专业技术资格信息唯一校验</description>
+		  </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbCertificateInfo相关操作+++++++++ -->
+		<action path="/showPbCertificateInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+			parameter="method"
+			name="pbCertificateInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbCertificateInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbcertificateinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbCertificateInfo"
+				scope="request"
+				name="pbCertificateInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbCertificateInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/Pbcertificateinfo/ver_Pbcertificateinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbCertificateInfoPage"
+				scope="request"
+				name="pbCertificateInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbCertificateInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/Pbcertificateinfo/verpb_pbcertificateinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbCertificateInfo"
+				scope="request"
+				name="pbCertificateInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbCertificateInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbCertificateInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbCertificateInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/Pbcertificateinfo/verpb_pbcertificateinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbCertificateInfo"
+				scope="request"
+				name="pbCertificateInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbCertificateInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbCertificateInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbCertificateInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbCertificateHistInfo相关操作+++++++++ -->
+		<action path="/showPbCertificateHistInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+			parameter="method"
+			name="pbCertificateHistInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbCertificateHistInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbcertificatehistinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbCertificateHistInfo"
+				scope="request"
+				name="pbCertificateHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbCertificateHistInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/Pbcertificatehistinfo/ver_Pbcertificatehistinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbCertificateHistInfoPage"
+				scope="request"
+				name="pbCertificateHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbCertificateHistInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/Pbcertificatehistinfo/verpb_pbcertificatehistinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbCertificateHistInfo"
+				scope="request"
+				name="pbCertificateHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbCertificateHistInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbCertificateHistInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbCertificateHistInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/Pbcertificatehistinfo/verpb_pbcertificatehistinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbCertificateHistInfo"
+				scope="request"
+				name="pbCertificateHistInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbCertificateHistInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbCertificateHistInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbCertificateHistInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbDeathInfo相关操作+++++++++ -->
+		<action path="/showPbDeathInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+			parameter="method"
+			name="pbDeathInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbDeathInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbdeathinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbDeathInfo"
+				scope="request"
+				name="pbDeathInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbDeathInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbdeathinfo/ver_pbdeathinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbDeathInfo"
+				scope="request"
+				name="pbDeathInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbDeathInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbdeathinfo/verpb_pbdeathinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbDeathInfo"
+				scope="request"
+				name="pbDeathInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbDeathInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbDeathInfo"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbDeathInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbdeathinfo/verpb_pbdeathinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbDeathInfo"
+				scope="request"
+				name="pbDeathInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbDeathInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbDeathInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbDeathInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<!-- ++++++++PbInjuryInfo相关操作+++++++++ -->
+		<action path="/showPbInjuryInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+			parameter="method"
+			name="pbInjuryInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbInjuryInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbinjuryinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbInjuryInfo"
+				scope="request"
+				name="pbInjuryInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbInjuryInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbinjuryinfo/ver_pbinjuryinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbInjuryInfoPage"
+				scope="request"
+				name="pbInjuryInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbInjuryInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbinjuryinfo/verpb_pbinjuryinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbInjuryInfo"
+				scope="request"
+				name="pbInjuryInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbInjuryInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbInjuryInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbInjuryInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbinjuryinfo/verpb_pbinjuryinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbInjuryInfo"
+				scope="request"
+				name="pbInjuryInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbInjuryInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbInjuryInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbInjuryInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbPoliticInfo相关操作+++++++++ -->
+		<action path="/showPbPoliticInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+			parameter="method"
+			name="pbPoliticInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbPoliticInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbpoliticinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbPoliticInfo"
+				scope="request"
+				name="pbPoliticInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbPoliticInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpoliticinfo/ver_pbpoliticinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbPoliticInfoPage"
+				scope="request"
+				name="pbPoliticInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbPoliticInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpoliticinfo/verpb_pbpoliticinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbPoliticInfo"
+				scope="request"
+				name="pbPoliticInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbPoliticInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbPoliticInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbPoliticInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpoliticinfo/verpb_pbpoliticinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbPoliticInfo"
+				scope="request"
+				name="pbPoliticInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbPoliticInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbPoliticInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbPoliticInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbPunishmentInfo相关操作+++++++++ -->
+		<action path="/showPbPunishmentInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+			parameter="method"
+			name="pbPunishmentInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbPunishmentInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbpunishmentinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbPunishmentInfo"
+				scope="request"
+				name="pbPunishmentInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbPunishmentInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpunishmentinfo/ver_pbpunishmentinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbPunishmentInfoPage"
+				scope="request"
+				name="pbPunishmentInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbPunishmentInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpunishmentinfo/verpb_pbpunishmentinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbPunishmentInfo"
+				scope="request"
+				name="pbPunishmentInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbPunishmentInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbPunishmentInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbPunishmentInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpunishmentinfo/verpb_pbpunishmentinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbPunishmentInfo"
+				scope="request"
+				name="pbPunishmentInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbPunishmentInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbPunishmentInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbPunishmentInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbResumeInfo相关操作+++++++++ -->
+		<action path="/showPbResumeInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+			parameter="method"
+			name="pbResumeInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbResumeInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbresumeinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbResumeInfo"
+				scope="request"
+				name="pbResumeInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbResumeInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbresumeinfo/ver_pbresumeinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbResumeInfoPage"
+				scope="request"
+				name="pbResumeInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbResumeInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbresumeinfo/verpb_pbresumeinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbResumeInfo"
+				scope="request"
+				name="pbResumeInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbResumeInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbResumeInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbResumeInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbresumeinfo/verpb_pbresumeinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbResumeInfo"
+				scope="request"
+				name="pbResumeInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbResumeInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbResumeInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbResumeInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbRetrieInfo相关操作+++++++++ -->
+		<action path="/showPbRetrieInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+			parameter="method"
+			name="pbRetrieInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbRetrieInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbretrieinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbRetrieInfo"
+				scope="request"
+				name="pbRetrieInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbRetrieInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbretrieinfo/ver_pbretrieinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbRetrieInfoPage"
+				scope="request"
+				name="pbRetrieInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbRetrieInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbretrieinfo/verpb_pbretrieinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbRetrieInfo"
+				scope="request"
+				name="pbRetrieInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbRetrieInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbRetrieInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbRetrieInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbretrieinfo/verpb_pbretrieinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbRetrieInfo"
+				scope="request"
+				name="pbRetrieInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbRetrieInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbRetrieInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbRetrieInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbReviewInfo相关操作+++++++++ -->
+		<action path="/showPbReviewInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+			parameter="method"
+			name="pbReviewInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbReviewInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbreviewinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbReviewInfo"
+				scope="request"
+				name="pbReviewInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbReviewInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbreviewinfo/ver_pbreviewinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbReviewInfoPage"
+				scope="request"
+				name="pbReviewInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbReviewInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbreviewinfo/verpb_pbreviewinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbReviewInfo"
+				scope="request"
+	 			name="pbReviewInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbReviewInfo信息</description>
+			<forward name="success" path="/ListPbReviewInfo"/>
+		 </action>
+		 
+		 <action path="/goToCreatePbReviewInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+				name="pbReviewInfoForm"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbReviewInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbreviewinfo/verpb_pbreviewinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbReviewInfo"
+				scope="request"
+				name="pbReviewInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbReviewInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbReviewInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbReviewInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbRewardInfo相关操作+++++++++ -->
+		<action path="/showPbRewardInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+			parameter="method"
+			name="pbRewardInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>PbRewardInfo详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbrewardinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbRewardInfo"
+				scope="request"
+				name="pbRewardInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbRewardInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbrewardinfo/ver_pbrewardinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbRewardInfoPage"
+				scope="request"
+				name="pbRewardInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbRewardInfo信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbrewardinfo/verpb_pbrewardinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbRewardInfo"
+				scope="request"
+				name="pbRewardInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbRewardInfo信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbRewardInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbRewardInfo信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbrewardinfo/verpb_pbrewardinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbRewardInfo"
+				scope="request"
+				name="pbRewardInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbRewardInfo信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbRewardInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbRewardInfo信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++PbSpeciaAuth相关操作+++++++++ -->
+		<action path="/showPbSpeciaAuth" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+			parameter="method"
+			name="pbSpeciaAuthForm" 
+			scope="request" 
+			validate="false">
+			<description>PbSpeciaAuth详细信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbspeciaauth_show.jsp"/>
+		</action>
+
+        <action path="/listPbSpeciaAuthInfo"
+				scope="request"
+				name="pbSpeciaAuthForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbSpeciaAuth信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbspeciaauthinfo/ver_pbspeciaauthinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbSpeciaAuthPage"
+				scope="request"
+				name="pbSpeciaAuthForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到PbSpeciaAuth信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbspeciaauthinfo/verpb_pbspeciaauth_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbSpeciaAuth"
+				scope="request"
+				name="pbSpeciaAuthForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+				validate="false"
+				parameter="method">
+			<description>更新PbSpeciaAuth信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbSpeciaAuthPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+				validate="false"
+				name="pbSpeciaAuthForm"
+				parameter="method">
+			<description>跳转到PbSpeciaAuth信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbspeciaauthinfo/verpb_pbspeciaauth_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbSpeciaAuth"
+				scope="request"
+				name="pbSpeciaAuthForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+				validate="false"
+				parameter="method">
+			<description>新增PbSpeciaAuth信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbSpeciaAuth"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除PbSpeciaAuth信息</description>
+		   </action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- ++++++++院内中层职务任职信息相关操作+++++++++ -->
+		<action path="/showPbDutyInfo" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+			parameter="method"
+			name="pbDutyInfoForm" 
+			scope="request" 
+			validate="false">
+			<description>院内中层职务任职信息查看</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbdutyinfo_show.jsp"/>
+		</action>
+
+        <action path="/listPbDutyInfo"
+				scope="request"
+				name="pbDutyInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示院内中层职务任职信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbdutyinfo/ver_pbdutyinfo_list.jsp"/>
+		</action>
+	
+		<action path="/goToUpdatePbDutyInfoPage"
+				scope="request"
+				name="pbDutyInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到院内中层职务任职信息更新页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbdutyinfo/ver_pbdutyinfo_update.jsp"/>
+		 </action>
+		 
+		 <action path="/updatePbDutyInfo"
+				scope="request"
+				name="pbDutyInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新院内中层职务任职信息</description>
+		 </action>
+		 
+		 <action path="/goToCreatePbDutyInfoPage"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到院内中层职务任职信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbdutyinfo/ver_pbdutyinfo_create.jsp"/>
+		  </action>
+		  
+		 <action path="/createPbDutyInfo"
+				scope="request"
+				name="pbDutyInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增院内中层职务任职信息</description>
+		  </action>		  
+		  
+		  <action path="/deletePbDutyInfo"
+				  scope="request"
+			      type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>删除院内中层职务任职信息</description>
+		   </action>
+		
+			<action path="/uniqueCheckDutyInfo"
+				scope="request"
+				name="pbDutyInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+				validate="false"
+				parameter="method">
+				<description>主要职务唯一校验</description>
+		  	</action>
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<!--人员进入信息begin -->
+		<action path="/listPbPersonIn"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonInForm"
+			input="/hrinfo/ver/unit/comm/pbpersonin/pbPersonInList.jsp"
+			validate="false">
+			<description>查看人员进入信息</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpersonin/pbPersonInList.jsp"/>
+		</action>
+		<action path="/showPbPersonIn" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method"
+			name="pbPersonInForm" 
+			scope="request" 
+			validate="false">
+			<description>查看人员进入信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_personin_show.jsp"/>
+		</action>
+		<action path="/goToInsertPbPersonIn"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonInForm"
+			validate="false"
+			input="/hrinfo/ver/unit/comm/pbpersonin/pbPersonCreate.jsp">
+			<description>跳转到人员进入信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpersonin/pbPersonInCreate.jsp"/>
+		</action>
+		<action path="/insertPbPbPersonIn" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonInForm"
+			validate="true">
+			<description>新增人员进入信息</description>
+		</action>
+		<action path="/goToUpdatePbPersonIn"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method" 
+			scope="request" 
+			name="pbPersonInForm"
+			input="/hrinfo/ver/unit/comm/pbpersonin/pbPersonInUpdate.jsp"
+			validate="false">
+			<description>跳转到人员进入信息修改页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpersonin/pbPersonInUpdate.jsp"/>
+		</action>
+		<action path="/updatePbPersonIn"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method"
+			scope="request"
+			name="pbPersonInForm"
+			validate="true">
+			<description>修改人员进入信息</description>
+		</action>
+		<action path="/deletePbPersonIn"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method" 
+			scope="request" 
+			name="pbPersonInForm"
+			validate="false">
+			<description>删除人员进入信息</description>
+		</action>
+		<!--人员进入信息end -->
+		<!--人员离开信息begin -->
+		<action path="/listPbPersonOut"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonOutForm"
+			input="/hrinfo/ver/unit/comm//pbpersonout/pbPersonOutList.jsp"
+			validate="false">
+			<description>查看人员离开信息</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpersonout/pbPersonOutList.jsp"/>
+		</action>
+		<action path="/showPbPersonOut" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method"
+			name="pbPersonOutForm" 
+			scope="request" 
+			validate="false">
+			<description>查看人员进入信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_personout_show.jsp"/>
+		</action>
+		<action path="/goToInsertPbPersonOut"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonOutForm"
+			validate="false"
+			input="/hrinfo/ver/unit/comm/pbpersonout/pbPersonCreate.jsp">
+			<description>跳转到人员离开信息新增页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpersonout/pbPersonOutCreate.jsp"/>
+		</action>
+		<action path="/insertPbPbPersonOut" 
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonOutForm"
+			validate="true">
+			<description>新增人员离开信息</description>
+		</action>
+		<action path="/goToUpdatePbPersonOut"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method" 
+			scope="request" 
+			name="pbPersonOutForm"
+			input="/hrinfo/ver/unit/comm/pbpersonout/pbPersonOutUpdate.jsp"
+			validate="false">
+			<description>跳转到人员离开信息修改页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbpersonout/pbPersonOutUpdate.jsp"/>
+		</action>
+		<action path="/updatePbPersonOut"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method"
+			scope="request"
+			name="pbPersonOutForm"
+			validate="true">
+			<description>修改人员离开信息</description>
+		</action>
+		<action path="/deletePbPersonOut"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method" 
+			scope="request" 
+			name="pbPersonOutForm"
+			validate="false">
+			<description>删除人员离开信息</description>
+		</action>
+		<!--人员离开信息end -->
+		<action path="/listPbQualifications"
+				scope="request"
+				name="pbQualificationsInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示PbQualificationsInfo信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbqualificationsinfo/personupdate_pbqualificationsinfo_list.jsp"/>
+		</action>
+		<action path="/listPbProfTechQualif"
+				scope="request"
+				name="pbQualificationsInfoForm"
+				type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+				validate="false"
+				parameter="method">
+			<description>展示专业资格信息到主页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/pbprotechqualifinfo/personupdate_pbprotechqualifinfo_list.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

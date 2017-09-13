@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+    </form-beans>
+	<action-mappings>
+		<!-- ****************************************事项环节树****************************************** -->
+		<action path="/findOrg"
+				scope="request"
+				type="com.yh.hr.component.orgtree.action.JhcOrgTreeAction"
+				parameter="method">
+			<description>跳转到机构树</description>
+			<forward name="success" path="/hrcomponent/unit/orgTreeLeft.jsp"/>
+		</action>
+		<action path="/goViewUnitInformation"
+				scope="request"
+				type="com.yh.hr.component.orgtree.action.JhcOrgTreeAction"
+				parameter="method">
+			<description>跳转到机构树</description>
+			<forward name="success" path="/hrcomponent/unit/orgTreeLeft.jsp"/>
+		</action>
+		<action path="/goToUnitRight"
+				scope="request"
+				type="com.yh.hr.component.unittree.action.JhcUnitTreeAction"
+				parameter="method">
+			<description>跳转到右边列表</description>
+			<forward name="success1" path="/hrcomponent/unit/unitRight.jsp"/>
+			<forward name="success2" path="/hrinfo/unit/unitinfo_tabs.jsp"/>
+		</action>
+		<action path="/goToUnitRightStatus"
+				scope="request"
+				type="com.yh.hr.component.unittree.action.JhcUnitTreeAction"
+				parameter="method">
+			<description>跳转到右边列表</description>
+			<forward name="success1" path="/hrcomponent/unit/unitRight_status.jsp"/>
+			<forward name="success2" path="/hrinfo/unit/unitinfo_tabs.jsp"/>
+		</action>
+		<action path="/goUnitRight"
+				scope="request"
+				type="TaskWorkProcessAction"
+				parameter="method" >
+			<description>查看单位信息</description>
+			<forward name="success" path="/hrcomponent/unit/right_status.jsp" />
+		</action>
+		
+		<!--单位信息维护-->
+		<action path="/goUpdateUnitInformation"
+				scope="request"
+				type="com.yh.hr.component.unittree.action.JhcUnitTreeAction"
+				parameter="method">
+			<description>跳转到机构树</description>
+			<forward name="success" path="/hrcomponent/unit/unitUpdateLeft.jsp"/>
+		</action>
+		<action path="/goUpdateUnitRight"
+				scope="request"
+				type="TaskWorkProcessAction"
+				parameter="method" >
+			<description>查看单位信息</description>
+			<forward name="success" path="/hrcomponent/unit/updateRight.jsp" />
+		</action>
+		<action path="/goToAdminUnitRight"
+				scope="request"
+				type="com.yh.hr.component.unittree.action.JhcUnitTreeAction"
+				parameter="method">
+			<description>跳转到右边列表</description>
+			<forward name="success1" path="/hrcomponent/unit/unitRight.jsp"/>
+			<forward name="success2" path="/hrinfo/unit/unitinfo_tabs.jsp"/>
+		</action>
+		<action path="/goToUpdateUnitRight"
+				scope="request"
+				type="com.yh.hr.component.unittree.action.JhcUnitTreeAction"
+				parameter="method">
+			<description>跳转到右边列表</description>
+			<forward name="success1" path="/hrcomponent/unit/unitRight.jsp"/>
+			<forward name="success2" path="/hrinfo/unit/unitinfo_update_tabs.jsp"/>
+		</action>
+		<!--单位信息维护-->
+		
+		<action path="/loadRightUnitNav"
+				scope="request"
+				type="com.yh.hr.component.unittree.action.JhcUnitTreeAction"
+				parameter="method">
+			<description>跳转到事项环节树</description>
+			<forward name="success" path="/hrcomponent/mtree/RightUnitNav.jsp"/>
+		</action>
+		
+		<action path="/findUnitNameByUnitOid"
+				scope="request"
+				type="com.yh.hr.component.unittree.action.JhcUnitTreeAction"
+				parameter="method">
+			<description>根据单位OID查询单位信息</description>
+		</action>
+	</action-mappings>
+</struts-config>

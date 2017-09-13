@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <title>模态框demo</title>
+    <link rel="stylesheet" href="..\..\..\css\common\reset.css">
+    <link rel="stylesheet" href="..\..\..\css\common\base.css">
+    <link rel="stylesheet" href="..\..\..\css\common\layout.css">
+    <link rel="stylesheet" href="..\..\..\css\components\left_nav.css">
+    <link rel="stylesheet" href="..\..\..\css\components\handle_btn.css">
+    <link rel="stylesheet" href="..\..\..\css\components\modal_dialog.css">
+    <link rel="stylesheet" href="..\..\..\css\components\info_check.css">
+    <link rel="stylesheet" href="..\..\..\css\components\file_import.css">
+    <link rel="stylesheet" href="..\..\..\css\components\search_result_table.css">
+    <link rel="stylesheet" href="..\..\..\css\cydefinied.css">
+
+    <style type="text/css">
+        .modal-dialog-demo a{
+            display: inline-block;
+            padding: 8px 10px;
+            background-color: #1cc6a3;
+            color: #ffffff;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+<body class="main-body">
+
+    <div class="modal-dialog-demo">
+        <a href="big_dialog_layout.html" class="check_transaction_popdown">大模态框布局解释</a>
+        <a href="dialog_layout.html" class="check_transaction_popdown">普通模态框布局解释</a>
+        <a href="small_dialog_layout.html" class="check_transaction_popdown">确认提示模态框(小模态框)</a>
+        <!--<a href="oneColumn_dialog.html" class="check_transaction_popdown">一栏信息输入框(左右)布局</a>-->
+        <a href="twoColumn_dialog.html" class="check_transaction_popdown">两栏信息输入框(上下)布局</a>
+        <a href="threeColumn_dialog.html" class="check_transaction_popdown">三栏信息输入框(上下)布局</a>
+        <a href="threeColumn_img_dialog.html" class="check_transaction_popdown">基本信息修改布局(有图片有备注输入信息去区域)</a>
+        <a href="md_business_maintenance.html" class="check_transaction_popdown">业务维护新增(支持查询、显示、输入信息等的样式)</a>
+        <a href="file_upload_dialog.html" class="check_transaction_popdown">文件上传</a>
+        <a href="declare_business_dialog.html" class="check_transaction_popdown">申报业务</a>
+        <a href="input_todoidea_dialog.html" class="check_transaction_popdown">录入待办意见</a>
+        <a href="person-dictionaryMap.html" class="check_transaction_popdown">字典映射</a>
+    </div>
+
+<script src="../../../js/jquery-1.12.4.js"></script>
+<script src="../../../js/jquery.popdown.js"></script>
+<script>
+    $(function() {
+        //点击各个按钮弹出模态框事件
+        $(document).ready(function () {
+            $('.check_transaction_popdown').popdown();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- 导入信息  -->
+	  <bean id="importPersonFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.ImportPersonFacade">
+	        	<property name="importPersonService" ref="importPersonService"/>
+			</bean>
+		</property>
+    </bean>
+	 
+    <bean id="importPersonService" class="com.yh.hr.info.dataimport.person.service.impl.ImportPersonServiceImpl" >
+       	<property name="pbPersonInfoService" ref="pbPersonInfoService"/>
+       	<property name="pbEducationLevelDegreeService" ref="pbEducationLevelDegreeService"/>
+       	<property name="pbCertificateInfoService" ref="pbCertificateInfoService"/>
+       	<property name="pbPoliticInfoService" ref="pbPoliticInfoService"/>
+       	<property name="pbEngageContractInfoService" ref="pbEngageContractInfoService"/>
+       	<property name="pbEngageConHistInfoService" ref="pbEngageConHistInfoService"/>
+       	<property name="pbProfTechQualifInfoService" ref="pbProfTechQualifInfoService"/>
+       	<property name="pbQualificationsInfoService" ref="pbQualificationsInfoService"/>
+       	<property name="pbPersonInService" ref="pbPersonInService"/>
+       	<property name="pbPersonOutService" ref="pbPersonOutService"/>
+       	<property name="pbRetrieInfoService" ref="pbRetrieInfoService"/>
+       	<property name="pbDeathInfoService" ref="pbDeathInfoService"/>
+       	<property name="pbYnGwEmployInfoService" ref="pbYnGwEmployInfoService"/>
+    </bean>
+
+
+	<!-- 导入信息  -->
+	<bean id="imCollectTemplateFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.ImCollectTemplateFacade">
+	        	<property name="imCollectTemplateService" ref="imCollectTemplateService"/>
+			</bean>
+		</property>
+    </bean>
+    <!-- 批次信息  -->
+	<bean id="imImportBatchFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.ImImportBatchFacade">
+	        	<property name="imImportBatchService" ref="imImportBatchService"/>
+			</bean>
+		</property>
+    </bean>
+    <!-- 导入异常日志处理-->
+	<bean id="checkUnusualHandleFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.CheckUnusualHandleFacade">
+	        	<property name="checkUnusualHandleService" ref="checkUnusualHandleService"/>
+	        	<property name="imDataUnusualLogService" ref="imDataUnusualLogService"/>
+			</bean>
+		</property>
+    </bean> 
+    <!-- 批次导入流程状态推动-->
+	<bean id="checkBatchHandleFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.CheckBatchHandleFacade">
+	        	<property name="checkBatchHandleService" ref="checkBatchHandleService"/>
+			</bean>
+		</property>
+    </bean>
+    <!-- 导入前数据检查-->
+	<bean id="checkManageFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.CheckManageFacade">
+			</bean>
+		</property>
+    </bean>
+    
+    <!-- 插入数据(人员表，校核表)-->
+	<bean id="tableDataOperateFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.TableDataOperateFacade">
+	        	<property name="tableDataInsertService" ref="tableDataInsertService"/>
+	        	<property name="tableDataEmptyService" ref="tableDataEmptyService"/>
+			</bean>
+		</property>
+    </bean>
+    
+    <!-- 导入人员信息入库 -->
+    <bean id="importPersonTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportPersonTransferService" singleton="false">
+		<property name="transfers">
+			<list>
+				<!-- 院内岗位信息入库  -->
+				<ref bean="importYngwEmployTransferService"/>
+				<!-- 合同信息入库  -->
+				<ref bean="importEngageContractTransferService"/>
+				<!-- 学历学位信息入库  -->
+				<ref bean="importEducationLevelDegreeTransferService"/>
+				<!-- 专业技术资格信息入库  -->
+				<ref bean="importProfTechQualifInfoTransferService"/>
+				<!-- 职业资格信息入库  -->
+				<ref bean="importQualificationsInfoTransferService"/>
+				<!-- 执业注册信息入库  -->
+				<ref bean="importCertificateInfoTransferService"/>
+				<!-- 政治面貌信息入库  -->
+				<ref bean="importPoliticInfoTransferService"/>
+				<!-- 人员进入信息入库  -->
+				<ref bean="importPersonInTransferService"/>
+				<!-- 人员离开信息入库  -->
+				<ref bean="importPersonOutTransferService"/>
+				<!-- 离退休信息入库  -->
+				<ref bean="importRetrieInfoTransferService"/>
+				<!-- 死亡信息入库  -->
+				<ref bean="importDeathInfoTransferService"/>
+			</list>
+		</property>
+	</bean>
+	<!-- 院内岗位信息入库 -->
+	<bean id="importYngwEmployTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportYngwEmployTransferService" />
+	<!-- 合同信息入库 -->
+	<bean id="importEngageContractTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportEngageContractTransferService" />
+	<!-- 学历学位信息入库 -->
+	<bean id="importEducationLevelDegreeTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportEducationLevelDegreeTransferService" />
+	<!-- 专业技术资格信息入库 -->
+	<bean id="importProfTechQualifInfoTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportProfTechQualifInfoTransferService" />
+	<!-- 职业资格信息入库 -->
+	<bean id="importQualificationsInfoTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportQualificationsInfoTransferService" />
+	<!-- 执业注册信息入库 -->
+	<bean id="importCertificateInfoTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportCertificateInfoTransferService" />
+	<!-- 政治面貌信息入库 -->
+	<bean id="importPoliticInfoTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportPoliticInfoTransferService" />
+	<!-- 人员进入信息入库 -->
+	<bean id="importPersonInTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportPersonInTransferService" />
+	<!-- 人员离开信息入库 -->
+	<bean id="importPersonOutTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportPersonOutTransferService" />
+	<!-- 离退休信息入库 -->
+	<bean id="importRetrieInfoTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportRetrieInfoTransferService" />
+	<!-- 死亡信息入库 -->
+	<bean id="importDeathInfoTransferService" class="com.yh.hr.info.dataimport.person.service.transfer.ImportDeathInfoTransferService" />
+</beans>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 查询业务办理过程service -->
+	<bean id="taskWorkProcessFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.bt.facade.TaskWorkProcessFacade">
+				<property name="btTaskService" ref="btTaskService"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

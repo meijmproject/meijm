@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<struts-config>
+	<form-beans>
+		<form-bean name="gwYnInfoForm" type="com.yh.hr.component.yngw.web.form.GwYnInfoForm" />
+    </form-beans>
+    
+    <action-mappings>
+    	<!-- ++++++++院内岗位管理相关操作+++++++++ -->
+    	<action path="/goYngwSetList"
+				scope="request"
+				name="gwYnInfoForm"
+				type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				parameter="method">
+				<description>院内岗位管理工作台</description>
+				<forward name="success"
+				path="/hrcomponent/yngw/yngw_worktop.jsp" />
+		</action>
+		
+		<action path="/listGwYnInfo"
+				scope="request"
+				name="gwYnInfoForm"
+				type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				parameter="method">
+			<description>展示院内岗位信息到主页面</description>
+		</action>
+		<action path="/listPositionName"
+				  scope="request"
+			      type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				  validate="false"
+				  parameter="method">
+		   		<description>获取岗位名称信息</description>
+		   </action>
+		<action path="/goToCreateGwYnInfoPage"
+				scope="request"
+				name="gwYnInfoForm"
+				type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				parameter="method">
+			<description>跳转到院内岗位信息新增页面</description>
+			<forward name="success" path="/hrcomponent/yngw/yngw_info_create.jsp"/>
+		</action>
+		
+		<action path="/createGwYnInfo"
+				scope="request"
+				name="gwYnInfoForm"
+				type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				validate="false"
+				parameter="method">
+			<description>新增院内岗位信息</description>
+		</action>
+		
+		<action path="/deleteGwYnInfo"
+				scope="request"
+		      	type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+			  	validate="false"
+			  	parameter="method">
+	   		<description>删除院内岗位信息</description>
+		</action>
+		
+		<action path="/getSelectItems"
+				scope="request"
+		      	type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+			  	parameter="method">
+	   		<description>院内岗位信息-获取需要的选项</description>
+		</action>
+		
+		<action path="/uniqueCheckYnGwInfo"
+				scope="request"
+		      	type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+			  	parameter="method">
+	   		<description>院内岗位信息-唯一验证</description>
+		</action>
+		
+		<action path="/goGwYnInfoUpdatePage"
+				scope="request"
+				name="gwYnInfoForm"
+				type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				validate="false"
+				parameter="method">
+			<description>跳转到院内岗位信息更新页面</description>
+			<forward name="success" path="/hrcomponent/yngw/yngw_info_update.jsp"/>
+		</action>
+		
+		<action path="/updateGwYnInfo"
+				scope="request"
+				name="gwYnInfoForm"
+				type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				validate="false"
+				parameter="method">
+			<description>更新院内岗位信息</description>
+		 </action>
+		 
+		<action path="/showGwYnInfoPage"
+				scope="request" 
+				name="gwYnInfoForm" 
+				type="com.yh.hr.component.yngw.web.action.GwYnInfoAction"
+				parameter="method"
+				validate="false">
+			<description>院内岗位详细信息查看</description>
+			<forward name="success" path="/hrcomponent/yngw/yngw_info_show.jsp"/>
+		 </action>
+    
+    </action-mappings>
+</struts-config>

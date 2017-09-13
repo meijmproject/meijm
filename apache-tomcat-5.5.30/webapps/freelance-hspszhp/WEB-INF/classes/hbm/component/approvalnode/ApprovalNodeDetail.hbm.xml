@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.yh.component.approvalnode.bo">
+    <class name="com.yh.component.approvalnode.bo.ApprovalNodeDetail" table="yha_approval_node_detail">
+        <id name="approvalNodeDetailOid" column="APPROVAL_NODE_DETAIL_OID" type="java.lang.Long">
+            <generator class="identity"/>
+        </id>
+
+        <property name="nodeCode" type="java.lang.String">
+            <column name="NODE_CODE">
+                <comment>审批环节CODE</comment>
+            </column>
+        </property>
+        <property name="nodeName" type="java.lang.String">
+            <column name="NODE_NAME">
+                <comment>审批环节名称</comment>
+            </column>
+        </property>
+        <property name="nodeNameEN" type="java.lang.String">
+            <column name="NODE_NAME_EN">
+                <comment>审批环节英文名称</comment>
+            </column>
+        </property>
+        <property name="displayOrder" type="java.lang.Double">
+            <column name="DISPLAY_ORDER">
+                <comment>显示序号</comment>
+            </column>
+        </property>
+        <property name="isActive" type="java.lang.String">
+            <column name="IS_ACTIVE">
+                <comment>是否激活</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="approvalNodeDefinitionOid" type="java.lang.Long">
+            <column name="APPROVAL_NODE_DEFINITION_OID">
+                <comment>审批环节定义OID</comment>
+            </column>
+        </property>
+        <property name="createdByCode" type="java.lang.String">
+            <column name="CREATED_BY_CODE">
+                <comment>创建人CODE</comment>
+            </column>
+        </property>
+        <property name="createdByName" type="java.lang.String">
+            <column name="CREATED_BY_NAME">
+                <comment>创建人</comment>
+            </column>
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE">
+                <comment>创建日期</comment>
+            </column>
+        </property>
+        <property name="lastModifierCode" type="java.lang.String">
+            <column name="LAST_MODIFIER_CODE">
+                <comment>修改人CODE</comment>
+            </column>
+        </property>
+        <property name="lastModifierName" type="java.lang.String">
+            <column name="LAST_MODIFIER_NAME">
+                <comment>修改人姓名</comment>
+            </column>
+        </property>
+        <property name="lastModifyDate" type="java.util.Date">
+            <column name="LAST_MODIFY_DATE">
+                <comment>修改日期</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

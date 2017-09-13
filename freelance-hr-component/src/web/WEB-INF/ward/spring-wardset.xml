@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="wardSetFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.component.wardset.facade.WardSetFacade">
+	            <property name="wardSetService">
+						<ref bean="wardSetService" />
+				</property>
+				<property name="utOrgService">
+						<ref bean="utOrgService" />
+				</property>
+				<property name="utUnitService">
+						<ref bean="utUnitService" />
+				</property>
+			</bean>
+        </property>
+    </bean>
+    <bean id="wardSetService" class="com.yh.hr.component.wardset.service.impl.WardSetServiceImpl"/>
+</beans>

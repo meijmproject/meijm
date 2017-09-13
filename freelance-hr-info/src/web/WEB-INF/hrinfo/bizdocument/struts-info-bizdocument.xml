@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+	</form-beans>
+	<action-mappings>
+
+	    <action path="/goBizDocumentManage"
+			type="com.yh.hr.info.bizdocument.web.action.BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>跳转到文件上传页面</description>
+			<forward name="success" path="/hrinfo/bizdocument/bizdocument_workbench.jsp" />
+		</action>
+		<action path="/listBizDocument"
+			type="com.yh.hr.info.bizdocument.web.action.BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>查询文件列表</description>
+		</action>
+		<action path="/goCreateBizDocument"
+			type="com.yh.hr.info.bizdocument.web.action.BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>跳转到文件上传页面</description>
+			<forward name="success" path="/hrinfo/bizdocument/bizdocument_list.jsp" />
+		</action>
+		<action path="/createBizDocument"
+			type="com.yh.hr.info.bizdocument.web.action.BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>上传文件</description>
+		</action>
+		<!-- <action path="/goUploadPhoto"
+			type="BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>跳转到文件上传页面</description>
+			<forward name="success" path="/hrinfo/uploadphoto/person_upload.jsp" />
+		</action>
+		<action path="/uploadPhoto"
+			type="BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>上传文件</description>
+		</action>
+		<action path="/listUploadPhoto"
+			type="BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>查询文件列表</description>
+		</action>
+		
+		<action path="/deleteUploadPhoto"
+			type="BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>删除文件</description>
+		</action>
+		
+		<action path="/downloadUploadPhoto"
+			type="BizDocumentAction"
+			scope="request"
+			parameter="method">
+			<description>下载文件</description>
+		</action>
+		 -->
+	</action-mappings>
+</struts-config>

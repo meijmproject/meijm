@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+    </form-beans>
+	<action-mappings>
+		<action path="/listOrg"
+				scope="request"
+				type="com.yh.hr.component.orgtree.action.JhcOrgTreeAction"
+				parameter="method">
+			<description>内设机构信息list</description>
+		</action>
+		<action path="/getChildOrg"
+				scope="request"
+				type="com.yh.hr.component.orgtree.action.JhcOrgTreeAction"
+				parameter="method">
+			<description>查询下设内设机构信息</description>
+		</action>
+		<action path="/findOrgInfoUp"
+				scope="request"
+				type="com.yh.hr.component.orgtree.action.JhcOrgTreeAction"
+				parameter="method">
+			<description>根据下设机构Oid查询上级机构信息</description>
+		</action>
+	</action-mappings>
+</struts-config>

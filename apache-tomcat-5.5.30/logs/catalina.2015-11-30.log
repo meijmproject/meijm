@@ -1,0 +1,28 @@
+2015-11-30 16:00:00 org.apache.catalina.core.AprLifecycleListener init
+信息: Loaded APR based Apache Tomcat Native library 1.1.20.
+2015-11-30 16:00:00 org.apache.catalina.core.AprLifecycleListener init
+信息: APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2015-11-30 16:00:01 org.apache.coyote.http11.Http11AprProtocol init
+信息: Initializing Coyote HTTP/1.1 on http-9000
+2015-11-30 16:00:01 org.apache.coyote.ajp.AjpAprProtocol init
+信息: Initializing Coyote AJP/1.3 on ajp-8045
+2015-11-30 16:00:01 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 889 ms
+2015-11-30 16:00:01 org.apache.catalina.core.StandardService start
+信息: Starting service Catalina
+2015-11-30 16:00:01 org.apache.catalina.core.StandardEngine start
+信息: Starting Servlet Engine: Apache Tomcat/5.5.30
+2015-11-30 16:00:01 org.apache.catalina.core.StandardHost start
+信息: XML validation disabled
+2015-11-30 16:00:03 org.apache.catalina.core.StandardContext start
+严重: Error listenerStart
+2015-11-30 16:00:03 org.apache.catalina.core.StandardContext start
+严重: Context [/jade] startup failed due to previous errors
+2015-11-30 16:00:03 org.apache.coyote.http11.Http11AprProtocol start
+信息: Starting Coyote HTTP/1.1 on http-9000
+2015-11-30 16:00:03 org.apache.coyote.ajp.AjpAprProtocol start
+信息: Starting Coyote AJP/1.3 on ajp-8045
+2015-11-30 16:00:03 org.apache.catalina.storeconfig.StoreLoader load
+信息: Find registry server-registry.xml at classpath resource
+2015-11-30 16:00:03 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1950 ms

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>工資管理界面</title>
+    <link media="screen" rel="stylesheet" href="../../css/index.css"/>
+    <link href="../../css/base.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../../css/messageCheck.css"/>
+    <link rel="stylesheet" href="../../css/salary/salary_manage.css">
+
+    <script src="../../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../../js/uijs/index.js"></script>
+    <script src="../../js/uijs/salary/salary_manage.js"></script>
+
+</head>
+<body>
+<!--头部导航开始-->
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a href="#">系统管理</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <ul  class="rt_arrow_down">
+                            <li>
+                                <a href=""><img src="../../img/index/change_password.png"  class="change_password" title="修改密码" alt=""/></a>
+                            </li>
+                            <li> <a href=""><img src="../../img/index/help_center.png"  class="change_password"  title="帮助中心" alt=""/></a></li>
+                            <h3 class="text_line"></h3><!--清除浮动-->
+                        </ul>
+                    </div>
+                    <div class="arrow_down">
+                        <img src="../../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                        <div class="hide_content">
+                            <ul>
+                                <li>
+                                    <a href="">帮助中心</a>
+                                </li>
+                                <li>
+                                    <a href="">修改密码</a>
+                                </li>
+                                <li>
+                                    <a href="">xxxxxx</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<!--头导航结束-->
+
+<!--页面定位栏开始-->
+<div class="sitemap salarymanage-sitemap">
+    <ul>
+        <li>当前位置：</li>
+        <li><a href="#">业务办理 <span class="spanColor"> > </span></a></li>
+        <li>工资管理</span></li>
+    </ul>
+</div>
+<!--定位结束-->
+
+<!--已选搜索条件栏 start-->
+<div class="salarymanage-search">
+
+    <dl class="salarymanage-search-dl">
+        <dt>
+            <a class="btn-salary-search" href="#"><span><<</span><span>隐藏搜索</span></a>已选条件：
+        </dt>
+        <dd>
+           <a class="selected-condition">衢州市人力资源和社会保障局</a>
+           <a class="selected-condition">公务员</a>
+           <a class="selected-condition">军转干部</a>
+           <a class="selected-condition">财政拨款</a>
+           <a class="selected-condition">事业单位</a>
+           <a class="selected-condition">事业单位</a>
+           <a class="selected-condition">事业单位</a>
+           <a class="selected-condition">事业单位</a>
+           <a class="selected-condition">事业单位</a>
+           <a class="selected-condition">事业单位</a>
+           <a class="selected-condition">事业单位</a>
+           <a class="selected-clear">清空筛选</a>
+        </dd>
+    </dl>
+
+</div>
+<!--已选搜索条件栏 end-->
+
+<div class="c-main-content">
+    <!--搜索详细条件选择区-start-->
+    <div class="search-condition-detail">
+        <h3>人员条件</h3>
+        <div class="search-condition-detail-dl">
+            <dl>
+                <dt title="姓名">姓名：</dt>
+                <dd><input type="text"></dd>
+            </dl>
+            <dl>
+                <dt title="性别">性别：</dt>
+                <dd>
+                    <ul class="search-condition-ul">
+                        <li class="search-condition-active">全部</li>
+                        <li>男</li>
+                        <li>女</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="人员状态">人员状态：</dt>
+                <dd>
+                    <select>
+                        <option>在职</option>
+                        <option>不在职</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="是否干部身份">是否干部身份：</dt>
+                <dd>
+                    <ul class="search-condition-ul">
+                        <li class="search-condition-active">全部</li>
+                        <li>是</li>
+                        <li>否</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="当前工资领导标志">当前工资领导标志：</dt>
+                <dd>
+                    <ul class="search-condition-ul">
+                        <li class="search-condition-active">全部</li>
+                        <li>领导</li>
+                        <li>非领导</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="学历">学历：</dt>
+                <dd>
+                    <select>
+                        <option>本科</option>
+                        <option>研究生</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="人员类别">人员类别：</dt>
+                <dd>
+                    <select>
+                        <option>人员类别1</option>
+                        <option>人员类别2</option>
+                        <option>人员类别3</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="是否军转干部">是否军转干部：</dt>
+                <dd>
+                    <ul class="search-condition-ul">
+                        <li class="search-condition-active">全部</li>
+                        <li>是</li>
+                        <li>否</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="参加工作时间">参加工作时间：</dt>
+                <dd><input class="input-time" type="text">
+                    <span class="connect-line"></span>
+                    <input class="input-time" type="text"></dd>
+            </dl>
+        </div>
+
+        <div class="separate-line"></div>
+
+        <h3 class="">单位条件</h3>
+        <div class="search-condition-detail-dl">
+            <dl>
+                <dt title="单位名称">单位名称：</dt>
+                <dd>
+                    <input class="search-condition-unit" type="text">
+                    <ul class="search-condition-unit-ul">
+                        <li title="衢州市人力资源社会保障局衢州市人力资源社会保障局">衢州市人力资源社会保障局衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                        <li title="衢州市人力资源社会保障局">衢州市人力资源社会保障局</li>
+                    </ul>
+                    <input type="checkbox" checked>含下设单位
+                </dd>
+            </dl>
+            <dl>
+                <dt title="单位性质">单位性质：</dt>
+                <dd>
+                    <select>
+                        <option>--请选择--</option>
+                        <option>单位性质1</option>
+                        <option>单位性质2</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl>
+                <dt title="工资关系单位">工资关系单位：</dt>
+                <dd>
+                    <select>
+                        <option>--请选择--</option>
+                        <option>单位1</option>
+                        <option>单位2</option>
+                    </select>
+                </dd>
+                <img class="search-unit-connectspan" src="../../img/salary/search_connect.png">
+            </dl>
+            <dl>
+                <dt title="是否工作单位">是否工作单位：</dt>
+                <dd>
+                    <ul class="search-condition-ul">
+                        <li class="search-condition-active">全部</li>
+                        <li>是</li>
+                        <li>否</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+
+        <a class="btn-search-detail" href="#">查询</a>
+    </div>
+    <!--搜索详细条件选择区-end-->
+
+    <!--搜索结果区-->
+    <div class="salarymanage-right-content">
+        <!-- 列表内容展示-->
+        <!-- 列表内容展示-->
+        <div class="main_list">
+            <table class="table_edit_bg2">
+                <tr class="td_title2" style="border-bottom: 1px solid #ddd;" align="left">
+                    <th width="100px"><input type="checkbox"/></th>
+                    <th align="left">单位名称</th>
+                    <th align="left">主管单位名称</th>
+                    <th align="left">文号</th>
+                    <th align="left">所属地区</th>
+                    <th align="left">单位性质</th>
+                    <th align="left">单位级别</th>
+                    <th align="left">经费来源</th>
+                    <th align="left">业务类型</th>
+                    <th align="left">排序号</th>
+                    <th align="left">业务创建人</th>
+                    <th align="left">业务创建时间</th>
+                </tr>
+            </table>
+            <div class="table-content"  style="overflow-y: scroll">
+                <table class="table_edit_bg2">
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+                    <tr class="td_content2">
+                        <td width="100px"><input type="checkbox"/></td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">江苏省税务总局</td>
+                        <td align="left">XJDW20160701001</td>
+                        <td align="left">江苏省</td>
+                        <td align="left">事业单位</td>
+                        <td align="left">省、部级</td>
+                        <td align="left">财政全额拨款</td>
+                        <td align="left">新建</td>
+                        <td align="left">001</td>
+                        <td align="left">系统管理员</td>
+                        <td align="left">2016-07-01 09:05:04</td>
+                    </tr>
+
+
+                </table>
+            </div>
+
+            <!-- 页码部分-->
+            <div class="page">
+                <ul>
+                    <li style="margin-left: 15px;"><a href="#"><</a></li>
+                    <li>第<input type="text" value="1235" class="input_page"/>页</li>
+                    <li>共2页</li>
+                    <li><a href="#">></a></li>
+                    <li style="float: right;margin: 0px 5px;">共有12条记录.当前显示1-9条记录</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

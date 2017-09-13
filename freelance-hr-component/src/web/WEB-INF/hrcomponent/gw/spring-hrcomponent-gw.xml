@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 岗位资源下达服务接口 -->
+	<bean id="gwFlowApprovedService" class="com.yh.hr.component.gw.service.impl.GwFlowApprovedServiceImpl"/>
+	
+    <!-- 岗位资源占用服务接口 -->
+    <bean id="gwFlowUseInService" class="com.yh.hr.component.gw.service.impl.GwFlowUseInServiceImpl" >
+    	<property name="gwInfoService">
+    		<ref bean="gwInfoService"/>
+    	</property>
+    </bean>
+    
+    <!-- 岗位资源释放服务接口 -->
+    <bean id="gwFlowUseOutService" class="com.yh.hr.component.gw.service.impl.GwFlowUseOutServiceImpl" >
+    	<property name="gwInfoService">
+    		<ref bean="gwInfoService"/>
+    	</property>
+    </bean>
+    
+</beans>

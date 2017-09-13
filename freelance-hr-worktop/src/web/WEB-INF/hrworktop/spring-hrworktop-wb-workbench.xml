@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 事项树跳转工作台 -->
+	<bean id="wbWorkBenchFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.component.worktop.facade.WbWorkBenchFacade">
+				<property name="wbWorkBenchService" ref="wbWorkBenchService"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="wbWorkBenchService" class="com.yh.hr.component.worktop.service.impl.WbWorkBenchServiceImpl" />
+</beans>

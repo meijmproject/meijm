@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="viewPersonFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.view.facade.ViewPersonFacade">
+			</bean>
+		</property>
+	</bean>
+
+		<!--家庭成员与社会关系facade -->
+	<bean name="viewPbFamilyInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="viewPbFamilyInfoFacadeTarget" />
+		</property>
+	</bean>
+	<bean name="viewPbFamilyInfoFacadeTarget"
+		class="com.yh.hr.info.view.facade.ViewPbFamilyInfoFacade">
+		
+	</bean>
+    <!-- 外出 信息-->
+	<bean name="verGoOutInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="verGoOutInfoFacadeTarget" />
+		</property>
+	</bean>
+	<bean name="verGoOutInfoFacadeTarget"
+		class="com.yh.hr.info.ver.unit.comm.facade.VerGoOutInfoFacade">
+		<property name="pbGoOutInfoService" ref="pbGoOutInfoService" />
+	</bean>
+	
+	<!-- 加班信息-->
+	<bean name="verOverTimeInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="verOverTimeInfoFacadeTarget" />
+		</property>
+	</bean>
+	<bean name="verOverTimeInfoFacadeTarget"
+		class="com.yh.hr.info.ver.unit.comm.facade.VerOverTimeInfoFacade">
+		<property name="pbOverTimeInfoService" ref="pbOverTimeInfoService" />
+	</bean>
+	<!-- 调休信息-->
+	<bean name="verChangeOffInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="verChangeOffInfoFacadeTarget" />
+		</property>
+	</bean>
+	<bean name="verChangeOffInfoFacadeTarget"
+		class="com.yh.hr.info.ver.unit.comm.facade.VerChangeOffInfoFacade">
+		<property name="pbChangeOffInfoService" ref="pbChangeOffInfoService" />
+	</bean>
+
+	<!-- 请休假信息-->
+	<bean name="verVacationInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref bean="verVacationInfoFacadeTarget" />
+		</property>
+	</bean>
+	<bean name="verVacationInfoFacadeTarget"
+		class="com.yh.hr.info.ver.unit.comm.facade.VerVacationInfoFacade">
+		<property name="pbVacationService" ref="pbVacationService" />
+	</bean>
+</beans>

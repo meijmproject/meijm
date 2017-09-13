@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.yh.hr.res.pt.bo">
+    <class name="com.yh.hr.res.pt.bo.PtOwnAllowance" table="JHC_PT_OWN_ALLOWANCE">
+        <id name="ownAllowanceOid" column="OWN_ALLOWANCE_OID" type="java.lang.Long">
+           <generator class="identity"/>
+		
+        </id>
+        <property name="bizPersonOid" type="java.lang.Long" >
+            <column name="BIZ_PERSON_OID"  >
+                <comment>人员bizPersonOid</comment>
+            </column>
+        </property>		
+        <property name="personOid" type="java.lang.Long" >
+            <column name="PERSON_OID"  >
+                <comment>人员PersonOid</comment>
+            </column>
+        </property>
+        <property name="allowanceCategoryCode" type="java.lang.String">
+            <column name="ALLOWANCE_CATEGORY_CODE"  >
+                <comment>津贴类别编码</comment>
+            </column>
+        </property>
+        <property name="allowanceCategoryName" type="java.lang.String">
+            <column name="ALLOWANCE_CATEGORY_NAME"  >
+                <comment>津贴类别名称</comment>
+            </column>
+        </property>
+        <property name="allowanceCode" type="java.lang.String">
+            <column name="ALLOWANCE_CODE"  >
+                <comment>津贴编码</comment>
+            </column>
+        </property>
+        <property name="allowanceName" type="java.lang.String">
+            <column name="ALLOWANCE_NAME" >
+                <comment>津贴名称</comment>
+            </column>
+        </property>				
+	    <property name="allowanceAmount" type="java.lang.Double">
+            <column name="ALLOWANCE_AMOUNT" precision="12" scale="2">
+                <comment>金额</comment>
+            </column>
+        </property>	
+        <property name="startDate" type="java.util.Date">
+            <column name="START_DATE" >
+                <comment>开始享受时间</comment>
+            </column>
+        </property>	
+        <property name="endDate" type="java.util.Date">
+            <column name="END_DATE"  >
+                <comment>截止享受时间</comment>
+            </column>
+        </property>	
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK"  >
+                <comment>备注信息</comment>
+            </column>
+        </property>	
+		<property name="handleCode" type="java.lang.String">
+            <column name="HANDLE_CODE"  >
+                <comment>操作类型</comment>
+            </column>
+        </property>
+		<property name="handleMatchNo" type="java.lang.Long" >
+            <column name="HANDLE_MATCH_NO"  >
+                <comment>两条数据修改前后对应识别码</comment>
+            </column>
+        </property>
+        <property name="fileBaseOn" type="java.lang.String" >
+            <column name="FILE_BASE_ON"  >
+                <comment>文件依据</comment>
+            </column>
+        </property>
+        <property name="createdByCode" type="java.lang.String">
+            <column name="CREATED_BY_CODE">
+                <comment>CreatedByCode</comment>
+            </column>
+        </property>
+        <property name="createdByName" type="java.lang.String">
+            <column name="CREATED_BY_NAME">
+                <comment>CreatedByName</comment>
+            </column>
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE">
+                <comment>CreatedDate</comment>
+            </column>
+        </property>
+        <property name="updatedByCode" type="java.lang.String">
+            <column name="UPDATED_BY_CODE">
+                <comment>UpdatedByCode</comment>
+            </column>
+        </property>
+        <property name="updatedByName" type="java.lang.String">
+            <column name="UPDATED_BY_NAME">
+                <comment>UpdatedByName</comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE">
+                <comment>UpdatedDate</comment>
+            </column>
+        </property>
+
+    </class>
+</hibernate-mapping>

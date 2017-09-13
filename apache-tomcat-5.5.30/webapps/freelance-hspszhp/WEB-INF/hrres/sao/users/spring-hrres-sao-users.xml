@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!--账号信息操作service   -->
+	<bean name="saoUserService" class="com.yh.hr.res.sao.users.impl.SaoUserServiceImpl" >
+		<property name="usersService" ref="usersService"/>
+		<property name="systemPositionService" ref="systemPositionService"/>
+	</bean>
+</beans>

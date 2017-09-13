@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+/*人员栏目设置*/
+.pcs-search{
+    /*width: 100%;*/
+    font-size: 14px;
+    color: #282828;
+    margin-bottom: 15px;
+}
+.pcs-search-right,.pcs-search-left{
+    display: inline-block;
+    width: 45%;
+}
+.pcs-search-right .pcs-symbol,.pcs-search-left .pcs-symbol{
+    width: 90px;
+    text-align: right;
+}
+.pcs-search-right .pcs-symbol{
+    width: 120px;
+}
+.pcs-search span,.pcs-search input,.pcs-search select,.pcs-search button{
+    display: inline-block;
+    vertical-align: middle;
+}
+.pcs-symbol{
+    padding-right: 4px;
+    padding-left: 20px;
+}
+.pcs-symbol span{
+    color: #ff0000;
+}
+.pcs-select,.pcs-input{
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #e3e3e3;
+    background-color:#f5f7f9 ;
+    border-radius: 5px;
+    font-size: inherit;
+    padding-left: 4px;
+    vertical-align: middle;
+}
+.pcs-input-query{
+    background: url("../../images/common/search.png") no-repeat 95% #f5f7f9;
+}
+.pcs-input[type=checkbox]{
+    height: 16px;
+    width: 16px;
+    margin-right: 180px;
+}
+.pcs-content{
+    height: calc(100% - 90px);
+    padding: 0 20px;
+}
+/*人员名册模板*/
+.pcs-template{
+    width: 100%;
+    height: calc(100% - 20px);
+    background: #fff;
+    margin-top: 20px;
+}
+
+.pcs-template .search-result-table{
+    height: calc(100% - 165px);
+}
+
+.main-dataset,.main-field{
+    float: left;
+    width: calc(50% - 1px);
+    height: calc(100% - 20px);
+    border-bottom: 1px solid #d9dfe9;
+    background: #fff;
+}
+.main-dataset{
+    border-right: 1px solid #edf0f5;
+    background: #f7f7f7;
+}
+.pcs-title{
+    padding: 20px 0 5px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color:#fe5621;
+}
+.pcs-template .handle-btn{
+    background: transparent;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    padding-top: 0px;
+}
+
+.sr-dataset-table,.sr-field-table{
+    height: calc(100% - 160px);
+}
+.main-dataset .sr-table-tbody tr.pcs-table-select{
+    background: #fff;
+}
+.main-dataset .sr-table-tbody tr.pcs-table-select td{
+    color: #4bae4f;
+}
+
+/*新增人员名册模板*/
+.md-addPcsTml-container{
+    padding: 20px;
+    background: #ffffff;
+}
+.max-height-none{
+    max-height: none!important;
+}
+.addTml-tabs{
+    border-radius: 6px;
+}
+.addTml-tabs{
+    background: #fff;
+    width: 180px;
+    position: fixed;
+}
+.addTml-tab-a{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #d9dfe9;
+    border-right: 1px solid #d9dfe9;
+    border-left: 1px solid #d9dfe9;
+    font-size: 14px;
+    color: #282828;
+    padding-left: 8px;
+    background: url("../../images/common/right_gray.png")no-repeat 98% transparent;
+}
+.addTml-tabs li:last-child a{
+    border-bottom: 1px solid #d9dfe9;
+}
+.addTml-tab-a:hover{
+    background: url("../../images/common/right_green.png")no-repeat 98% #f1f4f8;
+    color: #2bcaa9;
+    border-left: 2px solid #1cc6a3;
+}
+.addTml-tab-a.addTml-tab-aselect{
+    background: url("../../images/common/right_green.png")no-repeat 98% #f1f4f8;
+    color: #2bcaa9;
+    border-left: 2px solid #1cc6a3;
+}
+
+.addTml-cont{
+    overflow: hidden;
+    font-size: 14px;
+    height: 100%;
+    margin-left: 200px;
+}
+.addTml-cont>div{
+    border-bottom: 1px solid #d9dfe9;
+    margin-bottom: 20px;
+}
+.addTml-cont .md-main-content{
+    padding: 0 0 80px 0;
+}
+.atc-main-cont{
+    border: 1px solid #1cc6a3;
+    padding: 10px 10px 0 20px;
+    margin-bottom: 20px;
+}
+.atc-title{
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    color: #fe5621;
+}
+.atc-description{
+    width: 100%;
+    height: 130px;
+    box-sizing: border-box;
+    border: 1px solid #d9dfe9;
+    background-color: #f8f9fb;
+    overflow-y: auto;
+    border-radius: 6px;
+    text-indent: 1em;
+    margin-bottom: 5px;
+    font-weight: normal!important;
+}
+.md-units .updown-remark .atc-description{
+    height: 130px;
+}
+.atc-main-cont .pcs-symbol{
+    padding-left: 0;
+}
+.atc-radio{
+    padding-left: 24px;
+    background: url("../../images/common/radio-gray.png")no-repeat 5px transparent;
+    margin-right: 20px;
+}
+.atc-radio.atc-radio-select{
+    background-image: url("../../images/common/radio-gray-select.png");
+    color: #1cc6a3;
+}
+.tips-red{
+    color: #fe5621;
+    font-size: 12px;
+    margin-bottom: 20px;
+}

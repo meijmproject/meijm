@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  	<!-- 信息集  -->
+	<bean id="personInformationFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.component.infotemplate.facade.PersonInformationFacade">
+	        	<property name="personInformationService" ref="personInformationService"/>
+			</bean>
+		</property>
+    </bean>
+    <bean id="personInformationService" class="com.yh.hr.component.infotemplate.service.impl.PersonInformationServiceImpl"/>
+</beans>

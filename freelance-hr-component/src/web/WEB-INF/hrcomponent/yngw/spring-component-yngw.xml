@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+
+<beans>
+	<!-- 院内岗位信息管理 -->
+	<bean id="gwYnInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref local="gwYnInfoFacadeTarget" />
+		</property>
+	</bean>
+	<bean id="gwYnInfoFacadeTarget" class="com.yh.hr.component.yngw.facade.impl.GwYnInfoFacadeImpl">
+		<property name="gwYnInfoService">
+			<ref local="gwYnInfoService"/>
+		</property>
+	</bean>
+	<bean id="gwYnInfoService" class="com.yh.hr.component.yngw.service.impl.GwYnInfoServiceImpl">
+	</bean>
+</beans>

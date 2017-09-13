@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yh.admin.bo.UserOrgAuth" table="YHB_USER_ORG_AUTH" >
+       <composite-id>   
+        <key-property name="orgOid" column="org_OID" type="long" />
+        <key-property name="userId" column="USER_ID" type="string"/>
+      </composite-id>
+        <property name="orgName" type="java.lang.String">
+            <column name="ORG_NAME" />
+        </property>
+        <property name="orgStatus" type="java.lang.String">
+            <column name="ORG_STATUS" />
+        </property>
+        <property name="systemPositionOid" type="java.lang.Long">
+            <column name="SYSTEM_POSITION_OID" />
+        </property>
+    </class>
+</hibernate-mapping>

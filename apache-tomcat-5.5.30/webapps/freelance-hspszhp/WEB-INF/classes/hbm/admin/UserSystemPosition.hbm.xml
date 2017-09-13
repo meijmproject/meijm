@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="com.yh.admin.bo.UserSystemPosition" table="YHB_USER_SP">
+		<composite-id>
+			<key-property name="systemPositionOid" column="SYSTEM_POSITION_OID" type="java.lang.Long" />
+			<key-property name="userId" column="USER_ID" type="java.lang.String" />
+		</composite-id>
+		<property name="effectiveDate" column="EFFECTIVE_DATE" type="java.util.Date" />
+		<property name="expiredDate" column="EXPIRED_DATE" type="java.util.Date" />
+		
+		<property name="createdByCode" type="java.lang.String">
+            <column name="CREATED_BY_CODE">
+                <comment>创建人ID</comment>
+            </column>
+        </property>
+        <property name="createdByName" type="java.lang.String">
+            <column name="CREATED_BY_NAME">
+                <comment>创建人姓名</comment>
+            </column>
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE">
+                <comment>创建时间</comment>
+            </column>
+        </property>
+        <property name="updatedByCode" type="java.lang.String">
+            <column name="UPDATED_BY_CDOE">
+                <comment>修改人ID</comment>
+            </column>
+        </property>
+        <property name="updatedByName" type="java.lang.String">
+            <column name="UPDATED_BY_NAME">
+                <comment>修改人姓名</comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE">
+                <comment>修改时间</comment>
+            </column>
+        </property>
+	</class>
+</hibernate-mapping>

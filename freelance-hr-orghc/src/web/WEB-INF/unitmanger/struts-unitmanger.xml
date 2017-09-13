@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="ubUnitForm" type="com.yh.hr.orghc.unit.unitmanger.web.form.UbUnitForm" />
+		<form-bean name="orgForm" type="com.yh.hr.orghc.unit.unitmanger.web.form.OrgForm" />
+    </form-beans>
+	<action-mappings>
+		<action path="/goToUnitManageWorkBench"
+				scope="request"
+				validate="false"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位管理主页面</description>
+			<forward name="success" path="/unit/unitmanger/unitmanger_main.jsp"/>
+		</action>
+		<action path="/goToUnitWorkTop"
+				scope="request"
+				validate="false"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位管理页面</description>
+			<forward name="success" path="/unit/unitmanger/unitmanger_worktop.jsp"/>
+		</action>
+		<action path="/getUnitInformation"
+				scope="request"
+				validate="false"
+				name="ubUnitForm"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位管理页面</description>
+			<forward name="success" path="/unit/unitmanger/unit_information.jsp"/>
+		</action>
+		<action path="/goToUnitManger"
+				scope="request"
+				validate="false"
+				name="ubUnitForm"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位管理详情页面</description>
+			<forward name="success" path="/unit/unitmanger/unit_main.jsp"/>
+		</action>
+		<action path="/listUbOrgByUnitOid"
+				scope="request"
+				validate="false"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位管理机构列表</description>
+		</action>
+		
+		<action path="/goToUpdatUnit"
+				scope="request"
+				validate="false"
+				name="ubUnitForm"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位修改页面</description>
+			<forward name="success" path="/unit/unitmanger/unit_update.jsp"/>
+		</action>
+		<action path="/updateUnitInfo"
+				scope="request"
+				validate="false"
+				name="ubUnitForm"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>修改单位信息</description>
+		</action>
+		<action path="/getUbUnit"
+				scope="request"
+				validate="false"
+				name="ubUnitForm"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位修改页面</description>
+			<forward name="success" path="/unit/unitmanger/unit_information.jsp"/>
+		</action>
+		<action path="/goToAddUbUnit"
+				scope="request"
+				validate="false"
+				name="ubUnitForm"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>跳转到单位新增页面</description>
+			<forward name="success" path="/unit/unitmanger/unit_add.jsp"/>
+		</action>
+		<action path="/addUnitInfo"
+				scope="request"
+				validate="false"
+				name="ubUnitForm"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>单位新增</description>
+		</action>
+		 <!-- 编制信息-->
+		<action path="/addVerUbHcInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>增加编制</description>
+        </action>
+        <action path="/deleteVerUbHcInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>删除编制</description>
+        </action>
+        <action path="/updateVerUbHcInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>修改编制</description>
+        </action>
+        <action path="/listHcInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>编制列表</description>
+            <forward name="success" path="/unit/unitmanger/pbhcinfo/verpb_hc_list.jsp"/>
+        </action>
+         <!-- 领导职数信息-->
+          <action path="/listLeaderInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>领导职数列表</description>
+            <forward name="success" path="/unit/unitmanger/pbleaderinfo/verpb_leader_list.jsp"/>
+        </action>
+        <action path="/addVerUbLeaderInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>增加领导职数</description>
+        </action>
+        <action path="/deleteVerUbLeaderInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>删除领导职数</description>
+        </action>
+        <action path="/updateVerUbLeaderInfo"
+                scope="request"
+                type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+                validate="false"
+                parameter="method">
+            <description>修改领导职数</description>
+        </action>
+        
+		<action path="/listOrgByUnit"
+				scope="request"
+				validate="false"
+				type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+				parameter="method">
+			<description>查询科室列表</description>
+		</action>
+		
+		<action path="/goCreateOrg"
+	        scope="request"
+	        type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	        name="orgForm"
+	        parameter="method">
+	      <description>跳转新增页面</description>
+	      <forward name="success" path="/unit/unitmanger/org/unitmanager_org_create.jsp"/>
+	    </action>
+	    
+		<action path="/createOrg"
+	        scope="request"
+	        name="orgForm"
+	        type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	        parameter="method">
+	      <description>新增科室</description>
+	    </action>
+	    
+	<action path="/goUpdateOrg"
+	        scope="request"
+	        type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	        name="orgForm"
+	        parameter="method">
+	      <description>跳转修改页面</description>
+	      <forward name="success" path="/unit/unitmanger/org/unitmanager_org_update.jsp"/>
+    </action>
+	    
+	<action path="/updateOrg"
+	       scope="request"
+	       name="orgForm"
+	       type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	       parameter="method">
+	     <description>修改科室</description>
+   	</action>
+   	
+	<action path="/goViewOrg"
+	        scope="request"
+	        type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	        name="orgForm"
+	        parameter="method">
+	      <description>跳转查看页面</description>
+	      <forward name="success" path="/unit/unitmanger/org/unitmanager_org_view.jsp"/>
+    </action>
+    
+	<action path="/deleteOrg"
+	       scope="request"
+	       type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	       parameter="method">
+	     <description>删除科室</description>
+   	</action>
+   	<action path="/revokeOrg"
+	       scope="request"
+	       type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	       parameter="method">
+	     <description>撤销科室</description>
+   	</action>
+	<action path="/findByOrgType"
+	       scope="request"
+	       type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	       parameter="method">
+	     <description>上级科室联动科室类型</description>
+   	</action>
+	
+	<action path="/getOrg"
+	       scope="request"
+	       type="com.yh.hr.orghc.unit.unitmanger.web.action.UnitMangerAction"
+	       parameter="method">
+	     <description>上级科室联动科室类型</description>
+   	</action>
+	</action-mappings>
+</struts-config>

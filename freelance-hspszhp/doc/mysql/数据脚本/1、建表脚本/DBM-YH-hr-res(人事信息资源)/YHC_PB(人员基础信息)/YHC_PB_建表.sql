@@ -1,0 +1,1211 @@
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for yhc_pb_certificate_hist_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_certificate_hist_info`;
+CREATE TABLE `yhc_pb_certificate_hist_info` (
+  `CERTIFICATE_HIST_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `CERTIFICATE_TYPE` varchar(20) DEFAULT NULL COMMENT '注册类型',
+  `CERTIFICATE_BEGIN_DATE` date DEFAULT NULL COMMENT '注册日期',
+  `CERTIFICATE_END_DATE` date DEFAULT NULL COMMENT '注册有效截止日期',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`CERTIFICATE_HIST_OID`),
+  KEY `YHC_PB_CERTIF_HIST_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_CERTIF_HIST_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_certificate_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_certificate_info`;
+CREATE TABLE `yhc_pb_certificate_info` (
+  `CERTIFICATE_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `CERTIFICATE_NO` varchar(50) DEFAULT NULL COMMENT '执业注册证书编号',
+  `APPROVE_ORGAN_NAME` varchar(100) DEFAULT NULL COMMENT '发证机构',
+  `APPROVED_DATE` date DEFAULT NULL COMMENT '审批日期',
+  `ISSUED_DATE` date DEFAULT NULL COMMENT '签发日期',
+  `SCOPE_CODE` varchar(20) DEFAULT NULL COMMENT '执业范围',
+  `CERTIFICATE_UNIT` varchar(100) DEFAULT NULL COMMENT '执业地点',
+  `CERTIFICATE_BEGIN_DATE` date DEFAULT NULL COMMENT '当前注册日期',
+  `CERTIFICATE_END_DATE` date DEFAULT NULL COMMENT '当前注册有效截止日期',
+  `CANCEL_FLAG` varchar(20) DEFAULT NULL COMMENT '是否注销',
+  `CANCEL_DATE` date DEFAULT NULL COMMENT '注销日期',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`CERTIFICATE_OID`),
+  KEY `YHC_PB_CERTIF_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_CERTIF_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_change_off_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_change_off_info`;
+CREATE TABLE `yhc_pb_change_off_info` (
+  `CHANGE_OFF_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `CHANGE_OFF_TYPE` varchar(20) DEFAULT NULL COMMENT '调休类型',
+  `START_DATE` date DEFAULT NULL COMMENT '开始时间',
+  `END_DATE` date DEFAULT NULL COMMENT '结束时间',
+  `CHANGE_OFF_DAYS` decimal(12,2) DEFAULT NULL COMMENT '调休天数',
+  `REASON` varchar(1000) DEFAULT NULL COMMENT '调休事由',
+  `WORK_HANDOVER` varchar(1000) DEFAULT NULL COMMENT '工作交接事项',
+  `WORK_AGENT` varchar(100) DEFAULT NULL COMMENT '工作代理人',
+  `EMERG_CONTACT` varchar(100) DEFAULT NULL COMMENT '紧急联络人',
+  `EMERG_PHONE` varchar(20) DEFAULT NULL COMMENT '紧急联系人电话',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`CHANGE_OFF_OID`),
+  KEY `YHC_PB_CHANGE_OFF_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_CHANGE_OFF_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_death_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_death_info`;
+CREATE TABLE `yhc_pb_death_info` (
+  `PERSON_OID` bigint(20) NOT NULL,
+  `DEATH_DATE` date DEFAULT NULL COMMENT '死亡时间',
+  `DEATH_TYPE` varchar(20) DEFAULT NULL COMMENT '死亡原因类别',
+  `DEATH_REASON` varchar(1000) DEFAULT NULL COMMENT '死亡原因',
+  `SMART_MONEY` decimal(12,2) DEFAULT NULL COMMENT '抚恤金',
+  `FUNERAL_MONEY` decimal(12,2) DEFAULT NULL COMMENT '丧葬费',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_DEATH_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='离退休情况';
+
+-- ----------------------------
+-- Table structure for yhc_pb_demission_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_demission_info`;
+CREATE TABLE `yhc_pb_demission_info` (
+  `DEMISSION_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `DEMISSION_TYPE_CODE` varchar(20) DEFAULT NULL COMMENT '离职原因类别',
+  `DEMISSION_TO` varchar(200) DEFAULT NULL COMMENT '离职后去向',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`DEMISSION_OID`),
+  KEY `YHC_PB_DEMISSION_INFO_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_DEMISSION_INFO_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_duty_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_duty_info`;
+CREATE TABLE `yhc_pb_duty_info` (
+  `DUTY_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `DUTY_STATUS` varchar(20) DEFAULT NULL COMMENT '在聘状态',
+  `DUTY_NAME` varchar(20) DEFAULT NULL COMMENT '职务名称',
+  `DEPT_OID` bigint(20) DEFAULT NULL COMMENT '任职部门',
+  `START_DATE` date DEFAULT NULL COMMENT '任职时间',
+  `END_DATE` date DEFAULT NULL COMMENT '离任时间',
+  `REMARK` varchar(2000) DEFAULT NULL COMMENT '备注',
+  `IS_MAIN_DUTY_INFO` varchar(2) DEFAULT NULL COMMENT '是否主要职务',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`DUTY_OID`),
+  KEY `YHC_PB_DUTY_INFO_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_DUTY_INFO_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_education_level_degree
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_education_level_degree`;
+CREATE TABLE `yhc_pb_education_level_degree` (
+  `EDUCATION_LEVEL_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `SCHOOL_NAME` varchar(100) DEFAULT NULL COMMENT '学校名称',
+  `SCHOOL_DESC` varchar(100) DEFAULT NULL COMMENT '学校描述',
+  `ACADEMY_NAME` varchar(50) DEFAULT NULL COMMENT '所在院系',
+  `ACADEMY_DESC` varchar(100) DEFAULT NULL COMMENT '院系描述',
+  `STUDY_TYPE_CODE` varchar(20) DEFAULT NULL COMMENT '学习形式',
+  `EDUCTIONAL_SYSTEM` varchar(20) DEFAULT NULL COMMENT '学制（年）',
+  `SCHOOL_ENROLL_DATE` date DEFAULT NULL COMMENT '入学日期',
+  `GRADUATE_DATE` date DEFAULT NULL COMMENT '毕（肄）业日期',
+  `EDU_TYPE` varchar(20) DEFAULT NULL COMMENT '教育类别',
+  `EDUCATION_CODE` varchar(20) DEFAULT NULL COMMENT '学历',
+  `MAJOR_CODE` varchar(100) DEFAULT NULL COMMENT '所学专业',
+  `MAJOR_NAME_CODE` varchar(100) DEFAULT NULL COMMENT '专业描述',
+  `EDUCATION_CERTIFICATE` varchar(20) DEFAULT NULL COMMENT '学历证书号码',
+  `EDUCATION_LEVEL` varchar(20) DEFAULT NULL COMMENT '学历等级',
+  `EDUCATION_LEVEL_NAME` varchar(100) DEFAULT NULL COMMENT '学历等级描述',
+  `IS_HIGHEST_EDUCATION_LEVEL` varchar(2) DEFAULT NULL COMMENT '是否当前最高学历标识',
+  `DEGREE_CODE` varchar(20) DEFAULT NULL COMMENT '学位',
+  `DEGREE_CERTIFICATE_CODE` varchar(20) DEFAULT NULL COMMENT '学位证书号码',
+  `DEGREE_GRANT_DATE` date DEFAULT NULL COMMENT '学位授予日期',
+  `DEGREE_GRANT_UNIT` varchar(100) DEFAULT NULL COMMENT '学位授予单位',
+  `DEGREE_GRANT_COUNTRY_CODE` varchar(20) DEFAULT NULL COMMENT '学位授予国家',
+  `IS_HIGHEST_DEGREE` varchar(2) DEFAULT NULL COMMENT '是否最高学位',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`EDUCATION_LEVEL_OID`),
+  KEY `YHC_PB_EDU_LEVEL_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_EDU_LEVEL_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_education_training_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_education_training_info`;
+CREATE TABLE `yhc_pb_education_training_info` (
+  `EDUCATION_TRAINING_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `EDUCATION_TRAINING_KINK_CODE` varchar(20) DEFAULT NULL COMMENT '教育培训性质',
+  `TRAINING_STATUS` varchar(20) DEFAULT NULL COMMENT '培训离岗状态',
+  `TRAINING_UNIT_NAME` varchar(200) DEFAULT NULL COMMENT '从学单位',
+  `TRAINING_TYPE` varchar(20) DEFAULT NULL COMMENT '培训类别',
+  `TRAINING_NAME` varchar(100) DEFAULT NULL COMMENT '培训名称',
+  `TRAINING_CONTENT` varchar(1000) DEFAULT NULL COMMENT '培训内容',
+  `TRAINING_BEGIN_DATE` date DEFAULT NULL COMMENT '起始时间',
+  `TRAINING_END_DATE` date DEFAULT NULL COMMENT '终止时间',
+  `TRAINING_GRADE` varchar(20) DEFAULT NULL COMMENT '考核成绩',
+  `TRAINING_RESULT` varchar(20) DEFAULT NULL COMMENT '培训结果',
+  `IS_ABROAD_STATUS` varchar(20) DEFAULT NULL COMMENT '是否出国（出境）培训',
+  `APPROVE_OFFICE_NAME` varchar(200) DEFAULT NULL COMMENT '批准机构名称',
+  `APPROVE_DATE` date DEFAULT NULL COMMENT '批准日期',
+  `REMARK` varchar(1000) DEFAULT NULL,
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`EDUCATION_TRAINING_OID`),
+  KEY `YHC_PB_EDU_TRAINING_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_EDU_TRAINING_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_engage_con_hist_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_engage_con_hist_info`;
+CREATE TABLE `yhc_pb_engage_con_hist_info` (
+  `ENGAGE_CONTRACT_HIST_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `CONTRACT_NO` varchar(30) DEFAULT NULL COMMENT '合同编号',
+  `CONTRACT_TYPE` varchar(20) DEFAULT NULL COMMENT '合同签订方式',
+  `CHANGE_TYPE` varchar(20) DEFAULT NULL COMMENT '合同类型',
+  `CONTRACT_BEGIN` date DEFAULT NULL COMMENT '合同开始时间',
+  `CONTRACT_END` date DEFAULT NULL COMMENT '合同截止时间',
+  `CONTRACT_END_ACTUAL` date DEFAULT NULL COMMENT '合同实际结束日期',
+  `ADDRESS_PERMANANT` varchar(100) DEFAULT NULL COMMENT '常住住址',
+  `ADDRESS_COMMUNICATION` varchar(100) DEFAULT NULL COMMENT '通信地址',
+  `CONTACT_PHONE` varchar(100) DEFAULT NULL COMMENT '联系电话',
+  `SIGN_DATE` date DEFAULT NULL COMMENT '合同签订时间',
+  `CONTRACT_JOB` varchar(100) DEFAULT NULL COMMENT '工作岗位',
+  `OTHERS` varchar(1000) DEFAULT NULL COMMENT '其它事项',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`ENGAGE_CONTRACT_HIST_OID`),
+  KEY `YHC_PB_ENGAGE_CON_HIST_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_ENGAGE_CON_HIST_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_engage_contract_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_engage_contract_info`;
+CREATE TABLE `yhc_pb_engage_contract_info` (
+  `ENGAGE_CONTRACT_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '业务主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `CONTRACT_NO` varchar(30) DEFAULT NULL COMMENT '合同编号',
+  `CONTRACT_TYPE` varchar(20) DEFAULT NULL COMMENT '合同签订方式',
+  `CHANGE_TYPE` varchar(20) DEFAULT NULL COMMENT '合同类型',
+  `CONTRACT_BEGIN` date DEFAULT NULL COMMENT '合同开始时间',
+  `CONTRACT_END` date DEFAULT NULL COMMENT '合同截止时间',
+  `CONTRACT_END_ACTUAL` date DEFAULT NULL COMMENT '合同实际结束日期',
+  `PROBATION_FLAG` varchar(20) DEFAULT NULL COMMENT '是否存在试用期',
+  `PROBATION_BEGIN` date DEFAULT NULL COMMENT '试用期开始日期',
+  `PROBATION_END` date DEFAULT NULL COMMENT '试用期结束日期',
+  `STATUS` varchar(20) DEFAULT NULL COMMENT '合同状态',
+  `ADDRESS_PERMANANT` varchar(100) DEFAULT NULL COMMENT '经常居住地',
+  `ADDRESS_COMMUNICATION` varchar(100) DEFAULT NULL COMMENT '通信地址',
+  `CONTACT_PHONE` varchar(100) DEFAULT NULL COMMENT '联系电话',
+  `SIGN_DATE` datetime DEFAULT NULL COMMENT '合同签订时间',
+  `CONTRACT_JOB` varchar(100) DEFAULT NULL COMMENT '工作岗位',
+  `OTHERS` varchar(1000) DEFAULT NULL COMMENT '其它事项',
+  `UNIT_OID` bigint(20) DEFAULT NULL COMMENT '用人单位oid',
+  `UNIT_NAME` varchar(100) DEFAULT NULL COMMENT '用人单位',
+  `UNIT_MASTER` varchar(100) DEFAULT NULL COMMENT '用人单位主要负责人',
+  `UNIT_ADDRESS` varchar(100) DEFAULT NULL COMMENT '用人单位地址',
+  `UNIT_PHONE` varchar(100) DEFAULT NULL COMMENT '用人单位联系电话',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`ENGAGE_CONTRACT_OID`),
+  KEY `YHC_PB_ENGAGE_CON_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_ENGAGE_CON_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_family_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_family_info`;
+CREATE TABLE `yhc_pb_family_info` (
+  `FAMILY_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `NAME` varchar(100) DEFAULT NULL COMMENT '成员姓名',
+  `RELATIONSHIP` varchar(20) DEFAULT NULL COMMENT '与本人关系',
+  `ID_TYPE` varchar(20) DEFAULT NULL COMMENT '证件类别',
+  `ID_NO` varchar(20) DEFAULT NULL COMMENT '身份证号',
+  `POLITICS_VISAGE` varchar(20) DEFAULT NULL COMMENT '政治面貌',
+  `BIRTHDAY` date DEFAULT NULL COMMENT '出生日期',
+  `UNIT` varchar(100) DEFAULT NULL COMMENT '单位',
+  `DUTY` varchar(50) DEFAULT NULL COMMENT '职务',
+  `ADDRESS` varchar(100) DEFAULT NULL COMMENT '现住址',
+  `PHONE` varchar(50) DEFAULT NULL COMMENT '联系电话',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`FAMILY_OID`),
+  KEY `YHC_PB_FAMILY_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_FAMILY_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='家庭成员与社会关系';
+
+-- ----------------------------
+-- Table structure for yhc_pb_go_out_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_go_out_info`;
+CREATE TABLE `yhc_pb_go_out_info` (
+  `GO_OUT_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `GO_OUT_TYPE` varchar(20) DEFAULT NULL COMMENT '外出类型 1-参会;2-讲课;3-短期;4-培训;5-交流;6-学习',
+  `VISIT_ORG` varchar(200) DEFAULT NULL COMMENT '出访机构',
+  `GO_OUT_ADDRESS` varchar(200) DEFAULT NULL COMMENT '外出地点',
+  `BUDGET_FROM` varchar(100) DEFAULT NULL COMMENT '经费来源',
+  `FUNDS_BUDGET` decimal(12,2) DEFAULT NULL COMMENT '经费预算',
+  `START_DATE` date DEFAULT NULL COMMENT '外出时间',
+  `END_DATE` date DEFAULT NULL COMMENT '返回时间',
+  `START_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '开始当天假长',
+  `END_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '结束当天假长',
+  `DAY_COUNT` decimal(12,2) DEFAULT NULL COMMENT '外出天数',
+  `STATUTORY_HOLIDAY_DAYS` decimal(12,2) DEFAULT NULL COMMENT '含节假日天数',
+  `FOREIGN_AFFAIRS_NO` varchar(50) DEFAULT NULL COMMENT '外事办批件号',
+  `JOB_HANDOVER` varchar(1000) DEFAULT NULL COMMENT '工作交接事项',
+  `HANDOVER_MAN` varchar(200) DEFAULT NULL COMMENT '工作交接人',
+  `REASON` varchar(1000) DEFAULT NULL COMMENT '外出事由',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `EMERG_CONTACT` varchar(100) DEFAULT NULL COMMENT '紧急联系人',
+  `EMERG_PHONE` varchar(20) DEFAULT NULL COMMENT '紧急联系人电话',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`GO_OUT_OID`),
+  KEY `YHC_PB_PERSON_GO_OUT_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_PERSON_GO_OUT_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='普通外出基础表';
+
+-- ----------------------------
+-- Table structure for yhc_pb_revoke_go_out
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_revoke_go_out`;
+CREATE TABLE `yhc_pb_revoke_go_out` (
+  `PB_REVOKE_GO_OUT_OID` bigint(12) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PB_GO_OUT_OID` bigint(12) NOT NULL COMMENT '普通外出基础OID',
+  `REVOKE_START_DATE` date DEFAULT NULL COMMENT '销假开始日期',
+  `REVOKE_END_DATE` date DEFAULT NULL COMMENT '销假结束日期',
+  `START_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '开始当天假长',
+  `END_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '结束当天假长',
+  `REVOKE_VACATION_DAYS` decimal(12,2) DEFAULT NULL COMMENT '销假天数',
+  `STATUTORY_HOLIDAY_DAYS` DECIMAL(12,2) DEFAULT NULL COMMENT '含节假日天数',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人姓名',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人姓名',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PB_REVOKE_GO_OUT_OID`),
+	KEY `YHC_PB_REVOKE_GO_OUT_FK` (`PB_GO_OUT_OID`),
+  CONSTRAINT `YHC_PB_REVOKE_GO_OUT_FK` FOREIGN KEY (`PB_GO_OUT_OID`) REFERENCES `yhc_pb_go_out_info` (`GO_OUT_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='普通外出销假基础表';
+
+-- ----------------------------
+-- Table structure for yhc_pb_go_out_study
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_go_out_study`;
+CREATE TABLE `yhc_pb_go_out_study` (
+  `PB_GO_OUT_STUDY_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '基础人员OID',
+  `GO_STUDY_UNIT` varchar(200) DEFAULT NULL COMMENT '前往进修单位',
+  `APPLY_STUDY_MAJOR` varchar(200) DEFAULT NULL COMMENT '申请进修专业',
+  `START_DATE` date DEFAULT NULL COMMENT '开始时间',
+  `END_DATE` date DEFAULT NULL COMMENT '结束时间',
+  `START_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '开始当天假长',
+  `END_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '结束当天假长',
+  `DAY_COUNT` decimal(12,2) DEFAULT NULL COMMENT '外出天数',
+  `STATUTORY_HOLIDAY_DAYS` decimal(12,2) DEFAULT NULL COMMENT '含节假日天数',
+  `BUDGET_FROM` varchar(100) DEFAULT NULL COMMENT '经费来源',
+  `PUT_UP_STATUS` varchar(2) DEFAULT NULL COMMENT '住宿情况',
+  `POLITICAL_PERFORMANCE` varchar(1000) DEFAULT NULL COMMENT '本人政治表现',
+  `PROFESSIONAL_LEVEL_PURPOSE` varchar(200) DEFAULT NULL COMMENT '本人专业水平与进修目的或要求',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PB_GO_OUT_STUDY_OID`),
+  KEY `YHC_PB_GO_OUT_STUDY_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_GO_OUT_STUDY_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='外出进修基础表';
+
+-- ----------------------------
+-- Table structure for yhc_pb_revoke_go_out_study
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_revoke_go_out_study`;
+CREATE TABLE `yhc_pb_revoke_go_out_study` (
+  `PB_REVOKE_GO_OUT_STUDY_OID` bigint(12) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PB_GO_OUT_STUDY_OID` bigint(12) NOT NULL COMMENT '外出进修基础OID',
+  `REVOKE_START_DATE` date DEFAULT NULL COMMENT '销假开始日期',
+  `REVOKE_END_DATE` date DEFAULT NULL COMMENT '销假结束日期',
+  `START_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '开始当天假长',
+  `END_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '结束当天假长',
+  `REVOKE_VACATION_DAYS` decimal(12,2) DEFAULT NULL COMMENT '销假天数',
+  `STATUTORY_HOLIDAY_DAYS` DECIMAL(12,2) DEFAULT NULL COMMENT '含节假日天数',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人姓名',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人姓名',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PB_REVOKE_GO_OUT_STUDY_OID`),
+	KEY `YHC_PB_REVOKE_GO_OUT_STUDY_FK` (`PB_GO_OUT_STUDY_OID`),
+  CONSTRAINT `YHC_PB_REVOKE_GO_OUT_STUDY_FK` FOREIGN KEY (`PB_GO_OUT_STUDY_OID`) REFERENCES `yhc_pb_go_out_study` (`PB_GO_OUT_STUDY_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='外出进修销假基础表';
+
+-- ----------------------------
+-- Table structure for yhc_pb_image
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_image`;
+CREATE TABLE `yhc_pb_image` (
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '业务人员OID',
+  `PHOTO_PATH` longblob COMMENT '相片',
+  `PHOTO_TYPE` varchar(10) DEFAULT NULL COMMENT '图片扩展名',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_IMAGE_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_injury_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_injury_info`;
+CREATE TABLE `yhc_pb_injury_info` (
+  `INJURY_OID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `PERSON_OID` bigint(20) NOT NULL,
+  `HURT_DATE` date DEFAULT NULL COMMENT '受伤日期',
+  `HURT_LEVEL` varchar(20) DEFAULT NULL COMMENT '伤残等级',
+  `CONGIZANCE_LETTER` varchar(100) DEFAULT NULL COMMENT '认定公函',
+  `JUDGE_ORGAN` varchar(200) DEFAULT NULL COMMENT '认定单位',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`INJURY_OID`),
+  KEY `YHC_PB_INJURY_INFO_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_INJURY_INFO_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='工伤信息';
+
+-- ----------------------------
+-- Table structure for yhc_pb_overtime_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_overtime_info`;
+CREATE TABLE `yhc_pb_overtime_info` (
+  `OVERTIME_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `OVERTIME_TYPE` varchar(20) DEFAULT NULL,
+  `START_DATE` date DEFAULT NULL COMMENT '开始时间',
+  `END_DATE` date DEFAULT NULL COMMENT '结束时间',
+  `OVERTIME_DAYS` decimal(12,2) DEFAULT NULL COMMENT '加班天数',
+  `REASON` varchar(1000) DEFAULT NULL COMMENT '加班事由',
+  `STATUTORY_HOLIDAY_DAYS` decimal(12,2) DEFAULT NULL COMMENT '法定假天数',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`OVERTIME_OID`),
+  KEY `YHC_PB_OVERTIME_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_OVERTIME_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_person_attach
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_person_attach`;
+CREATE TABLE `yhc_pb_person_attach` (
+  `PERSON_OID` bigint(20) NOT NULL,
+  `IS_TWO_DUTY` varchar(2) DEFAULT NULL COMMENT '是否双肩挑',
+  `POSITION_DATE` date DEFAULT NULL COMMENT '岗位起始时间',
+  `M_POSITION_NAME` varchar(100) DEFAULT NULL COMMENT '主岗位名称',
+  `M_POSITION_TYPE` varchar(20) DEFAULT NULL COMMENT '现聘岗位类别（主）YHRS0022',
+  `M_POSITION_LEVEL` varchar(20) DEFAULT NULL COMMENT '现聘岗位级别（主）YHRS0023',
+  `M_POSITION_LEVEL_DATE` date DEFAULT NULL COMMENT '现聘岗位级别起始时间（主）',
+  `S_POSITION_NAME` varchar(100) DEFAULT NULL COMMENT '辅岗位名称',
+  `S_POSITION_TYPE` varchar(20) DEFAULT NULL COMMENT '现聘岗位类别（副）YHRS0022',
+  `S_POSITION_LEVEL` varchar(20) DEFAULT NULL COMMENT '现聘岗位级别（副）YHRS0023',
+  `S_POSITION_LEVEL_DATE` date DEFAULT NULL COMMENT '现聘岗位级别起始时间（副）',
+  `FT_SCHOOL_NAME` varchar(100) DEFAULT NULL COMMENT '全日制最高学校名称',
+  `FT_MAJOR_NAME` varchar(100) DEFAULT NULL COMMENT '全日制最高专业名称',
+  `FT_EDUCATION_LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '全日制最高学历代码YHRS0039',
+  `FT_DEGREE_CODE` varchar(20) DEFAULT NULL COMMENT '全日制最高学位代码YHRS0040',
+  `OJ_SCHOOL_NAME` varchar(100) DEFAULT NULL COMMENT '在职最高学校名称',
+  `OJ_MAJOR_NAME` varchar(100) DEFAULT NULL COMMENT '在职最高专业名称',
+  `OJ_EDUCATION_LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '在职最高学历代码YHRS0039',
+  `OJ_DEGREE_CODE` varchar(20) DEFAULT NULL COMMENT '在职最高学位代码YHRS0040',
+  `EDUCATION_LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '最高学历代码YHRS0039',
+  `DEGREE_CODE` varchar(20) DEFAULT NULL COMMENT '最高学位代码YHRS0040',
+  `LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '护士层级',
+  `PROF_CERTIFICATE_NO` varchar(100) DEFAULT NULL COMMENT '专业技术资格证书编号',
+  `PROF_TECH_NAME` varchar(100) DEFAULT NULL COMMENT '专业技术资格名称',
+  `PROF_TECH_LEVEL` varchar(20) DEFAULT NULL COMMENT '专业技术资格等级',
+  `SPECIALITY_NAME` varchar(100) DEFAULT NULL COMMENT '专业名称',
+  `PROF_PROCURE_DATE` date DEFAULT NULL COMMENT '专业技术资格取得日期',
+  `CERTIFICATE_NO` varchar(50) DEFAULT NULL COMMENT '职业资格证书编号',
+  `QUALIFICATIONS_NAME` varchar(100) DEFAULT NULL COMMENT '职业资格名称',
+  `QUALIFICATIONS_LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '职（执）业资格等级',
+  `QUALIFICATIONS_TYPE` varchar(20) DEFAULT NULL COMMENT '执业资格类型',
+  `SKILL_WORK_CODE` varchar(20) DEFAULT NULL COMMENT '职业（工种）名称',
+  `PROCURE_DATE` date DEFAULT NULL COMMENT '职业资格取得日期',
+  `POLITIC_STATUS_CODE` varchar(20) DEFAULT NULL COMMENT '政治面貌',
+  `HIS_POSITION_STATUS` varchar(20) DEFAULT NULL COMMENT '岗位聘任状态',
+  `HIS_POSITION_TYPE` varchar(20) DEFAULT NULL COMMENT '岗位类别',
+  `HIS_POSITION_LEVEL` varchar(20) DEFAULT NULL COMMENT '岗位级别',
+  `HIS_POSITION_NAME` varchar(100) DEFAULT NULL COMMENT '岗位名称',
+  `HIS_BEGIN_DATE` date DEFAULT NULL COMMENT '岗位聘任开始时间',
+  `HIS_DUTY_ATTRIBUTE`  VARCHAR(20) DEFAULT NULL COMMENT '院内岗位职务属性',
+  `APPOINT_PROF_TITLE_CODE` VARCHAR(20) DEFAULT NULL COMMENT '院内岗位所聘职称编码YHRS0117',
+  `DUTY_NAME` varchar(20) DEFAULT NULL COMMENT '现任职务',
+  `START_DATE` date DEFAULT NULL COMMENT '现任职务开始时间',
+  `DUTY_DEPT_OID` bigint(20) DEFAULT NULL COMMENT '现任职务所在部门',
+  `ENTRY_CURRENT_UNIT_DATE` date DEFAULT NULL COMMENT '进入本单位时间',
+  `ENTRY_CURRENT_UNIT_TYPE` VARCHAR(20) DEFAULT NULL COMMENT '进入本单位类型',
+  `PERSON_OUT_TYPE` VARCHAR(20) DEFAULT NULL COMMENT '离开类型',
+  `OUT_DATE` date DEFAULT NULL COMMENT '离开日期',
+  `DEATH_TYPE` VARCHAR(20) DEFAULT NULL COMMENT '死亡类型',
+  `DEATH_DATE` date DEFAULT NULL COMMENT '死亡时间',
+  `RETRIE_TYPE_CODE` VARCHAR(20) DEFAULT NULL COMMENT '退休类型',
+  `RETRIE_DATE` date DEFAULT NULL COMMENT '退休日期',
+  PRIMARY KEY (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_PERSON_ATTACH_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='人员信息附属表';
+
+-- ----------------------------
+-- Table structure for yhc_pb_person_in
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_person_in`;
+CREATE TABLE `yhc_pb_person_in` (
+  `PERSON_IN_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `ENTRY_CURRENT_UNIT_TYPE` varchar(20) DEFAULT NULL,
+  `ENTRY_CURRENT_UNIT_DATE` date DEFAULT NULL,
+  `PERSON_IN_FROM` varchar(200) DEFAULT NULL COMMENT '进入前所在单位',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '说明',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PERSON_IN_OID`),
+  KEY `YHC_PB_PERSON_IN_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_PERSON_IN_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_person_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_person_info`;
+CREATE TABLE `yhc_pb_person_info` (
+  `PERSON_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '人员oid',
+  `NAME` varchar(50) DEFAULT NULL COMMENT '姓名',
+  `ID_CODE` varchar(20) DEFAULT NULL COMMENT '有效证件类别',
+  `ID_NO` varchar(18) NOT NULL COMMENT '证件号码',
+  `ENGLISH_NAME` varchar(100) DEFAULT NULL COMMENT '外文姓名',
+  `ALTERNATIVE_NAME` varchar(300) DEFAULT NULL COMMENT '曾用名',
+  `SEX_CODE` varchar(20) DEFAULT NULL COMMENT '性别',
+  `BIRTHDAY` date DEFAULT NULL COMMENT '出生日期',
+  `PEOPLE_CODE` varchar(20) DEFAULT NULL COMMENT '民族',
+  `NATIONALITY_CODE` varchar(20) DEFAULT NULL COMMENT '国籍',
+  `ANCESTOR_PLACE_CODE` varchar(20) DEFAULT NULL COMMENT '籍贯',
+  `BIRTHPLACE_CODE` varchar(20) DEFAULT NULL COMMENT '出生地',
+  `HUKOU_PLACE` varchar(20) DEFAULT NULL COMMENT '户口所在地',
+  `IS_SZ` varchar(20) DEFAULT NULL COMMENT '是否深户',
+  `HEALTH_STATUS_CODE` varchar(20) DEFAULT NULL COMMENT '健康状况',
+  `MARRIAGE_STATUS_CODE` varchar(20) DEFAULT NULL COMMENT '婚姻状况',
+  `ADDRESS` varchar(100) DEFAULT NULL COMMENT '家庭住址',
+  `EMAIL` varchar(100) DEFAULT NULL COMMENT '个人Email地址',
+  `MOBILE_PHONE` varchar(100) DEFAULT NULL COMMENT '手机号码',
+  `OFFICE_PHONE` varchar(100) DEFAULT NULL COMMENT '办公电话',
+  `UNIT_OID` bigint(20) DEFAULT NULL COMMENT '工作单位',
+  `DEPT_OID` bigint(20) DEFAULT NULL COMMENT '工作部门',
+  `HIRE_DEPT_OID` bigint(20) DEFAULT NULL,
+  `PERSON_STATUS` varchar(20) DEFAULT NULL COMMENT '人员状态',
+  `PERSON_TYPE` varchar(20) DEFAULT NULL COMMENT '人员类别',
+  `FLAG_OF_HKMCTW_CHINESE_CODE` varchar(2) DEFAULT NULL COMMENT '港澳台侨属标识',
+  `PROT_TECH_FLAG` varchar(2) DEFAULT NULL COMMENT '是否专业技术人员标识',
+  `EXPORT_FLAG` varchar(2) DEFAULT NULL COMMENT '是否专家标志',
+  `DOCTOR_FLAG` varchar(2) DEFAULT NULL COMMENT '是否博士后研究人员',
+  `IS_ABORD_EXPERT` varchar(2) DEFAULT NULL COMMENT '是否海外专家',
+  `IS_STUDY_ABORD_EXPERT` varchar(2) DEFAULT NULL COMMENT '是否留学回国专家',
+  `IS_COMES_CHINA_EXPERT` varchar(2) DEFAULT NULL COMMENT '是否来华定居专家',
+  `IS_VETERAN` varchar(2) DEFAULT NULL COMMENT '是否退役军人标识',
+  `IS_ALLOCATION` varchar(2) DEFAULT NULL COMMENT '是否军转安置干部',
+  `IS_CADRE` varchar(2) DEFAULT NULL COMMENT '是否干部身份',
+  `D_POSITION_TYPE` varchar(20) DEFAULT NULL COMMENT '编制类型',
+  `BANKPOLL` varchar(20) DEFAULT NULL COMMENT '经费形式',
+  `PERSON_ORDER_VIEW` bigint(20) DEFAULT NULL COMMENT '人员排序号',
+  `ENTRY_CURRENT_UNIT_TYPE` varchar(20) DEFAULT NULL,
+  `ENTRY_CURRENT_UNIT_DATE` date DEFAULT NULL,
+  `EMERG_CONTACT` varchar(50) DEFAULT NULL COMMENT '紧急联系人',
+  `EMERG_PHONE` varchar(20) DEFAULT NULL COMMENT '紧急联系人手机号码',
+  `DISPATCHING_UNIT_CODE` varchar(20) DEFAULT NULL COMMENT '所属劳务派遣公司',
+  `PERSON_CODE` varchar(20) DEFAULT NULL COMMENT '人员编号',
+  `LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '护士层级',
+  `PERSON_INT_OID` bigint(20) DEFAULT NULL COMMENT '人员内码ID',
+  `START_WORK_DATE` date DEFAULT NULL COMMENT '参加工作时间',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_person_out
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_person_out`;
+CREATE TABLE `yhc_pb_person_out` (
+  `PERSON_OUT_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `PERSON_OUT_TYPE` varchar(20) DEFAULT NULL COMMENT '减员类型：1-辞职；2-辞退；3-调离；4-开除',
+  `OUT_DATE` date DEFAULT NULL COMMENT '离开日期',
+  `PERSON_OUT_TO` varchar(200) DEFAULT NULL COMMENT '离开后去向',
+  `REMARK` varchar(2000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PERSON_OUT_OID`),
+  KEY `YHC_PB_PERSON_OUT_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_PERSON_OUT_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_photo
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_photo`;
+CREATE TABLE `yhc_pb_photo` (
+  `PHOTO_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员OID',
+  `PHOTO_NAME` varchar(200) DEFAULT NULL COMMENT '原影像文件名称',
+  `PHOTO_CODE` varchar(100) DEFAULT NULL COMMENT '影像文件在服务器上的名称',
+  `PHOTO_TYPE` varchar(10) DEFAULT NULL COMMENT '图片扩展名',
+  `PICTURE_TYPE` varchar(10) DEFAULT NULL COMMENT '影像类别',
+  `REF_TYPE` varchar(2) DEFAULT NULL COMMENT '来源类型（区分是哪个信息集的影像）',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PHOTO_OID`),
+  KEY `YHC_PB_PHOTO_PERSON_INFO_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_PHOTO_PERSON_INFO_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_politic_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_politic_info`;
+CREATE TABLE `yhc_pb_politic_info` (
+  `POLITIC_OID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `PERSON_OID` bigint(20) NOT NULL,
+  `POLITIC_STATUS_CODE` varchar(20) DEFAULT NULL COMMENT '政治面貌',
+  `JOIN_POLITIC_DATE` date DEFAULT NULL COMMENT '参加党派时间',
+  `UNIT_OF_JOIN_PARTY` varchar(100) DEFAULT NULL COMMENT '参加党派时所在单位',
+  `INTRODUCER` varchar(100) DEFAULT NULL COMMENT '介绍人',
+  `PROBATION_DATE` date DEFAULT NULL COMMENT '转正时间',
+  `POLITIC_DUTY_CODE` varchar(20) DEFAULT NULL COMMENT '党内职务名称',
+  `OUT_PARTY_DATE` date DEFAULT NULL COMMENT '离党日期',
+  `ABNORMITY_TYPE` varchar(20) DEFAULT NULL COMMENT '异常事项类别',
+  `ABNORMITY_REASON` varchar(1000) DEFAULT NULL COMMENT '异常事项原因',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`POLITIC_OID`),
+  KEY `YHC_PB_POLITIC_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_POLITIC_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='政治面貌与党派';
+
+-- ----------------------------
+-- Table structure for yhc_pb_prof_tech_qualif_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_prof_tech_qualif_info`;
+CREATE TABLE `yhc_pb_prof_tech_qualif_info` (
+  `PROF_TECH_QUALIF_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `CERTIFICATE_NO` varchar(100) DEFAULT NULL COMMENT '资格证书编号',
+  `PROF_TECH_CODE` varchar(20) DEFAULT NULL COMMENT '专业技术资格CODE',
+  `PROF_TECH_NAME` varchar(100) DEFAULT NULL COMMENT '专业技术资格名称',
+  `PROF_TECH_LEVEL` varchar(20) DEFAULT NULL COMMENT '专业技术资格等级',
+  `PROF_TECH_LEVEL_NAME` varchar(100) DEFAULT NULL COMMENT '专业技术资格等级描述',
+  `SPECIALITY_NAME` varchar(100) DEFAULT NULL COMMENT '专业名称',
+  `PROCURE_DATE` date DEFAULT NULL COMMENT '取得资格日期',
+  `VALIDITY_DATE` date DEFAULT NULL COMMENT '有效期',
+  `ACQUIRE_APPROACH_CODE` varchar(12) DEFAULT NULL COMMENT '取得资格途径',
+  `ISSUE_ORGAN` varchar(200) DEFAULT NULL COMMENT '发证机构',
+  `APPROVE_ORGAN_NAME` varchar(100) DEFAULT NULL COMMENT '资格审批机构名称',
+  `IS_HIGHEST_LEVEL` varchar(2) DEFAULT NULL COMMENT '是否主要专业技术资格',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PROF_TECH_QUALIF_OID`),
+  KEY `YHC_PB_PROF_TECH_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_PROF_TECH_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_punishment_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_punishment_info`;
+CREATE TABLE `yhc_pb_punishment_info` (
+  `PUNISHMENT_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `PUNISHMENT_NAME` varchar(100) DEFAULT NULL COMMENT '处分名称',
+  `PUNISHMENT_REASON` varchar(500) DEFAULT NULL COMMENT '处分原因',
+  `PUNISHMENT_MONTH` bigint(20) DEFAULT NULL COMMENT '处分期限（月）',
+  `PUNISHMENT_END_DATE` date DEFAULT NULL COMMENT '处分截止日期',
+  `PUNISHMENT_APPROVAL_UNIT` varchar(100) DEFAULT NULL COMMENT '处分批准机关名称',
+  `PUNISHMENT_DATE` date DEFAULT NULL COMMENT '处分批准日期',
+  `IS_CANCAL_PUNISHMENT` varchar(20) DEFAULT NULL COMMENT '处分是否撤销标识',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PUNISHMENT_OID`),
+  KEY `YHC_PB_PUNISHMENT_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_PUNISHMENT_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='惩处信息';
+
+-- ----------------------------
+-- Table structure for yhc_pb_qualifications_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_qualifications_info`;
+CREATE TABLE `yhc_pb_qualifications_info` (
+  `QUALIFICATIONS_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `CERTIFICATE_NO` varchar(50) DEFAULT NULL COMMENT '职业资格证书编号',
+  `QUALIFICATIONS_CODE` varchar(20) DEFAULT NULL COMMENT '职业资格名称CODE',
+  `QUALIFICATIONS_NAME` varchar(100) DEFAULT NULL COMMENT '职业资格名称',
+  `QUALIFICATIONS_LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '职业资格等级',
+  `QUALIFICATIONS_LEVEL_NAME` varchar(100) DEFAULT NULL COMMENT '职业资格等级描述',
+  `QUALIFICATIONS_TYPE` varchar(20) DEFAULT NULL COMMENT '职业资格类型',
+  `PROCURE_DATE` date DEFAULT NULL COMMENT '取得资格日期',
+  `VALIDITY_DATE` date DEFAULT NULL COMMENT '有效期',
+  `ACQUIRE_APPROACH_CODE` varchar(12) DEFAULT NULL COMMENT '取得资格途径',
+  `ISSUE_ORGAN` varchar(100) DEFAULT NULL COMMENT '发证机构',
+  `IS_HIGHEST_LEVEL` varchar(2) DEFAULT NULL COMMENT '是否本人当前最高技术工人等级',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`QUALIFICATIONS_OID`),
+  KEY `YHC_PB_QUALIFI_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_QUALIFI_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_resume_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_resume_info`;
+CREATE TABLE `yhc_pb_resume_info` (
+  `RESUME_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '工作简历OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `START_DATE` datetime DEFAULT NULL COMMENT '开始时间',
+  `END_DATE` datetime DEFAULT NULL COMMENT '截止时间',
+  `UNIT` varchar(100) DEFAULT NULL COMMENT '工作单位',
+  `DUTY` varchar(50) DEFAULT NULL COMMENT '职务',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`RESUME_OID`),
+  KEY `YHC_PB_RESUME_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_RESUME_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_retrie_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_retrie_info`;
+CREATE TABLE `yhc_pb_retrie_info` (
+  `PERSON_OID` bigint(20) NOT NULL,
+  `RETRIE_TYPE_CODE` varchar(20) DEFAULT NULL COMMENT '离退类别',
+  `RETRIE_DATE` date DEFAULT NULL COMMENT '离退日期',
+  `RETRIE_REASON` varchar(20) DEFAULT NULL COMMENT '提前退休原因',
+  `RETIRE_TREATMENT_LEVEL_CODE` varchar(20) DEFAULT NULL COMMENT '离退后享受待遇级别',
+  `RETIRE_TREATMENT_TYPE_CODE` varchar(20) DEFAULT NULL COMMENT '离退后享受待遇类别',
+  `RETIRE_FEE_RATIO` decimal(12,2) DEFAULT NULL COMMENT '离退休费比例',
+  `RETIRE_ALLOWANCE_RATIO` decimal(12,2) DEFAULT NULL COMMENT '离退休补助比例',
+  `RETIRT_PAYMENT_UNIT` varchar(20) DEFAULT NULL COMMENT '离退休费支付单位',
+  `RETIRE_MANAGE_UNIT` varchar(100) DEFAULT NULL COMMENT '离退休后管理单位',
+  `RETRIT_APPROVE_UNIT` varchar(100) DEFAULT NULL COMMENT '离退休批准机关',
+  `RETRIE_APPROVE_FILENO` varchar(50) DEFAULT NULL COMMENT '离退休批准文号',
+  `RETIRE_NO` varchar(50) DEFAULT NULL COMMENT '离退休证号',
+  `SERVICE_YEARS_ADDED` bigint(20) DEFAULT NULL COMMENT '有害工种增加工龄',
+  `SPECIAL_CONTRIBUTION_RATIO` decimal(12,2) DEFAULT NULL COMMENT '特殊贡献比例',
+  `SPECIAL_CONTRIBUTION_FLAG` varchar(2) DEFAULT NULL COMMENT '特殊贡献标志',
+  `RETURNED_OVERSEAS_CHI_SCALE` decimal(12,2) DEFAULT NULL COMMENT '归侨加发比例',
+  `RETURNED_OVERSEAS_FLAG` varchar(2) DEFAULT NULL COMMENT '归国华侨标志',
+  `IS_NO_CHILD_FOR_LIFE` varchar(2) DEFAULT NULL COMMENT '是否终身无子女YHRS0003',
+  `APPROVAL_TYPE` varchar(20) DEFAULT NULL COMMENT '审批类型',
+  `APPROVAL_UNIT` varchar(100) DEFAULT NULL COMMENT '审查部门',
+  `COMPLIED_CLAUSE` varchar(100) DEFAULT NULL COMMENT '符合条例',
+  `FAMILY_PLANNING_AWARD` varchar(50) DEFAULT NULL COMMENT '计生奖励',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_RETRIE_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='离退休情况';
+
+-- ----------------------------
+-- Table structure for yhc_pb_review_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_review_info`;
+CREATE TABLE `yhc_pb_review_info` (
+  `REVIEW__OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '业务库考核OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `REVIEW_TYPE_CODE` varchar(20) DEFAULT NULL COMMENT '考核类别',
+  `REVIEW_TYPE_NAME` varchar(100) DEFAULT NULL COMMENT '考核类别描述',
+  `REVIEW_YEAR` date DEFAULT NULL COMMENT '考核年度',
+  `REVIEW_RESULT_CODE` bigint(20) DEFAULT NULL COMMENT '考核结论code',
+  `REVIEW_RESULT_DESC` varchar(100) DEFAULT NULL COMMENT '考核结论描述',
+  `REVIEW_DATE` date DEFAULT NULL COMMENT '考核日期',
+  `REVIEW_UNIT_OID` varchar(12) DEFAULT NULL COMMENT '考核时所在单位',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`REVIEW__OID`),
+  KEY `YHC_PB_REVIEW_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_REVIEW_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='考核信息';
+
+-- ----------------------------
+-- Table structure for yhc_pb_reward_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_reward_info`;
+CREATE TABLE `yhc_pb_reward_info` (
+  `REWARD_OID` bigint(20) NOT NULL AUTO_INCREMENT,
+  `PERSON_OID` bigint(20) NOT NULL,
+  `REWARD_NAME` varchar(100) DEFAULT NULL COMMENT '奖励名称',
+  `REWARD_TYPE_CODE` varchar(20) DEFAULT NULL COMMENT '奖励类别',
+  `HONOUR_LEVEL` varchar(20) DEFAULT NULL COMMENT '授予荣誉称号级别',
+  `ENCOURAGEMENT_REASON` varchar(500) DEFAULT NULL COMMENT '奖励原因',
+  `REWARD_UNIT` varchar(100) DEFAULT NULL COMMENT '奖励批准单位',
+  `REWARD_DATE` date DEFAULT NULL COMMENT '奖励批准日期',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`REWARD_OID`),
+  KEY `YHC_PB_REWARD_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_REWARD_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='奖励信息';
+
+-- ----------------------------
+-- Table structure for yhc_pb_specia_auth
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_specia_auth`;
+CREATE TABLE `yhc_pb_specia_auth` (
+  `SPECIA_AUTH_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `AUTH_TYPE` varchar(20) DEFAULT NULL COMMENT '权限类型',
+  `AUTH_LEVEL` varchar(20) DEFAULT NULL COMMENT '授权级别',
+  `AUTH_DATE` date DEFAULT NULL COMMENT '授权时间',
+  `AUTH_STATUS` varchar(20) DEFAULT NULL COMMENT '授权状态',
+  `CANCEL_AUTH_DATE` date DEFAULT NULL COMMENT '取消授权时间',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注信息',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`SPECIA_AUTH_OID`),
+  KEY `YHC_PB_SPECIA_AUTH_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_SPECIA_AUTH_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_sy_gw_employ_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_sy_gw_employ_info`;
+CREATE TABLE `yhc_pb_sy_gw_employ_info` (
+  `SY_GW_EMPLOY_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `DUTY_UNIT_NAME` varchar(100) DEFAULT NULL COMMENT '聘任单位名称',
+  `DUTY_UNIT_OID` bigint(20) DEFAULT NULL COMMENT '聘任单位OID',
+  `DEPT_NAME` varchar(100) DEFAULT NULL COMMENT '内设机构名称',
+  `DEPT_OID` bigint(20) DEFAULT NULL COMMENT '内设机构OID',
+  `POSITIONING_STATUS` varchar(20) DEFAULT NULL COMMENT '岗位聘任状态',
+  `POSITION_TYPE` varchar(20) DEFAULT NULL COMMENT '岗位类别',
+  `POSITION_LEVEL` varchar(20) DEFAULT NULL COMMENT '岗位级别',
+  `POSITION_NAME` varchar(100) DEFAULT NULL COMMENT '岗位名称',
+  `BEGIN_DATE` date DEFAULT NULL COMMENT '岗位聘任开始时间',
+  `END_DATE` date DEFAULT NULL COMMENT '岗位聘任拟截止时间',
+  `END_DATE_ACTUAL` date DEFAULT NULL COMMENT '岗位聘任实际截止时间',
+  `IS_M_POSITION` varchar(2) DEFAULT NULL COMMENT '是否主岗位',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `DUTY_RECORD_TYPE` varchar(20) DEFAULT NULL COMMENT '职务类型',
+  `DUTY_ATTRIBUTE` varchar(20) DEFAULT NULL COMMENT '职务属性',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`SY_GW_EMPLOY_OID`),
+  KEY `YHC_PB_SY_GW_EMPLOY_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_SY_GW_EMPLOY_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='任职聘任信息';
+
+-- ----------------------------
+-- Table structure for yhc_pb_vacation_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_vacation_info`;
+CREATE TABLE `yhc_pb_vacation_info` (
+  `VACATION_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '人员ID',
+  `VACATION_TYPE` varchar(20) DEFAULT NULL COMMENT '休假类型',
+  `START_DATE` date DEFAULT NULL COMMENT '休假开始时间',
+  `END_DATE` date DEFAULT NULL COMMENT '休假结束时间',
+  `VACATION_DAYS` decimal(12,2) DEFAULT NULL COMMENT '请假天数',
+  `STATUTORY_HOLIDAY_DAYS` decimal(12,2) DEFAULT NULL COMMENT '包含法定假天数',
+  `REASON` varchar(1000) DEFAULT NULL COMMENT '休假原因',
+  `WORK_HANDOVER` varchar(1000) DEFAULT NULL COMMENT '工作交接事项',
+  `WORK_AGENT` varchar(100) DEFAULT NULL COMMENT '工作代理人',
+  `EMERG_CONTACT` varchar(100) DEFAULT NULL COMMENT '紧急联络人',
+  `EMERG_PHONE` varchar(20) DEFAULT NULL COMMENT '紧急联系人电话',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `VACATION_STATUS` varchar(2) DEFAULT NULL COMMENT '请销假状态',
+  `START_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '开始当天假长',
+  `END_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '结束当天假长',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`VACATION_OID`),
+  KEY `YHC_PB_VACATION_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_VACATION_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_yn_gw_employ_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_yn_gw_employ_info`;
+CREATE TABLE `yhc_pb_yn_gw_employ_info` (
+  `YN_GW_EMPLOY_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL,
+  `DEPT_OID` bigint(20) DEFAULT NULL COMMENT '聘任内设机构OID',
+  `DEPT_NAME` varchar(100) DEFAULT NULL COMMENT '聘任内设机构名称',
+  `HIS_POSITION_STATUS` varchar(20) DEFAULT NULL COMMENT '岗位聘任状态',
+  `HIS_WORK_TYPE` varchar(20) DEFAULT NULL COMMENT '工作类别',
+  `HIS_POSITION_TYPE` varchar(20) DEFAULT NULL COMMENT '岗位类别',
+  `HIS_POSITION_LEVEL` varchar(20) DEFAULT NULL COMMENT '岗位级别CODE',
+  `HIS_POSITION_NAME` varchar(100) DEFAULT NULL COMMENT '岗位名称',
+  `HIS_POSITION_OID` bigint(20) DEFAULT NULL COMMENT '岗位名称OID',
+  `HIS_BEGIN_DATE` date DEFAULT NULL COMMENT '岗位聘任开始时间',
+  `HIS_DUTY_ATTRIBUTE`  VARCHAR(20) DEFAULT NULL COMMENT '院内岗位职务属性',
+  `END_DATE` date DEFAULT NULL COMMENT '岗位聘任拟截止时间',
+  `END_DATE_ACTUAL` date DEFAULT NULL COMMENT '岗位聘任实际截止时间',
+  `DUTY_ATTRIBUTE` varchar(20) DEFAULT NULL COMMENT '职务属性',
+  `IS_PART_TIME` VARCHAR(2) DEFAULT NULL COMMENT '是否兼职	0：否	1：是',
+  `APPOINT_PROF_TITLE_CODE` VARCHAR(20) DEFAULT NULL COMMENT '所聘职称编码YHRS0117',
+  `APPOINT_PROF_TITLE_NAME` VARCHAR(100) DEFAULT NULL COMMENT '所聘职称',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`YN_GW_EMPLOY_OID`),
+  KEY `YHC_PB_YN_GW_EMPLOY_PERSON_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_YN_GW_EMPLOY_PERSON_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `YHC_PB_PHOTO_TEMP` (
+  `PHOTO_OID` BIGINT(12) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `PERSON_OID` BIGINT(12) NOT NULL COMMENT '人员ID',
+  `PHOTO_NAME` VARCHAR(200) NULL COMMENT '原名称',
+  `PHOTO_CODE` VARCHAR(100) NULL COMMENT '服务器上的名称',
+  `PHOTO_TYPE` VARCHAR(10) NULL COMMENT '附件类型',
+  `PICTURE_TYPE` VARCHAR(10) NULL COMMENT '影像分类',
+  `REF_TYPE` VARCHAR(2) NULL COMMENT '信息集类型',
+  `STATUS` VARCHAR(2) NULL COMMENT '状态',
+  `CREATE_BY` VARCHAR(20) NULL COMMENT '创建人ID',
+  `CREATE_NAME` VARCHAR(20) NULL COMMENT '创建人姓名',
+  `CREATE_DATE` DATETIME NULL COMMENT '创建时间',
+  `UPDATE_BY` VARCHAR(20) NULL COMMENT '修改人ID',
+  `UPDATE_NAME` VARCHAR(20) NULL COMMENT '修改人姓名',
+  `UPDATE_DATE` DATETIME NULL COMMENT '修改时间',
+  PRIMARY KEY (`PHOTO_OID`),
+  INDEX `YHC_PB_PHOTO_TEMP_FK_idx` (`PERSON_OID` ASC),
+  CONSTRAINT `YHC_PB_PHOTO_TEMP_FK`
+    FOREIGN KEY (`PERSON_OID`)
+    REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+COMMENT = '临时影像信息'
+
+DROP TABLE IF EXISTS `yhc_pb_revoke_vacation`;
+CREATE TABLE `yhc_pb_revoke_vacation` (
+  `REVOKE_VACATION_OID` bigint(12) NOT NULL AUTO_INCREMENT,
+  `VACATION_OID` bigint(12) DEFAULT NULL,
+  `REVOKE_START_DATE` date DEFAULT NULL,
+  `REVOKE_END_DATE` date DEFAULT NULL,
+  `START_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '开始当天假长',
+  `END_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '结束当天假长',
+  `REVOKE_VACATION_DAYS` decimal(12,2) DEFAULT NULL,
+  `STATUTORY_HOLIDAY_DAYS` DECIMAL(12,2) DEFAULT NULL COMMENT '含节假日天数',
+  `REMARK` varchar(1000) DEFAULT NULL,
+  `CREATE_BY` varchar(20) DEFAULT NULL,
+  `CREATE_NAME` varchar(20) DEFAULT NULL,
+  `CREATE_DATE` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `UPDATE_BY` varchar(20) DEFAULT NULL,
+  `UPDATE_NAME` varchar(20) DEFAULT NULL,
+  `UPDATE_DATE` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`REVOKE_VACATION_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for yhc_pb_vacation_workinjury
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_vacation_workinjury`;
+CREATE TABLE `yhc_pb_vacation_workinjury` (
+  `VACATION_OID` bigint(20) NOT NULL COMMENT '主键OID',
+  `IS_AFFIRM_WORKINJURY` varchar(2) DEFAULT NULL COMMENT '是否认定工伤',
+  `WORKINJURY_AFFIRM_UNIT` varchar(200) DEFAULT NULL COMMENT '工伤认定单位',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(100) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(100) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`VACATION_OID`),
+  KEY `YHC_PB_VACATION_WORKINJURY_FK` (`VACATION_OID`),
+  CONSTRAINT `YHC_PB_VACATION_WORKINJURY_FK` FOREIGN KEY (`VACATION_OID`) REFERENCES `yhc_pb_vacation_info` (`VACATION_OID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='工伤假基础表';
+
+-- ----------------------------
+-- Table structure for YHC_PB_PROLONG_MATERNITY_LEAVE
+-- ----------------------------
+DROP TABLE IF EXISTS `YHC_PB_PROLONG_MATERNITY_LEAVE`;
+CREATE TABLE `YHC_PB_PROLONG_MATERNITY_LEAVE` (
+  `VACATION_OID` bigint(20) NOT NULL COMMENT '主键OID',
+  `PROLONG_START_DATE` date DEFAULT NULL COMMENT '延长产假开始日期',
+  `PROLONG_END_DATE` date DEFAULT NULL COMMENT '延长产假结束日期',
+  `START_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '开始当天假长',
+  `END_DATE_DAYS` decimal(12,2) DEFAULT NULL COMMENT '结束当天假长',
+  `VACATION_DAYS` decimal(12,2) DEFAULT NULL COMMENT '请假天数',
+  `REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(100) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(100) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`VACATION_OID`),
+  KEY `YHC_PB_PROLONG_MATERNITY_LEAVE_FK` (`VACATION_OID`),
+  CONSTRAINT `YHC_PB_PROLONG_MATERNITY_LEAVE_FK` FOREIGN KEY (`VACATION_OID`) REFERENCES `yhc_pb_vacation_info` (`VACATION_OID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='延长产假基础表';
+
+
+-- ----------------------------
+-- Table structure for yhc_pb_department_change
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_department_change`;
+CREATE TABLE `yhc_pb_department_change` (
+  `PB_DEPARTMENT_CHANGE_OID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+  `PERSON_OID` bigint(20) NOT NULL COMMENT '基础人员OID',
+  `DEPARTMENT_FROM_OID` bigint(20) NOT NULL COMMENT '人员变动前科室OID',
+  `DEPARTMENT_TO_OID` bigint(20) NOT NULL COMMENT '人员变动后科室OID',
+  `ENTRY_DEPARTMENT_DATE` date DEFAULT NULL COMMENT '进入当前科室时间',
+	`REMARK` varchar(1000) DEFAULT NULL COMMENT '备注',
+  `CREATE_BY` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATE_NAME` varchar(20) DEFAULT NULL COMMENT '创建人名称',
+  `CREATE_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_BY` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATE_NAME` varchar(20) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATE_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+  PRIMARY KEY (`PB_DEPARTMENT_CHANGE_OID`),
+  KEY `YHC_PB_DEPARTMENT_CHANGE_FK` (`PERSON_OID`),
+  CONSTRAINT `YHC_PB_DEPARTMENT_CHANGE_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='人员科室变动基础表';
+
+
+
+-- ----------------------------
+-- Table structure for yhc_pb_wage_info
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_wage_info`;
+CREATE TABLE `yhc_pb_wage_info` (
+	`PB_WAGE_INFO_OID` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+	`PERSON_OID` BIGINT(20) NOT NULL COMMENT '基础人员OID',
+	`START_DATE_OF_WAGE` DATE DEFAULT NULL COMMENT '起薪时间',
+	`EDU_LEVEL` VARCHAR(20) DEFAULT NULL COMMENT '学历等级',
+	`DUTY_NAME` VARCHAR(20) DEFAULT NULL COMMENT '职务名称',
+	`DUTY_LEVEL` VARCHAR(20) DEFAULT NULL COMMENT '职务级别/岗位级别',
+	`IS_PROBATIONARY_PERIOD` VARCHAR(2) DEFAULT NULL COMMENT '是否见习期',
+	`WORK_DATE` DATE DEFAULT NULL COMMENT '参加工作时间',
+	`WAGE_TOTAL` DECIMAL(12,2) DEFAULT NULL COMMENT '工资总额',
+	`EFFECTIVE_FLAG` VARCHAR(2) DEFAULT '1' COMMENT '生效标识	1：生效	0：失效',
+	`REMARK` VARCHAR (1000) DEFAULT NULL COMMENT '备注',
+  `CREATED_BY_CODE` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATED_BY_NAME` varchar(100) DEFAULT NULL COMMENT '创建人名称',
+  `CREATED_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATED_BY_CODE` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATED_BY_NAME` varchar(100) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATED_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+	PRIMARY KEY (`PB_WAGE_INFO_OID`),
+	KEY `YHC_PB_WAGE_INFO_FK` (`PERSON_OID`),
+	CONSTRAINT `YHC_PB_WAGE_INFO_FK` FOREIGN KEY (`PERSON_OID`) REFERENCES `yhc_pb_person_info` (`PERSON_OID`)
+) ENGINE INNODB AUTO_INCREMENT=1000 DEFAULT CHARSET=UTF8 COMMENT '人员工资信息基础表';
+
+
+-- ----------------------------
+-- Table structure for yhc_pb_wage_info_items
+-- ----------------------------
+DROP TABLE IF EXISTS `yhc_pb_wage_info_items`;
+CREATE TABLE `yhc_pb_wage_info_items` (
+	`PB_WAGE_INFO_ITEMS_OID` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT '主键OID',
+	`PB_WAGE_INFO_OID` BIGINT(20) NOT NULL COMMENT '工资信息主表OID',
+	`WAGE_ITEM_CODE` VARCHAR(20) DEFAULT NULL COMMENT '工资项编码',
+	`WAGE_ITEM_NAME` VARCHAR(20) DEFAULT NULL COMMENT '工资项名称',
+	`PROPERTY_ONE_NAME` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性1名称',
+	`PROPERTY_TWO_NAME` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性2名称',
+	`PROPERTY_THREE_NAME` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性3名称',
+	`PROPERTY_FOUR_NAME` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性4名称',
+	`PROPERTY_ONE_VALUE` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性1取值',
+	`PROPERTY_TWO_VALUE` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性2取值',
+	`PROPERTY_THREE_VALUE` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性3取值',
+	`PROPERTY_FOUR_VALUE` VARCHAR(20) DEFAULT NULL COMMENT '工资项子属性4取值',
+	`WAGE_AMOUNT` DECIMAL(12,2) DEFAULT NULL COMMENT '金额',
+	`ORDER_VIEW` VARCHAR (20) DEFAULT NULL COMMENT '排序号',
+	`REMARK` VARCHAR (1000) DEFAULT NULL COMMENT '备注',
+  `CREATED_BY_CODE` varchar(20) DEFAULT NULL COMMENT '创建人ID',
+  `CREATED_BY_NAME` varchar(100) DEFAULT NULL COMMENT '创建人名称',
+  `CREATED_DATE` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATED_BY_CODE` varchar(20) DEFAULT NULL COMMENT '修改人ID',
+  `UPDATED_BY_NAME` varchar(100) DEFAULT NULL COMMENT '修改人名称',
+  `UPDATED_DATE` datetime DEFAULT NULL COMMENT '修改时间',
+	PRIMARY KEY (`PB_WAGE_INFO_ITEMS_OID`),
+	KEY `YHC_PB_WAGE_INFO_ITEMS_FK` (`PB_WAGE_INFO_OID`),
+	CONSTRAINT `YHC_PB_WAGE_INFO_ITEMS_FK` FOREIGN KEY (`PB_WAGE_INFO_OID`) REFERENCES `yhc_pb_wage_info` (`PB_WAGE_INFO_OID`)
+) ENGINE INNODB AUTO_INCREMENT=1000 DEFAULT CHARSET=UTF8 COMMENT '人员工资信息明细基础表';

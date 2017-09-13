@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	 <bean id="dataExportManagerFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataexport.facade.DataExportManagerFacade">
+	        	<property name="dataExportManagerService" ref="dataExportManagerService"/>
+	        	<property name="utOrgService" ref="utOrgService"/>
+	        	<property name="utUnitService" ref="utUnitService"/>
+			</bean>
+		</property>
+    </bean>
+        <bean id="dataExportManagerService" class="com.yh.hr.info.dataexport.service.impl.DataExportManagerServiceImpl" >
+        </bean> 
+</beans>

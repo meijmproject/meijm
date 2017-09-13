@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="verPbPersonWorkbenchFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean
+				class="com.yh.hr.info.ver.unit.workbench.facade.VerPbPersonWorkbenchFacade">
+				<property name="utUnitService" ref="utUnitService" />
+				<property name="saoUserUnitAuthorizationService" ref="saoUserUnitAuthorizationService" />
+				<property name="verPbPersonWorkbenchService" ref="verPbPersonWorkbenchService" />
+			    <property name="utOrgService" ref="utOrgService" />
+			    <property name="pbPersonInfoService" ref="pbPersonInfoService" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="verPbPersonWorkbenchService" class="com.yh.hr.info.ver.unit.workbench.service.VerPbPersonWorkbenchService" />
+
+</beans>

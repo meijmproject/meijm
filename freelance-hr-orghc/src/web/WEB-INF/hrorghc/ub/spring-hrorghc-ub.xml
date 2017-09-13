@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+    <!--单位信息   -->
+	<bean name="ubUnitService" class="com.yh.hr.orghc.ub.service.impl.UbUnitServiceImpl" >
+	    <property name="utOrganizationComService" ref="utOrganizationComService"/>
+	    </bean>
+	<!--内设机构信息-->
+	<bean name="ubOrgService" class="com.yh.hr.orghc.ub.service.impl.UbOrgServiceImpl" >
+	    <property name="utOrganizationComService" ref="utOrganizationComService"/>
+   	</bean>
+</beans>

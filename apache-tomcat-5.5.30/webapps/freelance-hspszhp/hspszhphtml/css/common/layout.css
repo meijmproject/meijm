@@ -1,0 +1,108 @@
+@charset "utf-8";
+body{
+	min-width:1280px!important;
+	overflow-x:auto!important;
+    background: #ffffff;
+}
+body boby{
+    overflow-x: hidden!important;
+}
+.main-body{
+    background-color: #fff;
+    font-family:'Microsoft Yahei';
+    overflow-x: hidden!important;
+}
+
+/*下部主要内容区*/
+.main-container{
+    background: #edf0f5;
+    /*border: 1px solid transparent;*/
+    position: relative;
+}
+
+/*两栏布局：左边固定宽度右边自适应*/
+/*左边信息部分*/
+.left-content{
+    background: #fff;
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+    height: 100%;
+}
+/*右部信息展示区*/
+.right-content{
+    overflow: hidden;
+    font-size: 14px;
+    height: 100%;
+}
+
+/*三栏布局：左右固定宽度，中间自适应*/
+.left-column{
+    position: fixed;
+    top: 60px;
+    left: 20px;
+    width: 125px;
+}
+.right-column{
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width:190px;
+}
+.main-column{
+    width: auto;
+    /*padding-bottom: 20px;*/
+    margin-left: 165px;
+    margin-right: 230px;
+    margin-top: 20px;
+    position:relative;
+}
+/*当前位置导航*/
+.current-position{
+    width: calc(100% - 40px);
+    font-size: 14px;
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e3e3e3;
+    color: #111;
+    padding:0 20px;
+}
+.current-position span{
+    font-size: 14px;
+    color: #666666;
+    color:#1cc6a3;
+}
+/*导航位置固定*/
+.position-fixed{
+    position:fixed;
+    z-index:999;
+}
+.position-fixed+.main-container{
+    top:40px;
+    overflow-y: auto;
+}
+.btn-return{
+    float: right;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 8px;
+    margin-top: 7px;
+    background-color: #1cc6a3;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.btn-return-work{
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    margin-top: 5px;
+    background-color: #1cc6a3;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}

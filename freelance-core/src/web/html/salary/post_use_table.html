@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>岗位使用情况</title>
+</head>
+<link rel="stylesheet" href="../../css/reset.css">
+<link rel="stylesheet" href="../../css/salary/institution_basic_table.css">
+<style>
+    body{
+        margin: 1%;
+    }
+</style>
+<body>
+<table class="institution_basic">
+    <tr class="institution_basic_td_bg">
+        <td colspan="2" class="border_right">岗位类型</td>
+        <td colspan="2" class="border_right">岗位等级</td>
+        <td colspan="3" class="border_right">核定岗位数</td>
+        <td colspan="3" class="border_right">聘用岗位数</td>
+        <td colspan="3" class="border_right">锁定岗位数</td>
+        <td colspan="2" class="border_right">冻结岗位数</td>
+        <td colspan="2">可用岗位数</td>
+    </tr>
+    <tr class="border_top institution_basic_td_color">
+        <td colspan="2" rowspan="10" class="border_right institution_basic_td_bg">管理岗位</td>
+        <td colspan="2" class="institution_basic_td_bg border_right">三</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">四</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">五</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">六</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">七</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">八</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">九</td>
+        <td colspan="3" rowspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2" rowspan="3"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">十</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">未定级</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg foot_red border_right">小计</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="border_top institution_basic_td_color">
+        <td colspan="2" rowspan="15" class="border_right institution_basic_td_bg">专业技术岗位</td>
+        <td colspan="2" class="institution_basic_td_bg border_right">一</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">二</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">三</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">四</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">五</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">六</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">七</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">八</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">九</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">十</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">十一</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">十二</td>
+        <td colspan="3" rowspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2" rowspan="3"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">十三</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">未定级</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg foot_red border_right">小计</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="border_top institution_basic_td_color">
+        <td colspan="2" rowspan="7" class="border_right institution_basic_td_bg">工勤技能岗位</td>
+        <td colspan="2" class="institution_basic_td_bg border_right">一</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">二</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">三</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">四</td>
+        <td colspan="3" rowspan="2"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2" rowspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">五</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg border_right">普通工</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="institution_basic_td_color">
+        <td colspan="2" class="institution_basic_td_bg foot_red border_right">小计</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr class="border_top institution_basic_td_color">
+        <td colspan="4" class="institution_basic_td_bg foot_red border_right">总计</td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+    </tr>
+</table>
+
+</body>
+</html>

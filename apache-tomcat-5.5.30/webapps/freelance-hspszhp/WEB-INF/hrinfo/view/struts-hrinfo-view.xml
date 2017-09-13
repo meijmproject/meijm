@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="verPbPersonInfoForm" type="com.yh.hr.info.ver.unit.person.web.form.VerPbPersonInfoForm" />
+		<form-bean name="verPbFamilyInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.VerPbFamilyInfoForm" />
+		<form-bean name="pbSyGwEmployInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbSyGwEmployInfoForm" />
+		<form-bean name="pbYnGwEmployInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbYnGwEmployInfoForm" />
+		<form-bean name="pbEngageContractInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEngageContractInfoForm" />
+		<form-bean name="pbEngageConHistInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEngageConHistInfoForm" />
+		<form-bean name="pbEducationLevelDegreeForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEducationLevelDegreeForm" />
+		<form-bean name="pbEducationTrainingInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbEducationTrainingInfoForm" />
+		<form-bean name="pbQualificationsInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbQualificationsInfoForm" />
+		<form-bean name="pbProfTechQualifInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbProfTechQualifInfoForm" />
+		<form-bean name="pbCertificateInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbCertificateInfoForm" />
+		<form-bean name="pbCertificateHistInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbCertificateHistInfoForm" />
+		<form-bean name="pbDeathInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbDeathInfoForm" />
+		<form-bean name="pbInjuryInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbInjuryInfoForm" />
+		<form-bean name="pbPoliticInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbPoliticInfoForm" />
+		<form-bean name="pbPunishmentInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbPunishmentInfoForm" />
+		<form-bean name="pbResumeInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbResumeInfoForm" />
+		<form-bean name="pbRetrieInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbRetrieInfoForm" />
+		<form-bean name="pbReviewInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbReviewInfoForm" />
+		<form-bean name="pbRewardInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbRewardInfoForm" />
+		<form-bean name="pbSpeciaAuthForm" type="com.yh.hr.info.ver.unit.comm.web.form.PbSpeciaAuthForm" />
+		<form-bean name="verGoOutInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.VerGoOutInfoForm" />
+		<form-bean name="verOverTimeInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.VerOverTimeInfoForm" />
+		<form-bean name="verChangeOffInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.VerChangeOffInfoForm" />
+		<form-bean name="verVacationInfoForm" type="com.yh.hr.info.ver.unit.comm.web.form.VerPbVacationInfoForm" />
+		<!--
+		<form-bean name="verPbMilitaryInfoForm" type="VerPbMilitaryInfoForm" />
+    	<form-bean name="verPbExserviceInfoForm" type="VerPbExserviceInfoForm" />
+    	<form-bean name="verPbWageInfluenceForm" type="VerPbWageInfluenceForm" />
+    	-->
+    </form-beans>
+	<action-mappings>
+		<action path="/goVerPersonView"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.person.web.action.VerPbPersonAction"
+				parameter="method">
+			<description>跳转到单位人员信息校核查看页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/comm/view_verperson_main.jsp"/>
+		</action>
+		<action path="/goProtectPersonView"
+				scope="request"
+				type="com.yh.hr.info.ver.unit.person.web.action.VerPbPersonAction"
+				parameter="method">
+			<description>跳转到单位人员信息校核查看页面</description>
+			<forward name="success" path="/hrinfo/protect/org/workbench/view_protectperson_main.jsp"/>
+		</action>
+		<action path="/goToViewPbPersonPageShow"
+			type="com.yh.hr.info.view.web.action.ViewPbPersonAction"
+			parameter="method" 
+			name="verPbPersonInfoForm"
+			scope="request"
+			validate="false">
+			<description>查看基础信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbperson_info.jsp"/>
+		</action>
+		<action path="/goToViewPbPersonPortionShow"
+			type="com.yh.hr.info.view.web.action.ViewPbPersonAction"
+			parameter="method" 
+			name="verPbPersonInfoForm"
+			scope="request"
+			validate="false">
+			<description>查看人员基础信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbperson_info_portion.jsp"/>
+		</action>
+		<action path="/listPbFamilyInfoShow"
+			type="com.yh.hr.info.view.web.action.ViewPbFamilyInfoAction"
+			parameter="method" 
+			scope="request"
+			name="verPbFamilyInfoForm"
+			validate="false">
+			<description>查看家庭主要成员信息情况列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_familyinfo_list.jsp"/>
+		</action>
+		<action path="/showPbFamilyInfo"
+			type="com.yh.hr.info.view.web.action.ViewPbFamilyInfoAction"
+			parameter="method" 
+			scope="request" 
+			name="verPbFamilyInfoForm"
+			input="/hrinfo/view/view_ver_familyinfo_list.jsp"
+			validate="false">
+			<description>查看家庭成员与社会关系详细信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_familyinfo_show.jsp"/>
+		</action>
+		<action path="/listPbSyGwEmployInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbSyGwEmployInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbSyGwEmployInfoForm"
+			validate="false">
+			<description>查看事业岗位聘任信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbsygwemployinfo_list.jsp"/>
+		</action>
+		<action path="/listPbYnGwEmployInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbYnGwEmployInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbYnGwEmployInfoForm"
+			validate="false">
+			<description>查看院内岗位聘任信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbyngwemployinfo_list.jsp"/>
+		</action>
+		<action path="/listPbContractInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageContractInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbEngageContractInfoForm"
+			validate="false">
+			<description>查看合同信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbengagecontractinfo_list.jsp"/>
+		</action>
+		<action path="/listPbContractChangeInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEngageConHistInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbEngageConHistInfoForm"
+			validate="false">
+			<description>查看合同变动历史信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbengageconhistinfo_list.jsp"/>
+		</action>
+		<action path="/listPbEducationLevelInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationLevelDegreeAction"
+			parameter="method" 
+			scope="request"
+			name="pbEducationLevelDegreeForm"
+			validate="false">
+			<description>查看学历学位信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbeducationleveldegree_list.jsp"/>
+		</action>
+		<action path="/listPbEducationTraningShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbEducationTrainingInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbEducationTrainingInfoForm"
+			validate="false">
+			<description>查看教育培训经历信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbeducationtraininginfo_list.jsp"/>
+		</action>
+		<action path="/listPbProfTechQualifInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbProfTechQualifInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbProfTechQualifInfoForm"
+			validate="false">
+			<description>查看专业技术资格信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbproftechqualifinfo_list.jsp"/>
+		</action>
+		<action path="/listPbQualificationsInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbQualificationsInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbQualificationsInfoForm"
+			validate="false">
+			<description>查看执业（职业）资格信息信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbqualificationsinfo_list.jsp"/>
+		</action>
+		<action path="/listPbCertificateInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbCertificateInfoForm"
+			validate="false">
+			<description>查看执业注册信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbcertificateinfo_list.jsp"/>
+		</action>
+		<action path="/listPbCertificateHistInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbCertificateHistInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbCertificateHistInfoForm"
+			validate="false">
+			<description>查看执业注册历史信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbcertificatehistinfo_list.jsp"/>
+		</action>
+		<action path="/listPbSpeciaAuthInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbSpeciaAuthAction"
+			parameter="method" 
+			scope="request"
+			name="pbSpeciaAuthForm"
+			validate="false">
+			<description>查看特殊授权情况列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbspeciaauth_list.jsp"/>
+		</action>
+		<action path="/listPbReviewInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbReviewInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbReviewInfoForm"
+			validate="false">
+			<description>查看年度考核信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbreviewinfo_list.jsp"/>
+		</action>
+		<action path="/listPbPoliticInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPoliticInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbPoliticInfoForm"
+			validate="false">
+			<description>查看政治面貌与党派信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbpoliticinfo_list.jsp"/>
+		</action>
+		<action path="/listPbRewardInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbRewardInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbRewardInfoForm"
+			validate="false">
+			<description>查看奖励信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbrewardinfo_list.jsp"/>
+		</action>
+		<action path="/listPbPunishmentInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPunishmentInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbPunishmentInfoForm"
+			validate="false">
+			<description>查看处分信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbpunishmentinfo_list.jsp"/>
+		</action>
+		<action path="/listPbInjuryInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbInjuryInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbInjuryInfoForm"
+			validate="false">
+			<description>查看工伤信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbinjuryinfo_list.jsp"/>
+		</action>
+		<action path="/listPbResumeInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbResumeInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbResumeInfoForm"
+			validate="false">
+			<description>查看工作经历列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbresumeinfo_list.jsp"/>
+		</action>
+		<action path="/listPbRetrieInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbRetrieInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbRetrieInfoForm"
+			validate="false">
+			<description>查看离退休情况信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbretrieinfo_list.jsp"/>
+		</action>
+		<action path="/listPbDeathInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbDeathInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbDeathInfoForm"
+			validate="false">
+			<description>查看自然减员信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbdeathinfo_list.jsp"/>
+		</action>
+		<action path="/listPbDutyInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbDutyInfoAction"
+			parameter="method" 
+			scope="request"
+			name="pbDutyInfoForm"
+			validate="false">
+			<description>查看院内中层职务任职信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_pbdutyinfo_list.jsp"/>
+		</action>
+		<action path="/listPersonPhoto"
+			type="com.yh.hr.info.ver.unit.person.web.action.VerPbPersonAction"
+			parameter="method" 
+			scope="request"
+			validate="false">
+			<description>查看影像</description>
+		</action>
+		<action path="/listPbPersonInShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonInAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonInForm"
+			validate="false">
+			<description>查看人员进入信息情况列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_personin_list.jsp"/>
+		</action>
+		<action path="/listPbPersonOutShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.PbPersonOutAction"
+			parameter="method" 
+			scope="request"
+			name="pbPersonOutForm"
+			validate="false">
+			<description>查看人员离开信息情况列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_personout_list.jsp"/>
+		</action>
+		<action path="/listPbGoOutInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerGoOutInfoAction"
+			parameter="method" 
+			scope="request"
+			name="verGoOutInfoForm"
+			validate="false">
+			<description>查看外出信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_gooutinfo_list.jsp"/>
+		</action>
+		<action path="/showGoOutInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerGoOutInfoAction"
+			parameter="method" 
+			scope="request" 
+			name="verGoOutInfoForm"
+			input="/hrinfo/view/view_ver_gooutinfo_list.jsp"
+			validate="false">
+			<description>查看外出信息详细信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_gooutinfo_show.jsp"/>
+		</action>
+		<action path="/listPbOvertimeInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerOverTimeInfoAction"
+			parameter="method" 
+			scope="request"
+			name="verOverTimeInfoForm"
+			validate="false">
+			<description>查看加班信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_overtimeinfo_list.jsp"/>
+		</action>
+		<action path="/showOverTimeInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerOverTimeInfoAction"
+			parameter="method" 
+			scope="request" 
+			name="verOverTimeInfoForm"
+			input="/hrinfo/view/view_ver_overtimeinfo_list.jsp"
+			validate="false">
+			<description>查看加班信息详细信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_overtimeinfo_show.jsp"/>
+		</action>
+		<action path="/listPbChangeOffInfoShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerChangeOffInfoAction"
+			parameter="method"
+			scope="request"
+			name="verChangeOffInfoForm"
+			validate="false">
+			<description>查看调休信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_changeoffinfo_list.jsp"/>
+		</action>
+		<action path="/showChangeOffInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerChangeOffInfoAction"
+			parameter="method"
+			scope="request"
+			name="verChangeOffInfoForm"
+			input="/hrinfo/view/view_ver_changeoffinfo_list.jsp"
+			validate="false">
+			<description>查看调休信息详细信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_changeoffinfo_show.jsp"/>
+		</action>
+		<action path="/listPbVacationShow"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerVacationInfoAction"
+			parameter="method"
+			scope="request"
+			name="verVacationInfoForm"
+			validate="false">
+			<description>查看请休假信息列表</description>
+			<forward name="success" path="/hrinfo/view/view_ver_vacationinfo_list.jsp"/>
+		</action>
+		<action path="/showVacationInfo"
+			type="com.yh.hr.info.ver.unit.comm.web.action.VerVacationInfoAction"
+			parameter="method"
+			scope="request"
+			name="verVacationInfoForm"
+			input="/hrinfo/view/view_ver_vacationinfo_list.jsp"
+			validate="false">
+			<description>查看请休假信息详细信息</description>
+			<forward name="success" path="/hrinfo/view/view_ver_vacationinfo_show.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

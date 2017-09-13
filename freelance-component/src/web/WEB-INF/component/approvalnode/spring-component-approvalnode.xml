@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- CfgProperties -->
+	<bean id="approvalNodeFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref local="approvalNodeFacadeTarget" />
+		</property>
+	</bean>
+	<bean id="approvalNodeFacadeTarget" class="com.yh.component.approvalnode.facade.impl.ApprovalNodeFacadeImpl">
+		<property name="approvalNodeService">
+			<ref local="approvalNodeService"/>
+		</property>
+	</bean>
+	<bean id="approvalNodeService" class="com.yh.component.approvalnode.service.impl.ApprovalNodeServiceImpl">
+	</bean>
+</beans>

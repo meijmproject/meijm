@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<struts-config>
+	<form-beans>
+		<form-bean name="gbDescriptionForm" type="com.yh.hr.component.gb.web.form.GbDescriptionForm" />
+	</form-beans>
+    <action-mappings>
+    	<action path="/goToSygwManageWorkBench"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>跳转到事业单位岗位管理工作台</description>
+				<forward name="success" path="/hrcomponent/gb/gb_worktop.jsp" />
+		</action>
+		<action path="/goToGBPlanWorkbeanch"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>跳转到岗位下达工作台</description>
+				<forward name="success-create" path="/hrcomponent/gb/gbplan/gb_plan_worktop.jsp" />
+				<forward name="success-update" path="/hrcomponent/gb/gbplan/gb_plan_view_worktop.jsp" />
+		</action>
+		
+		<action path="/goToGbDescriptionWorkBench"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>跳转到岗位说明书工作台</description>
+				<forward name="success" path="/hrcomponent/gb/gbdescription/gbdescription.jsp" />
+		</action>
+		<action path="/listGbDescription"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>岗位说明书列表页</description>
+		</action>
+		
+		<action path="/goToAddGbDescription"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>跳转到岗位说明书新增页面</description>
+				<forward name="success" path="/hrcomponent/gb/gbdescription/gbdescription_add.jsp" />
+		</action>
+		<action path="/addGbDescription"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				name="gbDescriptionForm"
+				parameter="method">
+				<description>岗位说明书新增</description>
+		</action>
+		
+		<action path="/goToUpdateGbDescription"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				name="gbDescriptionForm"
+				parameter="method">
+				<description>跳转到岗位说明书修改页面</description>
+				<forward name="success" path="/hrcomponent/gb/gbdescription/gbdescription_update.jsp" />
+		</action>
+		<action path="/updateGbDescription"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				name="gbDescriptionForm"
+				parameter="method">
+				<description>岗位说明书修改</description>
+		</action>
+		<action path="/deleteGbDescription"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>岗位说明书删除</description>
+		</action>
+		<action path="/viewGbDescription"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				name="gbDescriptionForm"
+				parameter="method">
+				<description>岗位说明书查看</description>
+				<forward name="success" path="/hrcomponent/gb/gbdescription/gbdescription_view.jsp" />
+		</action>
+		
+		<action path="/createGBPlan"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>新建岗位下达</description>
+		</action>
+		<action path="/goToUpdatePBPlan"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>跳转到修改岗位下达</description>
+				<forward name="success" path="/hrcomponent/gb/gbplan/gb_plan_update_worktop.jsp" />
+		</action>
+		<action path="/updateGBPlan"
+				scope="request"
+				type="com.yh.hr.component.gb.web.action.GBAction"
+				parameter="method">
+				<description>修改岗位下达</description>
+		</action>
+		
+		<action path="/goToGBPlan"
+	        scope="request"
+	        type="com.yh.hr.component.gb.web.action.GBAction"
+	        parameter="method">
+	      <description>跳转到岗位使用情况表</description>
+	      <forward name="success" path="/hrcomponent/gb/gbplan/gbplan_work_infomation.jsp"/>
+	      <forward name="export" path="/hrcomponent/gb/gbplan/gbplan_work_infomation_export.jsp"/>
+	    </action>
+	    
+    </action-mappings>
+</struts-config>

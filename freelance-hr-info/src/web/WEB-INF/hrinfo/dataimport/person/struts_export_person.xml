@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+          
+<struts-config>
+	<action-mappings>
+		<action path="/exportDicPerson"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.exportPersonAction"
+				parameter="method">
+			<description>导出excel</description>
+		</action>
+		<action path="/exportPersonSuc"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.exportPersonAction"
+				parameter="method">
+			<description>入库完成</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/person_import_suc.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>	

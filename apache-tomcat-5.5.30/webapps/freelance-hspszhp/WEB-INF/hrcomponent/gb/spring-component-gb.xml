@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="gbDescriptionFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.component.gb.facade.GbDescriptionFacade">
+				<property name="gbDescriptionService" ref="gbDescriptionService" />
+			</bean>
+		</property>
+	</bean>
+   <bean id="gbDescriptionService" class="com.yh.hr.component.gb.service.impl.GbDescriptionServiceImpl"/>
+    <!-- 岗位下达管理 -->
+	<bean id="gBPlanFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref local="gBPlanFacadeTarget" />
+		</property>
+	</bean>
+	<bean id="gBPlanFacadeTarget" class="com.yh.hr.component.gb.facade.GBPlanFacade">
+		<property name="gBPlanService">
+			<ref local="gBPlanService"/>
+		</property>
+	</bean>
+	<bean id="gBPlanService" class="com.yh.hr.component.gb.service.impl.GBPlanServiceImpl"></bean>
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yh.admin.message.bo.MessageBoard" table="YHB_MESSAGE_BOARD" >
+        <id name="messageOid" type="java.lang.Long">
+            <column name="MESSAGE_OID" precision="12" scale="0" />
+			  <generator class="identity"/>
+        </id>
+        <property name="publisher" type="java.lang.String">
+            <column name="PUBLISHER" />
+        </property>
+        <property name="reader" type="java.lang.String">
+            <column name="READER"  />
+        </property>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE"  />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="CONTENT"  />
+        </property>
+        <property name="effDate" type="java.util.Date">
+            <column name="EFF_DATE"  />
+        </property>
+        <property name="expDate" type="java.util.Date">
+            <column name="EXP_DATE"  />
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE"  />
+        </property>
+        <property name="createdBy" type="java.lang.String">
+            <column name="CREATED_BY"  />
+        </property>
+        <property name="systemId" type="java.lang.String">
+            <column name="SYSTEM_ID"  />
+        </property>
+    </class>
+</hibernate-mapping>

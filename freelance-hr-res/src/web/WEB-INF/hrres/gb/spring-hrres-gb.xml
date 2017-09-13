@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--岗位信息-->
+	<bean name="gbPostPercentService" class="com.yh.hr.res.gb.service.impl.GbPostPercentServiceImpl">
+	</bean>
+	<!-- 岗位数量设置信息 -->
+    <bean id="gbPlanDetailService" class="com.yh.hr.res.gb.service.impl.GbPlanDetailServiceImpl" />
+    <!-- 岗位说明书设置信息 -->
+	<!-- 事业单位岗位分类管理情况  -->
+	<bean id="gbSortManagementDetailService" class="com.yh.hr.res.gb.service.impl.GbSortManagementDetailServiceImpl"/>
+	<bean id="gbSortManagementService" class="com.yh.hr.res.gb.service.impl.GbSortManagementServiceImpl"/>
+</beans>

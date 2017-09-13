@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.yh.hr.component.yngw.bo">
+    <class name="com.yh.hr.component.yngw.bo.GwYnInfo" table="YHG_GB_YN_INFO">
+        <id name="positionOid" column="POSITION_OID" type="java.lang.Long">
+            <generator class="identity"/>
+        </id>
+
+        <property name="positionName" type="java.lang.String">
+            <column name="POSITION_NAME">
+                <comment>岗位名称</comment>
+            </column>
+        </property>
+        <property name="parentPositionOid" type="java.lang.Long">
+            <column name="PARENT_POSITION_OID">
+                <comment>上级岗位名称oid</comment>
+            </column>
+        </property>
+        <property name="parentPositionName" type="java.lang.String">
+            <column name="PARENT_POSITION_NAME">
+                <comment>上级岗位名称</comment>
+            </column>
+        </property>
+        <property name="hisWorkType" type="java.lang.String">
+            <column name="HIS_WORK_TYPE">
+                <comment>工作类别</comment>
+            </column>
+        </property>
+        <property name="hisPositionType" type="java.lang.String">
+            <column name="HIS_POSITION_TYPE">
+                <comment>岗位类别</comment>
+            </column>
+        </property>
+        <property name="hisPositionObligation" type="java.lang.String">
+            <column name="HIS_POSITION_OBLIGATION">
+                <comment>岗位职责</comment>
+            </column>
+        </property>
+        <property name="hisPositionQualifications" type="java.lang.String">
+            <column name="HIS_POSITION_QUALIFICATIONS">
+                <comment>岗位任职条件</comment>
+            </column>
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="REMARK">
+                <comment>备注</comment>
+            </column>
+        </property>
+        <property name="createdByCode" type="java.lang.String">
+            <column name="CREATED_BY_CODE">
+                <comment>创建人Code</comment>
+            </column>
+        </property>
+        <property name="createdByName" type="java.lang.String">
+            <column name="CREATED_BY_NAME">
+                <comment>创建人名称</comment>
+            </column>
+        </property>
+        <property name="createdDate" type="java.util.Date">
+            <column name="CREATED_DATE">
+                <comment>创建日期</comment>
+            </column>
+        </property>
+        <property name="updatedByCode" type="java.lang.String">
+            <column name="UPDATED_BY_CODE">
+                <comment>修改人Code</comment>
+            </column>
+        </property>
+        <property name="updatedByName" type="java.lang.String">
+            <column name="UPDATED_BY_NAME">
+                <comment>修改人名称</comment>
+            </column>
+        </property>
+        <property name="updatedDate" type="java.util.Date">
+            <column name="UPDATED_DATE">
+                <comment>修改日期</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

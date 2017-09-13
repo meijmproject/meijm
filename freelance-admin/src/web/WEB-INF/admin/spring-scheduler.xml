@@ -1,0 +1,34 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- 日终任务 -->
+	<!-- scheduler facatory define -->
+	<bean class="com.yh.platform.core.scheduler.SchedulerFactoryWithTargetBean">
+       <property name="triggers">
+          <list>
+          	  <!-- 同步单位数据权限
+			  <ref bean="updateUserUnitAuthTrigger"/>-->
+          </list>
+       </property>
+    </bean>
+
+	<!-- 同步单位数据权限 -->
+	<bean id="updateUserUnitAuthTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	     <property name="jobDetail">
+	        <ref bean="updateUserUnitAuthService"/>
+	     </property>
+	     <property name="cronExpression">
+	        <value>0 0 22 * * ?  </value>
+	     </property>
+    </bean>
+    
+    <bean id="updateUserUnitAuthService" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	     <property name="targetObject">
+	          <ref bean="userAuthorizationService"/>
+	     </property>
+	     <property name="targetMethod">
+	          <value>updateUserAuth</value>
+	     </property>
+	</bean>
+</beans>
+

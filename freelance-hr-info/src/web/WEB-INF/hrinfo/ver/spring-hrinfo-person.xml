@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- 人员基础信息  -->
+	<bean id="verPbPersonInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.ver.unit.person.facade.VerPbPersonInfoFacade">
+	        	<property name="pbPersonInfoService" ref="pbPersonInfoService"/>
+	        	<property name="utUnitService" ref="utUnitService"/>
+	        	<property name="pbImageService" ref="pbImageService"/>
+	        	<property name="utOrgService" ref="utOrgService" />
+			</bean>
+		</property>
+    </bean>
+    <bean id="viewPbPersonInfoFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.view.facade.ViewPbPersonInfoFacade">
+	        	<property name="pbPersonInfoService" ref="pbPersonInfoService"/>
+				<property name="utUnitService" ref="utUnitService"/>
+				<property name="pbPersonAttachService" ref="pbPersonAttachService"/>
+				<property name="utOrganizationComService" ref="utOrganizationComService"/>
+			    <property name="utOrgService" ref="utOrgService" />
+			    <property name="viewPbPersonService" ref="viewPbPersonService" />
+			</bean>
+		</property>
+    </bean>
+    <bean id="viewPbPersonService" class="com.yh.hr.info.view.service.impl.ViewPbPersonServiceImpl" >
+    	        	<property name="pbPersonInfoService" ref="pbPersonInfoService"/>
+    	        	<property name="pbPersonAttachService" ref="pbPersonAttachService"/>
+    </bean>
+
+</beans>

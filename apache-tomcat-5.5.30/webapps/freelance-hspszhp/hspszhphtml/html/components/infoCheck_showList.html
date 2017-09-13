@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <meta charset="utf-8">
+    <title>信息校核信息集列表项展示</title>
+    <link rel="stylesheet" href="..\..\css\common\reset.css">
+    <link rel="stylesheet" href="..\..\css\components\info_check.css">
+    <link rel="stylesheet" href="..\..\css\components\handle_btn.css">
+
+</head>
+<body style="background: #edf0f5;width: 925px;margin: 20px;">
+
+    <!--不带图片不带备注的单信息集-->
+    <div class="infoshow-container padding-lrb">
+        <h2 class="infoshow-title">基本人员信息<button class="btn-modify-gray btn-icon-default"></button></h2>
+        <div class="data-units" id="data-units1">
+            <!--<dl class="data-unit-dl">-->
+                <!--<dt>全日制最高学位</dt>-->
+                <!--<dd >学士</dd>-->
+            <!--</dl>-->
+        </div>
+    </div>
+
+    <!--带图片带备注的单信息集-->
+    <div class="infoshow-container padding-lrb">
+        <h2 class="infoshow-title">学历信息<button class="btn-modify-gray btn-icon-default"></button></h2>
+        <div class="data-units">
+            <dl class="data-unit-dl photo-unit">
+                <dt>照片</dt>
+                <dd><img src="/hspszhphtml/images/bq8.jpg"/></dd>
+            </dl>
+            <!--<dl class="data-unit-dl">-->
+                <!--<dt>全日制最高学位</dt>-->
+                <!--<dd >学士</dd>-->
+            <!--</dl>-->
+            <dl class="data-unit-dl remark-unit">
+                <dt>备注</dt>
+                <dd><textarea>备注内容</textarea></dd>
+            </dl>
+        </div>
+    </div>
+
+<script src="..\..\js\jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        // 向数据集sl-content中插入数据
+        $.ajax({
+            url: "/hspszhphtml/html/json_data.json",//json文件位置
+            type: "GET",//请求方式为get
+            dataType: "json", //返回数据格式为json
+            success: function(data) {//请求成功完成后要执行的方法
+                //each循环 使用$.each方法遍历返回的数据date
+                $.each(data.infoListData, function(i, item) {
+                    var num=4;
+                    while (num--){
+                        var str = ' <dl class="data-unit-dl"><dt>' + item.type + '</dt><dd>' + item.value + '</dd></dl>';
+                        $('#data-units1').append(str);
+                        $('.remark-unit').before(str);
+                    }
+                });
+            }
+        });
+
+    })
+</script>
+</body>
+</html>

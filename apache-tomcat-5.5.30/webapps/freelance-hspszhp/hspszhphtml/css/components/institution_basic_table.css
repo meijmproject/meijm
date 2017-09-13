@@ -1,0 +1,147 @@
+.institution_basic{
+    /*margin: 0px 20px;*/
+    border: 1px solid #808080;
+    width: 100%;
+    background: #fff;
+}
+/*.institution_basic tr{
+    border-left: 1px solid #a6a6a6;
+}*/
+.institution_basic tr td,.institution_basic tr th{
+    width: 5.88%;
+    height: 45px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-family: "Microsoft Yahei", Helvetica, "pragmatica-web", Arial, sans-serif;
+    border-right: 1px dotted #c0c0c0;
+    border-left: 1px dotted #c0c0c0;
+    border-bottom: 1px dotted #c0c0c0;
+    word-wrap:break-word;
+    /*display: inline-block;*/
+}
+/* .big-data-excel{
+  width:300%;
+} */
+.big-data-excel.institution_basic tr td,.big-data-excel.institution_basic tr th{
+    width: 60px;
+}
+.institution_basic .border_top{
+    border-top: 1px solid #a6a6a6;
+}
+.institution_basic .border_right{
+    border-right: 1px solid #a6a6a6;
+}
+.institution_basic .border_bottom{
+    border-bottom: 1px solid #a6a6a6;
+}
+.institution_basic .border_left{
+    border-left: 1px solid #a6a6a6;
+}
+.institution_basic .institution_basic_td_bg{
+    background: #f5f9fc;
+    color: #000002;
+}
+.institution_basic .institution_basic_td_color{
+    /*color: #00ccfb;*/
+    color: #666666;
+}
+.institution_basic .text_no_center{
+    text-align: left;
+}
+.institution_basic .text_no_center input{
+    margin: 10px 10px;
+    width: inherit;
+}
+.institution_basic .condition{
+    padding: 10px 20px;
+    height: 160px;
+    line-height: 40px;
+    overflow: auto;
+}
+.institution_basic .condition p{
+    height: 40px;
+}
+.institution_basic .first_td{
+    width: 10%;
+}
+.institution_basic .example td{
+    height: 0.01px;
+    border:none;
+    opacity: 0;
+}
+.institution_basic_td_black td{
+    color:#333;
+}
+.institution_basic_a_table{
+    padding: 20px;
+    max-height: 490px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.institution_basic td input,.institution_basic td select{
+    display: inline-block;
+    width: 56%;
+    padding:2px 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f2f2f2;
+}
+.show-more-info td input {
+	padding: 2px 0!important;
+	width: 90%!important;
+	font-size: 14px;
+}
+.institution_basic td textarea{
+    height: 95%;
+    width: 97%;
+    margin-top: 10px;
+    padding: 6px 10px;
+    line-height: 26px;
+    color: #333;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #ddd;
+}
+.institution_basic .td_has_input{
+    padding-left:10px;
+}
+.institution_basic .delete_info{
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background:url("../../images/components/hadle_btn/delete.png") -17px 0px no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.institution_basic .add_info{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 17px;
+    height: 17px;
+    background:url("../../images/components/hadle_btn/add16-green.png") 0px 0px no-repeat;
+    border: none;
+    margin-right: 10px;
+}
+.institution_basic .pointer{
+    cursor: pointer;
+}
+.institution_basic tr .foot_red{
+    color: red;
+}
+.institution_basic td .hide{
+    display: none;
+}
+.excel-btn{
+    text-align: center;
+    padding: 20px;
+}
+.excel-btn button{
+    height: 50px;
+    width: 120px;
+    font-size: 16px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人员导入-数据检查</title>
+    <link rel="stylesheet" href="../../../css/common/reset.css">
+    <link rel="stylesheet" href="../../../css/common/base.css">
+    <link rel="stylesheet" href="../../../css/common/layout.css">
+    <link rel="stylesheet" href="../../../css/components/head_nav.css">
+    <link rel="stylesheet" href="../../../css/components/file_import.css">
+    <link rel="stylesheet" href="../../../css/components/handle_btn.css">
+</head>
+<body>
+<div id="head-nav"></div>
+<div class="current-position">
+    当前位置：
+    <span>基础信息管理 &gt; </span>
+    <span>机构管理 &gt; </span>
+    <span>人员信息导入 </span>
+</div>
+<div class="main-container file-import-wrap">
+    <div class="person-info-import">
+        <div class="file-import-process">
+            <ol class="progress progress-6 clearfix">
+                <li class="active">
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">1</div>
+                        <div class="process-cont-text">导入</div>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">2</div>
+                        <div class="process-cont-text">信息项映射</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">3</div>
+                        <div class="process-cont-text">数据检查</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">4</div>
+                        <div class="process-cont-text">数据校核</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-line"></div>
+                    <div class="process-cont">
+                        <div class="process-cont-number">5</div>
+                        <div class="process-cont-text">人员入库</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="process-cont">
+                        <div class="process-cont-number">6</div>
+                        <div class="process-cont-text">完成</div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="person-info-loading">
+        <div class="person-check-cont">
+            <h2>2017/7/7 16:00:00 ,计划导入人员总数200人</h2>
+            <h2 class="present-check-num">当前已检查<span>80</span>人</h2>
+
+            <ul class="person-info-check">
+                <li class="person-check-item first-level">
+                    <div class="person-check-result">未通过</div>
+                    <div class="person-check-num">10人</div>
+                    <div class="person-check-name">必填项</div>
+                </li>
+                <li class="person-check-item second-level">
+                    <div class="person-check-result">未通过</div>
+                    <div class="person-check-num">10人</div>
+                    <div class="person-check-name">数据格式</div>
+                </li>
+                <li class="person-check-item thrid-level">
+                    <div class="person-check-result">未通过</div>
+                    <div class="person-check-num">20人</div>
+                    <div class="person-check-name">数据长度</div>
+                </li>
+                <li class="person-check-item fourth-level">
+                    <div class="person-check-result">未通过</div>
+                    <div class="person-check-num">30人</div>
+                    <div class="person-check-name">字典项</div>
+                </li>
+                <li class="person-check-item fifth-level">
+                    <div class="person-check-result ">未通过</div>
+                    <div class="person-check-num">20人</div>
+                    <div class="person-check-name">关联性</div>
+                </li>
+                <li class="person-check-item sixth-level">
+                    <div class="person-check-result">未通过</div>
+                    <div class="person-check-num">30人</div>
+                    <div class="person-check-name">完整性</div>
+                </li>
+            </ul>
+            <div class="person-check-btns">
+                <button class="btn-search btn-default">重新导入</button>
+                <button class="btn-search btn-default">字典映射</button>
+                <button class="btn-search btn-default">人员入库</button>
+                <button class="btn-search btn-default download"><a>采集信息表下载</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../../../js/jquery-1.12.4.js"></script>
+<script>
+    $(function() {
+        $('#head-nav').load('../../components/head_nav.html');
+
+    });
+</script>
+</html>

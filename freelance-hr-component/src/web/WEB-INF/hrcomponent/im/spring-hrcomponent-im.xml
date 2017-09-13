@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!--*****************************************************导入前检查 *****************************************************-->
+	<!-- 必填项检查service -->
+    <bean id="importCheckType_1" class="com.yh.hr.component.im.check.service.impl.RequiredCheckServiceImpl" />
+	<!-- 数据项长度检查service -->
+    <bean id="importCheckType_2" class="com.yh.hr.component.im.check.service.impl.DataLengthCheckServiceImpl" />
+    <bean id="importCheckType_3" class="com.yh.hr.component.im.check.service.impl.DataFormatCheckServiceImpl" />
+	<!-- 数据格式检查service -->
+	<!-- 科室是否存在检查service -->
+    <bean id="importCheckType_7" class="com.yh.hr.component.im.check.service.impl.OrgExistCheckServiceImpl" />
+    
+    <!--*****************************************************导入后检查***************************************************** -->
+    <!-- 关联性检查 -->
+    <!-- 岗位类别关联性检查 -->
+    <bean id="relationCheck_HIS_POSITION_TYPE" class="com.yh.hr.component.im.check.service.relation.impl.PositionTypeCheckServiceImpl" />
+    <!-- 合同开始时间关联性检查 -->
+    <bean id="relationCheck_CONTRACT_BEGIN" class="com.yh.hr.component.im.check.service.relation.impl.ContractBeginCheckServiceImpl" />
+    <!-- 合同截止时间关联性检查 -->
+    <bean id="relationCheck_CONTRACT_END" class="com.yh.hr.component.im.check.service.relation.impl.ContractEndCheckServiceImpl" />
+    <!-- 政治面貌关联性检查 -->
+    <bean id="relationCheck_POLITIC_STATUS_CODE" class="com.yh.hr.component.im.check.service.relation.impl.PoliticStatusCheckServiceImpl" />
+    <!-- 进入本单位时间关联性检查 -->
+    <bean id="relationCheck_ENTRY_CURRENT_UNIT_DATE" class="com.yh.hr.component.im.check.service.relation.impl.EntryDateCheckServiceImpl" />
+    <!-- 离开本单位时间关联性检查 -->
+    <bean id="relationCheck_OUT_DATE" class="com.yh.hr.component.im.check.service.relation.impl.OutDateCheckServiceImpl" />
+    <!-- 离退休时间关联性检查 -->
+    <bean id="relationCheck_RETRIE_DATE" class="com.yh.hr.component.im.check.service.relation.impl.RetireDateCheckServiceImpl" />
+    <!-- 自然减员时间关联性检查 -->
+    <bean id="relationCheck_DEATH_DATE" class="com.yh.hr.component.im.check.service.relation.impl.DeathDateCheckServiceImpl" />
+    
+    <!-- 完整性检查 -->
+    <bean id="integrityCheckService" class="com.yh.hr.component.im.check.service.integrity.impl.IntegrityCheckServiceImpl" />
+     <!-- 字典项检查 -->
+    <bean id="dictionaryCheckService" class="com.yh.hr.component.im.check.service.dic.impl.DictionaryCheckServiceImpl" />
+    
+    <!--******************************************************日志处理****************************************************** -->
+	<!-- 人员导入检查日志服务service -->
+    <bean id="checkUnusualHandleService" class="com.yh.hr.component.im.loghandle.service.impl.CheckUnusualHandleServiceImpl" />
+	<!-- 导入批次检查数量更新服务service -->
+    <bean id="checkBatchHandleService" class="com.yh.hr.component.im.loghandle.service.impl.CheckBatchHandleServiceImpl" />
+	<!-- 字典映射日志批量更新服务service -->
+    <bean id="dicMappingLogHandleService" class="com.yh.hr.component.im.loghandle.service.impl.DicMappingLogHandleServiceImpl" />
+    
+    
+    <!--*******************************************************表操作******************************************************* -->
+	<!-- 组装SQL插入数据service -->
+    <bean id="tableDataInsertService" class="com.yh.hr.component.im.tablehandle.service.impl.TableDataInsertServiceImpl" />
+	<!-- 清空表数据service -->
+    <bean id="tableDataEmptyService" class="com.yh.hr.component.im.tablehandle.service.impl.TableDataEmptyServiceImpl" />
+	<!-- 组装SQL查询表数据service -->
+    <bean id="tableDataSelectService" class="com.yh.hr.component.im.tablehandle.service.impl.TableDataSelectServiceImpl" />
+</beans>

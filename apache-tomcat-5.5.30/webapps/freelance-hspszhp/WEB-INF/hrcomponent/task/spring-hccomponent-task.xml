@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    
+	<!-- 业务事项创建 -->
+	<bean id="taskCreateAbstractService" class="com.yh.hr.component.task.service.impl.TaskCreateAbstractService" abstract="true">
+		<property name="yhWorkflowService">
+			<ref bean="yhWorkflowService"/>
+		</property>
+	</bean> 
+		<!-- 业务事项删除 -->
+	<bean id="taskDeleteAbstractService" class="com.yh.hr.component.task.service.impl.TaskDeleteAbstractService" abstract="true">
+	</bean>
+	<!-- 业务事项终止 -->
+	<bean id="taskStopAbstractService" class="com.yh.hr.component.task.service.impl.TaskStopAbstractService" abstract="true">
+		<property name="yhWorkflowService">
+			<ref bean="yhWorkflowService"/>
+		</property>
+	</bean>
+	<!-- 业务事项推动 -->
+	<bean id="taskNextAbstractService" class="com.yh.hr.component.task.service.impl.TaskNextAbstractService" abstract="true">
+		<property name="yhWorkflowService">
+			<ref bean="yhWorkflowService"/>
+		</property>
+	</bean>
+		<!-- 业务事项撤回 -->
+	<bean id="taskRevokeAbstractService" class="com.yh.hr.component.task.service.impl.TaskRevokeAbstractService" abstract="true">
+		<property name="yhWorkflowService">
+			<ref bean="yhWorkflowService"/>
+		</property>
+	</bean>
+	
+	<!-- 业务流程默认实现类    -->
+	    
+	<!-- 业务事项创建 -->
+	<bean id="createTaskDefault" class="com.yh.hr.component.task.service.impl.TaskCreateDefaultServiceImpl" parent="taskCreateAbstractService" singleton="false" />
+	<!-- 业务事项删除 -->
+	<bean id="deleteTaskDefault" class="com.yh.hr.component.task.service.impl.TaskDeleteDefaultServiceImpl" parent="taskDeleteAbstractService" singleton="false" />
+	<!-- 业务事项终止 -->
+	<bean id="stopTaskDefault" class="com.yh.hr.component.task.service.impl.TaskStopDefaultServiceImpl" parent="taskStopAbstractService" singleton="false" />
+	<!-- 业务事项推动 -->
+	<bean id="nextTaskDefault" class="com.yh.hr.component.task.service.impl.TaskNextDefaultServiceImpl" parent="taskNextAbstractService" singleton="false" />
+	<!-- 业务事项撤回 -->
+	<bean id="revokeTaskDefault" class="com.yh.hr.component.task.service.impl.TaskRevokeDefaultServiceImpl" parent="taskRevokeAbstractService" singleton="false" />
+	<!-- 查询待办已办 -->
+	<bean id="taskItemDefault" class="com.yh.hr.component.task.service.impl.TaskItemDefaultServiceImpl" />
+</beans>

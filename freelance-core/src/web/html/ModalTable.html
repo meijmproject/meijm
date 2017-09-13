@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出窗/弹出表格</title>
+    <link href="../css/modalstyle.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../css/index.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../js/jquery.leanModal.min.js"></script>
+</head>
+
+<body>
+<div id="w">
+    <div id="content">
+        <center><a href="#showmodal" class="flatbtn" id="modaltrigger">Modal Boder</a></center>
+    </div>
+</div>
+<div id="showmodal" class="modal-content" style="display:none;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="close_modal();"><a
+                href="#"><span aria-hidden="true">&times;</span></a></button>
+        <h4 class="modal-title">用户新增 > 用户维护</h4>
+    </div>
+    <div class="modal-body">
+        <div id="query-condition">
+
+            <div class="wrong">
+                <embed src="../img/index/jg.svg" width="20" height="20" top="-5" type="image/svg+xml" class="ico"/>
+                报错信息位置
+            </div>
+
+            <form class="form-inline">
+
+                <div class="modal-row01">  <!--单列 -->
+
+                    <ol class="tit">1. 单列表单样式</ol>
+
+                    <dl>
+                        <dt>单位名称</dt>
+                        <dd><input type="text" class="modal_iput"></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>（这是表单名称超过两行不截取效果）任职内设机构</dt>
+                        <dd><input type="text" class="modal_inputred"></dd>
+                    </dl>
+                    <dl>
+                        <dt>（这是表单名称超过两行不截取效果）任职内设机构</dt>
+                        <dd><input type="text" class="modal_inputred"></dd>
+                    </dl>
+
+                </div>
+
+
+                <div class="modal-row02">   <!--两列 -->
+
+                    <ol class="tit">2. 两列表单样式</ol>
+
+                    <dl>
+                        <dt>单位名称</dt>
+                        <dd><input type="text" class="modal_iput"></dd>
+
+                        <dt title="任职内设机构任职内设机构任职内设机构任职内设机任职内设机构任职内设机构任职内设机构任职内设机">
+                            （这是表单名称超过两行截取效果）任职内设机构任职内设机构任职内设机构任职内设机任职内设机构任职内设机构任职内设机构任职内设机
+                        </dt>
+                        <dd><input type="text" class="modal_iput"></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>单位名称</dt>
+                        <dd><input type="text" class="modal_inputred"></dd>
+
+                        <dt>任职内设机构</dt>
+                        <dd><input type="text" class="modal_iput"></dd>
+                    </dl>
+
+                </div>
+
+
+                <div class="modal-row03">   <!--三列 -->
+
+                    <ol class="tit">3. 三列表单样式</ol>
+
+                    <dl>
+                        <dt>单位名称</dt>
+                        <dd><input type="text" class="modal_iput"></dd>
+
+
+                        <dt title="任职内设机构任职内设机构任职内设机构任职内设机任职内设机构任职内设机构任职内设机构任职内设机">
+                            （这是表单名称超过两行截取效果）任职内设机构任职内设机构任职内设机构任职内设机任职内设机构任职内设机构任职内设机构任职内设机
+                        </dt>
+
+                        <dt title="(这是表单名称超过两行截取效果)任职内设机构任职内设机构任职内设机构任职内设机任职内设机">
+                            （这是表单名称超过两行截取效果）任职内设机构任职内设机构任职内设机构任职内设机任职内设机构任职内设机构任职内设机构任职内设机
+                        </dt>
+
+                        <dd><input type="text" class="modal_iput"></dd>
+
+                        <dt>单位名称</dt>
+                        <dd>
+                            <select class="modal_select">
+                                <option>国家级正职</option>
+                                <option>国家级副职</option>
+                            </select>
+                        </dd>
+
+                    </dl>
+
+                    <dl>
+                        <dt>单位名称</dt>
+                        <dd><input type="text" class="modal_inputred"></dd>
+
+                        <dt>任职内设机构</dt>
+                        <dd><input type="text" class="modal_iput"></dd>
+
+                        <dt>单位名称</dt>
+                        <dd>
+                            <select class="modal_select">
+                                <option>国家级正职国家级正职国家级正职国家级正职</option>
+                                <option>国家级副职</option>
+                            </select>
+                        </dd>
+                    </dl>
+
+                </div>
+
+
+            </form>
+
+
+            <div style="clear: both"></div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">保　存</button>
+                <button type="button" class="btn btn-default close-login" data-dismiss="modal" onclick="close_modal();">
+                    <a href="#">取　消</a></button>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#loginform').submit(function (e) {
+            return false;
+        });
+        $('#modaltrigger').leanModal({top: 50, overlay: 0.55, closeButton: ".hidemodal"});
+    });
+
+    function close_modal() {
+        $("#lean_overlay").fadeOut(200);
+        $("#showmodal").css({"display": "none"})
+    }
+
+</script>
+</body>
+</html>

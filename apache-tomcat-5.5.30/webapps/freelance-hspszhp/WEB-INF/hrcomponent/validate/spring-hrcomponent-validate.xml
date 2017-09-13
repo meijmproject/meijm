@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--                              注册验证类                                                          -->
+	
+	<!--1 基于类、方法 -->
+	<bean id="yhValidateClassConfigParse" class="com.yh.component.validate.parse.impl.YhValidateClassConfigParse" />
+	
+	<!--2 基于事项、环节 -->
+	<bean id="validateItemNodeConfigParse" class="com.yh.hr.component.validate.parse.impl.ValidateItemNodeConfigParse" />
+   	
+   	
+   	<!-- 逻辑配置项自动加载 加载器 -->
+   	<bean class="com.yh.hr.component.validate.config.YhValidateConfigLoader" />
+   	
+   	<!-- 具体验证逻辑配置项只需要在各自项目中定义即可（验证框架加载器会自动加载各自项目中的验证逻辑配置项） -->
+   	
+   	
+   	<!-- 一下是配置样例，直接放在各自项目中即可（无需其他配置） -->
+   	
+   	<!-- 基于业务事项的验证 -->
+   	<!-- <entry key="BizPlanRegisterWorkTopFacade"> 是拦截的facade的类名称 -->
+   	<!-- <entry> 可配置多个 -->
+   	<!--  
+   	<bean id="bizPlanRegisterItemNodeValidator" class="ValidateItemNodeConfig">
+   		<property name="validateConfigs">
+   			<map> 
+				<entry key="2012100201">
+					<map>
+						<entry key="BizPlanRegisterWorkTopFacade">
+							<map>
+								<entry key="submitReported">
+									<list>
+										这是里你的验证bean
+									</list>
+								</entry>
+							</map>
+						</entry>
+					</map>
+				</entry>
+				<entry key="2012100202">
+					<map>
+						<entry key="BizPlanRegisterWorkTopFacade">
+							<map>
+								<entry key="submitReported">
+									<list>
+										这是里你的验证bean
+									</list>
+								</entry>
+							</map>
+						</entry>
+					</map>
+				</entry>
+			</map>
+		</property>
+   	</bean>
+   	-->
+   	<!-- 基于类的验证 -->
+   	<!--  
+   	<bean id="bizCheckClassPlan" class="JadeValidateClassConfig">
+   		<property name="bizCheckClassConfigs">
+   			<map> 
+				<entry key="BizPlanRegisterWorkTopFacade">
+					<map>
+						<entry key="create">
+							<list>
+								这是里你的验证bean
+							</list>
+						</entry>
+					</map>
+				</entry>
+			</map>
+		</property>
+   	</bean>
+   	-->
+</beans>

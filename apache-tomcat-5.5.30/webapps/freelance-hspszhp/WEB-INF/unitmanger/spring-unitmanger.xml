@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="unitMangerFacade" parent="txnProxyParent">
+        <property name="target">
+            <bean class="com.yh.hr.orghc.unit.unitmanger.facade.UnitMangerFacade">
+	            <property name="unitMangerService">
+						<ref bean="unitMangerService" />
+				</property>
+				<property name="ubOrgService" ref="ubOrgService"></property>
+			</bean>
+        </property>
+    </bean>
+    <bean id="unitMangerService" class="com.yh.hr.orghc.unit.unitmanger.service.impl.UnitMangerServiceImpl">
+    	<property name="ubOrgService" ref="ubOrgService"/>
+    	<property name="ubLeaderService" ref="ubLeaderService"/>
+    	<property name="ubHcService" ref="ubHcService"/>
+    	<property name="ubUnitService" ref="ubUnitService"/>
+    </bean>
+    <bean id="ubLeaderService" class="com.yh.hr.orghc.ub.service.impl.UbLeaderServiceImpl"/>
+    <bean id="ubHcService" class="com.yh.hr.orghc.ub.service.impl.UbHcServiceImpl"/>
+</beans>

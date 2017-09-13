@@ -1,0 +1,159 @@
+.checkA_boxinput{padding: 20px 0 0 0px;}
+.checkA_horizontal{float: left; width: 44%;}
+.checkA_horizontal dt{
+    float: left;
+    min-width: 50px;
+    clear: left;
+    text-align: left;
+    font-size: 14px;
+    color: #7c7c7c;
+    position: relative;
+    top:3px;
+    margin-left:30px;
+}
+@media screen and (max-width:1920px){
+    .checkA_horizontal .checkA_horizontal_left{width: 23%;}
+}
+@media screen and (max-width:1600px){
+    .checkA_horizontal .checkA_horizontal_left{width: 20%;}
+}
+@media screen and (max-width:1600px){
+    .checkA_horizontal .checkA_horizontal_left{width: 27%;}
+}
+@media screen and (max-width:1366px){
+    .checkA_horizontal_time{width: 20%;}
+}
+
+.checkA_horizontal input{
+    width: 57%;
+    height: 26px;
+    color: #333;
+    font-size: 14px;
+    padding-left: 6px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+@media screen and (min-width:768px) and (max-width:1366px){
+    /*.checkA_horizontal dt{*/
+        /*font-size: 12px;*/
+    /*}*/
+    .checkA_horizontal{width: 50%;}
+    .checkA_horizontal input{
+        width: 60%;
+    }
+    .checkA_horizontal{width:48%;}
+}
+@media screen and (min-width:1366px) and (max-width:1600px){
+    .checkA_horizontal dt{
+        font-size: 13px;
+    }
+}
+.checkA_horizontal dd label input{background-color:#f7faff;}
+
+/*審核成功*/
+.AgreeInput_box_green{
+    border:1px solid #00ab3f;
+    height:105px;
+    position:relative;
+    background:#eef9f2;
+}
+@media screen and (max-width:1280px){
+    .AgreeInput_succeed{
+        position:absolute;
+        top:0;
+        bottom: 0;
+        left:0;
+        right:0;
+        margin:auto;
+        height:50%;
+        width:57%;
+    }
+}
+@media screen and (max-width:1660px){
+    .AgreeInput_succeed{
+        width:57%!important;
+    }
+}
+.AgreeInput_succeed{
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin:auto;
+    height:50%;
+    width:50%;
+}
+.AgreeInput_succeed_img{
+    position:relative;
+    background: url("../../img/business/AgreeInput_succend.png") no-repeat center;
+    top:6px;
+    height: 37px;
+    width: 37px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    float:left;
+}
+.AgreeInput_succeed_text{
+    float:left;
+    top:16px;
+    position:relative;
+    margin-left:40px;
+    font-size:14px;
+}
+.AgreeInput_num_green{color:#00ab3f;}
+@media screen and (max-width:1280px){
+    .AgreeInput_succeed {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 50%;
+        width: 57%;
+    }
+}
+/*审核报错*/
+.AgreeInput_succeed_numd{
+    color:#00ab3f;
+}
+.AgreeInput_box_red{
+    border: 1px solid #faccc6;
+    border-top:none;
+    height: 70px!important;
+    position: relative;
+    background: #ffebeb;
+}
+.AgreeInput_table_head table,.AgreeInput_table_body table{width:100%;table-layout: fixed;}
+/*.AgreeInput_table_head table tr th{*/
+    /*line-height:35px;*/
+    /*border-bottom:1px dashed #faccc6;*/
+    /*font-size: 14px;*/
+    /*font-family:"Microsoft Yahei", Helvetica, Arial, sans-serif;*/
+/*}*/
+/*.AgreeInput_table_head table tr .AgreeInput_head_th1,.AgreeInput_table_head table tr .AgreeInput_head_th2{width:10%;}*/
+/*.AgreeInput_table_head table tr .AgreeInput_head_th3{text-align:left;padding-left:3%;}*/
+.AgreeInput_table_body table tr td{
+    line-height:35px;
+    border-bottom:1px dashed #faccc6;
+    font-size: 14px;
+    font-family:"Microsoft Yahei", Helvetica, Arial, sans-serif;
+}
+.AgreeInput_table_body table tr .AgreeInput_head_td1,.AgreeInput_table_body table tr .AgreeInput_head_td2{width:10%;text-align:center;}
+.AgreeInput_table_body table tr .AgreeInput_head_td3{
+    text-align:left;padding-left:3%;
+    width:78%;
+    word-break:keep-all;             /* 不换行 */
+    white-space:nowrap;            /* 不换行 */
+    overflow:hidden;                  /* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;            /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+.AgreeInput_head{background: #ffebeb;border: 1px solid #faccc6;margin: 0 1.9%;border-bottom:1px dashed #faccc6;}
+.AgreeInput_head span{font-size: 14px;}
+.AgreeInput_head_span1{display: inline-block;height: 35px;line-height: 35px;width: 10%;text-align: center;}
+.AgreeInput_head_span2{display: inline-block;height: 35px;line-height: 35px;width: 10%;text-align: center;}
+.AgreeInput_head_span3{display: inline-block;height: 35px;line-height: 35px;text-align: left;padding-left: 3%;}
+.AgreeInput_forbid_bg{background:#e7e7e7!important;}

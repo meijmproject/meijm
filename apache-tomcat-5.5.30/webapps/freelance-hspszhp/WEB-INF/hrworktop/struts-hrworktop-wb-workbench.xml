@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+    </form-beans>
+	<action-mappings>
+	   	<action path="/goToMainTabPanel"
+				scope="request"
+				type="com.yh.hr.component.worktop.action.WbWorkBenchAction"
+				parameter="method">
+			<description>跳转到业务办理工作台页面</description>
+			<forward name="success" path="/hrworktop/worktop_viewport.jsp"/>
+		</action>
+		<action path="/goBizWorkViewport"
+				scope="request"
+				type="com.yh.hr.component.worktop.action.WbWorkBenchAction"
+				parameter="method">
+			<description>跳转到业务办理待办/已办页面</description>
+			<forward name="success1" path="/hrworktop/worktop_daiban.jsp"/>
+			<forward name="success2" path="/hrworktop/worktop_yiban.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>

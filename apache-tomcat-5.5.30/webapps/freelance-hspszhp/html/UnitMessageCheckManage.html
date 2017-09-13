@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="poied_html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>单位信息校核详情页</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/messageCheckDetail.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/default.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/messageCheck.css"/>
+     <link rel="stylesheet" href="../css/UnitMessageCheckManage.css"/>
+    <script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../js/uijs/index.js"></script>
+    <script src="../js/uijs/messageCheckDetail.js"></script>
+</head>
+<body class="poied_html">
+<!--头部导航-->
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a href="#">系统管理</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <ul  class="rt_arrow_down">
+                            <li>
+                                <a href=""><img src="../img/index/change_password.png"  class="change_password" title="修改密码" alt=""/></a>
+                            </li>
+                            <li> <a href=""><img src="../img/index/help_center.png"  class="change_password"  title="帮助中心" alt=""/></a></li>
+                            <h3 class="text_line"></h3><!--清除浮动-->
+                        </ul>
+                    </div>
+                    <div class="arrow_down">
+                        <img src="../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                        <div class="hide_content">
+                            <ul>
+                                <li>
+                                    <a href="">帮助中心</a>
+                                </li>
+                                <li>
+                                    <a href="">修改密码</a>
+                                </li>
+                                <li>
+                                    <a href="">xxxxxx</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+<div class="sitemap">
+    <ul style="float: left">
+        <li><b>当前位置：</b></li>
+        <li><a href="#">信息管理 <span class="spanColor"> > </span></a></li>
+        <li><a href="#">信息校核 <span class="spanColor"> > </span></a></li>
+        <li>单位信息管理</li>
+    </ul>
+    <div class="go_back"><span style="font-family: sans-serif;"><< </span>返回</div>
+    <div style="clear: both"></div>
+</div>
+<!--定位结束-->
+
+<!--右边导航-->
+<div class="scroll_auto_deail">
+    <div class="right">
+        <div class="nav_box nav_podie_bot" id="right_navbox">
+            <p>基本信息</p>
+            <ul class="right_navtext rightNav_chm w_poide_bot" id="right_navtext" style="overflow-y: auto">
+                <li><a href="#">基础信息</a></li>
+                <li><a href="#">单位信息</a></li>
+                <li><a href="#">资格资历信息</a></li>
+                <li class="nav_checked w_wak_bottom"><a href="#">工资相关信息</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--中间主体内容-->
+    <div class="unit_content marginL50_chm">
+        <!-- 正常3列，右侧有照片-->
+        <div class="sys_box">
+            <div class="sys_title_box"><p class="sys_title">基本信息</p></div>
+            <div class="sys_base"><span>基础信息</span>
+                <a><img src="../img/DetailPages/icon_revise.png"/></a>
+            </div>
+            <div class="sys_list">
+                <!--第一列-->
+                <div class="col_float">
+                    <dl class="dl-horizontal">
+                        <dt title="姓名"><b class="Required">* </b>姓名</dt>
+                        <!-- <div class="w_ellipsis">姓名姓名姓名姓名姓名姓名姓名</div> -->
+                        <!-- <div class="w_colon"> :</div> -->
+                        
+
+                        <!-- <div style="clear: both"></div> -->
+                        <!--清除浮动-->
+                        </dt>
+                        <dd><label><input type="text" value="张三" readonly="readonly" class="readonly"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="性别"><b class="Required">* </b>性别</dt>
+                        <dd>
+                            <label><select>
+                                <option>男</option>
+                                <option>女</option>
+                            </select></label>
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="有效证件类别"><b class="Required">* </b>有效证件类别</dt>
+                        <dd>
+                            <label><select>
+                                <option>身份证</option>
+                                <option>驾驶证</option>
+                            </select></label>
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="证件号码">证件号码</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="出生日期">出生日期</dt>
+                        <dd><label><input type="text" class="input_date"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="国籍">国籍</dt>
+                        <dd class="default_text"><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="民族">民族</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="籍贯">籍贯</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="户口所在地">户口所在地</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="出生地">出生地</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="证件号码">政治面貌</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                </div>
+                <!--第二列-->
+                <div class="col_float">
+                    <dl class="dl-horizontal">
+                        <dt title="参加党派时间">参加党派时间</dt>
+                        <dd><label><input type="text" class="input_date"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>本人身份</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>健康状况</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>计划生育状况</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>经费形式</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>养老保险状况</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>医疗保险情况</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>婚姻状况</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>人员状况</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>人员类别</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt>编制类型</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                </div>
+                <!--第三列-->
+                <div class="col_float">
+                    <dl class="dl-horizontal">
+                        <dt style="height: 288px;line-height: 288px;">照片</dt>
+                        <dd style="height:288px;text-align: center;border-bottom: 1px dashed #ececec;">
+                            <div><img
+                                    src="../img/DetailPages/picture.png" height="146px" style="margin-top: 48px;"/>
+                            </div>
+                            <div>
+                                <a href="javascript:;" class="a-upload">
+                                    <input type="file" name="" id="">上传照片
+                                </a>
+
+                                <p style="line-height: 0px;font-size: 12px;color: #999;">图片请小于100k（jpg、png、bmp）</p>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="财政供养状态">财政供养状态</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="进入本单位时间">进入本单位时间</dt>
+                        <dd><label><input type="text" class="input_date"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="所在单位">所在单位</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="所在内设机构名称名称名称">所在内设机构名称名称名称</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                    <dl class="dl-horizontal">
+                        <dt title="所在内设机构名称乱码">所在内设机构名称乱码</dt>
+                        <dd><label><input type="text"/></label></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 两列结束-->
+        <div class="sys_box sys_box_up">
+            <div class="sys_base"><span>编制信息</span>
+                <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_add_green.png"/></a>
+            </div>
+            <div class="sys_list">
+                <table class="table_edit_bg w_table_left" width="95%">
+                    <tr class="td_title w_tdbox_not">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td>编制类型</td>
+                        <td>经费形式</td>
+                        <td>变动前数量</td>
+                        <td>变动数量</td>
+                        <td>变动后数量</td>
+                        <td width="100">操作</td>
+                    </tr>
+                    <tr class="td_content">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td>
+                            <p class="w_check_select_not">行政编制</p>
+                        </td>
+                        <td>
+                            <p class="w_check_select_not">全额补助</p>
+                        </td>
+                        <td>50000</td>
+                        <td>
+                            <p class="w_check_select_wu">5000</p>
+                        </td>
+                        <td>55000</td>
+                        <td><a style="margin-right: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+                            <a><img src="../img/DetailPages/icon_revise.png"/></a>
+                        </td>
+                    </tr>
+                    <tr class="td_content">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td>
+                            <label><select class="w_check_select">
+                                <option>行政编制</option>
+                                <option>行政编制</option>
+                            </select></label>
+                        </td>
+                        <td>
+                            <label><select class="w_check_select">
+                                <option>全额补助</option>
+                                <option>全额补助</option>
+                            </select></label>
+                        </td>
+                        <td>50000</td>
+                        <td>
+                            <label><select class="w_check_select_num w_img_not">
+                                <option>5000</option>
+                            </select></label>
+                        </td>
+                        <td>55000</td>
+                        <td><a style="margin-right: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+                        </td>
+                    </tr>
+                </table>
+                <div class="w_winmsd_right">
+                    <div class="w_winmsd_right_con">
+                        <i>
+                            <button class="w_winmsd_right_save">保存</button>
+                            <button class="w_winmsd_right_celer">取消</button>
+                        </i>
+                    </div>
+                </div>
+                <div style="clear: both"></div><!--清除浮动-->
+            </div>
+        </div>
+        <div class="sys_box sys_box_up ">
+            <div class="sys_base"><span>领导职数信息</span>
+                <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_add_green.png"/></a>
+            </div>
+            <div class="sys_list">
+                <table class="table_edit_bg w_table_left">
+                    <tr class="td_title w_tdbox_not">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td>职务属性</td>
+                        <td>职务级别</td>
+                        <td>变动前数量</td>
+                        <td>变动数量</td>
+                        <td> 变动后数量</td>
+                        <td width="100">操作</td>
+                    </tr>
+                    <tr class="td_content">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td>
+                            <p class="td_content_left">行政机关</p>
+                        </td>
+                        <td>
+                            <p class="td_content_left">公务员职务级别</p>
+                        </td>
+                        <td>2</td>
+                        <td>
+                            <p class="td_content_left_two">2</p>
+                        </td>
+                        <td>2</td>
+                        <td><a style="margin-right: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+                            <a><img src="../img/DetailPages/icon_revise.png"/></a>
+                        </td>
+                    </tr>
+                    <tr class="td_content">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td>
+                            <label><select class="w_check_post_fu">
+                                <option>单位领导副职</option>
+                                <option>单位领导副职</option>
+                            </select></label>
+                        </td>
+                        <td>
+                            <label><select class="w_check_post_fu">
+                                <option>省部级正职</option>
+                                <option>省部级正职</option>
+                            </select></label>
+                        </td>
+                        <td>2</td>
+                        <td>
+                            <label><select class="w_check_post_num w_img_not">
+                                <option>1</option>
+                            </select></label>
+                        </td>
+                        <td>2</td>
+                        <td><a style="margin-right: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+                            <!--<a><img src="../img/DetailPages/icon_revise.png"/></a>-->
+                        </td>
+                    </tr>
+                    <tr class="td_content">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td>
+                            <label><select class="w_check_post_fu">
+                                <option>单位领导副职</option>
+                                <option>单位领导副职</option>
+                            </select></label>
+                        </td>
+                        <td>
+                            <label><select class="w_check_post_fu">
+                                <option>省部级正职</option>
+                                <option>省部级正职</option>
+                            </select></label>
+                        </td>
+                        <td>2</td>
+                        <td>
+                            <label><select class="w_check_post_num w_img_not">
+                                <option>1</option>
+                            </select></label>
+                        </td>
+                        <td>2</td>
+                        <td><a style="margin-right: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+                            <!--<a><img src="../img/DetailPages/icon_revise.png"/></a>-->
+                        </td>
+                    </tr>
+                </table>
+                <div class="w_winmsd_right">
+                    <div class="w_winmsd_right_con">
+                        <i>
+                            <button class="w_winmsd_right_save">保存</button>
+                            <button class="w_winmsd_right_celer">取消</button>
+                        </i>
+                    </div>
+                </div>
+                <div style="clear: both"></div><!--清除浮动-->
+            </div>
+        </div>
+        <!-- 一下内容不用-->
+        <div class="sys_box sys_box_up">
+            <div class="sys_list">
+                <table class="table_edit_bg" width="95%">
+                    <tr class="td_title">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td width="100"></td>
+                    </tr>
+                    <tr class="td_content">
+                        <td width="50"><input type="checkbox"/></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><a style="margin-right: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+                            <a><img src="../img/DetailPages/icon_revise.png"/></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

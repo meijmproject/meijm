@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.business-index{
+    background: #fff;
+    height: calc(100% - 50px);
+}
+.b-homepage{
+    width: 100%;
+    background: #fff;
+}
+.b-hp-bg{
+    width: 500px;
+    height: 500px;
+    background: url("../../images/business-bg.png") no-repeat  center transparent;
+    background-size: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.b-hp-text{
+    letter-spacing: 2px;
+    color: #737c8d;
+    text-align: center;
+    padding-bottom: 40px;
+}

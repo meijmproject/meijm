@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.yh.component.upload.bo">
+	<class name="com.yh.component.upload.bo.UploadRefAuth" table="YHA_UPLOAD_REF_AUTH">
+		<composite-id>
+			<key-property name="refCode" type="java.lang.String">
+				<column name="REF_CODE">
+					<comment>来源代码</comment>
+				</column>
+			</key-property>
+			<key-property name="refRoleCode" type="java.lang.String">
+				<column name="REF_ROLE_CODE">
+					<comment>具体角色（事项环节、自定义节点）</comment>
+				</column>
+			</key-property>
+			<key-property name="refRoleName" type="java.lang.String">
+				<column name="REF_ROLE_NAME">
+					<comment>角色名称</comment>
+				</column>
+			</key-property>
+			<key-property name="authority" type="java.lang.Integer">
+				<column name="AUTHORITY">
+					<comment>权限：1、查看、9、维护</comment>
+				</column>
+			</key-property>
+		</composite-id>
+	</class>
+</hibernate-mapping>

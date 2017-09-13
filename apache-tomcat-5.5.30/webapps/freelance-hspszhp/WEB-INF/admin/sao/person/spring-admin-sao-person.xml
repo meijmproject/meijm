@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+    <!--人员信息 freelance-hr-res-->
+	<bean name="saoPersonInfoService" class="com.yh.admin.sao.person.impl.SaoPersonInfoServiceImpl" >
+		<property name="pbPersonInfoService" ref="pbPersonInfoService"/>
+	</bean>
+</beans>

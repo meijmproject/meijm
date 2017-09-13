@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" >
+    <title>医院信息管理页面</title>
+    <link rel="stylesheet" href="../../css/common/reset.css">
+    <link rel="stylesheet" href="../../css/common/base.css">
+    <link rel="stylesheet" href="../../css/common/layout.css">
+    <link rel="stylesheet" href="../../css/components/search_unit.css">
+    <link rel="stylesheet" href="../../css/components/handle_btn.css">
+    <link rel="stylesheet" href="../../css/cydefinied.css">
+
+</head>
+<body class="main-body">
+
+    <div id="head-nav"></div>
+    <div class="current-position">当前位置 : <span>信息管理</span></div>
+
+    <div class="main-container">
+        <div id="left-content" class="left-content"></div>
+
+        <div id="right-content" class="right-content">
+            <ul class="c-nav-tab clearfix">
+                <li><a class="c-navtab-selected">科室管理</a></li>
+                <li><a>人员管理</a></li>
+            </ul>
+            <div class="search-content">
+                <div class="search-selected clearfix">
+                    <div class="search-selected-title">全部结果 > </div>
+                    <div class="search-selected-cont">
+                        <ul class="search-selected-item">
+                            <li><span>单位:事业单位</span><span class="search-selected-close"></span></li>
+                            <li><span>单位:事业事业单位</span><span class="search-selected-close"></span></li>
+                            <li><span>事业事业单位</span><span class="search-selected-close"></span></li>
+                            <li><span>事业单位</span><span class="search-selected-close"></span></li>
+                            <li><span>事业单位</span><span class="search-selected-close"></span></li>
+                            <li><span>事业单位</span><span class="search-selected-close"></span></li>
+                        </ul>
+                    </div>
+                    <div class="left-group"></div>
+                    <div class="right-group"></div>
+                </div>
+                <div class="search-include clearfix">
+                    <dl class="search-unit">
+                        <dt class="search-unit-dt">
+                            <select>
+                                <option>单位</option>
+                                <option>性别</option>
+                                <option>姓名</option>
+                                <option>出生日期</option>
+                            </select>
+                            <select>
+                                <option>等于</option>
+                                <option>模糊查询</option>
+                                <option>包含</option>
+                            </select>
+                        </dt>
+                        <dd class="search-unit-dd">
+                            <input type="text">
+                            <ul class="s-pulldown-list single-choice">
+                                <li class="s-pdl-li">事业单位1</li>
+                                <li class="s-pdl-li">事业单位2</li>
+                                <li class="s-pdl-li">事业单位3</li>
+                                <li class="s-pdl-li">事业单位4</li>
+
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="search-unit">
+                        <dt class="search-unit-dt">
+                            <select>
+                                <option>科室</option>
+                                <option>单位</option>
+                                <option>性别</option>
+                                <option>姓名</option>
+                                <option>出生日期</option>
+                            </select>
+                            <select>
+                                <option>等于</option>
+                                <option>模糊查询</option>
+                                <option>包含</option>
+                            </select>
+                        </dt>
+                        <dd class="search-unit-dd">
+                            <input type="text">
+                            <ul class="s-pulldown-list multiple-choice">
+                                <li class="s-pdl-li">麻醉部</li>
+                                <li class="s-pdl-li">五官科</li>
+                                <li class="s-pdl-li">儿科</li>
+                                <li class="s-pdl-li">内科</li>
+                                <li class="s-pdl-li">骨科</li>
+                                <li class="s-pdl-li">神经科</li>
+                                <li class="s-pdl-li">儿科</li>
+                                <li class="s-pdl-li">内科</li>
+                                <li class="s-pdl-li">骨科</li>
+                                <li class="s-pdl-li">神经科</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="search-unit">
+                        <dt class="search-unit-dt">
+                            <select>
+                                <option>创建时间</option>
+                                <option>单位</option>
+                                <option>姓名</option>
+                                <option>出生日期</option>
+                            </select>
+                            <select>
+                                <option>等于</option>
+                                <option>模糊查询</option>
+                                <option>包含</option>
+                            </select>
+                        </dt>
+                        <dd class="search-unit-dd">
+                            <input class="search-input-error" type="text" value="2017/02/23">
+                        </dd>
+                    </dl>
+                    <dl class="search-unit search-btns">
+                        <dt><button>查询</button></dt>
+                        <dd><button>全部清除</button></dd>
+                    </dl>
+
+                    <button class="search-advanced-btn"><span>高级查询</span></button>
+
+                    <div class="search-advanced clearfix">
+                        <div class="search-advanced-include">
+                            <dl class="search-unit">
+                                <span class="search-unit-close"></span>
+                                <dt class="search-unit-dt">
+                                    <select>
+                                        <option>科室</option>
+                                        <option>单位</option>
+                                        <option>性别</option>
+                                        <option>姓名</option>
+                                        <option>出生日期</option>
+                                    </select>
+                                    <select>
+                                        <option>等于</option>
+                                        <option>模糊查询</option>
+                                        <option>包含</option>
+                                    </select>
+                                </dt>
+                                <dd class="search-unit-dd">
+                                    <input type="text">
+                                    <ul class="s-pulldown-list">
+                                        <li class="s-pdl-li">麻醉部</li>
+                                        <li class="s-pdl-li">五官科</li>
+                                        <li class="s-pdl-li">儿科</li>
+                                        <li class="s-pdl-li">内科</li>
+                                        <li class="s-pdl-li">骨科</li>
+                                        <li class="s-pdl-li">神经科</li>
+                                        <li class="s-pdl-li">儿科</li>
+                                        <li class="s-pdl-li">内科</li>
+                                        <li class="s-pdl-li">骨科</li>
+                                        <li class="s-pdl-li">神经科</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                            <dl class="search-unit">
+                                <span class="search-unit-close"></span>
+                                <dt class="search-unit-dt">
+                                    <select>
+                                        <option>创建时间</option>
+                                        <option>单位</option>
+                                        <option>姓名</option>
+                                        <option>出生日期</option>
+                                    </select>
+                                    <select>
+                                        <option>等于</option>
+                                        <option>模糊查询</option>
+                                        <option>包含</option>
+                                    </select>
+                                </dt>
+                                <dd class="search-unit-dd">
+                                    <input class="search-input-error" type="text" value="2017/02/23">
+                                </dd>
+                            </dl>
+                            <dl class="search-unit search-advanced-add">
+                                <dt><img class="search-unit-add" src="../../images/components/search_unit/add-condition.png" height="60" width="60"/></dt>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="handle-btn-group">
+                <div class="handle-btn clearfix">
+                    <button href="add_modal_dialog.html" class="btn-add btn-left-icon btn-default check_transaction_popdown">新增业务</button>
+                    <button href="#" class="btn-delete btn-left-icon btn-default">删除</button>
+                    <button href="#" class="btn-look btn-left-icon btn-default">查看</button>
+                    <button href="#" class="btn-modify btn-left-icon btn-default">修改业务</button>
+                    <button href="#" class="btn-print btn-left-icon btn-default">打印</button>
+                    <button href="#" class="btn-export btn-left-icon btn-default">导出</button>
+                    <button href="#" class="btn-upload btn-left-icon btn-default">上传</button>
+
+                    <ul class="btn-list">
+                        <li class="btn-look btn-left-icon btn-default clearfix">查看
+                            <i class="btn-list-icon"></i>
+                            <ul class="btn-list-ul">
+                                <li><a href="#" button-click="viewWork">查看办理过程查看办理过程</a></li>
+                                <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                                <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                                <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="btn-delete btn-left-icon btn-default clearfix">删除
+                            <i class="btn-list-icon"></i>
+                            <ul class="btn-list-ul">
+                                <li><a href="#" button-click="viewWork">查看办理过程查看办理过程</a></li>
+                                <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                                <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                                <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button href="#" class="btn-set btn-left-icon btn-default">信息项设置</button>
+
+                    <div class="mt-info-set">
+                        <div class="mt-info">
+                            <div class="mt-info-content">
+                                <div class="mt-info-title">信息显示<i class="message-alert">鼠标拖动可调换位置</i></div>
+                                <!--<input class="mt-info-search" type="text" placeholder="搜索">-->
+                                <ul class="mt-infoset-ul mt-info-show">
+                                    <li class="mt-infoset-li"><i>01</i><a class="mt-infoset-lia">姓名</a></li>
+                                    <li class="mt-infoset-li"><i>02</i><a class="mt-infoset-lia">性别</a></li>
+                                    <li class="mt-infoset-li"><i>03</i><a class="mt-infoset-lia">单位</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia" title="岗位类别1岗位类别1岗位类别2">岗岗位类别1岗位类别1岗位类别2位类别1岗位类别1岗位类别2</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">部门代码</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">岗位类别</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">出生日期</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">创建日期</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">现在状态</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">技术职称</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">岗位</a></li>
+                                    <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">岗位类别2</a></li>
+                                </ul>
+                                <a class="mt-info-checkall" href="#">全选</a>
+                                <a class="mt-info-empty info-show-empty" href="#">清空条件</a>
+                            </div>
+                        </div>
+                        <div class="mt-info">
+                            <div class="mt-info-content">
+                                <div class="mt-info-title mes-right">排序<i class="message-alert">鼠标拖动可调换位置</i></div>
+                                <ul class="mt-infoset-ul mt-info-sort"></ul>
+                                <a class="mt-info-empty info-sort-empty" href="#">取消</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="mt-infoset-btn">
+                            <button class="mt-infoset-sure">确定</button>
+                            <button class="mt-infoset-cancel">关闭</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="search-result-table"></div>
+
+            </div>
+        </div>
+    </div>
+
+<script src="../../js/jquery-1.12.4.js"></script>
+<script src="../../js/jquery-ui.js"></script>
+<script src="../../js/components/handle_btn.js"></script>
+<script src="../../js/components/search_unit.js"></script>
+<script>
+
+    $(function(){
+        //加载子页面
+        $('#head-nav').load('../components/head_nav.html',{},function(){
+            eachAreaHeight("head-nav");
+        });
+        $('#left-content').load('../components/left_nav.html',{},function(){
+            eachAreaHeight("left-content");
+        });
+        $('#search-result-table').load('../components/search_result_table.html');
+
+        // 页面加载后各区域的高度设置
+        function eachAreaHeight(num){
+            var str = num;
+            var windowHeight = $(window).height();
+            //主内容区高度
+            $('.main-container').height(windowHeight-$('#head-nav').outerHeight(true)-$('.current-position').outerHeight(true)-2);
+            //信息查询结果表格区高度
+            $('#search-result-table').outerHeight($('.right-content').outerHeight(true)-
+                $('.search-content').outerHeight(true)-40-
+                $('.handle-btn').outerHeight(true));
+            console.log(str+"浏览器高度:"+windowHeight+"；头部导航:"+$('#head-nav').outerHeight(true)+";主内容："+$('.right-content').outerHeight(true)+";查询栏："+$('#search-unit').outerHeight(true)+";按钮操作栏："+ $('#handle-btn').outerHeight(true)+";表格区域："+$('#search-result-table').outerHeight(true));
+
+            //信息项操作区域
+            $('.mt-infoset-ul').outerHeight( $('#search-result-table').outerHeight(true)-220);
+        }
+        eachAreaHeight();
+
+        $(window).resize(
+            function(){
+                eachAreaHeight();
+            }
+        );
+
+        $(document).on('click','.c-nav-tab li a',function () {
+            $(this).addClass('c-navtab-selected');
+            $(this).parent('li').siblings('li').children('a').removeClass('c-navtab-selected');
+        })
+    });
+
+</script>
+</body>
+</html>

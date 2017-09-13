@@ -1,0 +1,345 @@
+.File_contentBox{
+    width: 95%;
+    margin: 0 auto;
+    background: #f5f9fc;
+    margin-top: 15px;
+}
+.File_contentBox_SCROLL{
+    padding-top: 20px;margin-left: 20px;padding-bottom: 15px;
+    height: 124px;
+    overflow:hidden;
+    overflow-y:scroll;
+}
+.File_contentBox_SCROLL P{
+    font-size:14px;
+    color:#333333;
+    margin-bottom: 15px;
+}
+.Files_selectBox{
+    position:relative;
+    top: -10px;
+    width: 95%;
+    margin: 0 auto;
+    background: #c1e7ff;
+    margin-bottom: 10px;
+}
+.Files_selectBox_content{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.Files_selectBox_P{padding-top: 10px;padding-bottom:7px;}
+
+/*选择文件*/
+.a-upload {
+    padding: 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    /**display: inline;*/
+    /**zoom: 1*/
+}
+
+.a-upload  input {
+    width: 200px;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+.file {
+    position: relative;
+    display: inline-block;
+    background: #0084e2;
+    margin-left:15px;
+    border: 1px solid #0084e2;
+    border-radius: 4px;
+    padding: 4px 20px;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #004de2;
+    border-color: #0084e2;
+    color: #fff;
+    text-decoration: none;
+}
+.Files_selectBox_span{position: relative;bottom:10px;font-size:14px;}
+/*文件上传状态*/
+.File_statesBox{
+    width: 95%;
+    margin: 0 auto;
+}
+/*表格*/
+.File_statesBox_table{
+    display: table;
+    vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-all;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.File_statesBox_tbody tr td{font-size:14px;font-weight:600;}
+.statesBox_table_Th1{width: 10%;}
+.statesBox_table_Th2{width:40%;}
+.File_statesBox_tableBody{
+    display: table;
+    vertical-align: top;
+    word-wrap: break-word;
+    word-break: break-all;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+.File_statesBox_tbody2 tr{font-size: 14px;}
+.File_statesBox_tbody2 tr{border-bottom:1px solid #ddd;line-height: 40px;}
+/*进度条*/
+progress {
+    width: 105px;
+    height: 20px;
+    border: 1px solid #0064B4;
+    background-color:#e6e6e6;
+    color: #0064B4; /*IE10*/
+}
+
+/*ie6-ie9*/
+progress ie {
+    display:block;
+    height: 100%;
+    background: #0064B4;
+}
+progress::-moz-progress-bar { background: #0064B4; }
+progress::-webkit-progress-bar { background: #e6e6e6; }
+progress::-webkit-progress-value  { background: #0064B4; }
+
+
+#msg4{margin-left: 10px;color:#003f67;}
+.File_operation{
+    background: url(../img/handel_icon/handle_25.png) -125px -80px no-repeat;
+    height: 24px;
+    width: 25px;
+    display: inline-block;
+    /*设置图片垂直居中*/
+    vertical-align:middle;
+    margin-left: 10px;
+}
+.File_operation_remove{
+    background: url(../img/handel_icon/handle_25.png) -125px -75px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    /*璁剧疆鍥剧墖鍨傜洿灞呬腑*/
+    vertical-align:middle;
+    margin-left: 10px;
+}
+.File_operation_remove_dis{
+    background: url(../img/handel_icon/handle_25.png) -75px -75px no-repeat;
+}
+.File_operation_delete {
+	background: url(../img/handel_icon/handle_25.png) -125px -25px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align:middle;
+    margin-left: 10px;
+}
+.File_operation_upload{
+    background: url(../img/handel_icon/handle_25.png) -175px 0 no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align:middle;
+    margin-left: 10px;
+}
+.File_operation_upload_dis{
+    background: url(../img/handel_icon/handle_25.png) -125px 0 no-repeat;
+}
+
+.File_operation_download {
+	background: url(../img/handel_icon/handle_25.png) -175px -50px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    vertical-align:middle;
+    margin-left: 10px;
+}
+.file_tif{
+    background: url(../img/handel_icon/handle_25.png) -25px -100px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_zip, .file_rar{
+    background: url(../img/handel_icon/handle_25.png) -150px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*璁剧疆鍥剧墖鍨傜洿灞呬腑*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_png,.file_gif,.file_jpeg,.file_jpg{
+    background: url(../img/handel_icon/handle_25.png) -175px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*璁剧疆鍥剧墖鍨傜洿灞呬腑*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_pdf {
+    background: url(../img/handel_icon/handle_25.png) 0px -100px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*璁剧疆鍥剧墖鍨傜洿灞呬腑*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_BIyuez{
+    background: url(../img/handel_icon/handle_25.png) -175px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*璁剧疆鍥剧墖鍨傜洿灞呬腑*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_doc , .file_docx{
+    background: url(../img/handel_icon/handle_25.png) -201px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*璁剧疆鍥剧墖鍨傜洿灞呬腑*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_xls, .file_xlsx{
+    background: url(../img/handel_icon/handle_25.png) -225px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*璁剧疆鍥剧墖鍨傜洿灞呬腑*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_zip{
+    background: url(../img/handel_icon/handle_25.png) -150px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*设置图片垂直居中*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_BIyuez{
+    background: url(../img/handel_icon/handle_25.png) -175px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*设置图片垂直居中*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_word{
+    background: url(../img/handel_icon/handle_25.png) -201px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*设置图片垂直居中*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.file_exel{
+    background: url(../img/handel_icon/handle_25.png) -225px -80px no-repeat;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    position: relative;
+    /*设置图片垂直居中*/
+    vertical-align:middle;
+    margin-left:10px;
+}
+.File_save {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.File_save button{
+    background: #c1c1c1;
+    line-height: 40px;
+    text-align: -moz-center !important;
+    text-align: center;
+    line-height: 30px;
+    width: 60px;
+    background: #00ab3f;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+}
+.File_statesBox_tbody{background-color:#f5f9fc;}
+.File_statesBox_bodyBOx{height: 195px;overflow-y: scroll;}
+.file{font-size: 14px;}
+#msg_shibai{
+    color:#ff0000;
+    margin-left: 10px;
+}
+.statesBox_table_su{
+    color:#0071b9;
+    text-decoration:underline;
+}
+@media screen and (max-width:1661px){
+    .statesBox_table_Th2 {width: 35%;}
+}
+
+#sucai{width:500px;height:300px;margin:10px auto;padding-right:12px;overflow:hidden;}
+#sucai p{color:#999;font-size:12px;line-height:220%;text-align:left;text-indent:2em;}
+.statesBox_table_hui{color:#ccc;}
+.progress_red{border: 1px solid #ff4242;}
+
+/*滚动条*/
+.nicescroll-index{z-index:99999!important;}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+          
+<struts-config>
+	<form-beans>
+	    <form-bean name="uploadPersonForm" type="com.yh.hr.info.dataimport.person.web.form.UploadPersonForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/goToUploadPersonListPage"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.ImportPersonAction"
+				parameter="method">
+			<description>弹出导入人员窗口</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/person_import_check.jsp"/>
+			<forward name="success_beforecheckend" path="/hrinfo/ver/unit/person/person-import-datacheckend.jsp"/>
+			<forward name="success_dicmapping" path="/hrinfo/ver/unit/person/person-import-ver_dicmapping.jsp"/>
+			<forward name="success_beforetransfer" path="/hrinfo/ver/unit/person/person-import-ver-beforetransfer.jsp"/>
+		</action>
+		<action path="/uploadPersonList"
+				scope="request"
+				name="uploadPersonForm"
+				type="com.yh.hr.info.dataimport.person.web.action.ImportPersonAction"
+				parameter="method">
+			<description>导入人员</description>
+		</action>
+		<action path="/downImportPersonExcel"
+				scope="request"
+				name="uploadPersonForm"
+				type="com.yh.hr.info.dataimport.person.web.action.ImportPersonAction"
+				parameter="method">
+			<description>下载导入人员错误表</description>
+		</action>
+		<action path="/checkImportFile"
+				scope="request"
+				name="uploadPersonForm"
+				type="com.yh.hr.info.dataimport.person.web.action.ImportCheckAction"
+				parameter="method">
+			<description>导入前信息检查</description>
+		</action>
+		<action path="/goToImCollectTemplate"
+				scope="request"
+				name="uploadPersonForm"
+				type="com.yh.hr.info.dataimport.person.web.action.ImCollectTemplateAction"
+				parameter="method">
+			<description>跳转到采集项映射页面</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/person-import-map.jsp"/>
+		</action>
+		<action path="/updateImCollectTemplate"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.ImCollectTemplateAction"
+				parameter="method">
+			<description>修改采集项映射页面</description>
+		</action>
+		<action path="/goTocheckImportFile"
+				scope="request"
+				type="com.yh.hr.info.dataimport.person.web.action.ImportPersonAction"
+				parameter="method">
+			<description>导入信息检查</description>
+			<forward name="success" path="/hrinfo/ver/unit/person/person-import-datacheck.jsp"/>
+		</action>
+	</action-mappings>
+</struts-config>	

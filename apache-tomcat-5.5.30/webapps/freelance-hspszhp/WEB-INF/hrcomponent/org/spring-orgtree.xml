@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- 内设机构信息 -->
+	<bean id="jhcOrgTreeFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.component.orgtree.facade.JhcOrgTreeFacade">
+				<property name="jhcOrgTreeService" ref="jhcOrgTreeService" />
+				<property name="saoUserUnitAuthorizationService" ref="saoUserUnitAuthorizationService" />
+			</bean>
+		</property>
+	</bean>
+   <bean id="saoUserUnitAuthorizationService" class="SaoUserUnitAuthorizationServiceImpl"></bean>
+   <bean id="jhcOrgTreeService" class="com.yh.hr.component.orgtree.service.impl.JhcOrgTreeServiceImpl">
+		<property name="utOrgService">
+			<ref bean="utOrgService"/>
+		</property>
+   </bean>
+</beans>

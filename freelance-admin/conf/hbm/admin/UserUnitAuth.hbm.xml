@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.yh.admin.bo.UserUnitAuth" table="YHB_USER_UNIT_AUTH" >
+       <composite-id>   
+        <key-property name="unitOid" column="UNIT_OID" type="long" />
+        <key-property name="userId" column="USER_ID" type="string"/>
+      </composite-id>
+        <property name="unitName" type="java.lang.String">
+            <column name="UNIT_NAME" />
+        </property>
+        <property name="unitStatus" type="java.lang.String">
+            <column name="UNIT_STATUS" />
+        </property>
+        <property name="unitKind" type="java.lang.String">
+            <column name="UNIT_KIND" />
+        </property>
+        <property name="unitCategoryCode" type="java.lang.String">
+            <column name="UNIT_CATEGORY_CODE" />
+        </property>
+        <property name="systemPositionOid" type="java.lang.Long">
+            <column name="SYSTEM_POSITION_OID" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	<!-- 导入信息  -->
+	  <bean id="exportPersonFacade" parent="txnProxyParent">
+		<property name="target">
+			<bean class="com.yh.hr.info.dataimport.person.facade.ExportPersonFacade">
+	        	<property name="exportPersonService" ref="exportPersonService"/>
+	        	<property name="imImportBatchService" ref="imImportBatchService"/>
+	        	<property name="imCheckPersonUnusualService" ref="imCheckPersonUnusualService"/>
+			</bean>
+		</property>
+    </bean>
+	 
+    <bean id="exportPersonService" class="com.yh.hr.info.dataimport.person.service.impl.ExportPersonServiceImpl" >
+    	<property name="tableDataSelectService" ref="tableDataSelectService"/>
+    </bean>
+
+</beans>

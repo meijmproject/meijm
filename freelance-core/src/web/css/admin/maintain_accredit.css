@@ -1,0 +1,171 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+body{font: normal 100% 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;min-width: 1280px;overflow: auto; width: 100%;}
+select{font: normal 100% 'microsoft yahei', Verdana, Arial, Helvetica, sans-serif;}
+a{color:#0088DB;text-decoration:none;cursor:pointer}
+.theme-signin{font-size:15px;}
+.clearfloat{clear:both;}
+
+/*主题弹出框*/
+/*.theme_popover_mask{position:absolute;left:0;top:0;width:100%;height:100%;background:#000;opacity:0.5;filter:alpha(opacity=50);-moz-opacity:0.5;}*/
+/*.theme_popover{height:auto;z-index:999;position:absolute;left:50%;margin:26px 0 0 -500px;background-color:#fff;background:#fff;}*/
+.theme_popover{width: 100%;}
+.theme_poptit{background: #0071b9;}
+.theme_poptit_RoleMaintain{line-height: 40px;margin-left: 20px;font-size: 16px;color: #fff;}
+.theme_poptit .theme_poptit_close{float:right;color:#fff;background: url(../img/ModalRoleMaintain/close_circle1.png) no-repeat  right center;margin:7px 10px 10px 0;width: 25px;height: 25px;}
+.theme-popbod_box{margin:20px auto;}
+.theme-popbod_box_left,.theme-popbod_box_right{border:1px solid #ccc;overflow:auto;}
+.theme-popbod_box_left{float:left;}
+.theme-popbod_box_right{float:left;}
+.theme-popbod_box_center{float:left;text-align:center;}
+.theme-popbod_box_center a{padding:5px 10px;border:1px solid #ccc;display:block;width:70px;margin:10px auto;border-radius:5px;}
+.theme_popover_content{margin:0 auto;margin-top: 20px;width: 100%;}
+/*选择系统*/
+.theme_popbod_box{background: #f7faff;}
+.theme_popbod_form{line-height:50px;margin-left: 30px;font-size: 14px;}
+/*去掉select下拉*/
+.theme_popbod_form .select{appearance: none;-moz-appearance: none;-webkit-appearance: none;}
+.theme_popbod_form .select{padding-left:10px;height: 30px;width:225px;color: #333333;font-size: 14px;background: url(../img/ModalRoleMaintain/icon_down2.png) no-repeat 95% center; }
+.theme_popbod_form label{color:#666666;}
+/*.theme_popover_content_Main{display:none}*/
+.theme_popover_content_Left{margin-left:1.5%;}
+.theme_popover_content_Left,.theme_popover_content_Right{float:left;border: 1px solid #ddd;width: 40%;}
+.theme_popover_content_Middle{float:left;height:100%;width: 13%;}
+.addElement_arrows,.removeElement_arrows,.RoleMaintain_arrows{font-family: SimSun;}
+.theme_popover_content_Middle div ul{padding-top:100%;}
+/* .theme_popover_content_Middle ul{margin-left:10%;margin-right: 10%;} */
+.theme_popover_content_Middle ul li{font-size:14px;text-align:center;display:block;cursor:pointer;line-height:40px;background:#0084e2;border-radius: 5px;color: #fff;margin-bottom: 20px;}
+.theme_popover_content_Middle ul li.last{padding-top:25px;}
+
+/*右侧弹出框*/
+.theme_popover_content_Right{margin-right: 30px;border: 1px solid #ddd;width:40%;}
+.customers{ width:100%;border-collapse:collapse;}
+.customers tbody{overflow:auto;}
+.popover_right_onscroll{ /*height: 556px;*/ overflow: auto;}
+.customers_title{line-height: 50px;border-bottom: 1px solid #ddd;font-size: 14px;font-weight: bold;color: #333;}
+.customers_title_td_system{padding-left: 30px;}
+.customers_title_td_function{padding-left: 15px;}
+tbody>tr{line-height: 40px;}
+.customers_contet_input,.customers_title_input{padding-left: 20px;}
+.customers_contet_td{font-size: 14px;padding-left: 2px;color:#7c7c7c;}
+.tbodyhover{background-color:#e9edf0;}
+/*.close{background-color:#007bd2;}*/
+.customers tbody .customers_tr_height td{}
+
+/*左侧弹出框*/
+/*系统安全*/
+.popover_list{background:#f7faff;}
+.popover_system{margin-left:5%;margin-right:5%;background: #fff;width: 90%;}
+/* .popover_list ul li a{padding-left:50px;color: #333333; font-size:14px; display: block;height:36px;line-height: 36px;position: relative;}
+.popover_list .popover_system .popover_system_PerInformation .popover_inactive{background:url(../img/ModalRoleMaintain/icon-folder-close1.png) no-repeat 20px center;}
+.popover_list .popover_system .popover_system_PerInformation .popover_inactives{background:url(../img/ModalRoleMaintain/icon-folder-open1.png) no-repeat 20px center;}
+.popover_list ul li ul{display: none;}
+.popover_list ul li ul li{ margin-left: 50px;line-height:28px;}
+二级
+.popover_list .popover_system .popover_system_PerInformation .popover_inactive_systemSafety li .popover_inactive{background:url(../img/ModalRoleMaintain/Role_document.png) no-repeat 1px center;}
+.popover_list .popover_system li .popover_inactive_systemSafety li .popover_inactives{background:url(../img/ModalRoleMaintain/Role_document.png) no-repeat 1px center;}
+.popover_list ul li ul li ul{display: none;}
+.popover_list ul li ul li a{ padding-left:30px;}
+.popover_list ul li ul li ul li {  border-color:#ddd; }
+.popover_list ul li ul li ul li a{ color:black; margin-left: -30px;}
+.popover_system li a.active{background:#6ee58d;}
+三级下拉菜单
+.popover_list ul li ul li ul li a{background:url(../img/ModalRoleMaintain/Role_document.png) no-repeat 0px center;}
+.popover_list .popover_system .popover_system_PerInformation ul li .popover_inactive{background:url(../img/ModalRoleMaintain/icon-folder-close1.png) no-repeat 0px center;}
+.popover_list .popover_system .popover_system_PerInformation ul li .popover_inactives{background:url(../img/ModalRoleMaintain/icon-folder-open1.png) no-repeat 0px center;} */
+/*切换颜色*/
+.toggleClass_systemSafety{color:#fff;background: #e0e3e6;}
+/*隔行变色*/
+#tbody tr:nth-child(2n+1){background-color:#f5f9fc;}
+
+/*滚动条*/
+/* .popover_left_onscroll{height:530px;overflow:auto;overflow-y:scroll;} */
+
+/*脚部*/
+.popover_footer{margin-left: 46%;margin-bottom: 0px;}
+.popover_footer_save{float: left;}
+.popover_footer_save_bt{line-height: 30px;width: 75px;background: #00ab3f;border: none;font-size: 16px;color: #fff;}
+.popover_footer_cancel{float: left;margin-left: 30px;font-size: 16px;margin-top: 5px;color: #666666;text-decoration: underline !important;}
+.box_wrap{padding-bottom: 0px!important;}
+/**/
+.role_right_margin{margin-right: 0px!important;}
+
+/*权限管理css脚本*/
+.authorization_management{
+    padding: 20px 20px 0px 15px;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #ececec;
+}
+.authorization_management span{
+    display: inline-block;
+    width: 104px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    cursor: pointer;
+}
+.authorization_management_span_default{
+    background: #fff;
+    color: #333;
+}
+.authorization_management_span_active{
+    background: #0095ff;
+    color: #fff;
+}
+
+.left_nav_manintain{
+    width: 320px;
+}
+.user_ul .li_img img{
+    margin-right: 6px;
+}
+.icon_revise_maintain{
+    margin-right: -10px;
+}
+.right_content_maintain{
+    margin-left: 340px;
+}
+@media screen and (max-width: 1661px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 1441px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 1367px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .theme_popover_content_Middle ul li {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1281px){
+    .theme_popover_content_Middle {
+        width: 15%;}
+    .theme_popover_content_Middle ul {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .theme_popover_content_Middle ul li {
+        font-size: 12px;
+    }
+}
+/* 功能授权 功能名称 */
+.funcrole{
+	position: relative;
+    top: 4px;
+}

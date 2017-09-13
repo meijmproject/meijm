@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- CfgProperties -->
+	<bean id="propertiesFacade" parent="txnProxyParent">
+		<property name="target">
+			<ref local="propertiesFacadeTarget" />
+		</property>
+	</bean>
+	<bean id="propertiesFacadeTarget" class="com.yh.component.config.facade.impl.PropertiesFacadeImpl">
+		<property name="propertiesService">
+			<ref local="propertiesService"/>
+		</property>
+	</bean>
+	<bean id="propertiesService" class="com.yh.component.config.service.impl.PropertiesServiceImpl">
+	</bean>
+</beans>

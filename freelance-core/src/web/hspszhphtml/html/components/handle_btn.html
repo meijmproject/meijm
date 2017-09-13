@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge">
+    <title>信息结果操作按钮区</title>
+    <link rel="stylesheet" href="../../css/common/reset.css">
+    <link rel="stylesheet" href="../../css/common/base.css">
+    <link rel="stylesheet" href="../../css/components/handle_btn.css">
+    <link rel="stylesheet" href="../../css/cydefinied.css">
+    <link rel="stylesheet" href="../../css/common/layout.css">
+</head>
+<body style="background: #edf0f5;">
+
+<div class="handle-btn-group">
+    <div class="handle-btn clearfix">
+        <button href="add_modal_dialog.html" class="btn-add btn-left-icon btn-default check_transaction_popdown">新增业务</button>
+        <button href="#" class="btn-delete btn-left-icon btn-default">删除</button>
+        <button href="#" class="btn-look btn-left-icon btn-default">查看</button>
+        <button href="#" class="btn-modify btn-left-icon btn-default">修改业务</button>
+        <button href="#" class="btn-print btn-left-icon btn-default">打印</button>
+        <button href="#" class="btn-export btn-left-icon btn-default">导出</button>
+        <button href="#" class="btn-upload btn-left-icon btn-default">上传</button>
+
+        <ul class="btn-list">
+            <li class="btn-look btn-left-icon btn-default clearfix">查看
+                <i class="btn-list-icon"></i>
+                <ul class="btn-list-ul">
+                    <li><a href="#" button-click="viewWork">查看办理过程查看办理过程</a></li>
+                    <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                    <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                    <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                </ul>
+            </li>
+
+            <li class="btn-delete btn-left-icon btn-default clearfix">删除
+                <i class="btn-list-icon"></i>
+                <ul class="btn-list-ul">
+                    <li><a href="#" button-click="viewWork">查看办理过程查看办理过程</a></li>
+                    <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                    <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                    <li><a href="#" button-click="viewUnit">查看单位信息</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <button href="#" class="btn-set btn-left-icon btn-default">信息项设置</button>
+
+        <div class="mt-info-set">
+            <div class="mt-info">
+                <div class="mt-info-content">
+                    <div class="mt-info-title">信息显示<i class="message-alert">鼠标拖动可调换位置</i></div>
+                    <!--<input class="mt-info-search" type="text" placeholder="搜索">-->
+                    <ul class="mt-infoset-ul mt-info-show">
+                        <li class="mt-infoset-li"><i>01</i><a class="mt-infoset-lia">姓名</a></li>
+                        <li class="mt-infoset-li"><i>02</i><a class="mt-infoset-lia">性别</a></li>
+                        <li class="mt-infoset-li"><i>03</i><a class="mt-infoset-lia">单位</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia" title="岗位类别1岗位类别1岗位类别2">岗岗位类别1岗位类别1岗位类别2位类别1岗位类别1岗位类别2</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">部门代码</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">岗位类别</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">出生日期</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">创建日期</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">现在状态</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">技术职称</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">岗位</a></li>
+                        <li class="mt-infoset-li"><i>04</i><a class="mt-infoset-lia">岗位类别2</a></li>
+                    </ul>
+                    <a class="mt-info-checkall" href="#">全选</a>
+                    <a class="mt-info-empty info-show-empty" href="#">清空条件</a>
+                </div>
+            </div>
+            <div class="mt-info">
+                <div class="mt-info-content">
+                    <div class="mt-info-title mes-right">排序<i class="message-alert">鼠标拖动可调换位置</i></div>
+                    <ul class="mt-infoset-ul mt-info-sort"></ul>
+                    <a class="mt-info-empty info-sort-empty" href="#">取消</a>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="mt-infoset-btn">
+                <button class="mt-infoset-sure">确定</button>
+                <button class="mt-infoset-cancel">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="background-color: #ffffff;margin-top: 50px;">
+    <div style="padding: 10px;">
+        <button class="btn-add btn-left-icon btn-default">新增</button>
+        <button class="btn-delete btn-left-icon btn-default">删除</button>
+        <button class="btn-look btn-left-icon btn-default">查看</button>
+        <button class="btn-modify btn-left-icon btn-default">修改</button>
+        <button class="btn-print btn-left-icon btn-default">打印</button>
+        <button class="btn-export btn-left-icon btn-default">导出</button>
+        <button class="btn-upload btn-left-icon btn-default">上传</button>
+        <button class="btn-save btn-left-icon btn-default">保存</button>
+        <button class="btn-declare btn-left-icon btn-default">申报</button>
+        <button class="btn-recall btn-left-icon btn-default">撤回</button>
+        <button class="btn-termination btn-left-icon btn-default">终止</button>
+        <button class="btn-agree btn-left-icon btn-default">同意</button>
+    </div>
+
+    <div style="padding: 10px;">
+        <button class="btn-add-icon btn-search btn-default">新增</button>
+        <button class="btn-search-icon btn-search btn-default">搜索</button>
+        <button class="btn-delete-icon btn-search btn-default">删除</button>
+        <button class="btn-look-icon btn-search btn-default">查看</button>
+        <button class="btn-modify-icon btn-search btn-default">修改</button>
+        <button class="btn-print-icon btn-search btn-default">打印</button>
+        <button class="btn-export-icon btn-search btn-default">导出</button>
+        <button class="btn-browse-icon btn-search btn-default">浏览</button>
+        <button class="btn-upload-icon btn-search btn-default">上传</button>
+        <button class="btn-save-icon btn-search btn-default">保存</button>
+        <button class="btn-declare-icon btn-search btn-default">申报</button>
+        <button class="btn-recall-icon btn-search btn-default">撤回</button>
+        <button class="btn-termination-icon btn-search btn-default">终止</button>
+        <button class="btn-agree-icon btn-search btn-default">同意</button>
+    </div>
+
+    <div style="padding: 10px;">
+        <button class="btn-search btn-default">查看</button>
+        <button class="btn-search btn-default">导出excel</button>
+    </div>
+
+    <div style="padding: 10px;">
+        <a class="btn-add-gray btn-icon-only" title="新增"></a>
+        <a class="btn-look-gray btn-icon-only" title="查看"></a>
+        <a class="btn-delete-gray btn-icon-only" title="删除"></a>
+        <a class="btn-upload-gray btn-icon-only" title="上传"></a>
+        <a class="btn-modify-gray btn-icon-only" title="修改"></a>
+        <a class="btn-export-gray btn-icon-only" title="导出"></a>
+    </div>
+
+    <div class="clearfix">
+        <div class="fl clearfix" style="background-color: #ffffff;padding-left: 10px;">
+            <a class="btn-add-gray btn-icon-only" title="新增"></a>
+            <a class="btn-look-gray btn-icon-only" title="查看"></a>
+        </div>
+        <div class="fr clearfix" style="background-color: #ffffff;padding-right: 10px;">
+            <a class="btn-add-gray btn-icon-only" title="新增"></a>
+            <a class="btn-look-gray btn-icon-only" title="查看"></a>
+        </div>
+    </div>
+
+</div>
+
+<div style="height: 20px;width: 100%;"></div>
+<ul class="c-nav-tab clearfix">
+    <li><a class="c-navtab-selected">科室管理</a></li>
+    <li><a>人员管理</a></li>
+    <button class="btn-return"> &lt; 返回</button>
+</ul>
+
+</body>
+<script src="..\..\js\jquery-1.12.4.js"></script>
+<script src="..\..\js\jquery-ui.js"></script>
+<script src="..\..\js\components\handle_btn.js"></script>
+</html>

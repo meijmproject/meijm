@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+    </form-beans>
+	<action-mappings>
+		<action path="/goTOInfoManage"
+				scope="request"
+				type="com.yh.hr.component.info.action.InfoManageAction"
+				parameter="method">
+			<description>信息管理</description>
+			<forward name="success" path="/hrcomponent/info/infoManage.jsp"/>
+		</action>
+		<action path="/listInfoCondition"
+				scope="request"
+				type="com.yh.hr.component.info.action.InfoManageAction"
+				parameter="method">
+			<description>信息管理查询条件组合</description>
+		</action>
+		<action path="/listSelectCondition"
+				scope="request"
+				type="com.yh.hr.component.info.action.InfoManageAction"
+				parameter="method">
+			<description>信息管理查询条件下拉字典</description>
+		</action>
+		<action path="/saveOrderFields"
+	        scope="request"
+	        type="com.yh.hr.component.info.action.JhcCfShowFieldOrderAction"
+	        parameter="method">
+	      <description>保存用户对表格列进行的展示和排列</description>
+	    </action>
+	    <action path="/saveSortFields"
+	        scope="request"
+	        type="com.yh.hr.component.info.action.JhcCfShowResultOrderAction"
+	        parameter="method">
+	      <description>保存用户对表格排序</description>
+	    </action>
+	</action-mappings>
+</struts-config>

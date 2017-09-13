@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 岗位设置方案信息 -->
+    <bean id="gtSetPlanService" class="com.yh.hr.res.gt.service.impl.GtSetPlanServiceImpl" />
+    
+    <!-- 岗位说明书设置信息 -->
+    <bean id="gtDescriptionService" class="com.yh.hr.res.gt.service.impl.GtDescriptionServiceImpl" />
+    
+    <!-- 岗位数量设置信息 -->
+    <bean id="gtPlanDetailService" class="com.yh.hr.res.gt.service.impl.GtPlanDetailServiceImpl" />
+
+     <!-- 岗位信息管理 -->
+    <bean id="gtPostPercentService" class="com.yh.hr.res.gt.service.impl.GtPostPercentServiceImpl" />
+
+	<!--JHC_GT_SORT_MANAGEMENT  -->
+	<bean id="gtSortManagementService" class="com.yh.hr.res.gt.service.impl.GtSortManagementServiceImpl" />
+	
+	<!-- YHG_GT_SORT_MANAGEMENT_DETAIL -->
+	<bean id="gtSortManagementDetailService" class="com.yh.hr.res.gt.service.impl.GtSortManagementDetailServiceImpl" />
+	
+	<!-- 岗位其他信息 -->
+	<bean id="gtOtherInfoService" class="com.yh.hr.res.gt.service.impl.GtOtherInfoServiceImpl" />
+</beans>

@@ -1,0 +1,207 @@
+<div id="transaction_modal_box" class="transaction_modal_box">
+    <!-- 头部-->
+    <div class="transaction_theme_title">
+        <span class="theme_poptit_RoleMaintain">&nbsp;&nbsp;角色维护 <span class="RoleMaintain_arrows"> >> </span> 角色授权</span>
+        <a href="#"> <img class="transaction_theme_title_img close-popdown" src="../img/business/icon_delete.png" alt="关闭"></a>
+    </div>
+    <!--内容-->
+    <div class="theme-popbod dform">
+        <div class="theme_popover_content">
+            <!--头部内容-->
+            <div class="Role_Bigbog Role_Bigbog_save">
+                <div class="Role_crook_save">
+                    <span class="Role_save_span"></span>
+                    <div style="clear:both"></div>
+                </div>
+                <div class="Role_nameSelect">
+                    <form action="" class="Role_form">
+                         <span class="Role_nameSpan">角色名称 :</span>
+                         <input type="text" name="fname" autofocus value="测试系统管理角色">
+                    </form>
+                </div>
+                <div class="Role_describe">
+                    <span class="Role_describeSpan">描述 : &nbsp;</span>
+                    <textarea name="" id="" cols="40" rows="4" maxlength=""></textarea>
+                </div>
+                <div class="Role_savecCancel">
+                        <span class="Role_savecCancel_revamp"></span>
+                        <div style="clear:both"></div><!--清除浮动-->
+                </div>
+                <div style="clear:both"></div><!--清除浮动-->
+            </div>
+            <!--下边内容-->
+            <div class="theme_popover_content_Main" style="display:block">
+                <!--选项卡切换-->
+                <div class="role_tabPanel">
+                    <ul class="role_tabPanelUl">
+                        <li class="role_save_style">
+                            <span class="role_hit_span">功能授权</span>
+                            <span class="Role_save_span2"></span>
+                        </li>
+                        <li class="role_hit_lilfet role_hit">
+                            <span>事项授权</span>
+                        </li>
+                        <li class="role_hit_lilfet">
+                            <span>环节授权</span>
+                        </li>
+                        <div style="clear:both"></div><!--清除浮动-->
+                    </ul>
+                <div class="Role_panes">
+                    <div class="Role_pane" style="display:block;">
+                        <!--弹出框左侧-->
+                        <div class="theme_popover_content_Left">
+                            <div onscroll="myFunction()">
+                                <div class="popover_list">
+                                    <ul class="popover_system  popover_left_onscroll">
+                                        <li class="popover_system_PerInformation"><a href="#" class="popover_inactive popover_file">系统安全</a>
+                                            <ul style="display: none" class="popover_inactive_systemSafety">
+                                                <li><a href="#" class="popover_inactive">资源维护</a></li>
+                                                <li><a href="#" class="popover_inactive">菜单维护</a></li>
+                                                <li><a href="#" class="popover_inactive">系统岗位维护</a></li>
+                                                <li><a href="#" class="popover_inactive">用户维护</a></li>
+                                                <li><a href="#" class="popover_inactive">数据权限角色维护</a></li>
+                                                <li><a href="#" class="popover_inactive">操作日志查询</a></li>
+                                                <li><a href="#" class="popover_inactive">基础代码维护</a></li>
+                                                <li><a href="#" class="popover_inactive">功能维护</a></li>
+                                                <li><a href="#" class="popover_inactive">功能权限角色维护</a></li>
+                                                <li><a href="#" class="popover_inactive">业务参数维护</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="popover_system_PerInformation">
+                                            <a href="#" class="popover_inactive popover_file">人员信息集（公用）</a>
+                                            <ul style="display: none">
+                                                <li><a href="#" class="popover_inactive">修改</a>
+                                                    <ul>
+                                                        <li><a href="#">考核信息</a></li>
+                                                        <li><a href="#">经费形式信息</a></li>
+                                                        <li><a href="#">离退休情况信息</a></li>
+                                                        <li><a href="#">来华工作信息</a></li>
+                                                        <li><a href="#">数据权限角色维护</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div><!--滚动条结束-->
+                        </div>
+                        <!--弹出框中间-->
+                        <div class="theme_popover_content_Middle">
+                            <div>
+                                <ul>
+                                    <li class="addElement">添加授权 <span class="addElement_arrows">>></span></li>
+                                    <li class="removeElement"> <span class="removeElement_arrows"><< </span>移除授权</li>
+                                </ul>
+                                <div class="Role_save RoleMiddle_save">保存</div>
+                            </div>
+                        </div>
+                        <!--弹出框右侧-->
+                        <div class="theme_popover_content_Right">
+                            <table class="Role_table">
+                                <tbody>
+                                    <tr class="Role_tableTbody1">
+                                        <th class="Role_tableTbody1_th1">
+                                            <input type="checkbox"/>
+                                        </th>
+                                        <th>系统类别</th>
+                                        <th>功能名称</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="Role_tableDiv1">
+                                <table class="Role_tableTbody2">
+                                    <tbody>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Role_tableTbody1_th1">
+                                                <input type="checkbox"/>
+                                            </td>
+                                            <td>人事信息管理子系统	</td>
+                                            <td>资源维护</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="clear: both"></div><!--清除浮动-->
+                    </div>
+                    <!--<div class="Role_pane" style="display:none">2</div>-->
+                    <!--<div class="Role_pane" style="display:none">3</div>-->
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/uijs/business/instructions2.js"></script>
+<script src="../js/uijs/drag.js"></script>
+<script src="../js/uijs/ModalRoleMaintain.js"></script>

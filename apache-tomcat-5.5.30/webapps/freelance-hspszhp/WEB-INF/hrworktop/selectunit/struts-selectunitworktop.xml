@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		
+	</form-beans>
+	<action-mappings>
+		<!--选择单位-->
+		<action path="/goToSelectUnit"
+				type="com.yh.hr.select.unit.web.action.UnitSelectAction"
+				scope="request"
+				parameter="method" >
+			<description>跳转到选择单位页面</description>
+			<forward name="success" path="/hrworktop/selectunit/select_unit.jsp" />
+		</action>
+		<action path="/listSelectUnit"
+				type="com.yh.hr.select.unit.web.action.UnitSelectAction"
+				scope="request"
+				parameter="method" >
+			<description>选择单位页面列表</description>
+		</action>
+	</action-mappings>
+</struts-config>

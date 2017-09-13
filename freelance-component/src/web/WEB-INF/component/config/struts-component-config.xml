@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+    </form-beans>
+	<action-mappings>
+	
+		<action path="/findCfgPropertiesValue"
+				parameter="method"
+				scope="request"
+				type="com.yh.component.config.web.action.PropertiesAction"
+				validate="false">
+				<description>获取系统配置参数值</description>
+		</action>	
+	</action-mappings>
+</struts-config>

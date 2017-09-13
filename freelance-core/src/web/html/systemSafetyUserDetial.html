@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>系统安全-用户维护详情页</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/messageCheckDetail.css" rel="stylesheet" type="text/css"/>
+    <script src="../js/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="../js/uijs/index.js"></script>
+</head>
+<body>
+<!--头部导航-->
+<div class="head-v3">
+    <div class="navigation-up">
+        <div class="navigation-inner">
+            <div class="navigation-v3">
+                <ul class="navLeft">
+                    <li>衢州人事管理系统&nbsp;&nbsp;&nbsp;</li>
+                    <img src="../img/index/sys_change.png" class="sys_change"/>
+                    <img src="../img/index/chang.png" alt="" class="top_chang"/>
+                    <ul>
+                        <li class="nav-up-selected-inpage" _t_nav="home">
+                            <h2>
+                                <a href="#">首页</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Business">
+                            <h2>
+                                <a href="#">业务办理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="Information">
+                            <h2>
+                                <a href="#">信息管理</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="querySystem">
+                            <h2>
+                                <a href="#">查询系统</a>
+                            </h2>
+                        </li>
+                        <li class="" _t_nav="SystemAdmin">
+                            <h2>
+                                <a href="#">系统管理</a>
+                                &nbsp;&nbsp;&nbsp;
+                            </h2>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="nav-rightW">
+                <div class="nav-righW1">
+                    <div class="nav-righW1-v1" title="你好,单位人员信息校核（机关单位版）">你好,&nbsp;单位人员信息校核（机关单位版）</div>
+                    <div class="arrow_down_kuai">
+                    </div>
+                    <h3 class="text_line"></h3><!--清除浮动-->
+                    <div class="nav-righW1-v2">
+                        <ul  class="rt_arrow_down">
+                            <li>
+                                <a href=""><img src="../img/index/change_password.png"  class="change_password" title="修改密码" alt=""/></a>
+                            </li>
+                            <li> <a href=""><img src="../img/index/help_center.png"  class="change_password"  title="帮助中心" alt=""/></a></li>
+                            <h3 class="text_line"></h3><!--清除浮动-->
+                        </ul>
+                    </div>
+                    <div class="arrow_down">
+                        <img src="../img/index/arrow_down_kuai.png" class="btn_showhide hover-up" alt=""/>
+                        <div class="hide_content">
+                            <ul>
+                                <li>
+                                    <a href="">帮助中心</a>
+                                </li>
+                                <li>
+                                    <a href="">修改密码</a>
+                                </li>
+                                <li>
+                                    <a href="">xxxxxx</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-righW2">
+                    <div class="nav-righW2-v1" value=""><img class="ICOquit"src="../img/index/icon_poweroff.png" alt=""/><span class="quit">退出</span></div>
+                </div>
+                <h3 class="text_line"></h3><!--清除浮动-->
+            </div>
+            <h3 class="text_line"></h3><!--清除浮动-->
+        </div>
+    </div>
+    <div class="navigation-down">
+        <div id="Business" class="nav-down-menu menu-1" style="display: none;" _t_nav="Business">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 100px;">
+                    <dt><img src="../img/index/xinxixiaohe.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">信息校队</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute1" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute2" href="#">单位人员信息校队</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.compute3" href="#">人员信息校队</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/xinxiguanli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">人员信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage1" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage2" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage4" href="#">人员信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.storage3" href="#">人员信息管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/gongzixinx.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">工资信息查询</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring1" href="">工资历史信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring2" href="">特岗津贴享受信息管理</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.monitoring3" href="">工资标准管理</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/cailiaogli.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">业务材料管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.analysis1" href="#">业务材料打印</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><img src="../img/index/qitagl.png" class="ManagementSystem1" alt=""/><span class="infor_check_verifi">其他信息管理</span></dt>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool1" href="">预警天数设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool2" href="">通知公告设置</a>
+                    </dd>
+                    <dd>
+                        <a hotrep="hp.header.Business.devtool3" href="">系统资料管理</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="querySystem" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="querySystem">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 380px;">
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a class="link" hotrep="hp.header.querySystem.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div id="SystemAdmin" class="nav-down-menu menu-3 menu-1" style="display: none;" _t_nav="SystemAdmin">
+            <div class="navigation-down-inner">
+                <dl style="margin-left: 480px;">
+                    <dd>
+                        <a hotrep="hp.header.partner.1" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.2" href=""></a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a hotrep="hp.header.partner.3" href=""></a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear: both"></div>
+<!--定位-->
+<div class="sitemap">
+    <ul>
+        <li>当前位置：</li>
+        <li><a href="#">系统安全 ></a></li>
+        <li><a href="#">用户维护 ></a></li>
+        <li><a href="#">用户岗位</a></li>
+    </ul>
+</div>
+<!--左导航-->
+<div class="left_nav" id="left_nav">
+    <ul class="user_infor">
+        <li class="user_front">姓名</li>
+        <li class="user_latter">刘晓萌</li>
+    </ul>
+    <div style="clear: both"></div>
+    <ul class="user_infor">
+        <li class="user_front">用户ID</li>
+        <li class="user_latter">admin</li>
+    </ul>
+    <div style="clear: both"></div>
+    <ul class="user_infor">
+        <li class="user_front">所属单位</li>
+        <li class="user_latter">衢州市人力资源和社会保障局</li>
+    </ul>
+    <div style="clear: both"></div>
+    <ul class="user_infor">
+        <li class="user_front">用户类型</li>
+        <li class="user_latter">普通用户</li>
+    </ul>
+    <div style="clear: both"></div>
+    <ul class="user_infor">
+        <li class="user_front">当前状态</li>
+        <li class="user_latter">正常</li>
+    </ul>
+    <div style="clear: both"></div>
+    <div>
+        <button class="btn_add_post">新增岗位</button>
+    </div>
+</div>
+<!--中间主体内容-->
+<div class="right_content main_bg">
+    <div class="sys_box">
+        <div class="sys_base"><span>系统管理员</span>
+            <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+            <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_revise.png"/></a>
+            </i>
+        </div>
+        <div class="sys_list">
+            <div>
+                <dl class="row_float">
+                    <dt>岗位名称</dt>
+                    <dd>系统管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>功能权限</dt>
+                    <dd>系统管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>生效日期</dt>
+                    <dd>2016-01-01</dd>
+                </dl>
+                <div style="clear: both"></div>
+            </div>
+            <div>
+                <dl class="row_float">
+                    <dt>系统版本类型</dt>
+                    <dd>单位版本</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>数据权限</dt>
+                    <dd>安全管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>失效日期</dt>
+                    <dd>2099-12-31</dd>
+                </dl>
+                <div style="clear: both"></div>
+            </div>
+            <div>
+                <dl class="row_float">
+                    <dt>描述</dt>
+                    <dd>没什么好描述的</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="sys_box sys_box_up">
+        <div class="sys_base"><span>系统管理员</span>
+            <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+            <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_revise.png"/></a>
+            </i>
+        </div>
+        <div class="sys_list">
+            <div>
+                <dl class="row_float">
+                    <dt>岗位名称</dt>
+                    <dd>系统管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>功能权限</dt>
+                    <dd>系统管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>生效日期</dt>
+                    <dd>2016-01-01</dd>
+                </dl>
+                <div style="clear: both"></div>
+            </div>
+            <div>
+                <dl class="row_float">
+                    <dt>系统版本类型</dt>
+                    <dd>单位版本</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>数据权限</dt>
+                    <dd>安全管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>失效日期</dt>
+                    <dd>2099-12-31</dd>
+                </dl>
+                <div style="clear: both"></div>
+            </div>
+            <div>
+                <dl class="row_float">
+                    <dt>描述</dt>
+                    <dd>没什么好描述的</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="sys_box sys_box_up">
+        <div class="sys_base"><span>系统管理员</span>
+            <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_delete.png"/></a>
+            <a style="float:right;margin-left: 20px;"><img src="../img/DetailPages/icon_revise.png"/></a>
+            </i>
+        </div>
+        <div class="sys_list">
+            <div>
+                <dl class="row_float">
+                    <dt>岗位名称</dt>
+                    <dd>系统管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>功能权限</dt>
+                    <dd>系统管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>生效日期</dt>
+                    <dd>2016-01-01</dd>
+                </dl>
+                <div style="clear: both"></div>
+            </div>
+            <div>
+                <dl class="row_float">
+                    <dt>系统版本类型</dt>
+                    <dd>单位版本</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>数据权限</dt>
+                    <dd>安全管理员</dd>
+                </dl>
+                <dl class="row_float">
+                    <dt>失效日期</dt>
+                    <dd>2099-12-31</dd>
+                </dl>
+                <div style="clear: both"></div>
+            </div>
+            <div>
+                <dl class="row_float">
+                    <dt>描述</dt>
+                    <dd>没什么好描述的</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        //左边导航
+        $(".left_nav dd").hide();
+        $(".left_nav dt").click(function () {
+            $(this).parent().find('dd').removeClass("left_nav_choice");
+            $(".left_nav_choice").slideUp();
+            $(this).parent().find('dd').slideToggle();
+            $(this).parent().find('dd').addClass("left_nav_choice");
+        });
+        //设置左边导航的高度
+        $("#left_nav").height($(window).height()-120);
+    });
+</script>
+</body>
+</html>

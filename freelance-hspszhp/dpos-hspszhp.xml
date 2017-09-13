@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="freelance-hspszhp" basedir="." default="help">
+	
+	<!--  =============== 引用properties属性文件 ================== -->
+	<property file="../freelance-libs/build.properties" />
+	<property file="build.properties" />
+	
+	<!-- =================================================================== -->
+	<!-- 帮助信息 -->
+	<!-- =================================================================== -->
+	<target name="help">
+		<echo message="Freelance Application Build File for JDK1.5" />
+		<echo message="用法：ant -[target]" />
+		<echo message="------------------------------------------------------" />
+		<echo message="[target]如下" />
+		<echo message="  clean        清空所有输出文件包括build和部署目录" />
+		<echo message="  exploded-app 创建展开目录形式的应用结构" />
+		<echo message="  war          创建用于发布的WAR包文件（适用于生产打包、远程部署）" />
+		<echo message="  deploy       将扩展目录直接copy到appserver运行环境下(适用于编译环境与运行环境分离)" />
+		<echo message="  i18n         将资源文件转换成UTF-8码,并copy到 classpath下(适用于热部署)" />
+		<echo message="------------------------------------------------------" />
+	</target>
+
+	<!-- clean -->
+	<target name="clean" description="清空所有输出文件包括build和部署目录">
+		<delete dir="${deploy_dir}/${war.name.gdpos}" />
+	</target>
+		
+	<!-- expload resource -->
+	<target name="copyJSPAndXml" description="将指定的java source汇集到一起">		
+		<!-- copy libs-->
+		<!-- flatten：用于指定是否需要复制目录，如果为true代表把所有的文件复制到todir属性设定的目录下。默认为false，复制目录 -->
+		<copy todir="${deploy_dir}/${war.name.gdpos}/WEB-INF/lib" flatten="true">
+			<fileset dir="${lib.home.ref}/${lib.home}" >
+				<include name="**libs/*.jar"/>
+<!-- 					<include name="gdpos-orghc-libs/*.jar" /> -->
+			</fileset>
+		</copy>
+		<delete file="${deploy_dir}/${war.name.gdpos}/WEB-INF/lib/jsp-api.jar"/>
+		<delete file="${deploy_dir}/${war.name.gdpos}/WEB-INF/lib/servlet-api.jar"/>
+		<delete file="${deploy_dir}/${war.name.gdpos}/WEB-INF/lib/el-api.jar"/>
+	</target>
+	<target name="jar">
+		<ant antfile="../freelance-core/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-component/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-admin/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-res/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-orghc/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-res-sao/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-admin-sao/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-component/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-worktop/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-info/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-biz/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hr-report/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+		<ant antfile="../freelance-hspszhp/build.xml" dir="${project.root}/${project.name}" target="jar"/>
+	</target>
+	<!--创建编译任务，名字是compile,depends指定了comiple任务依赖init任务-->
+	<target name="init" description="comile target">
+		<!--执行子项目build.xml文件 -->
+		<ant antfile="../freelance-core/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-component/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-admin/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-res/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-res-sao/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-orghc/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-worktop/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-info/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-admin-sao/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-component/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-biz/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="../freelance-hr-report/build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+		<ant antfile="build.xml" dir="${project.root}/${project.name}" target="exploded-app"/>
+	</target>
+	<target name="copyI18nXml" description="copy i18n xml">
+		<!--执行子项目build.xml文件 -->
+		<copy todir="${i18nDir}">
+			<fileset dir="../freelance-hr-report/conf/i18n" />
+		</copy>
+		<ant antfile="../freelance-core/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-component/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-admin/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-hr-res-sao/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-hr-orghc/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-admin-sao/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-hr-info/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-hr-res/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-hr-component/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-hr-biz/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+		<ant antfile="../freelance-hr-report/build.xml" dir="${project.root}/${project.name}" target="copyI18nXml"/>
+	</target>
+	
+	<target name="exploded-app" depends="init,copyJSPAndXml"  description="步骤聚合"/>
+	
+	<!-- 系统应用包 -->
+	<target name="war"  depends="jar,exploded-app" description="创建用于发布的WAR包文件">
+		<jar basedir="${deploy_dir}/${war.name.gdpos}" jarfile="${war.name.gdpos}.war" compress="false" />
+	</target>
+	
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="../freelance-libs/tools/lib/ant-contrib-1.0b3.jar" />
+	<!-- 对资源进行国际化处理-->
+	<target name="i18n">
+		<taskdef name="i18ngen" classname="com.yh.component.i18n.I18NGen2" classpath="../freelance-component/bin;../freelance-libs/base-libs/dom4j.jar; ../freelance-libs/base-libs/commons-io.jar;"/>
+		<!-- 创建临时目录 -->
+		<mkdir dir="./tmp/i18n"/>
+		
+		<var name="i18nDir" value="./tmp/i18n" />
+		
+		<!-- 清除已存在的转码文件 -->
+		<delete>
+		  <fileset dir="./conf" >
+		  		<include name="resources*.properties"/>
+		  	</fileset>
+		</delete>
+		
+		<!-- 汇聚所有i18n文件到 ./tmp -->
+		<antcall target="copyI18nXml" />
+		
+		<i18ngen xml="./tmp" dest="./conf"/>
+		
+		<copy todir="${deploy_dir}/${war.name.gdpos}/WEB-INF/classes">
+			<fileset dir="./conf" />
+		</copy>
+		
+		<!-- 删除临时目录 -->
+		<delete dir="./tmp"></delete>
+ 	</target>
+</project>
